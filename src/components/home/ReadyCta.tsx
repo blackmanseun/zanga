@@ -37,7 +37,7 @@ export default function ReadyCta() {
                                 </Link>
                                 <Link
                                     href="/contact"
-                                    className="border border-terracotta text-terracotta px-8 py-3 rounded-full font-semibold text-sm hover:bg-terracotta hover:text-white transition-colors font-Montserrat text-center"
+                                    className="border border-white text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-primary transition-colors font-Montserrat text-center"
                                 >
                                     Take an Assessment
                                 </Link>
