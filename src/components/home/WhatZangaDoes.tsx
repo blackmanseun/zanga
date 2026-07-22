@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { FiSearch, FiBarChart2, FiTrendingUp, FiArrowUpRight } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
+import Reveal from '@/components/ui/Reveal'
 
 function AssessMockup({ accent }: { accent: string }) {
   const options = ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree']
@@ -116,9 +117,9 @@ const cards: Card[] = [
     label: 'Assess',
     Icon: FiSearch,
     description: 'Psychometric assessments, engagement surveys and workforce diagnostics.',
-    color: '#FE7191',
+    color: '#a3a748',
     arrowFg: 'text-gray-900',
-    mockup: <AssessMockup accent="#FE7191" />,
+    mockup: <AssessMockup accent="#a3a748" />,
   },
   {
     label: 'Understand',
@@ -132,9 +133,9 @@ const cards: Card[] = [
     label: 'Develop',
     Icon: FiTrendingUp,
     description: 'Coaching, learning and leadership development programmes.',
-    color: '#6C56C2',
+    color: '#c55e36',
     arrowFg: 'text-white',
-    mockup: <DevelopMockup accent="#6C56C2" />,
+    mockup: <DevelopMockup accent="#c55e36" />,
   },
 ]
 
@@ -153,30 +154,39 @@ export default function WhatZangaDoes() {
           <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
             What Zanga Does
           </span>
-          <h2 className="text-3xl md:text-[3rem] leading-[1.1] font-bold text-gray-900 mt-3 font-MonaSans max-w-3xl">
+          <h2 className="text-3xl md:text-[3rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-3xl">
             One Platform. Three Capabilities. Better Leadership Decisions.
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {cards.map((card) => (
-            <div key={card.label} className="rounded-2xl p-6 sm:p-8" style={{ backgroundColor: `${card.color}5A` }}>
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2">
-                  <h3 className="text-[24px] font-bold font-MonaSans text-gray-900">{card.label}</h3>
+          {cards.map((card, i) => (
+            <Reveal key={card.label} delayMs={i * 90} className="h-full">
+              <div
+                className="group h-full rounded-2xl p-6 sm:p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                style={{ backgroundColor: `${card.color}5A` }}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-[24px] font-bold font-MonaSans text-gray-900">{card.label}</h3>
+                  </div>
+                  <Link
+                    href="/solutions"
+                    aria-label={`Explore ${card.label}`}
+                    className={`w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center ${card.arrowFg} hover:brightness-95 transition-all`}
+                    style={{ backgroundColor: card.color }}
+                  >
+                    <FiArrowUpRight
+                      size={18}
+                      aria-hidden="true"
+                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
+                  </Link>
                 </div>
-                <Link
-                  href="/solutions"
-                  aria-label={`Explore ${card.label}`}
-                  className={`w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center ${card.arrowFg} hover:brightness-95 transition-all`}
-                  style={{ backgroundColor: card.color }}
-                >
-                  <FiArrowUpRight size={18} aria-hidden="true" />
-                </Link>
+                <p className="text-gray-700 text-sm font-Montserrat leading-relaxed mb-6">{card.description}</p>
+                <div className="bg-white rounded-xl shadow-sm p-4">{card.mockup}</div>
               </div>
-              <p className="text-gray-700 text-sm font-Montserrat leading-relaxed mb-6">{card.description}</p>
-              <div className="bg-white rounded-xl shadow-sm p-4">{card.mockup}</div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

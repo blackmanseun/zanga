@@ -44,6 +44,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [openMobileGroup, setOpenMobileGroup] = useState<string | null>(null)
+  const [isFixed, setIsFixed] = useState(false)
   const pathname = usePathname()
   const navRef = useRef<HTMLElement>(null)
 
@@ -63,11 +64,24 @@ export default function Header() {
     setOpenMobileGroup(null)
   }, [pathname])
 
+  useEffect(() => {
+    function handleScroll() {
+      setIsFixed(window.scrollY > 100)
+    }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const isActive = (item: NavItem) =>
     item.href === pathname || (item.dropdown?.some((child) => child.href === pathname) ?? false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 py-4">
+    <>
+    {isFixed && <div className="h-24" aria-hidden="true" />}
+    <header
+      className={`${isFixed ? 'fixed' : 'relative'} top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 py-4 transition-shadow duration-200 ${isFixed ? 'shadow-md' : ''}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-xl font-bold text-gray-900 font-MonaSans tracking-tight">
@@ -84,7 +98,7 @@ export default function Header() {
                   <div key={item.label} className="relative">
                     <button
                       onClick={() => setOpenDropdown(isOpen ? null : item.label)}
-                      className={`flex items-center gap-1 px-3 py-2 text-sm font-Montserrat transition-colors ${
+                      className={`flex items-center gap-1 px-3 py-2 text-md font-Montserrat transition-colors ${
                         active ? 'text-terracotta font-semibold' : 'text-gray-700 hover:text-gray-900'
                       }`}
                     >
@@ -98,7 +112,7 @@ export default function Header() {
                             key={child.href}
                             href={child.href}
                             onClick={() => setOpenDropdown(null)}
-                            className={`block px-4 py-2 text-sm font-Montserrat transition-colors ${
+                            className={`block px-4 py-2 text-md font-Montserrat transition-colors ${
                               pathname === child.href
                                 ? 'text-terracotta font-semibold'
                                 : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
@@ -117,7 +131,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href as string}
-                  className={`px-3 py-2 text-sm font-Montserrat transition-colors ${
+                  className={`px-3 py-2 text-md font-Montserrat transition-colors ${
                     active ? 'text-terracotta font-semibold' : 'text-gray-700 hover:text-gray-900'
                   }`}
                 >
@@ -154,7 +168,7 @@ export default function Header() {
         </div>
 
         {menuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
+          <div className="lg:hidden my-4 pt-2 border-t border-gray-200">
             <nav className="flex flex-col gap-1">
               {navItems.map((item) => {
                 const active = isActive(item)
@@ -165,7 +179,7 @@ export default function Header() {
                     <div key={item.label}>
                       <button
                         onClick={() => setOpenMobileGroup(isOpen ? null : item.label)}
-                        className={`flex items-center justify-between w-full py-2 text-sm font-Montserrat transition-colors ${
+                        className={`flex items-center justify-between w-full py-2 text-md font-Montserrat transition-colors ${
                           active ? 'text-terracotta font-semibold' : 'text-gray-700 hover:text-gray-900'
                         }`}
                       >
@@ -179,7 +193,7 @@ export default function Header() {
                               key={child.href}
                               href={child.href}
                               onClick={() => setMenuOpen(false)}
-                              className={`py-1.5 text-sm font-Montserrat transition-colors ${
+                              className={`py-1.5 text-md font-Montserrat transition-colors ${
                                 pathname === child.href
                                   ? 'text-terracotta font-semibold'
                                   : 'text-gray-600 hover:text-gray-900'
@@ -199,7 +213,7 @@ export default function Header() {
                     key={item.href}
                     href={item.href as string}
                     onClick={() => setMenuOpen(false)}
-                    className={`py-2 text-sm font-Montserrat transition-colors ${
+                    className={`py-2 text-md font-Montserrat transition-colors ${
                       active ? 'text-terracotta font-semibold' : 'text-gray-700 hover:text-gray-900'
                     }`}
                   >
@@ -210,7 +224,7 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="bg-terracotta text-white px-5 py-2.5 rounded-full text-sm font-semibold text-center mt-3 hover:bg-terracotta/90 transition-colors font-Montserrat"
+                className="bg-terracotta text-white px-5 py-2.5 rounded-full text-md font-semibold text-center mt-3 hover:bg-terracotta/90 transition-colors font-Montserrat"
               >
                 Book Demo
               </Link>
@@ -219,5 +233,6 @@ export default function Header() {
         )}
       </div>
     </header>
+    </>
   )
 }

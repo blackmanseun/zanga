@@ -11,7 +11,7 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
     <html lang="en" className={lora.variable}>
       <body className="bg-white text-gray-900 antialiased">
         <Header />
-        <main className="pt-16">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

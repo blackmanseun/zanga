@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Reveal from '@/components/ui/Reveal'
 
 const solutions = [
   {
@@ -79,7 +80,7 @@ export default function SolutionsPage() {
     <>
       {/* Hero */}
       <section className="bg-primary text-white py-24 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto animate-fade-in-up">
           <span className="text-highlight text-sm uppercase tracking-widest font-Montserrat font-semibold">
             Our Solutions
           </span>
@@ -96,29 +97,31 @@ export default function SolutionsPage() {
       {/* Solutions Grid */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
+          <Reveal className="text-center mb-14">
             <span className="text-highlight text-sm uppercase tracking-widest font-Montserrat font-semibold">
               What We Offer
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 font-MonaSans">
               Six Core Solutions
             </h2>
-          </div>
+          </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((s) => (
-              <div key={s.title} className="bg-gray-50 rounded-xl p-8 border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="text-4xl mb-5">{s.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 font-MonaSans">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-5 font-Montserrat">{s.description}</p>
-                <ul className="space-y-2">
-                  {s.outcomes.map((o) => (
-                    <li key={o} className="flex items-start gap-2 text-sm text-gray-600 font-Montserrat">
-                      <span className="text-highlight mt-0.5">✓</span>
-                      {o}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {solutions.map((s, i) => (
+              <Reveal key={s.title} delayMs={(i % 3) * 90}>
+                <div className="bg-gray-50 rounded-xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
+                  <div className="text-4xl mb-5">{s.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 font-MonaSans">{s.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-5 font-Montserrat">{s.description}</p>
+                  <ul className="space-y-2">
+                    {s.outcomes.map((o) => (
+                      <li key={o} className="flex items-start gap-2 text-sm text-gray-600 font-Montserrat">
+                        <span className="text-highlight mt-0.5">✓</span>
+                        {o}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -127,21 +130,23 @@ export default function SolutionsPage() {
       {/* How It Works */}
       <section className="py-20 px-4 bg-secondary text-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
+          <Reveal className="text-center mb-14">
             <span className="text-highlight text-sm uppercase tracking-widest font-Montserrat font-semibold">
               Our Process
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 font-MonaSans">
               How It Works
             </h2>
-          </div>
+          </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {steps.map((s) => (
-              <div key={s.step} className="relative">
-                <div className="text-5xl font-bold text-highlight/20 font-MonaSans mb-3">{s.step}</div>
-                <h3 className="text-base font-semibold mb-2 font-MonaSans">{s.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed font-Montserrat">{s.description}</p>
-              </div>
+            {steps.map((s, i) => (
+              <Reveal key={s.step} delayMs={i * 110}>
+                <div className="relative">
+                  <div className="text-5xl font-bold text-highlight/20 font-MonaSans mb-3">{s.step}</div>
+                  <h3 className="text-base font-semibold mb-2 font-MonaSans">{s.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed font-Montserrat">{s.description}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -149,7 +154,7 @@ export default function SolutionsPage() {
 
       {/* CTA */}
       <section className="py-20 px-4 bg-highlight text-white text-center">
-        <div className="max-w-3xl mx-auto">
+        <Reveal className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-MonaSans">
             Find the Right Solution for Your Organisation
           </h2>
@@ -162,7 +167,7 @@ export default function SolutionsPage() {
           >
             Book a Consultation
           </Link>
-        </div>
+        </Reveal>
       </section>
     </>
   )

@@ -11,7 +11,7 @@ export default function WhiteLabel() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#282A30]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
+          <span className="text-olive text-md uppercase tracking-widest font-Montserrat font-semibold">
             White-Label & Customisation
           </span>
           <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
@@ -81,7 +81,7 @@ export default function WhiteLabel() {
                 key={item}
                 className="flex items-center justify-between rounded-lg border border-gray-100 px-3 py-2"
               >
-                <span className="text-sm text-gray-700 font-Montserrat">{item}</span>
+                <span className="text-md text-gray-700 font-Montserrat">{item}</span>
                 <span className="text-[10px] text-gray-400 font-Montserrat">Customisable</span>
               </div>
             ))}
