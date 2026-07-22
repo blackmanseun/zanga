@@ -104,7 +104,7 @@ export default function Faq() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#282A30]">
       <div className="max-w-7xl mx-auto">
         <div className="mb-14">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
               <span className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-white/5 border border-white/10 rounded-full px-4 py-2 font-Montserrat mb-6">
                 <FiHelpCircle size={14} className="text-olive" aria-hidden="true" />
