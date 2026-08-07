@@ -13,7 +13,7 @@ export default function ClientLogoBar() {
         <section className="py-14 px-4 sm:px-6 lg:px-8 bg-white border-y border-gray-100">
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-gray-700 text-base md:text-[24px] font-semibold font-Montserrat">
-                    Trusted by organisations building Africa's future workforce
+                    Trusted to turn people and stakeholder insight into action.
                 </h2>
                 <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
                     {badges.map((badge) => (

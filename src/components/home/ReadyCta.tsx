@@ -16,13 +16,11 @@ export default function ReadyCta() {
                     <div className="grid md:grid-cols-2 gap-10 items-center">
                         <div>
                             <h2 className="text-3xl md:text-[2.5rem] font-bold font-MonaSans leading-tight text-white mb-4">
-                                Ready to Make Better Leadership Decisions?
+                                Ready to understand what your people and stakeholders are telling you?
                             </h2>
                             <p className="text-white/60 font-Montserrat leading-relaxed max-w-lg text-md">
-                                Whether you&apos;re exploring leadership assessments for the first time or looking for an
-                                enterprise-wide workforce intelligence solution, we&apos;ll help you identify the right
-                                starting point. Book a personalised demo with our team or experience Zanga firsthand by
-                                taking one of our assessments.
+                                Book a demonstration to explore the right Zanga solution for your organisation, or
+                                experience our approach by taking an assessment.
                             </p>
                         </div>
 
@@ -30,13 +28,13 @@ export default function ReadyCta() {
                             <p className="text-sm text-white/50 font-Montserrat mb-3">Choose how you&apos;d like to start</p>
                             <div className="flex flex-col sm:flex-row gap-3 mb-3">
                                 <Link
-                                    href="/contact"
+                                    href="#"
                                     className="bg-olive text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat text-center"
                                 >
                                     Book a Demo
                                 </Link>
                                 <Link
-                                    href="/contact"
+                                    href="#"
                                     className="border border-white text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-primary transition-colors font-Montserrat text-center"
                                 >
                                     Take an Assessment
@@ -44,7 +42,7 @@ export default function ReadyCta() {
                             </div>
                             <p className="text-white/40 font-Montserrat text-sm">
                                 Prefer to talk it through first?{' '}
-                                <Link href="/contact" className="text-white hover:text-olive hover:no-underline transition-colors">
+                                <Link href="#" className="text-white hover:text-olive hover:no-underline transition-colors">
                                     Contact our team
                                 </Link>
                                 .

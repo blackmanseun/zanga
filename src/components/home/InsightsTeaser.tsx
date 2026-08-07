@@ -70,34 +70,17 @@ const articles: Article[] = [
 
 export default function InsightsTeaser() {
     return (
-        <section
-            style={{
-                backgroundColor: 'rgb(250, 248, 246)',
-                backgroundImage:
-                    'linear-gradient(rgba(16, 24, 58, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 24, 58, 0.05) 1px, transparent 1px)',
-                backgroundSize: '48px 48px',
-            }}
-            className="py-20 px-4 sm:px-6 lg:px-8"
-        >
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
                 <Reveal>
-                    <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-10 md:mb-16">
-                        <div>
-              <span
-                  className="inline-block text-md font-semibold text-gray-900 bg-white border border-gray-200 rounded-full px-4 py-2 font-Montserrat whitespace-nowrap mb-6">
+                    <div className="mb-10 md:mb-16 md:max-w-2xl">
+                        <span
+                            className="inline-block text-md font-semibold text-gray-900 bg-white border border-gray-200 rounded-full px-4 py-2 font-Montserrat whitespace-nowrap mb-6">
                 Insights
               </span>
-                            <h2 className="text-3xl md:text-[2.75rem] font-bold font-MonaSans leading-tight text-gray-700">
-                                Insights That Turn Data Into Better Leadership Decisions
-                            </h2>
-                        </div>
-                        <p className="text-gray-600 font-Montserrat leading-relaxed text-md">
-                            Explore research, analysis, and practical perspectives on leadership, workforce analytics,
-                            organisational culture, and talent development across Africa and other high-context
-                            markets. Drawing on Zanga&apos;s research, assessment data, and a community of
-                            practitioners, our insights help organisations move beyond assumptions to{' '}
-                            evidence-based decision-making.
-                        </p>
+                        <h2 className="text-3xl md:text-[2.75rem] font-bold font-MonaSans leading-tight text-gray-700">
+                            Insights That Turn Data Into Better Leadership Decisions
+                        </h2>
                     </div>
                 </Reveal>
 
@@ -105,7 +88,7 @@ export default function InsightsTeaser() {
                     <div className="flex items-center justify-between gap-2 flex-wrap mb-4">
                         <h3 className="text-xl font-bold text-gray-700 font-MonaSans">Top Categories</h3>
                         <Link
-                            href="/insights"
+                            href="#"
                             className="text-md font-semibold text-gray-500 hover:text-olive font-Montserrat inline-flex items-center gap-1 transition-colors"
                         >
                             See all categories
@@ -138,7 +121,7 @@ export default function InsightsTeaser() {
                     <div className="flex items-center justify-between gap-2 flex-wrap mb-4">
                         <h3 className="text-xl font-bold text-gray-700 font-MonaSans">Latest Releases</h3>
                         <Link
-                            href="/insights"
+                            href="#"
                             className="text-md font-semibold text-gray-500 hover:text-olive font-Montserrat inline-flex items-center gap-1 transition-colors"
                         >
                             Explore insights

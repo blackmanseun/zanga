@@ -2,8 +2,13 @@ import React from 'react'
 import Hero from '@/components/home/Hero'
 import ClientLogoBar from '@/components/home/ClientLogoBar'
 import WhatZangaDoes from '@/components/home/WhatZangaDoes'
+import Products from '@/components/home/Products'
+import HowItWorks from '@/components/home/HowItWorks'
+import CulturalContext from '@/components/home/CulturalContext'
 import SolutionCards from '@/components/home/SolutionCards'
 import StakeholderIntelligence from '@/components/home/StakeholderIntelligence'
+import ResearchAndEvidence from '@/components/home/ResearchAndEvidence'
+import BuildWithZanga from '@/components/home/BuildWithZanga'
 import WhiteLabel from '@/components/home/WhiteLabel'
 import Testimonials from '@/components/home/Testimonials'
 import InsightsReport from '@/components/home/InsightsReport'
@@ -17,13 +22,15 @@ export default function HomePage() {
             <Hero/>
             <ClientLogoBar/>
             <WhatZangaDoes/>
+            <Products/>
             <SolutionCards/>
+            <HowItWorks/>
+            <CulturalContext/>
             <StakeholderIntelligence/>
-            <WhiteLabel/>
-            <Testimonials/>
+            <ResearchAndEvidence/>
+            <BuildWithZanga/>
             <InsightsReport/>
             <InsightsTeaser/>
-            <Faq/>
             <ReadyCta/>
         </>
     )

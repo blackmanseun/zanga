@@ -78,7 +78,7 @@ export default function Testimonials() {
                 </p>
               </div>
               <Link
-                href="/resources"
+                href="#"
                 className="mt-4 inline-flex items-center gap-1.5 text-md font-semibold text-terracotta font-Montserrat hover:underline"
               >
                 Read the Full Case Study

@@ -1,179 +1,89 @@
 import React from 'react'
 import Link from 'next/link'
-import { FiSearch, FiBarChart2, FiTrendingUp, FiArrowUpRight } from 'react-icons/fi'
-import type { IconType } from 'react-icons'
+import { FiArrowUpRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
-
-function AssessMockup({ accent }: { accent: string }) {
-  const options = ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree']
-  return (
-    <div>
-      <p className="text-[11px] text-gray-400 text-center font-Montserrat mb-3">Question 2 of 4</p>
-      <p className="text-sm font-semibold text-gray-900 text-center font-MonaSans mb-4">
-        I feel confident about our leadership pipeline
-      </p>
-      <div className="flex flex-wrap justify-center gap-1.5 mb-4">
-        {options.map((option) => {
-          const selected = option === 'Agree'
-          return (
-            <span
-              key={option}
-              className={`text-[10px] px-2.5 py-1.5 rounded-md border font-Montserrat ${
-                selected ? 'text-white border-transparent' : 'bg-gray-50 text-gray-500 border-gray-200'
-              }`}
-              style={selected ? { backgroundColor: accent } : undefined}
-            >
-              {option}
-            </span>
-          )
-        })}
-      </div>
-      <div className="h-8 rounded-md border border-gray-200 bg-gray-50" />
-    </div>
-  )
-}
-
-function UnderstandMockup({ accent }: { accent: string }) {
-  const rows = [
-    { label: 'Strategic Thinking', value: 82 },
-    { label: 'Decision Making', value: 65 },
-    { label: 'Team Leadership', value: 90 },
-  ]
-  return (
-    <div>
-      <div className="flex items-center justify-between mb-4">
-        <p className="text-sm font-semibold text-gray-900 font-MonaSans">Leadership Readiness</p>
-        <span
-          className="text-[10px] font-semibold px-2 py-0.5 rounded-full font-Montserrat"
-          style={{ color: accent, backgroundColor: `${accent}1A` }}
-        >
-          +12%
-        </span>
-      </div>
-      <div className="space-y-3">
-        {rows.map((row) => (
-          <div key={row.label}>
-            <div className="flex justify-between text-[11px] text-gray-500 font-Montserrat mb-1">
-              <span>{row.label}</span>
-              <span>{row.value}%</span>
-            </div>
-            <div className="h-1.5 rounded-full bg-gray-100">
-              <div className="h-full rounded-full" style={{ width: `${row.value}%`, backgroundColor: accent }} />
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-function DevelopMockup({ accent }: { accent: string }) {
-  return (
-    <div>
-      <div className="flex items-center justify-between mb-3">
-        <p className="text-sm font-semibold text-gray-900 font-MonaSans">Development Plan</p>
-        <span className="text-[11px] font-semibold font-Montserrat" style={{ color: accent }}>
-          Add
-        </span>
-      </div>
-      <div
-        className="rounded-lg border p-3 mb-2"
-        style={{ borderColor: `${accent}40`, backgroundColor: `${accent}14` }}
-      >
-        <p className="text-[10px] uppercase tracking-wide font-semibold font-Montserrat mb-1" style={{ color: accent }}>
-          Communication
-        </p>
-        <p className="text-xs font-semibold text-gray-900 font-MonaSans mb-2">
-          Advancing Proactive Communication Skills
-        </p>
-        <span
-          className="text-[9px] px-2 py-0.5 rounded-full font-Montserrat text-white"
-          style={{ backgroundColor: accent }}
-        >
-          Recommended focus area
-        </span>
-      </div>
-      <div className="rounded-lg border border-gray-100 p-3">
-        <p className="text-[10px] uppercase tracking-wide text-gray-400 font-semibold font-Montserrat mb-1">
-          Work Ethic
-        </p>
-        <p className="text-xs font-semibold text-gray-700 font-MonaSans">Strengthening Strategic Leadership</p>
-      </div>
-    </div>
-  )
-}
 
 type Card = {
   label: string
-  Icon: IconType
   description: string
+  cta: string
   color: string
-  arrowFg: string
-  mockup: React.ReactNode
 }
 
 const cards: Card[] = [
   {
-    label: 'Assess',
-    Icon: FiSearch,
-    description: 'Psychometric assessments, engagement surveys and workforce diagnostics.',
+    label: 'Hire with greater confidence',
+    description:
+      'Use culturally relevant psychometric and fit insights to improve selection and reduce costly hiring mistakes.',
+    cta: 'Explore Hiring Solutions',
     color: '#a3a748',
-    arrowFg: 'text-gray-900',
-    mockup: <AssessMockup accent="#a3a748" />,
   },
   {
-    label: 'Understand',
-    Icon: FiBarChart2,
-    description: 'Leadership analytics and culturally intelligent insights.',
+    label: 'Develop stronger leaders',
+    description:
+      'Identify capability, potential and development priorities with leadership assessments and 360 feedback.',
+    cta: 'Explore Leadership Solutions',
     color: '#FDBF12',
-    arrowFg: 'text-gray-900',
-    mockup: <UnderstandMockup accent="#FDBF12" />,
   },
   {
-    label: 'Develop',
-    Icon: FiTrendingUp,
-    description: 'Coaching, learning and leadership development programmes.',
+    label: 'Improve engagement and retention',
+    description:
+      'Understand employee sentiment, culture and the conditions shaping performance and retention.',
+    cta: 'Explore Pulse',
     color: '#c55e36',
-    arrowFg: 'text-white',
-    mockup: <DevelopMockup accent="#c55e36" />,
+  },
+  {
+    label: 'Strengthen succession decisions',
+    description: 'Identify high-potential talent, leadership readiness and organisational capability gaps.',
+    cta: 'Explore Succession Solutions',
+    color: '#a3a748',
+  },
+  {
+    label: 'Listen to customers and communities',
+    description:
+      'Collect, manage and interpret stakeholder feedback across confidential, digital and assisted channels.',
+    cta: 'Explore Voice',
+    color: '#FDBF12',
+  },
+  {
+    label: 'Understand founder and portfolio risk',
+    description: 'Add leadership and sentiment intelligence to lending, investment and portfolio decisions.',
+    cta: 'Explore Diligence',
+    color: '#c55e36',
   },
 ]
 
 export default function WhatZangaDoes() {
   return (
     <section
-        style={{
-          backgroundColor: 'rgb(250, 248, 246)',
-          backgroundImage:
-              'linear-gradient(rgba(16, 24, 58, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 24, 58, 0.05) 1px, transparent 1px)',
-          backgroundSize: '48px 48px',
-        }}
-        className="py-20 px-4 sm:px-6 lg:px-8">
+      style={{
+        backgroundColor: 'rgb(250, 248, 246)',
+        backgroundImage:
+          'linear-gradient(rgba(16, 24, 58, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 24, 58, 0.05) 1px, transparent 1px)',
+        backgroundSize: '48px 48px',
+      }}
+      className="py-20 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
-            What Zanga Does
+            Business Outcomes
           </span>
           <h2 className="text-3xl md:text-[3rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-3xl">
-            One Platform. Three Capabilities. Better Leadership Decisions.
+            What does your organisation need to understand better?
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card, i) => (
-            <Reveal key={card.label} delayMs={i * 90} className="h-full">
-              <div
-                className="group h-full rounded-2xl p-6 sm:p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-                style={{ backgroundColor: `${card.color}5A` }}
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-[24px] font-bold font-MonaSans text-gray-900">{card.label}</h3>
-                  </div>
+            <Reveal key={card.label} delayMs={(i % 3) * 90} className="h-full">
+              <div className="group h-full flex flex-col rounded-2xl p-6 sm:p-8 bg-white border border-slate-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <h3 className="text-xl font-bold font-MonaSans text-gray-800">{card.label}</h3>
                   <Link
-                    href="/solutions"
-                    aria-label={`Explore ${card.label}`}
-                    className={`w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center ${card.arrowFg} hover:brightness-95 transition-all`}
+                    href="#"
+                    aria-label={card.cta}
+                    className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
                     style={{ backgroundColor: card.color }}
                   >
                     <FiArrowUpRight
@@ -183,8 +93,21 @@ export default function WhatZangaDoes() {
                     />
                   </Link>
                 </div>
-                <p className="text-gray-700 text-sm font-Montserrat leading-relaxed mb-6">{card.description}</p>
-                <div className="bg-white rounded-xl shadow-sm p-4">{card.mockup}</div>
+                <p className="text-gray-700 text-sm font-Montserrat leading-relaxed mb-6 flex-1">
+                  {card.description}
+                </p>
+                <Link
+                  href="#"
+                  className="inline-flex items-center gap-2 text-sm font-semibold font-Montserrat"
+                  style={{ color: card.color }}
+                >
+                  {card.cta}
+                  <FiArrowUpRight
+                    size={16}
+                    aria-hidden="true"
+                    className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </Link>
               </div>
             </Reveal>
           ))}

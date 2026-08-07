@@ -62,35 +62,35 @@ function Panel({
 
 export default function InsightsReport() {
   return (
-    <section className="bg-[url('/images/footer_bg.webp')] bg-contain py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section
+      style={{
+        backgroundColor: 'rgb(250, 248, 246)',
+        backgroundImage:
+          'linear-gradient(rgba(16, 24, 58, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 24, 58, 0.05) 1px, transparent 1px)',
+        backgroundSize: '48px 48px',
+      }}
+      className="py-20 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <Reveal>
           <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
-            Zanga Human Capital Insights Report
+            Case Study
           </span>
           <h2 className="text-3xl md:text-[3rem] leading-[1.1] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
-            What Does Africa&apos;s Workforce Actually Look Like? We Measured It
+            Turning stakeholder voice into actionable intelligence.
           </h2>
-          <p className="text-gray-800 font-Montserrat font-semibold leading-relaxed mb-4">
-            Most conversations about Africa&apos;s workforce are driven by opinion. Ours is driven by evidence.
-          </p>
-          <p className="text-gray-500 font-Montserrat leading-relaxed mb-4">
-            The Zanga Human Capital Insights Report draws on leadership assessment data collected across
-            African organisations to reveal the competencies, cultural dynamics, gender patterns, and
-            generational shifts shaping the future of work. It gives executives, HR leaders, boards,
-            policymakers, educators, and investors the insights they need to make better people decisions
-            with confidence.
-          </p>
           <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
-            This is more than a report. It is part of Zanga&apos;s growing leadership intelligence platform,
-            transforming workforce data into practical insights that help organisations build stronger
-            leaders, stronger teams, and stronger institutions.
+            For a client working with farmers and other ecosystem stakeholders in Zambia, Zanga
+            provides an accessible grievance and feedback channel, structured case management,
+            escalation support and recurring insight. The solution helps the organisation engage
+            stakeholders more consistently while strengthening its ESG evidence and response
+            systems.
           </p>
           <Link
-            href="/big-data-report"
+            href="#"
             className="inline-flex items-center gap-2 bg-olive text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat"
           >
-            Download the Report
+            Explore Stakeholder Voice
             <FiArrowRight size={16} aria-hidden="true" />
           </Link>
         </Reveal>
@@ -99,24 +99,24 @@ export default function InsightsReport() {
           <div className="grid grid-cols-2 gap-4">
             <div className="flex flex-col gap-4">
               <Panel
-                src="/images/9.jpg"
+                src="/images/farming-one.jpg"
                 alt="A team celebrating over their annual report findings"
                 className="h-64"
               />
               <Panel
-                src="/images/2.jpg"
+                src="/images/farming-four.jpg"
                 alt="A worker on site carrying rolled-up plans"
                 className="h-40"
               />
             </div>
             <div className="flex flex-col gap-4 mt-8">
               <Panel
-                src="/images/13.jpg"
+                src="/images/farming-three.jpg"
                 alt="A diverse team reviewing documents together in the office"
                 className="h-40"
               />
               <Panel
-                src="/images/5.jpg"
+                src="/images/farming-two.jpg"
                 alt="A leader holding a folder of assessment findings"
                 className="h-64"
                 objectPosition="50% 20%"

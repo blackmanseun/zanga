@@ -5,26 +5,29 @@ const footerColumns = [
     {
         heading: 'Navigate',
         links: [
-            {label: 'Home', href: '/'},
-            {label: 'Solutions', href: '/solutions'},
-            {label: 'Industries', href: '/industries'},
-            {label: 'Resources', href: '/resources'},
+            {label: 'Solutions', href: '#'},
+            {label: 'Products', href: '#'},
+            {label: 'Assessments', href: '#'},
+            {label: 'Pricing', href: '#'},
+            {label: 'Partners', href: '#'},
+            {label: 'Resources', href: '#'},
+            {label: 'About', href: '#'},
         ],
     },
     {
         heading: 'Company',
         links: [
-            {label: 'About', href: '/about'},
-            {label: 'Coaches & Partners', href: '/coaches-partners'},
-            {label: 'Insights', href: '/insights'},
-            {label: 'Big Data Report', href: '/big-data-report'},
+            {label: 'Coach Login', href: '#'},
+            {label: 'Insights', href: '#'},
+            {label: 'Big Data Report', href: '#'},
+            {label: 'Contact', href: '#'},
         ],
     },
     {
         heading: 'Legal',
         links: [
-            {label: 'Privacy Policy', href: '/contact'},
-            {label: 'Terms of Service', href: '/contact'},
+            {label: 'Privacy Policy', href: '#'},
+            {label: 'Terms of Service', href: '#'},
         ],
     },
 ]

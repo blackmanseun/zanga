@@ -70,7 +70,7 @@ const faqs: FaqItem[] = [
         you require. Whether you&apos;re looking for a single assessment, a leadership development
         programme, or an enterprise-wide partnership, we&apos;ll recommend the most appropriate package
         for your needs.{' '}
-        <Link href="/contact" className="text-olive underline hover:no-underline">
+        <Link href="#" className="text-olive underline hover:no-underline">
           Talk to us about pricing
         </Link>
         .
@@ -119,7 +119,7 @@ export default function Faq() {
                 Can&apos;t find what you&apos;re looking for?
               </p>
               <Link
-                href="/contact"
+                href="#"
                 className="inline-flex items-center gap-2 text-white font-semibold font-Montserrat hover:text-olive transition-colors"
               >
                 Talk to our team

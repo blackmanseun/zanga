@@ -4,12 +4,13 @@ import {FiAlertTriangle, FiCheckCircle, FiHome, FiMessageSquare, FiSend, FiSun, 
 import type {IconType} from 'react-icons'
 
 const includes: string[] = [
-    'Dedicated reporting channels (hotline, WhatsApp, web forms and email)',
-    'Secure case management and escalation workflows',
-    'Investigation and resolution tracking',
-    'Real-time dashboards and trend analysis',
-    'Monthly insight reports',
-    'ESG and compliance-ready reporting',
+    'Individual assessment and development reports',
+    'Leadership capability and competency heat maps',
+    'Engagement, culture and sentiment dashboards',
+    'Team, function and demographic comparisons',
+    'Case-management and escalation visibility',
+    'Internal, sector and regional benchmarking',
+    'Custom and white-labelled reporting',
 ]
 
 type ReportStatus = 'New' | 'In Progress' | 'Resolved'
@@ -50,41 +51,27 @@ const reports: { category: string; text: string; status: ReportStatus; Icon: Ico
 export default function StakeholderIntelligence() {
     return (
         <section
-            style={{
-                backgroundColor: 'rgb(250, 248, 246)',
-                backgroundImage:
-                    'linear-gradient(rgba(16, 24, 58, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 24, 58, 0.05) 1px, transparent 1px)',
-                backgroundSize: '48px 48px',
-            }}
             className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto ">
               <span className="text-olive text-md uppercase tracking-widest font-Montserrat font-semibold">
-            Zanga stakeholder intelligence
+           PLATFORM AND REPORTING
           </span>
 
                 <div className="grid md:grid-cols-2 md:gap-16 items-center">
                     <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
-                        <span className="text-gray-700">Turn Stakeholder Feedback</span>
+                        <span className="text-gray-700">See the patterns behind </span>
                         <br/>
-                        <span className="text-olive">into Actionable Intelligence</span>
+                        <span className="text-olive">individual responses.</span>
                     </h2>
-
-                    <p className="text-gray-500 font-Montserrat leading-relaxed">
-                        Identify risks earlier. Strengthen stakeholder trust. Improve ESG reporting. Build
-                        stronger relationships with confidence.
-                    </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-16 items-start">
                     <div>
                         <p className="text-gray-500 font-Montserrat leading-relaxed mb-10">
-                            Zanga Stakeholder Intelligence transforms stakeholder engagement from scattered
-                            conversations
-                            into a structured, auditable system for listening, responding, resolving, and learning.
-
-                           <br/><br/> Whether
-                            you're engaging employees, customers, suppliers, farmers, host communities, or project
-                            beneficiaries, every concern is captured, tracked, and converted into actionable insight.
+                            Zanga turns assessments and sentiment into practical organisational
+                            intelligence. Track participation, compare teams, identify capability gaps,
+                            understand workforce trends and provide leaders with clearer evidence for
+                            action.
                         </p>
 
                         <p className="text-xs font-semibold text-olive uppercase tracking-wide font-Montserrat mb-4">
@@ -101,10 +88,10 @@ export default function StakeholderIntelligence() {
                         </ul>
 
                         <Link
-                            href="/contact"
+                            href="#"
                             className="inline-block bg-olive text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat mt-10"
                         >
-                            Request a Demo
+                            Book a Platform Demo
                         </Link>
                     </div>
 

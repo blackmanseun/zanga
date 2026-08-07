@@ -42,7 +42,7 @@ export default function WhiteLabel() {
           </div>
 
           <Link
-            href="/solutions"
+            href="#"
             className="inline-block bg-olive text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat"
           >
             Explore White-Label Solutions
