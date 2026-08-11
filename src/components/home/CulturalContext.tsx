@@ -1,21 +1,27 @@
 import React from 'react'
 import Link from 'next/link'
-import { FiArrowRight, FiAlertCircle } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
 
-function BarRow({ label, value, color }: { label: string; value: number; color: string }) {
-  return (
-    <div className="mb-2 last:mb-0">
-      <div className="flex justify-between text-[9px] text-gray-500 font-Montserrat mb-1">
-        <span>{label}</span>
-        <span className="font-semibold text-gray-700">{value}%</span>
-      </div>
-      <div className="h-1 rounded-full bg-gray-100">
-        <div className="h-full rounded-full" style={{ width: `${value}%`, backgroundColor: color }} />
-      </div>
-    </div>
-  )
+type OrbitPhoto = {
+  src: string
+  size: number
+  x: string
+  y: string
+  rotate: number
+  delay: number
 }
+
+const orbitPhotos: OrbitPhoto[] = [
+  { src: '/images/2.jpg', size: 80, x: '50%', y: '10.7%', rotate: -6, delay: 0 },
+  { src: '/images/9.jpg', size: 64, x: '77.8%', y: '22.2%', rotate: 4, delay: 0.25 },
+  { src: '/images/11.jpg', size: 80, x: '89.3%', y: '50%', rotate: -3, delay: 0.5 },
+  { src: '/images/13.jpg', size: 64, x: '77.8%', y: '77.8%', rotate: 5, delay: 0.75 },
+  { src: '/images/15.jpg', size: 80, x: '50%', y: '89.3%', rotate: -5, delay: 1 },
+  { src: '/images/7.jpg', size: 64, x: '22.2%', y: '77.8%', rotate: 3, delay: 1.25 },
+  { src: '/images/10.jpg', size: 80, x: '10.7%', y: '50%', rotate: -4, delay: 1.5 },
+  { src: '/images/3.jpg', size: 64, x: '22.2%', y: '22.2%', rotate: 6, delay: 1.75 },
+]
 
 export default function CulturalContext() {
   return (
@@ -26,15 +32,6 @@ export default function CulturalContext() {
             className="relative overflow-hidden md:rounded-[2rem] px-4 py-20 sm:p-12 lg:p-16"
             style={{ backgroundColor: '#282A30' }}
           >
-            <div
-              className="pointer-events-none absolute -left-40 md:right-24 md:-bottom-20 -bottom-40 sm:left-1/2 sm:-top-32"
-              aria-hidden="true"
-            >
-              <div className="w-[30rem] h-[30rem] rounded-[50%] border-2 border-white/10" />
-              <div className="absolute w-[22rem] h-[15rem] left-8 md:top-5 bottom-10 rounded-[50%] border-2 border-white/10" />
-              <div className="hidden md:block absolute w-[15rem] h-[13rem] left-14 top-2 rounded-[80%] border-2 border-white/10" />
-            </div>
-
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div>
                 <h2 className="text-[2rem] md:text-[2.75rem] font-bold text-white mb-4 font-MonaSans leading-tight">
@@ -60,48 +57,53 @@ export default function CulturalContext() {
                 </Link>
               </div>
 
-              <div className="hidden md:block relative min-h-[22rem] sm:min-h-[26rem]">
-                <div
-                  className="hidden sm:block absolute top-2 left-4 w-48 bg-white rounded-xl shadow-xl p-4 animate-float"
-                  style={{ transform: 'rotate(-6deg)', animationDelay: '0s' }}
-                >
-                  <p className="text-[11px] font-semibold text-gray-900 font-MonaSans mb-3">Local Context</p>
-                  <BarRow label="Hierarchy" value={72} color="#c55e36" />
-                  <BarRow label="Directness" value={35} color="#c55e36" />
-                  <BarRow label="Community Ties" value={81} color="#c55e36" />
-                </div>
-
-                <div
-                  className="absolute top-16 right-2 sm:right-6 w-52 bg-white rounded-xl shadow-xl p-4 animate-float z-10"
-                  style={{ transform: 'rotate(4deg)', animationDelay: '0.6s' }}
-                >
-                  <p className="text-[11px] font-semibold text-gray-900 font-MonaSans mb-3">Sentiment by Market</p>
-                  <BarRow label="Lagos" value={82} color="#a3a748" />
-                  <BarRow label="Nairobi" value={76} color="#a3a748" />
-                  <BarRow label="Accra" value={88} color="#a3a748" />
-                </div>
-
-                <div
-                  className="hidden sm:flex absolute bottom-24 left-0 items-center gap-2 bg-white rounded-full shadow-xl px-4 py-2.5 animate-float"
-                  style={{ transform: 'rotate(-3deg)', animationDelay: '1.1s' }}
-                >
-                  <FiAlertCircle size={14} className="text-terracotta shrink-0" aria-hidden="true" />
-                  <span className="text-[10px] font-semibold text-gray-700 font-Montserrat">
-                    Indirect language detected
-                  </span>
-                </div>
-
-                <div
-                  className="absolute bottom-0 right-6 sm:right-10 w-36 bg-white rounded-xl shadow-xl p-4 animate-float"
-                  style={{ transform: 'rotate(5deg)', animationDelay: '1.6s' }}
-                >
-                  <p className="text-[10px] font-semibold text-gray-900 font-MonaSans mb-2.5">Context Score</p>
+              <div className="hidden md:flex items-center justify-center">
+                <div className="relative w-[300px] h-[300px] lg:w-[450px] lg:h-[450px]">
                   <div
-                    className="relative w-14 h-14 mx-auto rounded-full"
-                    style={{ background: 'conic-gradient(#FDBF12 0% 91%, #eee 91% 100%)' }}
-                  >
-                    <div className="absolute inset-1.5 rounded-full bg-white flex items-center justify-center text-[11px] font-bold text-gray-900">
-                      91%
+                    className="absolute inset-0 rounded-full"
+                    style={{
+                      background:
+                        'radial-gradient(circle, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 45%, transparent 70%)',
+                    }}
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="absolute inset-[12%] rounded-full border border-white/10"
+                    aria-hidden="true"
+                  />
+
+                  {orbitPhotos.map((photo) => (
+                    <div
+                      key={photo.src}
+                      className="absolute"
+                      style={{ left: photo.x, top: photo.y, transform: 'translate(-50%, -50%)' }}
+                    >
+                      <div
+                        className="animate-float rounded-full overflow-hidden shadow-xl ring-4 ring-[#282A30]/40"
+                        style={{
+                          width: photo.size,
+                          height: photo.size,
+                          '--card-rotate': `${photo.rotate}deg`,
+                          animationDelay: `${photo.delay}s`,
+                        } as React.CSSProperties}
+                      >
+                        <img
+                          src={photo.src}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                  ))}
+
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                    <div className="w-28 h-28 lg:w-36 lg:h-36 rounded-full overflow-hidden shadow-2xl ring-4 ring-white/40">
+                      <img
+                        src="/images/14.jpg"
+                        alt="Zanga helps organisations understand the people behind the data"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>

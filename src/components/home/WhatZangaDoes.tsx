@@ -26,17 +26,17 @@ const cards: Card[] = [
     color: '#FDBF12',
   },
   {
+    label: 'Strengthen succession decisions',
+    description: 'Identify high-potential talent, leadership readiness and organisational capability gaps.',
+    cta: 'Explore Succession Solutions',
+    color: '#a3a748',
+  },
+  {
     label: 'Improve engagement and retention',
     description:
       'Understand employee sentiment, culture and the conditions shaping performance and retention.',
     cta: 'Explore Pulse',
     color: '#c55e36',
-  },
-  {
-    label: 'Strengthen succession decisions',
-    description: 'Identify high-potential talent, leadership readiness and organisational capability gaps.',
-    cta: 'Explore Succession Solutions',
-    color: '#a3a748',
   },
   {
     label: 'Listen to customers and communities',
@@ -57,19 +57,16 @@ export default function WhatZangaDoes() {
   return (
     <section
       style={{
-        backgroundColor: 'rgb(250, 248, 246)',
-        backgroundImage:
-          'linear-gradient(rgba(16, 24, 58, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 24, 58, 0.05) 1px, transparent 1px)',
-        backgroundSize: '48px 48px',
+        backgroundColor: 'rgb(250, 248, 246)'
       }}
-      className="py-20 px-4 sm:px-6 lg:px-8"
+      className="md:py-20 py-14 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="mb-16">
+        <div className="md:mb-16 mb-6">
           <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
             Business Outcomes
           </span>
-          <h2 className="text-3xl md:text-[3rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-3xl">
+          <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-3xl">
             What does your organisation need to understand better?
           </h2>
         </div>
@@ -79,7 +76,7 @@ export default function WhatZangaDoes() {
             <Reveal key={card.label} delayMs={(i % 3) * 90} className="h-full">
               <div className="group h-full flex flex-col rounded-2xl p-6 sm:p-8 bg-white border border-slate-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start justify-between gap-4 mb-3">
-                  <h3 className="text-xl font-bold font-MonaSans text-gray-800">{card.label}</h3>
+                  <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">{card.label}</h3>
                   <Link
                     href="#"
                     aria-label={card.cta}
@@ -93,12 +90,12 @@ export default function WhatZangaDoes() {
                     />
                   </Link>
                 </div>
-                <p className="text-gray-700 text-sm font-Montserrat leading-relaxed mb-6 flex-1">
+                <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                   {card.description}
                 </p>
                 <Link
                   href="#"
-                  className="inline-flex items-center gap-2 text-sm font-semibold font-Montserrat"
+                  className="inline-flex items-center gap-2 text-[14px] font-semibold font-Montserrat"
                   style={{ color: card.color }}
                 >
                   {card.cta}

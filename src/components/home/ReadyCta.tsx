@@ -3,20 +3,14 @@ import Link from 'next/link'
 
 export default function ReadyCta() {
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
                 <div
-                    className="rounded-3xl bg-[#282A30] p-10 md:p-14"
-                    style={{
-                        backgroundImage:
-                            'linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)',
-                        backgroundSize: '48px 48px',
-                    }}
-                >
-                    <div className="grid md:grid-cols-2 gap-10 items-center">
-                        <div>
+                    className="md:rounded-3xl rounded-xl bg-[#282A30] py-10 px-4 md:p-14">
+                    <div className="grid md:grid-cols-5 gap-10 items-center">
+                        <div className="col-span-3">
                             <h2 className="text-3xl md:text-[2.5rem] font-bold font-MonaSans leading-tight text-white mb-4">
-                                Ready to understand what your people and stakeholders are telling you?
+                                Ready to understand what <br className="hidden md:block"/>your people and stakeholders <br className="hidden md:block"/>are telling you?
                             </h2>
                             <p className="text-white/60 font-Montserrat leading-relaxed max-w-lg text-md">
                                 Book a demonstration to explore the right Zanga solution for your organisation, or
@@ -24,7 +18,7 @@ export default function ReadyCta() {
                             </p>
                         </div>
 
-                        <div>
+                        <div className="col-span-2 md:flex flex-col items-end">
                             <p className="text-sm text-white/50 font-Montserrat mb-3">Choose how you&apos;d like to start</p>
                             <div className="flex flex-col sm:flex-row gap-3 mb-3">
                                 <Link

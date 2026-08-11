@@ -33,26 +33,26 @@ const tracks: Track[] = [
 
 export default function BuildWithZanga() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <span className="text-olive text-md uppercase tracking-widest font-Montserrat font-semibold">
           Partnerships
         </span>
 
-        <div className="grid md:grid-cols-2 md:gap-16 items-center">
-          <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
+        <div className="max-w-3xl">
+          <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
             Build with Zanga.
           </h2>
-
-          <p className="text-gray-500 font-Montserrat leading-relaxed text-rightI ">
-            Zanga works with coaches, consultants, institutions, technology companies, researchers
-            and regional partners to make culturally intelligent people and stakeholder insight
-            more accessible.
-          </p>
         </div>
 
-        <div className="grid lg:grid-cols-[420px_1fr] gap-10 lg:gap-16 items-start mt-4">
+        <div className="grid lg:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-start mt-4">
           <div>
+            <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
+              Zanga works with coaches, consultants, institutions, technology companies, researchers
+              and regional partners to make culturally intelligent people and stakeholder insight
+              more accessible.
+            </p>
+
             <div>
               {tracks.map((track, i) => (
                 <div key={track.title} className="flex gap-4">

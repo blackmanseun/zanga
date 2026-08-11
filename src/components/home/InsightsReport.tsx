@@ -64,35 +64,40 @@ export default function InsightsReport() {
   return (
     <section
       style={{
-        backgroundColor: 'rgb(250, 248, 246)',
-        backgroundImage:
-          'linear-gradient(rgba(16, 24, 58, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 24, 58, 0.05) 1px, transparent 1px)',
-        backgroundSize: '48px 48px',
+        backgroundColor: 'rgb(250, 248, 246)'
       }}
-      className="py-20 px-4 sm:px-6 lg:px-8"
+      className="md:py-20 py-14 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <Reveal>
           <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
             Case Study
           </span>
-          <h2 className="text-3xl md:text-[3rem] leading-[1.1] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
+          <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold mt-3 mb-6 font-MonaSans text-gray-700">
             Turning stakeholder voice into actionable intelligence.
           </h2>
-          <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
+          <p className="text-gray-500 text-[16px] font-Montserrat leading-relaxed mb-8">
             For a client working with farmers and other ecosystem stakeholders in Zambia, Zanga
             provides an accessible grievance and feedback channel, structured case management,
             escalation support and recurring insight. The solution helps the organisation engage
             stakeholders more consistently while strengthening its ESG evidence and response
             systems.
           </p>
-          <Link
-            href="#"
-            className="inline-flex items-center gap-2 bg-olive text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat"
-          >
-            Explore Stakeholder Voice
-            <FiArrowRight size={16} aria-hidden="true" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="#"
+              className="inline-flex items-center justify-center gap-2 bg-olive text-white px-8 py-3 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat"
+            >
+              Explore Voice by Zanga
+              <FiArrowRight size={16} aria-hidden="true" />
+            </Link>
+            <Link
+              href="#"
+              className="inline-flex items-center justify-center gap-2 border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold text-base hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
+            >
+              Read Full Case Study
+            </Link>
+          </div>
         </Reveal>
 
         <Reveal delayMs={120}>
@@ -109,7 +114,7 @@ export default function InsightsReport() {
                 className="h-40"
               />
             </div>
-            <div className="flex flex-col gap-4 mt-8">
+            <div className="flex flex-col gap-4">
               <Panel
                 src="/images/farming-three.jpg"
                 alt="A diverse team reviewing documents together in the office"

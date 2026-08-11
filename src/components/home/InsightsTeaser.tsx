@@ -70,59 +70,25 @@ const articles: Article[] = [
 
 export default function InsightsTeaser() {
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
                 <Reveal>
                     <div className="mb-10 md:mb-16 md:max-w-2xl">
-                        <span
-                            className="inline-block text-md font-semibold text-gray-900 bg-white border border-gray-200 rounded-full px-4 py-2 font-Montserrat whitespace-nowrap mb-6">
-                Insights
-              </span>
-                        <h2 className="text-3xl md:text-[2.75rem] font-bold font-MonaSans leading-tight text-gray-700">
-                            Insights That Turn Data Into Better Leadership Decisions
+                       <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
+            Insights
+          </span>
+                        <h2 className="text-3xl md:text-[2.75rem] mt-3 font-bold font-MonaSans leading-[1.1] text-gray-700">
+                            Ideas and evidence for better people decisions.
                         </h2>
                     </div>
                 </Reveal>
 
-                <Reveal delayMs={80}>
-                    <div className="flex items-center justify-between gap-2 flex-wrap mb-4">
-                        <h3 className="text-xl font-bold text-gray-700 font-MonaSans">Top Categories</h3>
-                        <Link
-                            href="#"
-                            className="text-md font-semibold text-gray-500 hover:text-olive font-Montserrat inline-flex items-center gap-1 transition-colors"
-                        >
-                            See all categories
-                            <FiArrowRight size={14} aria-hidden="true"/>
-                        </Link>
-                    </div>
-                    <div className="h-px bg-gray-200 mb-6" aria-hidden="true"/>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
-                        {categories.map((category) => (
-                            <div
-                                key={category.title}
-                                className="flex items-center gap-3 rounded-xl border p-3 border-slate-200 hover:shadow-sm transition-all bg-white/60"
-                            >
-                <span
-                    className="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center"
-                    style={{backgroundColor: `${category.color}26`, color: category.color}}
-                >
-                  <category.Icon size={18} aria-hidden="true"/>
-                </span>
-                                <div className="min-w-0">
-                                    <p className="text-md font-bold text-gray-900 font-MonaSans truncate">{category.title}</p>
-                                    <p className="text-xs text-gray-500 font-Montserrat truncate">{category.subtitle}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </Reveal>
-
-                <Reveal delayMs={140}>
+                <Reveal delayMs={10}>
                     <div className="flex items-center justify-between gap-2 flex-wrap mb-4">
                         <h3 className="text-xl font-bold text-gray-700 font-MonaSans">Latest Releases</h3>
                         <Link
                             href="#"
-                            className="text-md font-semibold text-gray-500 hover:text-olive font-Montserrat inline-flex items-center gap-1 transition-colors"
+                            className="text-[14px] md:text-[16px] font-semibold text-gray-500 hover:text-olive font-Montserrat inline-flex items-center gap-1 transition-colors"
                         >
                             Explore insights
                             <FiArrowRight size={14} aria-hidden="true"/>

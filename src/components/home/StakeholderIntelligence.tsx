@@ -51,7 +51,7 @@ const reports: { category: string; text: string; status: ReportStatus; Icon: Ico
 export default function StakeholderIntelligence() {
     return (
         <section
-            className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            className="md:pb-20 md:pt-0 py-14 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto ">
               <span className="text-olive text-md uppercase tracking-widest font-Montserrat font-semibold">
            PLATFORM AND REPORTING
@@ -60,7 +60,7 @@ export default function StakeholderIntelligence() {
                 <div className="grid md:grid-cols-2 md:gap-16 items-center">
                     <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
                         <span className="text-gray-700">See the patterns behind </span>
-                        <br/>
+                        <br className="hidden md:block"/>
                         <span className="text-olive">individual responses.</span>
                     </h2>
                 </div>
@@ -89,7 +89,7 @@ export default function StakeholderIntelligence() {
 
                         <Link
                             href="#"
-                            className="inline-block bg-olive text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat mt-10"
+                            className="inline-block bg-olive text-white px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-olive/90 transition-colors font-Montserrat mt-10"
                         >
                             Book a Platform Demo
                         </Link>

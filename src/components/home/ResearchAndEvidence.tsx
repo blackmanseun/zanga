@@ -12,10 +12,10 @@ export default function ResearchAndEvidence() {
             <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
               Research and Evidence
             </span>
-            <h2 className="text-3xl md:text-[3rem] leading-[1.1] font-bold text-white mt-3 font-MonaSans max-w-3xl">
+            <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-white mt-3 font-MonaSans max-w-3xl">
               Building a stronger evidence base for how Africa leads and works.
             </h2>
-            <p className="text-white/70 text-base md:text-lg leading-relaxed font-Montserrat mt-5 max-w-3xl">
+            <p className="text-white/70 text-[14px] md:text-[16px] leading-relaxed font-Montserrat mt-5 max-w-3xl">
               Zanga&apos;s research transforms assessment and workforce data into insight for
               employers, leaders, partners and policymakers. Our growing dataset helps surface
               patterns across leadership competencies, cultural values, gender, generations and
@@ -33,7 +33,7 @@ export default function ResearchAndEvidence() {
               <h3 className="text-2xl md:text-[1.75rem] font-bold text-white mt-2 mb-3 font-MonaSans">
                 The Africa Workforce Report
               </h3>
-              <p className="text-white/70 font-Montserrat leading-relaxed mb-6 max-w-2xl">
+              <p className="text-white/70 font-Montserrat leading-relaxed text-[16px] mb-6 max-w-2xl">
                 Explore what our data reveals about leadership capability, cultural values and the
                 future of work across African organisations.
               </p>
@@ -70,9 +70,6 @@ export default function ResearchAndEvidence() {
               <span className="absolute top-4 left-4 w-11 h-11 rounded-full bg-olive text-white flex items-center justify-center shadow-lg">
                 <FiFileText size={18} aria-hidden="true" />
               </span>
-              <p className="absolute bottom-4 left-4 right-4 text-white text-xs font-Montserrat">
-                943+ leaders assessed across African organisations
-              </p>
             </div>
           </div>
         </Reveal>

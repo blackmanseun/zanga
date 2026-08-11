@@ -68,7 +68,7 @@ const socialLinks = [
 export default function Footer() {
     return (
         <footer className="bg-white border-t border-gray-200">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:py-16 py-8">
                 <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10">
                     <div>
                         <Link href="/" className="block mb-4">
@@ -125,7 +125,7 @@ export default function Footer() {
                 </div>
 
                 <div
-                    className="border-t border-gray-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    className="border-t border-gray-200 pt-6 flex flex-col sm:flex-row items-center justify-between md:gap-4">
                     <p className="text-gray-500 text-md font-Montserrat">
                         © {new Date().getFullYear()} Zanga. All rights reserved.
                     </p>

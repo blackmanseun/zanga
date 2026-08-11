@@ -136,9 +136,9 @@ const cards: Card[] = [
     Icon: FiCheckCircle,
     description:
       'Use clear reports, dashboards, benchmarks and recommendations to improve decisions, development and organisational response.',
-    color: '#c55e36',
+    color: '#475569',
     arrowFg: 'text-white',
-    mockup: <ActMockup accent="#c55e36" />,
+    mockup: <ActMockup accent="#475569" />,
   },
 ]
 
@@ -146,19 +146,16 @@ export default function HowItWorks() {
   return (
     <section
       style={{
-        backgroundColor: 'rgb(250, 248, 246)',
-        backgroundImage:
-          'linear-gradient(rgba(16, 24, 58, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 24, 58, 0.05) 1px, transparent 1px)',
-        backgroundSize: '48px 48px',
+        backgroundColor: 'rgb(250, 248, 246)'
       }}
-      className="py-20 px-4 sm:px-6 lg:px-8"
+      className="md:py-20 py-14 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
             How It Works
           </span>
-          <h2 className="text-3xl md:text-[3rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-3xl">
+          <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-3xl">
             From dispersed sentiment to decisions your organisation can use.
           </h2>
         </div>

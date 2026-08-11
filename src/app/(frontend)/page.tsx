@@ -9,11 +9,8 @@ import SolutionCards from '@/components/home/SolutionCards'
 import StakeholderIntelligence from '@/components/home/StakeholderIntelligence'
 import ResearchAndEvidence from '@/components/home/ResearchAndEvidence'
 import BuildWithZanga from '@/components/home/BuildWithZanga'
-import WhiteLabel from '@/components/home/WhiteLabel'
-import Testimonials from '@/components/home/Testimonials'
 import InsightsReport from '@/components/home/InsightsReport'
 import InsightsTeaser from '@/components/home/InsightsTeaser'
-import Faq from '@/components/home/Faq'
 import ReadyCta from '@/components/home/ReadyCta'
 
 export default function HomePage() {

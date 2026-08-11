@@ -80,14 +80,14 @@ export default function Hero() {
   return (
     <section
       style={{ backgroundColor: 'rgb(250, 248, 246)' }}
-      className="py-20 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="pb-20 pt-12 md:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <Reveal x={-24} y={0}>
-          <h1 className="text-[2rem] md:text-[3rem] font-bold leading-tight text-gray-700 font-MonaSans mb-6">
+          <h1 className="text-[2.2rem] md:text-[3rem] font-bold leading-tight text-gray-700 font-MonaSans mb-6">
             Understand the people and stakeholders your organisation depends on.
           </h1>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed font-Montserrat max-w-xl mb-10">
+          <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed font-Montserrat max-w-xl mb-10">
             Zanga combines culturally intelligent assessments, sentiment collection and workforce
             analytics to help organisations make better decisions about leadership, talent,
             engagement and stakeholder risk.
@@ -95,13 +95,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="#"
-              className="text-center bg-olive text-white px-8 py-4 rounded-md font-bold text-base hover:bg-olive/90 transition-colors font-Montserrat"
+              className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
             >
               Book a Demo
             </Link>
             <Link
               href="#"
-              className="text-center border border-terracotta text-terracotta px-8 py-4 rounded-md font-semibold text-base hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
+              className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
             >
               Explore Zanga Solutions
             </Link>
