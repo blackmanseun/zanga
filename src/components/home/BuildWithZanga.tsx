@@ -35,7 +35,7 @@ export default function BuildWithZanga() {
   return (
     <section className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <span className="text-olive text-md uppercase tracking-widest font-Montserrat font-semibold">
+        <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
           Partnerships
         </span>
 

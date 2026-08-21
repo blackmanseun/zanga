@@ -87,7 +87,7 @@ export default function Hero() {
           <h1 className="text-[2.2rem] md:text-[3rem] font-bold leading-tight text-gray-700 font-MonaSans mb-6">
             Understand the people and stakeholders your organisation depends on.
           </h1>
-          <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed font-Montserrat max-w-xl mb-10">
+          <p className="text-gray-600 text-[16px] md:text-[17px] leading-relaxed font-Montserrat max-w-xl mb-10">
             Zanga combines culturally intelligent assessments, sentiment collection and workforce
             analytics to help organisations make better decisions about leadership, talent,
             engagement and stakeholder risk.

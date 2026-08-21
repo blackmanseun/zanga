@@ -53,7 +53,7 @@ export default function StakeholderIntelligence() {
         <section
             className="md:pb-20 md:pt-0 py-14 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto ">
-              <span className="text-olive text-md uppercase tracking-widest font-Montserrat font-semibold">
+              <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
            PLATFORM AND REPORTING
           </span>
 
