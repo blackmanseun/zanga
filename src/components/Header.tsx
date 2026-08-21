@@ -32,7 +32,7 @@ const navItems: NavItem[] = [
         {
           heading: 'By Business Need',
           links: [
-            { label: 'Hire Better People', href: '#' },
+            { label: 'Hire Better People', href: '/solutions/hire-better-people' },
             { label: 'Develop Stronger Leaders', href: '#' },
             { label: 'Build High-Performing Teams', href: '#' },
             { label: 'Improve Engagement & Retention', href: '#' },
@@ -44,7 +44,7 @@ const navItems: NavItem[] = [
         {
           heading: 'By Organisation Type',
           links: [
-            { label: 'Enterprises', href: '#' },
+            { label: 'Enterprises', href: '/solutions/enterprises' },
             { label: 'SMEs & Growth Businesses', href: '#' },
             { label: 'Financial Institutions', href: '#' },
             { label: 'Development Organisations', href: '#' },
@@ -54,13 +54,13 @@ const navItems: NavItem[] = [
           ],
         },
         {
-          heading: 'Featured Paths',
+          heading: 'Start Here',
           variant: 'promo',
           links: [
-            { label: 'Find the Right Assessment', href: '#' },
-            { label: 'Explore Zanga 2.0', href: '#' },
-            { label: 'Download the Africa Workforce Report', href: '#' },
-            { label: 'Book a Demo', href: '#' },
+            { label: 'Not sure which Zanga tool you need?', href: '#' },
+            { label: 'Discover the wider intelligence ecosystem', href: '#' },
+            { label: 'Explore our latest research', href: '#' },
+            { label: 'Talk to us about your organisation', href: '#' },
           ],
         },
       ],
@@ -399,7 +399,7 @@ export default function Header() {
         ref={headerRef}
         className={`${isFixed ? 'fixed' : 'relative'} top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 py-4 transition-shadow duration-200 ${isFixed ? 'shadow-md' : ''}`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-0">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="text-xl font-bold text-gray-900 font-MonaSans tracking-tight">
               <img className="w-[60px]" src="/images/zanga-logo.svg" />
