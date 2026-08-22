@@ -86,76 +86,74 @@ export default function Hero() {
     <section
       ref={ref}
       style={{ backgroundColor: 'rgb(250, 248, 246)' }}
-      className="z-10 overflow-hidden relative w-full font-Montserrat"
+      className="z-10 overflow-hidden relative w-full font-Montserrat px-4 sm:px-6 lg:px-8"
     >
-      <div className="px-4 md:px-0 py-16 md:pt-0 md:pb-28 mx-auto md:grid grid-cols-12 overflow-hidden md:relative md:z-10 max-w-7xl">
-        <div className="col-span-12 grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-y-0">
-          <div className="order-1 md:order-none md:pt-[50px] md:col-span-7 md:row-start-1 text-left z-10 relative md:mt-[70px]">
-            <h1 className="text-[2.2rem] md:text-[3rem] font-bold leading-tight text-gray-700 font-MonaSans mb-6">
-              Make better hiring <br className="hidden md:block"/>decisions with insight
-              <br className="hidden md:block"/>
-              <span className=" leading-[1.4] px-1">that goes beyond the CV.</span>
-            </h1>
-            <p className="text-gray-600 text-[16px] md:text-[17px] leading-relaxed font-Montserrat max-w-xl mb-10">
-              Find people who don&apos;t just look right on paper, but have the capabilities,
-              behaviours and potential to succeed in the role and your organisation. Zanga
-              combines culturally intelligent psychometric and leadership assessments with
-              actionable talent insights to help you select with greater confidence.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="#"
-                className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
-              >
-                Request a Demo
-              </Link>
-            </div>
+      <div className="py-16 md:pt-0 md:pb-28 mx-auto overflow-hidden md:relative md:z-10 max-w-7xl grid grid-cols-1 md:grid-cols-[7fr_5fr] gap-y-8 md:gap-y-0">
+        <div className="md:w-[90%] xl:w-full order-1 md:order-none md:pt-[50px] md:col-start-1 md:row-start-1 text-left z-10 relative md:mt-[70px]">
+          <h1 className="text-[2.2rem] md:text-[3rem] font-bold leading-tight text-gray-700 font-MonaSans mb-6">
+            Make better hiring <br className="hidden md:block"/>decisions with insight
+            <br className="hidden md:block"/>
+            <span className=" leading-[1.4] px-1">that goes beyond the CV.</span>
+          </h1>
+          <p className="text-gray-600 text-[16px] md:text-[17px] leading-relaxed font-Montserrat max-w-xl mb-10">
+            Find people who don&apos;t just look right on paper, but have the capabilities,
+            behaviours and potential to succeed in the role and your organisation. Zanga
+            combines culturally intelligent psychometric and leadership assessments with
+            actionable talent insights to help you select with greater confidence.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="#"
+              className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
+            >
+              Request a Demo
+            </Link>
+          </div>
+        </div>
+
+        <div className="order-2 md:order-none md:col-start-2 md:row-start-1 md:row-span-2 md:relative md:w-[80%] md:mt-0">
+          <div className="md:hidden mx-auto">
+            <Swiper
+              effect="flip"
+              modules={[EffectFlip, Autoplay]}
+              slidesPerView={1}
+              loop
+              grabCursor
+              autoplay={{ delay: 2600, disableOnInteraction: false }}
+            >
+              {allCards.map((card) => (
+                <SwiperSlide key={`${card.image}-${card.trait}`}>
+                  <PersonInsightCard card={card} className="h-72" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
-          <div className="order-2 md:order-none md:col-start-8 md:col-span-5 md:row-start-1 md:row-span-2 md:relative md:w-[80%] md:mt-0">
-            <div className="md:hidden mx-auto">
-              <Swiper
-                effect="flip"
-                modules={[EffectFlip, Autoplay]}
-                slidesPerView={1}
-                loop
-                grabCursor
-                autoplay={{ delay: 2600, disableOnInteraction: false }}
-              >
-                {allCards.map((card) => (
-                  <SwiperSlide key={`${card.image}-${card.trait}`}>
-                    <PersonInsightCard card={card} className="h-72" />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
+          <div className="hidden md:flex justify-center gap-4 flex-row">
+            <motion.div
+              style={isDesktop ? { translateY: scaleYProgress } : {}}
+              transition={{ type: 'spring', stiffness: 80 }}
+              className="flex flex-col gap-5"
+            >
+              {columnOne.map((card) => (
+                <PersonInsightCard key={`${card.image}-${card.trait}`} card={card} />
+              ))}
+            </motion.div>
 
-            <div className="hidden md:flex justify-center gap-4 flex-row">
-              <motion.div
-                style={isDesktop ? { translateY: scaleYProgress } : {}}
-                transition={{ type: 'spring', stiffness: 80 }}
-                className="flex flex-col gap-5"
-              >
-                {columnOne.map((card) => (
-                  <PersonInsightCard key={`${card.image}-${card.trait}`} card={card} />
-                ))}
-              </motion.div>
-
-              <motion.div
-                style={isDesktop ? { translateY: reverseScaleYProgress } : {}}
-                transition={{ type: 'spring', stiffness: 80 }}
-                className="flex flex-col gap-5"
-              >
-                {columnTwo.map((card) => (
-                  <PersonInsightCard key={`${card.image}-${card.trait}`} card={card} />
-                ))}
-              </motion.div>
-            </div>
+            <motion.div
+              style={isDesktop ? { translateY: reverseScaleYProgress } : {}}
+              transition={{ type: 'spring', stiffness: 80 }}
+              className="flex flex-col gap-5"
+            >
+              {columnTwo.map((card) => (
+                <PersonInsightCard key={`${card.image}-${card.trait}`} card={card} />
+              ))}
+            </motion.div>
           </div>
+        </div>
 
-          <div className="order-3 md:order-none md:col-start-1 md:col-span-7 md:row-start-2">
-            <LogoMarquee/>
-          </div>
+        <div className="order-3 md:order-none md:col-start-1 md:row-start-2">
+          <LogoMarquee/>
         </div>
       </div>
     </section>

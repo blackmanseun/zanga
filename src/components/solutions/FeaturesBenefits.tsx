@@ -86,7 +86,7 @@ export default function FeaturesBenefits() {
                 </Reveal>
 
                 <div className="flex flex-col gap-12">
-                    <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full md:w-[80%] mx-auto">
+                    <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
                                 className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/17.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4">
@@ -202,7 +202,7 @@ export default function FeaturesBenefits() {
                         </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full md:w-[80%] mx-auto">
+                    <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div className="p-4 col-span-3">
                                 <span
@@ -281,7 +281,7 @@ export default function FeaturesBenefits() {
                         </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full md:w-[80%] mx-auto">
+                    <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
                                 className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/19.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
@@ -349,7 +349,7 @@ export default function FeaturesBenefits() {
                         </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full md:w-[80%] mx-auto">
+                    <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div className="p-4 col-span-3">
                                 <span
@@ -446,7 +446,7 @@ export default function FeaturesBenefits() {
                         </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full md:w-[80%] mx-auto">
+                    <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
                                 className="relative col-span-2 min-h-[280px] md:min-h-[420px] py-10 md:py-0 bg-[url('/images/18.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex items-center justify-center ">

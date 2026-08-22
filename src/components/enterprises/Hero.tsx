@@ -48,7 +48,7 @@ export default function Hero() {
                 <div>
                     <Squiggle/>
                     <h1 className="text-[2.2rem] md:text-[2.8rem] font-bold leading-tight text-gray-700 font-MonaSans mb-6">
-                        Understand your people.<br className="hidden md:block"/>Strengthen your leadership.
+                        Understand your people. <br className="hidden xl:block"/>Strengthen your leadership.
                         <span className=" leading-[1.4] px-1">Make better workforce decisions.</span>
                     </h1>
 
@@ -57,7 +57,7 @@ export default function Hero() {
                         Zanga brings together culturally intelligent leadership, talent, workforce and
                         stakeholder insights to help enterprise teams make better decisions at scale.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="hidden xl:flex flex-col sm:flex-row gap-4">
                         <Link
                             href="#"
                             className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
@@ -71,23 +71,37 @@ export default function Hero() {
                             Explore Zanga Solutions
                         </Link>
                     </div>
+                    <div className="xl:hidden flex flex-col sm:flex-row gap-4">
+                        <Link
+                            href="#"
+                            className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
+                        >
+                            Book a Demo
+                        </Link>
+                        <Link
+                            href="#"
+                            className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
+                        >
+                            Explore Zanga Solutions
+                        </Link>
+                    </div>
                 </div>
 
-                <div className="relative w-full max-w-[420px] h-[420px] sm:h-[460px] mx-auto hidden md:block">
+                <div className="relative w-full max-w-[420px] h-[420px] sm:h-[460px] mx-auto  md:block">
                     <Polaroid
-                        imgClassName="h-[250px]"
+                        imgClassName="md:h-[250px] h-[200px]"
                         src="/images/14.jpg"
-                        className="w-[250px] h-[280px] top-[-10%] left-0 -rotate-3 z-10"
+                        className="w-[250px] md:h-[280px] h-[250px] md:top-[-10%] top-0 left-0 md:-rotate-3 z-10"
                     />
                     <Polaroid
-                        imgClassName="h-[200px]"
+                        imgClassName="md:h-[200px] h-[180px]"
                         src="/images/13.jpg"
                         className="w-[60%] top-[14%] -right-10 rotate-[8deg] z-20"
                     />
                     <Polaroid
-                        imgClassName="h-[220px]"
+                        imgClassName="md:h-[220px] h-[180px]"
                         src="/images/12.jpg"
-                        className="w-[60%] top-[46%] left-[-2%] rotate-[-10deg] z-30"
+                        className="w-[60%] top-[46%] md:left-[-2%] left-2 rotate-[-10deg] z-30"
                     />
                     <span
                         className="animate-pulse absolute right-2 bottom-0 w-14 h-14 rounded-full bg-terracotta/10 border border-terracotta/20"
@@ -95,7 +109,7 @@ export default function Hero() {
                     />
                 </div>
 
-                <div className="grid grid-cols-3 gap-3 md:hidden">
+                <div className="grid grid-cols-3 gap-3 hidden">
                     <Polaroid positioned={false} src="/images/12.jpg" className="w-full" imgClassName="h-24"/>
                     <Polaroid positioned={false} src="/images/10.jpg" className="w-full" imgClassName="h-24"/>
                     <Polaroid positioned={false} src="/images/15.jpg" className="w-full" imgClassName="h-24"/>

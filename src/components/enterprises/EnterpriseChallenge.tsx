@@ -18,19 +18,18 @@ export default function EnterpriseChallenge() {
                 <div className="hidden lg:block absolute -top-10 right-0">
                     <ParallaxVinyl
                         leftImages={['/images/13.jpg']}
-                        rightImages={['/images/6.jpg','/images/12.jpg', '/images/13.jpg', '/images/14.jpg', '/images/9.jpg']}
+                        rightImages={['/images/6.jpg', '/images/12.jpg', '/images/13.jpg', '/images/14.jpg', '/images/9.jpg']}
                     />
                 </div>
 
                 <Reveal>
-                    <div className="max-w-xl">
+                    <div className="md:max-w-lg xl:max-w-xl">
                         <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
            Enterprise Challenge
           </span>
 
-                        <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
-                            <span className="text-gray-700">The enterprise</span> <br/>
-                            <span className="text-olive">challenge</span>
+                        <h2 className="mb-6 text-gray-700 text-3xl md:text-[2.8rem] font-bold mt-3 font-MonaSans leading-[1.1]">
+                            The enterprise challenge
                         </h2>
 
                         <div className="space-y-4">
