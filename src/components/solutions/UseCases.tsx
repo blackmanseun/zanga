@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {FiAward, FiTrendingUp, FiLayers, FiArrowRight} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
+import BoldZanga from '@/components/ui/BoldZanga'
 
 type UseCase = {
     title: string
@@ -62,12 +63,12 @@ export default function UseCases() {
                     </h2>
                 </Reveal>
 
-                <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-start">
+                <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-stretch">
                     {useCases.map((useCase, i) => (
-                        <Reveal key={useCase.title} delayMs={i * 100}>
-                            <div className={i === 1 ? 'md:-translate-y-6' : ''}>
+                        <Reveal key={useCase.title} delayMs={i * 100} className="h-full">
+                            <div className="h-full flex flex-col">
                                 <div
-                                    className={`rounded-2xl p-1 bg-white overflow-hidden ${i === 1 ? 'h-56 md:h-64' : 'h-48 md:h-56'}`}
+                                    className={`rounded-2xl p-1 bg-white overflow-hidden shrink-0 ${i === 1 ? 'h-56 md:h-64' : 'h-48 md:h-56'}`}
                                 >
                                     <img
                                         src={useCase.image}
@@ -76,7 +77,7 @@ export default function UseCases() {
                                     />
                                 </div>
 
-                                <div className="relative -mt-24 mx-3 bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+                                <div className="relative -mt-24 mx-3 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex flex-col flex-1">
                                     <span
                                         className="w-10 h-10 rounded-full flex items-center justify-center mb-4"
                                         style={{backgroundColor: `${useCase.color}1F`, color: useCase.color}}
@@ -90,11 +91,11 @@ export default function UseCases() {
                                         {useCase.tagline}
                                     </p>
                                     <p className="text-gray-500 text-sm font-Montserrat leading-relaxed mb-5">
-                                        {useCase.description}
+                                        <BoldZanga text={useCase.description}/>
                                     </p>
                                     <Link
                                         href="#"
-                                        className="inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
+                                        className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                     >
                                         {useCase.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>

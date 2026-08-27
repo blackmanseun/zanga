@@ -20,13 +20,13 @@ export default function WhiteLabel() {
             <span className="text-olive">Branded as Your Own.</span>
           </h2>
           <p className="text-white/70 font-Montserrat leading-relaxed mb-4">
-            Every organisation is different. That&apos;s why Zanga&apos;s platform can be customised to reflect your
+            Every organisation is different. That&apos;s why <strong>Zanga</strong>&apos;s platform can be customised to reflect your
             brand, industry, and operating context. From white-label assessments and co-branded reports to
             tailored competency frameworks and sector-specific insights, we help you deliver a seamless experience
             that feels like an extension of your organisation — not an external tool.
           </p>
           <p className="text-white/70 font-Montserrat leading-relaxed mb-8">
-            Zanga gives you the flexibility to own the client experience while benefiting from world-class
+<strong>Zanga</strong> gives you the flexibility to own the client experience while benefiting from world-class
             leadership science.
           </p>
 
@@ -88,7 +88,7 @@ export default function WhiteLabel() {
           </div>
 
           <div className="mt-6 pt-4 border-t border-gray-100 text-center">
-            <span className="text-[10px] text-gray-300 font-Montserrat">Powered by Zanga</span>
+            <span className="text-[10px] text-gray-300 font-Montserrat">Powered by <strong>Zanga</strong></span>
           </div>
         </div>
       </div>

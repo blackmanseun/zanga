@@ -68,7 +68,7 @@ export default function StakeholderIntelligence() {
                 <div className="grid md:grid-cols-2 gap-16 items-start">
                     <div>
                         <p className="text-gray-500 font-Montserrat leading-relaxed mb-10">
-                            Zanga turns assessments and sentiment into practical organisational
+<strong>Zanga</strong> turns assessments and sentiment into practical organisational
                             intelligence. Track participation, compare teams, identify capability gaps,
                             understand workforce trends and provide leaders with clearer evidence for
                             action.

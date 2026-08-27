@@ -148,7 +148,7 @@ export default function CoachesPartnersPage() {
               Join Our Network
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 font-MonaSans">
-              Are You a Coach? Apply to Join Zanga.
+              Are You a Coach? Apply to Join <strong>Zanga</strong>.
             </h2>
             <p className="text-gray-400 mt-4 max-w-xl mx-auto font-Montserrat">
               We accept the top 5% of applicants. If you have deep sector experience, recognised credentials,

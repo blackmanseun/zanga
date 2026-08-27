@@ -5,6 +5,7 @@ import {AiFillStar} from "react-icons/ai";
 import {FaInstagram, FaTiktok, FaYoutube} from "react-icons/fa";
 import {PiBrainLight} from "react-icons/pi";
 import {LiaShoePrintsSolid} from "react-icons/lia";
+import { FaArrowTrendDown } from "react-icons/fa6";
 
 function MiniBar({label, value}: { label: string; value: number }) {
     return (
@@ -169,11 +170,11 @@ export default function FeaturesBenefits() {
                                 Insight
                             </span>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4 font-MonaSans">
-                                    Understand the Person <br/>Behind the CV
+                                    Understand the person behind the CV
                                 </h3>
                                 <p
                                     className="text-gray-600 text-sm leading-relaxed font-Montserrat mb-3 last:mb-5">
-                                    Experience tells you what a candidate has done. Zanga helps you understand how they
+                                    Experience tells you what a candidate has done. <strong>Zanga</strong> helps you understand how they
                                     are likely to think, behave, communicate and approach their work.
                                 </p>
                                 <p
@@ -182,8 +183,9 @@ export default function FeaturesBenefits() {
                                     more complete picture of the person you are considering.
                                 </p>
                                 <div className="pt-10">
-                                    <p className="text-xs text-gray-400 font-Montserrat mb-2">
-                                        Zanga solution
+                                    <p className="flex items-center gap-1 text-sm text-gray-600 font-Montserrat mb-2">
+                                        <strong>Zanga</strong> solution
+                                        <span><FaArrowTrendDown className="text-terracotta" size={18}/></span>
                                     </p>
                                     <div className="flex md:flex-row flex-col items-center gap-2">
                                         <div
@@ -210,7 +212,7 @@ export default function FeaturesBenefits() {
                                 Role Fit
                             </span>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4 font-MonaSans">
-                                    Make Better <br/>Role-Fit Decisions
+                                    Make better role-fit decisions
                                 </h3>
                                 <p
                                     className="text-gray-600 text-sm leading-relaxed font-Montserrat mb-3 last:mb-5">
@@ -223,8 +225,9 @@ export default function FeaturesBenefits() {
                                     there is strong alignment and where further exploration may be needed.
                                 </p>
                                 <div className="pt-10">
-                                    <p className="text-xs text-gray-400 font-Montserrat mb-2">
-                                        Zanga solution
+                                    <p className="flex items-center gap-1 text-sm text-gray-600 font-Montserrat mb-2">
+                                        <strong>Zanga</strong> solution
+                                        <span><FaArrowTrendDown className="text-terracotta" size={18}/></span>
                                     </p>
                                     <div className="flex md:flex-row flex-col items-center gap-2">
                                         <div
@@ -315,7 +318,7 @@ export default function FeaturesBenefits() {
                                 Objectivity
                             </span>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4 font-MonaSans">
-                                    Reduce Subjectivity <br/>in Selection
+                                    Reduce subjectivity in selection
                                 </h3>
                                 <p
                                     className="text-gray-600 text-sm leading-relaxed font-Montserrat mb-3 last:mb-5">
@@ -324,13 +327,14 @@ export default function FeaturesBenefits() {
                                 </p>
                                 <p
                                     className="text-gray-600 text-sm leading-relaxed font-Montserrat mb-3 last:mb-5">
-                                    Zanga introduces a structured evidence base that gives hiring teams a more
+<strong>Zanga</strong> introduces a structured evidence base that gives hiring teams a more
                                     consistent way to understand and compare candidates, while complementing rather
                                     than replacing professional judgement.
                                 </p>
                                 <div className="pt-10">
-                                    <p className="text-xs text-gray-400 font-Montserrat mb-2">
-                                        Zanga solution
+                                    <p className="flex items-center gap-1 text-sm text-gray-600 font-Montserrat mb-2">
+                                        <strong>Zanga</strong> solution
+                                        <span><FaArrowTrendDown className="text-terracotta" size={18}/></span>
                                     </p>
                                     <div className="flex md:flex-row flex-col items-center gap-2">
                                         <div
@@ -357,7 +361,7 @@ export default function FeaturesBenefits() {
                                 Leadership
                             </span>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4 font-MonaSans">
-                                    Make Stronger <br/>Leadership Appointments
+                                    Make stronger leadership appointments
                                 </h3>
                                 <p
                                     className="text-gray-600 text-sm leading-relaxed font-Montserrat mb-3 last:mb-5">
@@ -370,8 +374,9 @@ export default function FeaturesBenefits() {
                                     insights to strengthen final interviews, references and onboarding.
                                 </p>
                                 <div className="pt-10">
-                                    <p className="text-xs text-gray-400 font-Montserrat mb-2">
-                                        Zanga solution
+                                    <p className="flex items-center gap-1 text-sm text-gray-600 font-Montserrat mb-2">
+                                        <strong>Zanga</strong> solution
+                                        <span><FaArrowTrendDown className="text-terracotta" size={18}/></span>
                                     </p>
                                     <div className="flex md:flex-row flex-col items-center gap-2">
                                         <div
@@ -527,7 +532,7 @@ export default function FeaturesBenefits() {
                                 Potential
                             </span>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4 font-MonaSans">
-                                    Identify Potential, Not <br/>Just Current Performance
+                                    Identify potential, not just current performance
                                 </h3>
                                 <p
                                     className="text-gray-600 text-sm leading-relaxed font-Montserrat mb-3 last:mb-5">
@@ -536,13 +541,14 @@ export default function FeaturesBenefits() {
                                 </p>
                                 <p
                                     className="text-gray-600 text-sm leading-relaxed font-Montserrat mb-3 last:mb-5">
-                                    Zanga helps organisations identify indicators of leadership potential and
+<strong>Zanga</strong> helps organisations identify indicators of leadership potential and
                                     readiness for greater responsibility, supporting graduate recruitment,
                                     emerging-talent programmes and succession pipelines.
                                 </p>
                                 <div className="pt-10">
-                                    <p className="text-xs text-gray-400 font-Montserrat mb-2">
-                                        Zanga solution
+                                    <p className="flex items-center gap-1 text-sm text-gray-600 font-Montserrat mb-2">
+                                        <strong>Zanga</strong> solution
+                                        <span><FaArrowTrendDown className="text-terracotta" size={18}/></span>
                                     </p>
                                     <div className="flex md:flex-row flex-col items-center gap-2">
                                         <div

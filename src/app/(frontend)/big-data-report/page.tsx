@@ -72,7 +72,7 @@ export default function BigDataReportPage() {
               Annual Research
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6 font-MonaSans leading-tight">
-              Zanga Big Data Report 2025
+<strong>Zanga</strong> Big Data Report 2025
             </h1>
             <p className="text-gray-300 text-lg font-Montserrat leading-relaxed mb-8">
               Our flagship annual research publication analysing leadership development, coaching impact,
@@ -207,7 +207,7 @@ export default function BigDataReportPage() {
               Download the Report →
             </button>
             <p className="text-gray-600 text-xs text-center font-Montserrat">
-              By submitting this form you agree to Zanga's Privacy Policy. We'll never share your data.
+              By submitting this form you agree to <strong>Zanga</strong>'s Privacy Policy. We'll never share your data.
             </p>
           </form>
         </div>

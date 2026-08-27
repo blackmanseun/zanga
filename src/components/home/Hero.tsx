@@ -88,7 +88,7 @@ export default function Hero() {
             Understand the people and stakeholders your organisation depends on.
           </h1>
           <p className="text-gray-600 text-[16px] md:text-[17px] leading-relaxed font-Montserrat max-w-xl mb-10">
-            Zanga combines culturally intelligent assessments, sentiment collection and workforce
+<strong>Zanga</strong> combines culturally intelligent assessments, sentiment collection and workforce
             analytics to help organisations make better decisions about leadership, talent,
             engagement and stakeholder risk.
           </p>
@@ -97,7 +97,7 @@ export default function Hero() {
               href="#"
               className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
             >
-              Book a Demo
+              Take a free assessment
             </Link>
             <Link
               href="#"

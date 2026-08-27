@@ -40,7 +40,7 @@ export default function CulturalContext() {
                 <p className="text-white/70 font-Montserrat leading-relaxed mb-4">
                   Leadership, engagement and stakeholder sentiment are shaped by culture. The same
                   behaviour, response or score can carry different meaning across workplaces and
-                  markets. Zanga is designed to interpret people data with greater sensitivity to
+                  markets. <strong>Zanga</strong> is designed to interpret people data with greater sensitivity to
                   high-context environments, including the influence of hierarchy, relationships,
                   community, indirect communication and local values.
                 </p>

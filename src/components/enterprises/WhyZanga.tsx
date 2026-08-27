@@ -58,13 +58,13 @@ export default function WhyZanga() {
                             <Panel
                                 src="/images/23.jpg"
                                 alt="A team bringing their hands together in agreement"
-                                className="md:h-56 h-40 rounded-2xl rounded-bl-none"
+                                className="md:h-56 h-36 rounded-2xl rounded-bl-none"
                                 objectPosition="[object-position:0%_25%]"
                             />
                             <Panel
                                 src="/images/21.jpg"
                                 alt="A team bringing their hands together in agreement"
-                                className="h-24 rounded-2xl rounded-tl-none md:w-[50%] w-[70%]"
+                                className="md:h-40 h-28 rounded-2xl rounded-tl-none md:w-[50%] w-[70%]"
                                 objectPosition="[object-position:50%_20%]"
                             />
                         </div>
@@ -73,7 +73,7 @@ export default function WhyZanga() {
 
                 <Reveal delayMs={120}>
                     <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
-                        Why Zanga
+                        Why <strong>Zanga</strong>
                     </span>
                     <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold mt-3 mb-6 font-MonaSans text-gray-700">
                         Global standards. Contextual intelligence.
@@ -83,7 +83,7 @@ export default function WhyZanga() {
                         people actually work.
                     </p>
                     <p className="text-gray-500 text-[16px] font-Montserrat leading-relaxed mb-8">
-                        Zanga combines research-backed assessment methodologies with cultural
+                        <strong>Zanga</strong> combines research-backed assessment methodologies with cultural
                         intelligence designed for African and other high-context workplaces. This helps
                         organisations understand not just what the data says, but what it means for
                         their leaders, teams and organisational context.

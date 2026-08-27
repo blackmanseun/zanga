@@ -14,6 +14,7 @@ import {
 } from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
+import BoldZanga from '@/components/ui/BoldZanga'
 
 type Category = {
     title: string
@@ -116,7 +117,7 @@ export default function InsightsTeaser() {
                                         {article.description}
                                     </p>
                                     <p className="text-xs text-gray-400 font-Montserrat">
-                                        by <span className="font-semibold text-gray-600">{article.author}</span> in{' '}
+                                        by <span className="font-semibold text-gray-600"><BoldZanga text={article.author}/></span> in{' '}
                                         <span className="font-semibold text-gray-600">{article.category}</span>
                                     </p>
                                 </div>

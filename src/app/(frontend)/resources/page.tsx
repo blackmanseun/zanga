@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import BoldZanga from '@/components/ui/BoldZanga'
 
 const resourceTypes = [
   { label: 'All Resources', count: 24 },
@@ -144,7 +145,7 @@ export default function ResourcesPage() {
                     </span>
                   </div>
                   <h3 className="text-gray-900 font-bold mb-2 font-MonaSans leading-snug">{r.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-4 font-Montserrat">{r.description}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4 font-Montserrat"><BoldZanga text={r.description}/></p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {r.tags.map((tag) => (
                       <span
@@ -178,7 +179,7 @@ export default function ResourcesPage() {
             Can't find what you need?
           </span>
           <h2 className="text-3xl font-bold mt-3 mb-4 font-MonaSans">
-            Talk to a Zanga Advisor
+            Talk to a <strong>Zanga</strong> Advisor
           </h2>
           <p className="text-gray-400 mb-8 font-Montserrat">
             Our team can point you to the right resources or create bespoke content for your organisation's specific needs.

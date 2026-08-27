@@ -124,7 +124,7 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2 font-MonaSans">Book a Demo</h2>
             <p className="text-gray-500 text-sm mb-8 font-Montserrat">
-              Schedule a 30-minute call with a Zanga advisor to see the platform in action and discuss your needs.
+              Schedule a 30-minute call with a <strong>Zanga</strong> advisor to see the platform in action and discuss your needs.
             </p>
             <div className="bg-gray-50 rounded-xl border border-gray-100 p-8 min-h-[400px] flex flex-col items-center justify-center text-center">
               <div className="text-5xl mb-4">📅</div>

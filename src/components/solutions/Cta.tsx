@@ -32,7 +32,7 @@ export default function Cta() {
                                         href="#"
                                         className="border border-white text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-primary transition-colors font-Montserrat text-center"
                                     >
-                                        Take an Assessment
+                                        Take a free assessment
                                     </Link>
                                 </div>
                                 <p className="text-white/40 font-Montserrat text-sm">

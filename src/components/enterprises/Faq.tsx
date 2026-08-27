@@ -23,14 +23,16 @@ const faqs: FaqItem[] = [
     {
         Icon: FiGrid,
         question: 'Can Zanga support large organisations with multiple business units?',
-        answer:
-            'Yes. Zanga can structure assessment, engagement and workforce-intelligence programmes across teams, functions and business units, with reporting designed for both individual and organisational decision-making.',
+        answer: (
+            <>Yes. <strong>Zanga</strong> can structure assessment, engagement and workforce-intelligence programmes across teams, functions and business units, with reporting designed for both individual and organisational decision-making.</>
+        ),
     },
     {
         Icon: FiSliders,
         question: 'Can we customise Zanga assessments to our leadership framework?',
-        answer:
-            'Depending on the engagement, Zanga can work with organisations to align assessment and reporting approaches with existing competency frameworks and organisational priorities.',
+        answer: (
+            <>Depending on the engagement, <strong>Zanga</strong> can work with organisations to align assessment and reporting approaches with existing competency frameworks and organisational priorities.</>
+        ),
     },
     {
         Icon: FiPieChart,
@@ -47,8 +49,9 @@ const faqs: FaqItem[] = [
     {
         Icon: FiGlobe,
         question: 'Can Zanga support organisations operating across different African markets?',
-        answer:
-            "Yes. Zanga's approach is designed for culturally diverse and high-context workplaces, while recognising that context differs across markets and organisations.",
+        answer: (
+            <>Yes. <strong>Zanga</strong>&apos;s approach is designed for culturally diverse and high-context workplaces, while recognising that context differs across markets and organisations.</>
+        ),
     },
 ]
 
@@ -64,24 +67,12 @@ export default function Faq() {
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                         <div>
               <span
-                  className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
+                  className="text-olive text-sm tracking-widest font-Montserrat font-semibold">
                   FAQs
               </span>
                             <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
                                 Frequently Asked Questions
                             </h2>
-                        </div>
-                        <div className="md:text-right shrink-0">
-                            <p className="text-gray-500 font-Montserrat mb-2">
-                                Can&apos;t find what you&apos;re looking for?
-                            </p>
-                            <Link
-                                href="#"
-                                className="inline-flex items-center gap-2 text-gray-900 font-semibold font-Montserrat hover:text-olive transition-colors"
-                            >
-                                Talk to our team
-                                <FiArrowRight size={16} aria-hidden="true"/>
-                            </Link>
                         </div>
                     </div>
                 </div>
@@ -131,6 +122,18 @@ export default function Faq() {
                             })}
                         </div>
                     ))}
+                </div>
+                <div className="mt-14 shrink-0">
+                    <p className="text-gray-500 font-Montserrat mb-2">
+                        Can&apos;t find what you&apos;re looking for?
+                    </p>
+                    <Link
+                        href="#"
+                        className="inline-flex items-center gap-2 text-gray-900 font-semibold font-Montserrat hover:text-olive transition-colors"
+                    >
+                        Talk to our team
+                        <FiArrowRight size={16} aria-hidden="true"/>
+                    </Link>
                 </div>
             </div>
         </section>

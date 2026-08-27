@@ -9,7 +9,7 @@ export default function CtaBanner() {
           Ready to elevate your leadership?
         </h2>
         <p className="text-gray-500 mb-8 text-lg font-Montserrat">
-          Join hundreds of organisations already growing with Zanga.
+          Join hundreds of organisations already growing with <strong>Zanga</strong>.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link

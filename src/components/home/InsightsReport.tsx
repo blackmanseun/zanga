@@ -77,7 +77,7 @@ export default function InsightsReport() {
             Turning stakeholder voice into actionable intelligence.
           </h2>
           <p className="text-gray-500 text-[16px] font-Montserrat leading-relaxed mb-8">
-            For a client working with farmers and other ecosystem stakeholders in Zambia, Zanga
+            For a client working with farmers and other ecosystem stakeholders in Zambia, <strong>Zanga</strong>
             provides an accessible grievance and feedback channel, structured case management,
             escalation support and recurring insight. The solution helps the organisation engage
             stakeholders more consistently while strengthening its ESG evidence and response

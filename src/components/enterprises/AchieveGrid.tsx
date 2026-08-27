@@ -46,6 +46,13 @@ const achievements: Achievement[] = [
         cta: 'Book an Enterprise Demo',
         color: '#0F3460',
     },
+    {
+        title: 'Strengthen Stakeholder and Community Engagement',
+        description:
+            'Capture structured feedback from customers, suppliers, communities, and other external stakeholders so you can identify grievances early, manage social risk, and respond before issues escalate.',
+        cta: 'Explore Voice by Zanga',
+        color: '#a3a748',
+    },
 ]
 
 export default function AchieveGrid() {

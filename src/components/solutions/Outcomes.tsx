@@ -41,7 +41,7 @@ export default function Outcomes() {
                         What better hiring intelligence can help you achieve
                     </h2>
                     <p className="text-gray-200 font-Montserrat leading-relaxed max-w-2xl">
-                        Zanga gives hiring teams clearer evidence at the point where better information can
+<strong>Zanga</strong> gives hiring teams clearer evidence at the point where better information can
                         make the greatest difference.
                     </p>
                 </div>

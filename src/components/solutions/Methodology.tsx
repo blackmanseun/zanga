@@ -1,4 +1,5 @@
 import React from 'react'
+import BoldZanga from '@/components/ui/BoldZanga'
 
 const paragraphs: string[] = [
     'Zanga does not use assessment scores as stand-alone hiring decisions.',
@@ -45,7 +46,7 @@ export default function Methodology() {
                 <div className="grid md:grid-cols-2 md:gap-16 items-center">
                     <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
                         <span className="text-gray-700">Better decisions start with </span>
-                        <span className="text-olive">better context.</span>
+                        <span className="text-olive">better context</span>
                     </h2>
                 </div>
 
@@ -57,7 +58,11 @@ export default function Methodology() {
                                     key={p}
                                     className={`text-gray-500 font-Montserrat leading-relaxed ${i === 2 ? 'font-semibold text-gray-700' : ''}`}
                                 >
-                                    {p}
+                                    {i === 2 ? (
+                                        <>What makes the <strong>Zanga</strong> approach different is <em className="italic">context</em>.</>
+                                    ) : (
+                                        <BoldZanga text={p}/>
+                                    )}
                                 </p>
                             ))}
                         </div>

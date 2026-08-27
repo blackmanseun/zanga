@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { FiAward, FiBriefcase, FiGlobe, FiArrowRight } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
+import BoldZanga from '@/components/ui/BoldZanga'
 
 type Track = {
   title: string
@@ -41,14 +42,14 @@ export default function BuildWithZanga() {
 
         <div className="max-w-3xl">
           <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
-            Build with Zanga.
+            Build with <strong>Zanga</strong>.
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-start mt-4">
           <div>
             <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
-              Zanga works with coaches, consultants, institutions, technology companies, researchers
+<strong>Zanga</strong> works with coaches, consultants, institutions, technology companies, researchers
               and regional partners to make culturally intelligent people and stakeholder insight
               more accessible.
             </p>
@@ -73,7 +74,7 @@ export default function BuildWithZanga() {
                   <div className={i < tracks.length - 1 ? 'pb-8' : ''}>
                     <h3 className="font-bold text-gray-900 font-MonaSans mb-1">{track.title}</h3>
                     <p className="text-sm text-gray-600 font-Montserrat leading-relaxed">
-                      {track.description}
+                      <BoldZanga text={track.description}/>
                     </p>
                   </div>
                 </div>

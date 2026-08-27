@@ -16,7 +16,7 @@ export default function ResearchAndEvidence() {
               Building a stronger evidence base for how Africa leads and works.
             </h2>
             <p className="text-white/70 text-[14px] md:text-[16px] leading-relaxed font-Montserrat mt-5 max-w-3xl">
-              Zanga&apos;s research transforms assessment and workforce data into insight for
+<strong>Zanga</strong>&apos;s research transforms assessment and workforce data into insight for
               employers, leaders, partners and policymakers. Our growing dataset helps surface
               patterns across leadership competencies, cultural values, gender, generations and
               workplace experience.

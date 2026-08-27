@@ -215,7 +215,7 @@ const navItems: NavItem[] = [
         {
           heading: 'Existing Partners',
           links: [
-            { label: 'Coach Login', href: '#' },
+            { label: 'Business Partner Login', href: '#' },
             { label: 'Partner Login (future)', href: '#' },
             { label: 'Contact Partner Team', href: '#' },
           ],
@@ -277,7 +277,7 @@ const navItems: NavItem[] = [
 ]
 
 const navButtons: (SimpleLink & { variant: 'text' | 'outline' | 'solid' })[] = [
-  { label: 'Coach Login', href: '#', variant: 'solid' },
+  { label: 'Business Partner Login', href: '#', variant: 'solid' },
 ]
 
 function ChevronIcon({ open }: { open: boolean }) {

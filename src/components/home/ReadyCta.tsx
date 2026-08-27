@@ -13,7 +13,7 @@ export default function ReadyCta() {
                                 Ready to understand what <br className="hidden md:block"/>your people and stakeholders <br className="hidden md:block"/>are telling you?
                             </h2>
                             <p className="text-white/60 font-Montserrat leading-relaxed max-w-lg text-md">
-                                Book a demonstration to explore the right Zanga solution for your organisation, or
+                                Book a demonstration to explore the right <strong>Zanga</strong> solution for your organisation, or
                                 experience our approach by taking an assessment.
                             </p>
                         </div>

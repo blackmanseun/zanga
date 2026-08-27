@@ -20,7 +20,7 @@ const LOGOS = [
 
 export default function LogoMarquee() {
     return (
-        <div className="md:mt-12">
+        <div className="mt-12">
             <p className="text-primary/30 text-15px mb-6 font-Montserrat">
                 Trusted by organisations making better people decisions.
             </p>

@@ -127,7 +127,7 @@ export default function Footer() {
                 <div
                     className="border-t border-gray-200 pt-6 flex flex-col sm:flex-row items-center justify-between md:gap-4">
                     <p className="text-gray-500 text-md font-Montserrat">
-                        © {new Date().getFullYear()} Zanga. All rights reserved.
+                        © {new Date().getFullYear()} <strong>Zanga</strong>. All rights reserved.
                     </p>
                     <p className="text-gray-500 text-md font-Montserrat">Kenya, Africa</p>
                 </div>

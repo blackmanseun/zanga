@@ -24,38 +24,44 @@ const faqs: FaqItem[] = [
     {
         Icon: FiHelpCircle,
         question: 'Should an assessment decide who we hire?',
-        answer:
-            'No. Zanga assessments are designed to improve professional judgement, not replace it. Results should be considered alongside relevant experience, technical competence, interviews, references and the specific requirements of the role.',
+        answer: (
+            <>No. <strong>Zanga</strong> assessments are designed to improve professional judgement, not replace it. Results should be considered alongside relevant experience, technical competence, interviews, references and the specific requirements of the role.</>
+        ),
     },
     {
         Icon: FiClock,
         question: 'When should we use assessments in the recruitment process?',
-        answer:
-            'It depends on the role and hiring process. Assessments can support initial screening, candidate shortlisting, final-stage interviews or executive selection. Zanga can help determine where assessment adds the greatest value within your recruitment journey.',
+        answer: (
+            <>It depends on the role and hiring process. Assessments can support initial screening, candidate shortlisting, final-stage interviews or executive selection. <strong>Zanga</strong> can help determine where assessment adds the greatest value within your recruitment journey.</>
+        ),
     },
     {
         Icon: FiGrid,
         question: 'Which assessment should we use?',
-        answer:
-            'The right assessment depends on the decision you are making. You may need insight into personality, behaviour, role fit, leadership capability or future potential. Tell us what you are recruiting for, and Zanga can recommend the most appropriate pathway.',
+        answer: (
+            <>The right assessment depends on the decision you are making. You may need insight into personality, behaviour, role fit, leadership capability or future potential. Tell us what you are recruiting for, and <strong>Zanga</strong> can recommend the most appropriate pathway.</>
+        ),
     },
     {
         Icon: FiAward,
         question: 'Can Zanga support executive recruitment?',
-        answer:
-            "Yes. Zanga's leadership assessments can provide deeper insight into leadership capability, potential strengths and development areas for senior and business-critical appointments. These insights can also inform final interviews, references and onboarding.",
+        answer: (
+            <>Yes. <strong>Zanga</strong>&apos;s leadership assessments can provide deeper insight into leadership capability, potential strengths and development areas for senior and business-critical appointments. These insights can also inform final interviews, references and onboarding.</>
+        ),
     },
     {
         Icon: FiUsers,
         question: 'Can Zanga support larger recruitment cohorts?',
-        answer:
-            'Yes. Depending on the assessment and programme design, Zanga can support cohort and organisational assessment programmes, including reporting and comparative insights for larger groups of candidates.',
+        answer: (
+            <>Yes. Depending on the assessment and programme design, <strong>Zanga</strong> can support cohort and organisational assessment programmes, including reporting and comparative insights for larger groups of candidates.</>
+        ),
     },
     {
         Icon: FiEdit3,
         question: "What makes Zanga's assessments different?",
-        answer:
-            'Zanga combines assessment science with cultural intelligence. Our approach recognises that workplace behaviour is influenced by context, including relationships, hierarchy and communication norms, helping organisations interpret people data more meaningfully in African and other high-context workplaces.',
+        answer: (
+            <><strong>Zanga</strong> combines assessment science with cultural intelligence. Our approach recognises that workplace behaviour is influenced by context, including relationships, hierarchy and communication norms, helping organisations interpret people data more meaningfully in African and other high-context workplaces.</>
+        ),
     },
 ]
 
@@ -71,24 +77,12 @@ export default function Faq() {
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                         <div>
               <span
-                  className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
+                  className="text-olive text-sm tracking-widest font-Montserrat font-semibold">
                   FAQs
               </span>
                             <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
                                 Frequently Asked Questions
                             </h2>
-                        </div>
-                        <div className="md:text-right shrink-0">
-                            <p className="text-gray-500 font-Montserrat mb-2">
-                                Can&apos;t find what you&apos;re looking for?
-                            </p>
-                            <Link
-                                href="#"
-                                className="inline-flex items-center gap-2 text-gray-900 font-semibold font-Montserrat hover:text-olive transition-colors"
-                            >
-                                Talk to our team
-                                <FiArrowRight size={16} aria-hidden="true"/>
-                            </Link>
                         </div>
                     </div>
                 </div>
@@ -140,6 +134,18 @@ export default function Faq() {
                             </div>
                         ))}
                     </div>
+                </div>
+                <div className="mt-14 shrink-0">
+                    <p className="text-gray-500 font-Montserrat mb-2">
+                        Can&apos;t find what you&apos;re looking for?
+                    </p>
+                    <Link
+                        href="#"
+                        className="inline-flex items-center gap-2 text-gray-900 font-semibold font-Montserrat hover:text-olive transition-colors"
+                    >
+                        Talk to our team
+                        <FiArrowRight size={16} aria-hidden="true"/>
+                    </Link>
                 </div>
             </div>
         </section>

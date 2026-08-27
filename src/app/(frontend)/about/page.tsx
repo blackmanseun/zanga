@@ -42,13 +42,13 @@ export default function AboutPage() {
       <section className="bg-primary text-white py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <span className="text-highlight text-sm uppercase tracking-widest font-Montserrat font-semibold">
-            About Zanga
+            About <strong>Zanga</strong>
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6 font-MonaSans leading-tight max-w-3xl">
             We Exist to Grow the Leaders Africa Needs
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl font-Montserrat leading-relaxed">
-            Zanga was founded on the belief that Africa's most pressing challenges demand its most capable leaders.
+<strong>Zanga</strong> was founded on the belief that Africa's most pressing challenges demand its most capable leaders.
             We bridge the gap between untapped human potential and world-class coaching expertise.
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
           </h2>
           <div className="text-gray-600 font-Montserrat leading-relaxed space-y-5 text-left">
             <p>
-              Zanga was founded in 2019 by a group of seasoned executives and coaching professionals who saw
+              <strong>Zanga</strong> was founded in 2019 by a group of seasoned executives and coaching professionals who saw
               a critical gap: African organisations were struggling to find coaches who truly understood their
               markets, cultures, and growth challenges.
             </p>
@@ -105,7 +105,7 @@ export default function AboutPage() {
               sector depth, and regional networks needed to serve Africa's fast-evolving business landscape.
             </p>
             <p>
-              So we built Zanga — a platform designed from the ground up to serve African enterprises with
+              So we built <strong>Zanga</strong> — a platform designed from the ground up to serve African enterprises with
               precision, depth, and data. Today, we operate across 15+ countries, partner with 200+ certified
               coaches, and have helped over 1,000 leaders unlock their full potential.
             </p>
@@ -143,7 +143,7 @@ export default function AboutPage() {
               Leadership
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 font-MonaSans">
-              Meet the Team Behind Zanga
+              Meet the Team Behind <strong>Zanga</strong>
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -165,7 +165,7 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-highlight text-white text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-MonaSans">
-            Partner with Zanga Today
+            Partner with <strong>Zanga</strong> Today
           </h2>
           <p className="text-white/80 mb-8 font-Montserrat text-lg">
             Whether you're a coach looking to join our network or an organisation ready to invest in leadership, we'd love to hear from you.

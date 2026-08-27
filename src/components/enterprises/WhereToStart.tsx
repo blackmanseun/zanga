@@ -17,11 +17,11 @@ export default function WhereToStart() {
                             <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold mt-3 font-MonaSans text-gray-700">
                                 Where Should You Start?
                             </h2>
+                            <p className="md:max-w-xl mt-4 text-gray-500 text-[16px] font-Montserrat leading-relaxed lg:pb-1">
+                                Every organisation&apos;s people priorities are different. Choose the path
+                                that matches what you are trying to solve right now.
+                            </p>
                         </div>
-                        <p className="text-gray-500 text-[16px] font-Montserrat leading-relaxed lg:pb-1">
-                            Every organisation&apos;s people priorities are different. Choose the path
-                            that matches what you are trying to solve right now.
-                        </p>
                     </div>
                 </Reveal>
 
@@ -108,13 +108,13 @@ export default function WhereToStart() {
                                 </p>
                                 <p className="relative mt-2 text-sm font-Montserrat leading-relaxed text-gray-500">
                                     Tell us what you are trying to solve, and we will recommend the most
-                                    appropriate Zanga pathway.
+                                    appropriate <strong>Zanga</strong> pathway.
                                 </p>
                                 <Link
                                     href="#"
                                     className="relative mt-5 inline-flex items-center justify-center gap-2 bg-terracotta text-white px-6 py-3 rounded-md font-semibold text-sm font-Montserrat hover:bg-terracotta/90 transition-colors"
                                 >
-                                    Book an Enterprise Demo
+                                    Book a free assessment
                                     <FiArrowRight size={16} aria-hidden="true"/>
                                 </Link>
                             </div>

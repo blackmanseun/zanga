@@ -132,7 +132,7 @@ export default function IndustriesPage() {
             speak the language. They understand the constraints. They challenge blind spots that only insiders can see.
           </p>
           <p className="text-gray-400 font-Montserrat leading-relaxed">
-            At Zanga, sector alignment is a core part of every matching decision. We don't just look at coaching
+            At <strong>Zanga</strong>, sector alignment is a core part of every matching decision. We don't just look at coaching
             methodology and style — we factor in lived industry experience to ensure every engagement is credible,
             contextual, and immediately relevant to the challenges your leaders face.
           </p>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import BoldZanga from '@/components/ui/BoldZanga'
 
 const categories = ['All', 'Leadership', 'Coaching', 'Data & Insights', 'Industry News', 'Case Studies']
 
@@ -73,7 +74,7 @@ export default function InsightsPage() {
             Thinking That Moves the Needle
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl font-Montserrat leading-relaxed">
-            Research, perspectives, and practical knowledge from Zanga's coaches, data team,
+            Research, perspectives, and practical knowledge from <strong>Zanga</strong>'s coaches, data team,
             and leadership experts across Africa.
           </p>
         </div>
@@ -119,7 +120,7 @@ export default function InsightsPage() {
                     {article.title}
                   </h3>
                   <p className="text-gray-500 text-sm leading-relaxed mb-5 font-Montserrat line-clamp-3">
-                    {article.excerpt}
+                    <BoldZanga text={article.excerpt}/>
                   </p>
                   <div className="flex items-center justify-between text-xs text-gray-400 font-Montserrat">
                     <span>{article.author}</span>

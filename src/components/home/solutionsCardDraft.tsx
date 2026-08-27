@@ -45,7 +45,7 @@ export default function SolutionCards() {
                     </h2>
                     <p className="text-gray-600 text-base md:text-lg leading-relaxed font-Montserrat mt-5 max-w-3xl mx-auto">
                         Generic leadership tools often overlook the relational dynamics, communication patterns and
-                        cultural values that shape performance in high-context workplaces. Zanga combines robust
+                        cultural values that shape performance in high-context workplaces. <strong>Zanga</strong> combines robust
                         assessment science with contextual intelligence to help organisations identify, develop and
                         retain leaders who can succeed in the environments where they actually work.
                     </p>

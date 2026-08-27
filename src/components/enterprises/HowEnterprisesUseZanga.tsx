@@ -64,24 +64,26 @@ export default function HowEnterprisesUseZanga() {
                         <div
                             className="absolute w-[15rem] h-[13rem] left-14 bottom-2 rounded-[80%] border-2 border-gray-200/70"/>
                     </div>
-
+                    <div className="md:block hidden absolute -bottom-32 -left-32 w-[30rem]">
+                        <img src="/images/chair.png"/>
+                    </div>
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
                         <div className="col-span-2">
                                 <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
                                     Use Cases
                                 </span>
                             <h2 className="text-3xl md:text-[2.75rem] font-bold text-gray-700 mt-3 mb-4 font-MonaSans leading-[1.1]">
-                                How enterprises<br/> use zanga
+                                How enterprises<br/> use <strong>zanga</strong>
                             </h2>
                             <p className="text-gray-500 font-Montserrat leading-relaxed max-w-sm">
-                                See how enterprise teams put Zanga to work across leadership, succession,
+                                See how enterprise teams put <strong>Zanga</strong> to work across leadership, succession,
                                 engagement and development.
                             </p>
                         </div>
 
                         <div className="col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
                             {useCases.map((useCase) => (
-                                <div key={useCase.title}>
+                                <div key={useCase.title} className="h-full flex flex-col">
                                         <span
                                             className="w-12 h-12 rounded-full flex items-center justify-center mb-4"
                                             style={{backgroundColor: `${useCase.color}1F`, color: useCase.color}}
@@ -96,7 +98,7 @@ export default function HowEnterprisesUseZanga() {
                                     </p>
                                     <Link
                                         href="#"
-                                        className="inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
+                                        className="mt-auto inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                         style={{color: useCase.color}}
                                     >
                                         {useCase.cta}

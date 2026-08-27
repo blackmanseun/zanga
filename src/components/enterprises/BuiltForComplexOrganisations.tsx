@@ -36,7 +36,7 @@ export default function BuiltForComplexOrganisations() {
                         </p>
 
                         <p className="text-xs font-semibold text-olive uppercase tracking-wide font-Montserrat mb-4">
-                            Zanga can support
+                            <strong>Zanga</strong> can support
                         </p>
                         <ul className="space-y-3 mb-10">
                             {capabilities.map((item) => (
@@ -68,7 +68,7 @@ export default function BuiltForComplexOrganisations() {
 
                     <div className="relative mt-8 lg:mt-0">
                         <img
-                            src="/images/3.jpg"
+                            src="/images/24.jpg"
                             alt="Enterprise team working across a shared workspace"
                             className="w-full h-[12rem] sm:h-[26rem] object-cover rounded-2xl"
                         />
