@@ -1,28 +1,28 @@
 import React from 'react'
-import Hero from '@/components/enterprises/Hero'
-import EnterpriseChallenge from '@/components/enterprises/EnterpriseChallenge'
-import AchieveGrid from '@/components/enterprises/AchieveGrid'
-import EnterpriseSolutions from '@/components/enterprises/EnterpriseSolutions'
-import HowEnterprisesUseZanga from '@/components/enterprises/HowEnterprisesUseZanga'
-import BuiltForComplexOrganisations from '@/components/enterprises/BuiltForComplexOrganisations'
-import WhyZanga from '@/components/enterprises/WhyZanga'
-import WhereToStart from '@/components/enterprises/WhereToStart'
-import Faq from '@/components/enterprises/Faq'
-import Cta from '@/components/enterprises/Cta'
+import EnterprisesHero from '@/components/enterprises/EnterprisesHero'
+import EnterprisesChallenge from '@/components/enterprises/EnterprisesChallenge'
+import EnterprisesAchieveGrid from '@/components/enterprises/EnterprisesAchieveGrid'
+import EnterprisesSolutions from '@/components/enterprises/EnterprisesSolutions'
+import EnterprisesHowUseZanga from '@/components/enterprises/EnterprisesHowUseZanga'
+import EnterprisesBuiltForComplexOrganisations from '@/components/enterprises/EnterprisesBuiltForComplexOrganisations'
+import EnterprisesWhyZanga from '@/components/enterprises/EnterprisesWhyZanga'
+import EnterprisesWhereToStart from '@/components/enterprises/EnterprisesWhereToStart'
+import EnterprisesFaq from '@/components/enterprises/EnterprisesFaq'
+import EnterprisesCta from '@/components/enterprises/EnterprisesCta'
 
 export default function EnterprisesPage() {
     return (
         <>
-            <Hero/>
-            <EnterpriseChallenge/>
-            <AchieveGrid/>
-            <EnterpriseSolutions/>
-            <HowEnterprisesUseZanga/>
-            <BuiltForComplexOrganisations/>
-            <WhyZanga/>
-            <WhereToStart/>
-            <Faq/>
-            <Cta/>
+            <EnterprisesHero/>
+            <EnterprisesChallenge/>
+            <EnterprisesAchieveGrid/>
+            <EnterprisesSolutions/>
+            <EnterprisesHowUseZanga/>
+            <EnterprisesBuiltForComplexOrganisations/>
+            <EnterprisesWhyZanga/>
+            <EnterprisesWhereToStart/>
+            <EnterprisesFaq/>
+            <EnterprisesCta/>
         </>
     )
 }

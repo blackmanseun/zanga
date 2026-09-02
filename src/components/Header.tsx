@@ -73,6 +73,7 @@ const navItems: NavItem[] = [
       columns: [
         {
           heading: 'Pulse by Zanga',
+          headingHref: '/products/pulse-by-zanga',
           links: [
             { label: 'Employee engagement', href: '#' },
             { label: 'Culture & values', href: '#' },
@@ -320,7 +321,17 @@ function MegaColumnView({ column, onNavigate }: { column: MegaColumn; onNavigate
     <div className={isPromo ? 'bg-terracotta/5 border border-terracotta/10 rounded-xl p-5' : ''}>
       {hasLinks ? (
         <>
-          <h4 className="text-sm font-semibold text-gray-900 font-Montserrat mb-3">{column.heading}</h4>
+          {column.headingHref ? (
+            <Link
+              href={column.headingHref}
+              onClick={onNavigate}
+              className="inline-block text-sm font-semibold text-gray-900 hover:text-terracotta font-Montserrat mb-3 transition-colors"
+            >
+              {column.heading}
+            </Link>
+          ) : (
+            <h4 className="text-sm font-semibold text-gray-900 font-Montserrat mb-3">{column.heading}</h4>
+          )}
           <ul className="space-y-2">
             {column.links!.map((link) => (
               <li key={link.label}>
@@ -493,9 +504,19 @@ export default function Header() {
                               <div key={column.heading}>
                                 {column.links?.length ? (
                                   <>
-                                    <p className="text-sm font-semibold text-gray-900 font-Montserrat mb-2">
-                                      {column.heading}
-                                    </p>
+                                    {column.headingHref ? (
+                                      <Link
+                                        href={column.headingHref}
+                                        onClick={() => setMenuOpen(false)}
+                                        className="block text-sm font-semibold text-gray-900 hover:text-terracotta font-Montserrat mb-2 transition-colors"
+                                      >
+                                        {column.heading}
+                                      </Link>
+                                    ) : (
+                                      <p className="text-sm font-semibold text-gray-900 font-Montserrat mb-2">
+                                        {column.heading}
+                                      </p>
+                                    )}
                                     <div className="flex flex-col gap-1">
                                       {column.links.map((link) => (
                                         <Link
