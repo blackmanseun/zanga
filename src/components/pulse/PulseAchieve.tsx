@@ -1,7 +1,35 @@
 import React from 'react'
+import Image from 'next/image'
 import { FiActivity, FiAlertTriangle, FiAward, FiTarget, FiCheckCircle } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import BoldZanga from '@/components/ui/BoldZanga'
+
+function Panel({
+    src,
+    alt,
+    className = '',
+    objectPosition = '[object-position:50%_50%]',
+}: {
+    src: string
+    alt: string
+    className?: string
+    // Tailwind arbitrary-value object-position utilities (supports responsive
+    // prefixes, e.g. "[object-position:50%_32%] md:[object-position:50%_55%]").
+    // Inline styles can't take responsive prefixes, so this can't be a plain "x% y%" string.
+    objectPosition?: string
+}) {
+    return (
+        <div className={`relative overflow-hidden bg-gray-100 border border-gray-200 ${className}`}>
+            <Image
+                src={src}
+                alt={alt}
+                fill
+                sizes="(min-width: 768px) 25vw, 50vw"
+                className={`object-cover ${objectPosition}`}
+            />
+        </div>
+    )
+}
 
 type Outcome = {
     title: string
@@ -91,12 +119,35 @@ export default function PulseAchieve() {
                         </div>
                     </div>
 
-                    <div className="relative mt-8 lg:mt-0">
-                        <img
-                            src="/images/3.jpg"
-                            alt="Teams working together across an organisation"
-                            className="w-full h-[20rem] sm:h-[26rem] object-cover rounded-2xl"
-                        />
+                    <div className="mt-8 lg:mt-0 grid grid-cols-2 gap-4">
+                        <div className="flex flex-col gap-4">
+                            <Panel
+                                src="/images/31.jpg"
+                                alt="A team celebrating over their annual report findings"
+                                className="md:h-96 h-56 rounded-2xl rounded-br-none"
+                                objectPosition="[object-position:50%_32%] md:[object-position:50%_55%]"
+                            />
+                            <Panel
+                                src="/images/headshot/8.jpg"
+                                alt="Colleagues working together in an open office"
+                                className="md:h-48 h-28 md:w-[50%] w-[80%] ml-auto rounded-2xl rounded-tr-none"
+                                objectPosition="[object-position:50%_10%]"
+                            />
+                        </div>
+                        <div className="flex flex-col gap-4">
+                            <div className="md:h-20 h-16 rounded-2xl rounded-bl-none bg-terracotta/25 md:w-[30%] w-[50%]" aria-hidden="true"/>
+                            <Panel
+                                src="/images/3.jpg"
+                                alt="A team bringing their hands together in agreement"
+                                className="md:h-72 h-36 rounded-2xl rounded-bl-none"
+                                objectPosition="[object-position:0%_25%]"
+                            />
+                            <Panel
+                                src="/images/headshot/2.png"
+                                alt="A team bringing their hands together in agreement"
+                                className="md:h-48 h-28 rounded-2xl rounded-tl-none md:w-[50%] w-[70%]"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

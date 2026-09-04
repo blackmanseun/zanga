@@ -50,7 +50,7 @@ const cards: Card[] = [
         label: 'Turn Feedback Into Action',
         description:
             'Employee surveys have little value if nothing happens after people respond. Pulse is designed to help organisations move from listening to understanding to action, giving leaders clearer priorities, practical recommendations and a stronger basis for conversations with their teams.',
-        cta: 'Explore Performance Sentiment',
+        cta: 'Explore Employee Sentiment',
         color: '#c55e36',
     },
 ]
@@ -66,7 +66,7 @@ export default function PulseCapabilities() {
             <div className="max-w-7xl mx-auto">
                 <div className="md:mb-16 mb-6">
                     <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
-                        Pulse by Zanga
+                        Understand beyond the engagement
                     </span>
                     <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-3xl">
                         Understand more than the engagement score

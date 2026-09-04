@@ -27,7 +27,6 @@ const audiences: Audience[] = [
     {
         title: 'For Executives',
         text: 'See the people factors affecting organisational performance without interpreting hundreds of individual survey responses.',
-        image: '/images/31.jpg',
     },
     {
         title: 'For Managers',

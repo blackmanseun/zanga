@@ -46,7 +46,7 @@ export default function PulseOutcomes() {
                         Pulse by Zanga
                     </span>
                     <h2 className="max-w-2xl text-white text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
-                        What pulse can help you understand
+                        What Pulse can help you understand
                     </h2>
                 </div>
 
@@ -66,7 +66,7 @@ export default function PulseOutcomes() {
                                         <h5 className="md:text-[17px] text-[16px] font-semibold text-gray-900 font-Montserrat">
                                             {o.title}
                                         </h5>
-                                        <p className="col-span-2 text-sm text-gray-500 font-Montserrat leading-relaxed mt-2 md:mt-0">
+                                        <p className="col-span-2 text-[16px] text-gray-500 font-Montserrat leading-relaxed mt-2 md:mt-0">
                                             {o.text}
                                         </p>
                                     </div>

@@ -70,7 +70,7 @@ export default function PulseTestimonial() {
                         Testimonials
                     </span>
                     <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
-                        What listening better <br className="hidden md:block"/> <span className="text-olive">can change</span>
+                        What better listening<br className="hidden md:block"/> <span className="text-olive">can change</span>
                     </h2>
                 </div>
 

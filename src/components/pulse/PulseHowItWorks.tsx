@@ -62,16 +62,13 @@ export default function PulseHowItWorks() {
                         <div
                             className="absolute w-[15rem] h-[13rem] left-14 bottom-2 rounded-[80%] border-2 border-gray-200/30"/>
                     </div>
-                    <div className="md:block hidden absolute -bottom-44 left-0 w-[15rem]">
-                        <img src="/images/megaphone.png"/>
-                    </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
                         <div className="col-span-2">
                             <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
                                 How Pulse Works
                             </span>
                             <h2 className="text-3xl md:text-[2.75rem] font-bold text-gray-700 mt-3 mb-4 font-MonaSans leading-[1.1]">
-                                From employee voice to organisational intelligence
+                                From employee <br className="hidden xl:block"/>voice to organisational intelligence
                             </h2>
                             <p className="text-gray-500 font-Montserrat leading-relaxed max-w-sm mb-6">
                                 Pulse is built around a simple idea: employee feedback should help organisations

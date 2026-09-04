@@ -52,7 +52,7 @@ export default function PulseUseCases() {
     return (
         <section
             style={{ backgroundColor: 'rgb(250, 248, 246)' }}
-            className="py-16 md:pb-24 md:pt-10 px-4 sm:px-6 lg:px-8">
+            className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <Reveal className="text-center mb-16">
                     <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
@@ -68,7 +68,7 @@ export default function PulseUseCases() {
                         <Reveal key={useCase.title} delayMs={i * 100} className="h-full">
                             <div className="h-full flex flex-col">
                                 <div
-                                    className={`rounded-2xl p-1 bg-white overflow-hidden shrink-0 ${i === 1 ? 'h-56 md:h-64' : 'h-48 md:h-56'}`}
+                                    className="rounded-2xl p-1 bg-white overflow-hidden shrink-0 h-48 md:h-56"
                                 >
                                     <img
                                         src={useCase.image}

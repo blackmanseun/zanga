@@ -72,9 +72,9 @@ export default function PulseWhatYouReceive() {
 
                     <div className="relative mt-8 lg:mt-0">
                         <img
-                            src="/images/10.jpg"
+                            src="/images/19.jpg"
                             alt="A team reviewing Pulse survey results together"
-                            className="w-full h-[12rem] sm:h-[26rem] object-cover rounded-2xl"
+                            className="xl:w-[85%] xl:h-[80%] md:w-full md:h-full object-cover rounded-2xl"
                         />
                     </div>
                 </div>
