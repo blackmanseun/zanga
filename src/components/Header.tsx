@@ -185,6 +185,7 @@ const navItems: NavItem[] = [
       columns: [
         {
           heading: 'Become a Partner',
+          headingHref: '/partners/become-a-partner',
           links: [
             { label: 'Coach / Practitioner', href: '#' },
             { label: 'Referral Partner', href: '#' },
