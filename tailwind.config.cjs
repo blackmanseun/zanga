@@ -11,7 +11,9 @@ module.exports = {
         accent: '#0F3460',
         highlight: '#E94560',
         olive: '#a3a748',
+        'olive-dark': '#6a6d2f',
         terracotta: '#c55e36',
+        'terracotta-dark': '#803d23',
       },
       fontFamily: {
         MonaSans: ['"Mona Sans"', 'sans-serif'],

@@ -45,7 +45,7 @@ export default function BecomePartnerAdvantage() {
                         Partner Support
                     </span>
                     <h2 className="max-w-2xl text-white text-3xl md:text-[2.75rem] font-bold mt-3 font-MonaSans leading-tight">
-                        The Zanga <br className="hidden md:block"/> partner advantage
+                        The Zanga partner advantage
                     </h2>
                 </div>
 
@@ -65,7 +65,7 @@ export default function BecomePartnerAdvantage() {
                                         <h5 className="md:text-[17px] text-[16px] font-semibold text-gray-900 font-Montserrat">
                                             {a.title}
                                         </h5>
-                                        <p className="col-span-2 text-sm text-gray-500 font-Montserrat leading-relaxed mt-2 md:mt-0">
+                                        <p className="col-span-2 text-15px text-gray-500 font-Montserrat leading-relaxed mt-2 md:mt-0">
                                             {a.text}
                                         </p>
                                     </div>

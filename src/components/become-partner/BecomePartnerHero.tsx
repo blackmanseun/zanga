@@ -56,16 +56,16 @@ export default function BecomePartnerHero() {
                         {partnerFaces.map((face, i) => (
                             <div
                                 key={face.src}
-                                className="relative aspect-square border-2 border-gray-900 shadow-[0_10px_20px_-10px_rgba(0,0,0,0.3)]"
+                                className="relative aspect-square border-2 border-terracotta/50 shadow-[0_10px_20px_-10px_rgba(0,0,0,0.3)]"
                                 style={{ backgroundColor: '#dcdcd8' }}
                             >
-                                <div className="absolute inset-[15%] overflow-hidden">
+                                <div className="absolute inset-[6%] overflow-hidden">
                                     <Image
                                         src={face.src}
                                         alt={`Zanga partner ${i + 1}`}
                                         fill
                                         sizes="10vw"
-                                        className="object-cover grayscale"
+                                        className="border border-olive object-cover"
                                         style={{ objectPosition: face.objectPosition ?? '50% 22%' }}
                                     />
                                 </div>

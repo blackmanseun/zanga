@@ -16,7 +16,7 @@ type PartnerModel = {
 
 const MODELS: PartnerModel[] = [
     {
-        bg: 'bg-secondary',
+        bg: 'bg-olive-dark',
         title: 'Practitioner Model',
         description:
             'For coaches and consultants who want to use Zanga assessments within their own client work.',
@@ -36,14 +36,14 @@ const MODELS: PartnerModel[] = [
         steps: ['Partner onboarding', 'Commercial agreement', 'Market activation', 'Sales and delivery support'],
     },
     {
-        bg: 'bg-accent',
+        bg: 'bg-terracotta-dark',
         title: 'Franchise Model',
         description:
             'For selected partners developing a broader Zanga presence within an agreed territory.',
         steps: ['Qualification', 'Territory agreement', 'Training and implementation', 'Market development'],
     },
     {
-        bg: 'bg-secondary',
+        bg: 'bg-olive-dark',
         title: 'White-label Model',
         description:
             'For organisations that want selected Zanga capabilities delivered under their own brand or within an existing offer.',
@@ -96,9 +96,9 @@ export default function BecomePartnerModels() {
                     {MODELS.map((model) => (
                         <SwiperSlide key={model.title} className="!h-auto">
                             <div
-                                className={`${model.bg} rounded-3xl flex flex-col h-full min-h-[440px] transition-all duration-300`}
+                                className={`${model.bg} rounded-3xl flex flex-col h-full min-h-[480px] transition-all duration-300`}
                             >
-                                <div className="p-8 pb-6">
+                                <div className="p-8 pb-6 flex-1 flex flex-col justify-center">
                                     <h3 className="text-white text-2xl font-bold font-MonaSans mb-3 leading-snug">
                                         {model.title}
                                     </h3>
@@ -107,9 +107,9 @@ export default function BecomePartnerModels() {
                                     </p>
                                 </div>
 
-                                <div className="border border-slate-200 w-[85%] ml-auto flex-1 bg-white rounded-3xl rounded-tr-none rounded-b-none p-6">
+                                <div className="border border-slate-200 w-[85%] ml-auto h-[300px] shrink-0 bg-white rounded-3xl rounded-tr-none rounded-b-none p-6">
                                     <p className="text-gray-400 text-xs uppercase tracking-widest font-Montserrat font-semibold mb-5">
-                                        Typical structure
+                                        How it works
                                     </p>
                                     <div className="space-y-4">
                                         {model.steps.map((step, i) => (

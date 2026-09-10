@@ -1,5 +1,6 @@
 import React from 'react'
 import BecomePartnerHero from '@/components/become-partner/BecomePartnerHero'
+import BecomePartnerLogoMarquee from '@/components/become-partner/BecomePartnerLogoMarquee'
 import BecomePartnerWhyPartner from '@/components/become-partner/BecomePartnerWhyPartner'
 import BecomePartnerCoaches from '@/components/become-partner/BecomePartnerCoaches'
 import BecomePartnerReferral from '@/components/become-partner/BecomePartnerReferral'
@@ -20,6 +21,7 @@ export default function BecomePartnerPage() {
         <>
             <BecomePartnerHero/>
             <BecomePartnerWhyPartner/>
+            <BecomePartnerLogoMarquee/>
             <BecomePartnerCoaches/>
             <BecomePartnerReferral/>
             <BecomePartnerReseller/>

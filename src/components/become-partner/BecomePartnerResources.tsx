@@ -38,6 +38,7 @@ const resources: Resource[] = [
         title: 'Sales & Product Resources',
         description:
             'Approved partners can access relevant product and commercial materials through their agreed partner channels.',
+        cta: 'Download references',
         color: '#0F3460',
         Icon: FiBriefcase,
     },

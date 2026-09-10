@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FiGlobe, FiCheckCircle, FiArrowRight } from 'react-icons/fi'
 import BoldZanga from '@/components/ui/BoldZanga'
 
@@ -60,37 +61,45 @@ export default function BecomePartnerReseller() {
                     </div>
 
                     <div
-                        className="mt-8 lg:mt-0 rounded-2xl border border-gray-100 p-8 lg:p-10 bg-white"
+                        className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10"
                     >
-                        <span className="w-12 h-12 rounded-full bg-[#FAF8F6] border border-gray-200 shadow-sm flex items-center justify-center text-olive mb-6">
-                            <FiGlobe size={20} aria-hidden="true"/>
-                        </span>
-                        <h3 className="text-xl font-bold text-gray-900 font-MonaSans mb-2">
-                            Partnership Opportunities
-                        </h3>
-                        <p className="text-gray-500 text-sm font-Montserrat leading-relaxed mb-6">
-                            Depending on the model, partners may be able to:
-                        </p>
-                        <ul className="space-y-4">
-                            {opportunities.map((item) => (
-                                <li
-                                    key={item}
-                                    className="flex items-start gap-3 text-gray-600 font-Montserrat leading-relaxed"
-                                >
-                                    <FiCheckCircle className="text-olive shrink-0 mt-0.5" size={18} aria-hidden="true"/>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
+                        <Image
+                            src="/images/35.jpg"
+                            alt=""
+                            fill
+                            sizes="(min-width: 1280px) 550px, 100vw"
+                            className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-slate-800/65"/>
 
-                        <div className="mt-8 pt-6 border-t border-gray-200">
-                            <Link
-                                href="#"
-                                className="w-full inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
-                            >
-                                Explore Reseller &amp; Franchise Opportunities
-                                <FiArrowRight size={16} aria-hidden="true"/>
-                            </Link>
+                        <div className="relative">
+                            <h3 className="text-xl font-bold text-white font-MonaSans mb-2">
+                                Partnership Opportunities
+                            </h3>
+                            <p className="text-gray-300 text-sm font-Montserrat leading-relaxed mb-6">
+                                Depending on the model, partners may be able to:
+                            </p>
+                            <ul className="space-y-4">
+                                {opportunities.map((item) => (
+                                    <li
+                                        key={item}
+                                        className="flex items-start gap-3 text-gray-200 font-Montserrat leading-relaxed"
+                                    >
+                                        <FiCheckCircle className="text-olive shrink-0 mt-0.5" size={18} aria-hidden="true"/>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <div className="mt-8 pt-6 border-t border-white/20">
+                                <Link
+                                    href="#"
+                                    className="w-full inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
+                                >
+                                    Explore Reseller &amp; Franchise Opportunities
+                                    <FiArrowRight size={16} aria-hidden="true"/>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

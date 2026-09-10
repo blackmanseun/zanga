@@ -16,7 +16,7 @@ const benefits: string[] = [
 export default function BecomePartnerWhyPartner() {
     return (
         <section
-            className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
+            className="md:pt-20 pt-14 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
                 <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
                     Partners
@@ -68,7 +68,7 @@ export default function BecomePartnerWhyPartner() {
                         <img
                             src="/images/34.jpg"
                             alt="A team of partners reviewing materials together"
-                            className="w-full xl:w-auto h-full object-cover rounded-2xl"
+                            className="w-full h-full object-cover rounded-2xl"
                         />
                     </div>
                 </div>

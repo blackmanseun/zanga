@@ -11,7 +11,7 @@ export default function BecomePartnerCta() {
                         <div className="grid md:grid-cols-5 gap-10 items-center">
                             <div className="col-span-2">
                                 <h2 className="text-3xl md:text-[2.5rem] font-bold font-MonaSans leading-[1.1] text-white mb-4">
-                                    Let&apos;s build something valuable together.
+                                    Let&apos;s build value together.
                                 </h2>
                                 <p className="text-white/60 font-Montserrat leading-relaxed max-w-lg text-md">
                                     Join Zanga&apos;s growing ecosystem of practitioners, commercial partners,
