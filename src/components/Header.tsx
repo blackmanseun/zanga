@@ -137,6 +137,7 @@ const navItems: NavItem[] = [
       columns: [
         {
           heading: 'Leadership Assessments',
+          headingHref: '/assessments/leadership-assessments',
           links: [
             { label: 'Leadership Competency Assessment', href: '#' },
             { label: '360 Leadership Assessment', href: '#' },

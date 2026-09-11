@@ -21,7 +21,7 @@ const LOGOS = [
     {src: '/images/logos/zicb-logo.png', alt: 'ZICB'}
 ]
 
-export default function SolutionsLogoMarquee() {
+export default function LeadershipAssessmentsLogoMarquee() {
     return (
         <div className="mt-12">
             <p className="text-primary/30 text-15px mb-6 font-Montserrat">

@@ -6,16 +6,19 @@ import 'swiper/css'
 import 'swiper/css/free-mode'
 
 const LOGOS = [
-    {src: '/images/logos/1.svg', alt: 'Achim Global Construction Ltd '},
-    {src: '/images/logos/2.svg', alt: 'Ashtech Capital Limited '},
-    {src: '/images/logos/3.svg', alt: 'Corporate Wizards'},
-    {src: '/images/logos/4.svg', alt: 'Evana Homes Limited'},
-    {src: '/images/logos/5.svg', alt: 'Everight Clinic Limited'},
-    {src: '/images/logos/6.svg', alt: 'Mangrove Delicious Food ltd'},
-    {src: '/images/logos/7.svg', alt: 'Sangtech Technologies Nig. Limited '},
-    {src: '/images/logos/8.svg', alt: 'Tummy Tummy Foods'},
-    {src: '/images/logos/9.svg', alt: 'Everight Diagnostic and Laboratory Services Limited'},
-    {src: '/images/logos/10.svg', alt: 'Rento Hotels and Suites'}
+    {src: '/images/logos/africa-finance-corporation-logo.png', alt: 'Africa Finance Corporation'},
+    {src: '/images/logos/africa-works-logo.png', alt: 'Africa Works'},
+    {src: '/images/logos/airtel-logo.png', alt: 'Airtel'},
+    {src: '/images/logos/bca-leadership-logo.png', alt: 'BCA Leadership'},
+    {src: '/images/logos/bnr-logo.png', alt: 'BNR'},
+    {src: '/images/logos/cabinet-office-logo.png', alt: 'Cabinet Office'},
+    {src: '/images/logos/cdi-africa-logo.png', alt: 'CDI Africa'},
+    {src: '/images/logos/ctl-leadership-logo.png', alt: 'CTL Leadership'},
+    {src: '/images/logos/fnb-logo.png', alt: 'FNB'},
+    {src: '/images/logos/giz-logo.png', alt: 'GIZ'},
+    {src: '/images/logos/grz-logo.png', alt: 'GRZ'},
+    {src: '/images/logos/who-logo.png', alt: 'WHO'},
+    {src: '/images/logos/zicb-logo.png', alt: 'ZICB'}
 ]
 
 // Repeated so the strip always overflows this section's wide container — Swiper's
@@ -44,7 +47,7 @@ export default function PulseLogoMarquee() {
                         <img
                             src={src}
                             alt={alt}
-                            className="h-9 w-auto object-contain opacity-40 hover:opacity-100 transition-all duration-300 md:grayscale md:hover:grayscale-0"
+                            className="h-12 w-auto object-contain opacity-40 hover:opacity-100 transition-all duration-300 md:grayscale md:hover:grayscale-0"
                         />
                     </SwiperSlide>
                 ))}
