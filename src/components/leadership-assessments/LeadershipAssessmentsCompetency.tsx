@@ -24,7 +24,7 @@ export default function LeadershipAssessmentsCompetency() {
 
                 <div className="max-w-3xl">
                     <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
-                        Leadership competency assessment
+                        Leadership competency <br className="hidden md:block"/> assessment
                     </h2>
                 </div>
 

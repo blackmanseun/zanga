@@ -51,7 +51,7 @@ export default function LeadershipAssessmentsClarity() {
                             </span>
 
                             <h2 className="mb-6 text-gray-700 text-3xl md:text-[2.8rem] font-bold mt-3 font-MonaSans leading-[1.1]">
-                                Understand Leadership <br className="hidden md:block"/>More Clearly
+                                Understand leadership <br className="hidden md:block"/>more clearly
                             </h2>
 
                             <p className="text-gray-500 font-Montserrat leading-relaxed mb-4">

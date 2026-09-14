@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Reveal from '@/components/ui/Reveal'
+import { FaArrowRightLong } from "react-icons/fa6"
 
 type AccentColor = 'olive-dark' | 'olive' | 'terracotta' | 'terracotta-dark'
 
@@ -126,22 +127,23 @@ export default function LeadershipAssessmentsComparison() {
                 </Reveal>
 
                 <Reveal>
-                    <div className="mt-12 md:rounded-3xl rounded-xl bg-[#282A30] py-10 px-6 md:p-12">
-                        <div className="grid md:grid-cols-[1fr_auto] gap-6 items-center text-center md:text-left">
+                    <div className="mt-12">
+                        <div className="grid md:grid-cols-[1fr_auto] gap-6 items-center text-left">
                             <div>
-                                <h3 className="text-2xl font-bold font-MonaSans text-white mb-2">
+                                <h3 className="text-[20px] font-bold font-MonaSans text-[#282A30] mb-2">
                                     Not sure which assessment you need?
                                 </h3>
-                                <p className="text-white/60 font-Montserrat leading-relaxed max-w-lg md:mx-0 mx-auto">
+                                <p className="text-black/60 font-Montserrat leading-relaxed max-w-lg md:mx-0 mx-auto">
                                     Tell us what leadership decision you are trying to make, and we will
                                     help you identify the most appropriate assessment.
                                 </p>
                             </div>
                             <Link
                                 href="#"
-                                className="bg-olive text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat text-center whitespace-nowrap"
+                                className="flex items-center gap-2 text-olive rounded-full font-semibold text-sm font-Montserrat text-center whitespace-nowrap"
                             >
                                 Find the Right Assessment
+                                <FaArrowRightLong size={18}/>
                             </Link>
                         </div>
                     </div>

@@ -23,7 +23,7 @@ export default function LeadershipAssessmentsExecutive() {
 
                 <div className="max-w-3xl">
                     <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
-                        Executive leadership assessment
+                        Executive leadership <br className="hidden md:block"/> assessment
                     </h2>
                 </div>
 
@@ -63,7 +63,7 @@ export default function LeadershipAssessmentsExecutive() {
                         className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10"
                     >
                         <Image
-                            src="/images/33.jpg"
+                            src="/images/45.jpg"
                             alt=""
                             fill
                             sizes="(min-width: 1280px) 550px, 100vw"
