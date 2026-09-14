@@ -11,10 +11,10 @@ export default function LeadershipAssessmentsHero() {
       style={{ backgroundColor: 'rgb(250, 248, 246)' }}
       className="z-10 overflow-hidden relative w-full font-Montserrat px-4 sm:px-6 lg:px-8"
     >
-      <div className="py-16 md:py-20 mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-[7fr_5fr] items-end">
-        <div className="order-1 md:order-none md:col-start-1 md:row-start-1 text-left">
-          <h1 className="text-[2.2rem] md:text-[3rem] font-bold leading-tight text-gray-700 font-MonaSans mb-6">
-            See what your <span className="text-olive">leaders <br className="hidden md:block"/> can do</span>, and where they <br className="hidden md:block"/> can go next
+      <div className="py-16 md:py-20 mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-5 xl:grid-cols-[7fr_5fr] items-end">
+        <div className="order-1 md:order-none md:col-span-3 md:col-start-1 md:row-start-1 text-left">
+          <h1 className="text-[2.5rem] md:text-[3rem] font-bold leading-tight text-gray-700 font-MonaSans mb-6">
+            See what your <span className="md:text-olive">leaders <br className="hidden md:block"/> can do</span>, and where they <br className="hidden md:block"/> can go next
           </h1>
           <p className="text-gray-600 text-[16px] md:text-[17px] leading-relaxed font-Montserrat max-w-xl mb-10">
             <strong>Zanga's</strong> leadership assessments help organisations understand current capability, future potential, development priorities and how leadership is experienced by others.
@@ -36,7 +36,7 @@ export default function LeadershipAssessmentsHero() {
           </div>
         </div>
 
-        <div className="order-2 md:order-none md:col-start-2 md:row-start-1">
+        <div className="order-2 md:order-none md:col-span-2 xl:col-start-2 md:row-start-1">
           <LeadershipAssessmentsHeroSwiper/>
           <LeadershipAssessmentsLogoMarquee/>
         </div>

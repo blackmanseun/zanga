@@ -22,6 +22,11 @@ export default function LeadershipAssessmentsHeroSwiper() {
                 spaceBetween={20}
                 loop
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
+                breakpoints={{
+                    768: { slidesPerView: 1.2 },
+                    1024: { slidesPerView: 1.4 },
+                    1280: { slidesPerView: 1.2 },
+                }}
                 className="rounded-2xl [&_.swiper-pagination-bullet]:bg-gray-300 [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet-active]:bg-terracotta"
             >
                 {IMAGES.map((src) => (
