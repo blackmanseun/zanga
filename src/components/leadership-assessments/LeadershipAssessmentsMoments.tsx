@@ -70,8 +70,8 @@ export default function LeadershipAssessmentsMoments() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {moments.map((moment, i) => (
                         <Reveal key={moment.title} y={24} delayMs={i * 80} className="h-full">
-                            <div className={`h-full flex flex-col border border-slate-200 p-4 rounded-xl bg-[#FAF8F6] group transition-all duration-500 ease-in-out lg:hover:shadow-lg lg:hover:border-slate-300 ${i % 2 === 0 ? 'lg:hover:-rotate-[10deg]' : 'lg:hover:rotate-[10deg]'}`}>
-                                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-5 transition-transform duration-300 ease-in-out lg:group-hover:scale-[1.2]">
+                            <div className="h-full flex flex-col border border-slate-200 p-4 rounded-xl bg-[#FAF8F6] group hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-5">
                                     <moment.Icon size={22} className="text-gray-700" aria-hidden="true"/>
                                 </div>
                                 <h3 className="text-lg font-bold text-gray-700 font-MonaSans mb-2">{moment.title}</h3>

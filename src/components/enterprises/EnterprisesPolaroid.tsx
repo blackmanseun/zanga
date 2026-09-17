@@ -12,7 +12,8 @@ export default function EnterprisesPolaroid({
     positioned?: boolean
 }) {
     return (
-        <div className={`${positioned ? 'absolute' : ''} bg-white p-2 pb-5 rounded-sm shadow-xl ${className}`}>
+        <div
+            className={`${positioned ? 'absolute' : ''} bg-white border border-terracotta/50 p-2 pb-5 rounded-sm shadow-xl ${className}`}>
             <img
                 src={src}
                 alt=""

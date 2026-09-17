@@ -28,8 +28,8 @@ export default function LeadershipAssessmentsPotential() {
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 xl:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-start mt-4">
-                    <div>
+                <div className="grid md:grid-cols-2 xl:grid-cols-[550px_1fr] gap-10 lg:gap-16 mt-4">
+                    <div className="flex flex-col h-full">
                         <p className="text-gray-700 font-semibold font-Montserrat leading-relaxed mb-4">
                             Identify who can grow into greater responsibility.
                         </p>
@@ -46,14 +46,13 @@ export default function LeadershipAssessmentsPotential() {
                             well in their current roles and those who may have the capacity to succeed at a
                             higher level.
                         </p>
-                        <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
-                            <span className="font-semibold text-gray-700">Best suited for:</span>{' '}
-                            Organisations making succession, high-potential and future-readiness decisions.
+                        <p className="text-gray-700 font-semibold font-Montserrat leading-relaxed mb-8">
+                            Best suited for: Organisations making succession, high-potential and future-readiness decisions.
                         </p>
 
                         <Link
                             href="#"
-                            className="inline-flex items-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
+                            className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-terracotta/90 transition-colors font-Montserrat mt-auto self-start"
                         >
                             Explore Leadership Potential Assessment
                             <FiArrowRight size={16} aria-hidden="true"/>
@@ -61,7 +60,7 @@ export default function LeadershipAssessmentsPotential() {
                     </div>
 
                     <div
-                        className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10"
+                        className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10 h-full min-h-[420px]"
                     >
                         <Image
                             src="/images/26.jpg"

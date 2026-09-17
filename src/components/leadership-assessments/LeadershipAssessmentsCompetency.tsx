@@ -28,8 +28,8 @@ export default function LeadershipAssessmentsCompetency() {
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 xl:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-start mt-4">
-                    <div>
+                <div className="grid md:grid-cols-2 xl:grid-cols-[550px_1fr] gap-10 lg:gap-16 mt-4">
+                    <div className="flex flex-col h-full">
                         <p className="text-gray-700 font-semibold font-Montserrat leading-relaxed mb-4">
                             Understand current leadership capability.
                         </p>
@@ -46,15 +46,15 @@ export default function LeadershipAssessmentsCompetency() {
                             Participants complete a self-assessment and receive a detailed report with
                             insight into their leadership profile and development priorities.
                         </p>
-                        <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
-                            <span className="font-semibold text-gray-700">Best suited for:</span> Leaders,
+                        <p className="text-gray-700 font-semibold font-Montserrat leading-relaxed mb-8">
+                            Best suited for: Leaders,
                             managers and emerging leaders who need a clearer understanding of current
                             capability.
                         </p>
 
                         <Link
                             href="#"
-                            className="inline-flex items-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
+                            className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-terracotta/90 transition-colors font-Montserrat mt-auto self-start"
                         >
                             Explore the Leadership Competency Assessment
                             <FiArrowRight size={16} aria-hidden="true"/>
@@ -62,7 +62,7 @@ export default function LeadershipAssessmentsCompetency() {
                     </div>
 
                     <div
-                        className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10"
+                        className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10 h-full min-h-[420px]"
                     >
                         <Image
                             src="/images/9.jpg"

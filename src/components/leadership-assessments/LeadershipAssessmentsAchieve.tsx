@@ -1,6 +1,7 @@
 import React from 'react'
 import { FiTrendingUp, FiUsers, FiAward, FiTarget, FiGlobe } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
+import EnterprisesPolaroid from '@/components/enterprises/EnterprisesPolaroid'
 
 type Outcome = {
     title: string
@@ -84,13 +85,29 @@ export default function LeadershipAssessmentsAchieve() {
                         ))}
                     </div>
 
-                    <div className="relative mt-8 lg:mt-0">
-                        <img
-                            src="/images/31.jpg"
-                            alt="Leaders reviewing development plans together"
-                            className="w-full h-[20rem] sm:h-[35rem] object-cover rounded-2xl"
+                <div className="xl:block hidden w-full">
+                    <div className="relative w-full max-w-[420px] h-[420px] sm:h-[460px] mx-auto mt-8 lg:mt-16">
+                        <EnterprisesPolaroid
+                            imgClassName="md:h-[250px] h-[200px] object-bottom"
+                            src="/images/50.jpg"
+                            className="w-[250px] md:h-[280px] h-[250px] md:top-[-10%] top-0 left-0 md:-rotate-3 z-10"
+                        />
+                        <EnterprisesPolaroid
+                            imgClassName="md:h-[200px] h-[180px]"
+                            src="/images/51.jpg"
+                            className="object-cover w-[60%] top-[14%] -right-10 rotate-[8deg] z-20"
+                        />
+                        <EnterprisesPolaroid
+                            imgClassName="md:h-[220px] h-[180px] object-cover"
+                            src="/images/53.jpg"
+                            className="w-[60%] top-[46%] md:left-[-2%] left-2 rotate-[-10deg] z-30"
+                        />
+                        <span
+                            className="animate-pulse absolute right-2 bottom-0 w-14 h-14 rounded-full bg-terracotta/10 border border-terracotta/20"
+                            aria-hidden="true"
                         />
                     </div>
+                </div>
                 </div>
             </div>
         </section>

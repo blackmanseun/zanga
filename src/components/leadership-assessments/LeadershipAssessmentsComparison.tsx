@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import Reveal from '@/components/ui/Reveal'
-import { FaArrowRightLong } from "react-icons/fa6"
 
 type AccentColor = 'olive-dark' | 'olive' | 'terracotta' | 'terracotta-dark'
 
@@ -87,7 +86,8 @@ export default function LeadershipAssessmentsComparison() {
                 </Reveal>
 
                 <Reveal>
-                    <div className="rounded border border-gray-200 bg-white shadow-sm overflow-x-auto">
+                    {/* Table view (md and up) */}
+                    <div className="hidden md:block rounded border border-gray-200 bg-white shadow-sm overflow-x-auto">
                         <table className="w-full border-collapse border-t border-b border-slate-300">
                             <thead>
                                 <tr className="bg-olive/5">
@@ -124,6 +124,36 @@ export default function LeadershipAssessmentsComparison() {
                             </tbody>
                         </table>
                     </div>
+
+                    {/* Stacked cards (mobile only) */}
+                    <div className="md:hidden space-y-4">
+                        {rows.map((row) => (
+                            <div
+                                key={row.assessment}
+                                className="rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden"
+                            >
+                                <div className={`px-5 py-4 ${rowTint[row.color]}`}>
+                                    <h3 className="text-gray-800 font-Montserrat font-semibold text-[15px] leading-snug">
+                                        {row.assessment}
+                                    </h3>
+                                </div>
+                                <dl className="divide-y divide-gray-100">
+                                    {columns
+                                        .filter((col) => col.key !== 'assessment')
+                                        .map((col) => (
+                                            <div key={col.key} className="px-5 py-4">
+                                                <dt className="text-xs uppercase tracking-widest font-Montserrat font-semibold text-gray-400 mb-1">
+                                                    {col.label}
+                                                </dt>
+                                                <dd className="text-sm text-gray-600 font-Montserrat leading-relaxed">
+                                                    {row[col.key]}
+                                                </dd>
+                                            </div>
+                                        ))}
+                                </dl>
+                            </div>
+                        ))}
+                    </div>
                 </Reveal>
 
                 <Reveal>
@@ -138,13 +168,20 @@ export default function LeadershipAssessmentsComparison() {
                                     help you identify the most appropriate assessment.
                                 </p>
                             </div>
-                            <Link
-                                href="#"
-                                className="flex items-center gap-2 text-olive rounded-full font-semibold text-sm font-Montserrat text-center whitespace-nowrap"
-                            >
-                                Find the Right Assessment
-                                <FaArrowRightLong size={18}/>
-                            </Link>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Link
+                                    href="#"
+                                    className="text-[14px] text-center bg-olive text-white px-8 py-2 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
+                                >
+                                    Find the Right Assessment
+                                </Link>
+                                <Link
+                                    href="#"
+                                    className="text-center border border-terracotta text-terracotta px-8 py-2 rounded-md font-semibold text-[14px] hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
+                                >
+                                    Request a Demo
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </Reveal>

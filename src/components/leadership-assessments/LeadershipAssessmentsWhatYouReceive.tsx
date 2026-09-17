@@ -30,7 +30,7 @@ export default function LeadershipAssessmentsWhatYouReceive() {
 
                 <div className="max-w-3xl">
                     <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
-                        What organisations <br/> receive
+                        The output
                     </h2>
                 </div>
 
@@ -61,11 +61,11 @@ export default function LeadershipAssessmentsWhatYouReceive() {
                         </Link>
                     </div>
 
-                    <div className="relative md:mt-0 h-full xl:h-auto">
+                    <div className="relative mt-8 lg:mt-0">
                         <img
-                            src="/images/46.jpg"
+                            src="/images/55.jpg"
                             alt="A leadership team reviewing an assessment report together"
-                            className="xl:w-[95%] xl:h-[90%] md:w-full md:h-full object-cover rounded-2xl"
+                            className="w-full h-64 md:h-80 xl:h-[650px] object-cover rounded-2xl"
                         />
                     </div>
                 </div>

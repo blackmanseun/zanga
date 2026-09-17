@@ -42,11 +42,8 @@ export default function LeadershipAssessmentsApproach() {
 
                 <div className="max-w-3xl">
                     <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-4 font-MonaSans leading-tight text-gray-700">
-                        How <strong>Zanga&apos;s</strong> leadership assessment approach works
+                        The <strong>Zanga</strong> leadership <br className="hidden md:block"/> assessment approach
                     </h2>
-                    <p className="text-gray-500 font-Montserrat font-semibold mb-6">
-                        Assess. Understand. Develop. Track.
-                    </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">

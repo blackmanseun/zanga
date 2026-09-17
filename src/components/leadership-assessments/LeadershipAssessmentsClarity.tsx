@@ -1,7 +1,31 @@
 import React from 'react'
+import Image from 'next/image'
 import { FiCheckCircle } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
-import EnterprisesPolaroid from '@/components/enterprises/EnterprisesPolaroid'
+
+function Panel({
+    src,
+    alt,
+    className = '',
+    objectPosition = '[object-position:50%_50%]',
+}: {
+    src: string
+    alt: string
+    className?: string
+    objectPosition?: string
+}) {
+    return (
+        <div className={`relative overflow-hidden bg-gray-100 border border-gray-200 ${className}`}>
+            <Image
+                src={src}
+                alt={alt}
+                fill
+                sizes="(min-width: 768px) 25vw, 50vw"
+                className={`object-cover ${objectPosition}`}
+            />
+        </div>
+    )
+}
 
 const points: string[] = [
     'Current leadership capability',
@@ -21,26 +45,35 @@ export default function LeadershipAssessmentsClarity() {
             <div className="relative max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-16 items-center">
                     <Reveal>
-                        <div className="relative w-full max-w-[420px] h-[420px] sm:h-[460px] mx-auto md:block mt-16">
-                            <EnterprisesPolaroid
-                                imgClassName="md:h-[250px] h-[200px]"
-                                src="/images/headshot/2.jpg"
-                                className="w-[250px] md:h-[280px] h-[250px] md:top-[-10%] top-0 left-0 md:-rotate-3 z-10"
-                            />
-                            <EnterprisesPolaroid
-                                imgClassName="md:h-[200px] h-[180px]"
-                                src="/images/headshot/6.jpg"
-                                className="w-[60%] top-[14%] -right-10 rotate-[8deg] z-20"
-                            />
-                            <EnterprisesPolaroid
-                                imgClassName="md:h-[220px] h-[180px]"
-                                src="/images/headshot/8.jpg"
-                                className="w-[60%] top-[46%] md:left-[-2%] left-2 rotate-[-10deg] z-30"
-                            />
-                            <span
-                                className="animate-pulse absolute right-2 bottom-0 w-14 h-14 rounded-full bg-terracotta/10 border border-terracotta/20"
-                                aria-hidden="true"
-                            />
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="flex flex-col gap-4">
+                                <Panel
+                                    src="/images/5.jpg"
+                                    alt="A leader reviewing work on a laptop"
+                                    className="md:h-[500px] h-56 rounded-2xl rounded-br-none"
+                                    objectPosition="[object-position:50%_20%]"
+                                />
+                                <Panel
+                                    src="/images/49.jpg"
+                                    alt="Two colleagues in a feedback conversation"
+                                    className="md:h-44 h-28 md:w-[50%] w-[80%] ml-auto rounded-2xl rounded-tr-none"
+                                />
+                            </div>
+                            <div className="flex flex-col gap-4">
+                                <div className="md:h-20 h-16 rounded-2xl rounded-bl-none bg-terracotta/25 md:w-[30%] w-[50%]" aria-hidden="true"/>
+                                <Panel
+                                    src="/images/47.jpg"
+                                    alt="A leader focused on his laptop at a desk"
+                                    className="md:h-[400px] h-36 rounded-2xl rounded-bl-none"
+                                    objectPosition="[object-position:50%_25%]"
+                                />
+                                <Panel
+                                    src="/images/48.jpg"
+                                    alt="A leader working at his desk"
+                                    className="md:h-44 h-28 rounded-2xl rounded-tl-none md:w-[50%] w-[70%]"
+                                    objectPosition="[object-position:50%_20%]"
+                                />
+                            </div>
                         </div>
                     </Reveal>
 

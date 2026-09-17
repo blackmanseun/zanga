@@ -27,8 +27,8 @@ export default function LeadershipAssessments360() {
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 xl:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-start mt-4">
-                    <div>
+                <div className="grid md:grid-cols-2 xl:grid-cols-[550px_1fr] gap-10 lg:gap-16 mt-4">
+                    <div className="flex flex-col h-full">
                         <p className="text-gray-700 font-semibold font-Montserrat leading-relaxed mb-4">
                             See leadership from different perspectives.
                         </p>
@@ -49,14 +49,13 @@ export default function LeadershipAssessments360() {
                             The output provides a more rounded picture of leadership effectiveness and
                             helps focus development conversations on the areas that matter most.
                         </p>
-                        <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
-                            <span className="font-semibold text-gray-700">Best suited for:</span>{' '}
-                            Established and senior leaders who would benefit from multi-rater feedback.
+                        <p className="text-gray-700 font-semibold font-Montserrat leading-relaxed mb-8">
+                            Best suited for: Established and senior leaders who would benefit from multi-rater feedback.
                         </p>
 
                         <Link
                             href="#"
-                            className="inline-flex items-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
+                            className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-terracotta/90 transition-colors font-Montserrat mt-auto self-start"
                         >
                             Explore the 360&deg; Feedback Leadership Assessment
                             <FiArrowRight size={16} aria-hidden="true"/>
@@ -64,7 +63,7 @@ export default function LeadershipAssessments360() {
                     </div>
 
                     <div
-                        className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10"
+                        className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10 h-full min-h-[420px]"
                     >
                         <Image
                             src="/images/44.jpg"

@@ -27,8 +27,8 @@ export default function LeadershipAssessmentsExecutive() {
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 xl:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-start mt-4">
-                    <div>
+                <div className="grid md:grid-cols-2 xl:grid-cols-[550px_1fr] gap-10 lg:gap-16 mt-4">
+                    <div className="flex flex-col h-full">
                         <p className="text-gray-700 font-semibold font-Montserrat leading-relaxed mb-4">
                             Add deeper insight to business-critical leadership decisions.
                         </p>
@@ -45,14 +45,13 @@ export default function LeadershipAssessmentsExecutive() {
                             The assessment can be used alongside interviews, track record, references and
                             other evidence to provide a more complete picture of the individual.
                         </p>
-                        <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
-                            <span className="font-semibold text-gray-700">Best suited for:</span>{' '}
-                            C-suite, executive and other business-critical leadership roles.
+                        <p className="text-gray-700 font-semibold font-Montserrat leading-relaxed mb-8">
+                            Best suited for: C-suite, executive and other business-critical leadership roles.
                         </p>
 
                         <Link
                             href="#"
-                            className="inline-flex items-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
+                            className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-terracotta/90 transition-colors font-Montserrat mt-auto self-start"
                         >
                             Request an Executive Leadership Assessment
                             <FiArrowRight size={16} aria-hidden="true"/>
@@ -60,7 +59,7 @@ export default function LeadershipAssessmentsExecutive() {
                     </div>
 
                     <div
-                        className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10"
+                        className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10 h-full min-h-[420px]"
                     >
                         <Image
                             src="/images/45.jpg"
