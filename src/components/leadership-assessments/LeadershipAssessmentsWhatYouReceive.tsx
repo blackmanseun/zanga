@@ -54,7 +54,7 @@ export default function LeadershipAssessmentsWhatYouReceive() {
 
                         <Link
                             href="#"
-                            className="inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
+                            className="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-terracotta/90 transition-colors font-Montserrat"
                         >
                             Request a Demo
                             <FiArrowRight size={16} aria-hidden="true"/>
