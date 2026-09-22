@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import HeroImageGrid from '@/components/ui/HeroImageGrid'
+import EnterprisesHeroGrid from '@/components/enterprises/EnterprisesHeroGrid'
 
 export default function EnterprisesHero() {
     return (
@@ -10,7 +10,7 @@ export default function EnterprisesHero() {
         >
             <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <div className="md:pt-8">
-                    <h1 className="text-[2.2rem] md:text-[2.8rem] font-bold leading-tight text-gray-700 font-MonaSans mb-6">
+                    <h1 className="text-[2.2rem] md:text-[2.8rem] font-bold text-gray-700 leading-[1.1] font-MonaSans mb-6">
                         Understand your people. <br className="hidden xl:block"/>Strengthen your leadership.
                         <span className=" leading-[1.4] px-1"> Make better workforce decisions</span>
                     </h1>
@@ -50,7 +50,7 @@ export default function EnterprisesHero() {
                     </div>
                 </div>
 
-                <HeroImageGrid/>
+                <EnterprisesHeroGrid/>
             </div>
         </section>
     )

@@ -45,7 +45,7 @@ const navItems: NavItem[] = [
           heading: 'By Organisation Type',
           links: [
             { label: 'Enterprises', href: '/solutions/enterprises' },
-            { label: 'SMEs & Growth Businesses', href: '#' },
+            { label: 'SMEs & Growth Businesses', href: '/solutions/sme' },
             { label: 'Financial Institutions', href: '#' },
             { label: 'Development Organisations', href: '#' },
             { label: 'Public-Sector Institutions', href: '#' },
