@@ -15,7 +15,7 @@ export default function SmesWhereToStart() {
                                 Get Started
                             </span>
                             <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold mt-3 font-MonaSans text-gray-700">
-                                Where Should You Start?
+                                Where should you start?
                             </h2>
                             <p className="md:max-w-xl mt-4 text-gray-500 text-[16px] font-Montserrat leading-relaxed lg:pb-1">
                                 Every growing business&apos;s people priorities are different. Choose the
@@ -36,7 +36,7 @@ export default function SmesWhereToStart() {
                                 alt="A candidate being interviewed for an important role"
                                 fill
                                 sizes="(min-width: 1024px) 55vw, 100vw"
-                                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                className="object-cover object-[70%_25%] transition-transform duration-500 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-800/90 via-slate-800/20 to-transparent"/>
                             <div className="absolute inset-x-0 bottom-0 md:p-8 p-5">

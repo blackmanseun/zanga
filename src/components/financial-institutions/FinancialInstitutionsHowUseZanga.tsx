@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {FiUserCheck, FiAward, FiUsers, FiActivity, FiArrowRight} from 'react-icons/fi'
+import {FiAward, FiTrendingUp, FiMessageSquare, FiMapPin, FiTarget, FiArrowRight} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
 
@@ -14,40 +14,40 @@ type UseCase = {
 
 const useCases: UseCase[] = [
     {
-        title: 'Before a Critical Hire',
+        title: 'Institution-Wide Leadership Assessment',
         description:
-            'Use assessment to add another layer of evidence when appointing someone into a role where getting the decision wrong would be costly.',
-        cta: 'Explore Fit by Zanga',
+            'Assess leadership capability across branches, regions, subsidiaries and functions to identify strengths, development priorities and capability gaps.',
+        cta: 'Explore Leadership Assessments',
         color: '#c55e36',
-        Icon: FiUserCheck,
-    },
-    {
-        title: 'When Someone Becomes a Manager',
-        description:
-            'Assess their current leadership capability, identify priority development areas and connect them to the right development pathway.',
-        cta: 'Explore Leadership Solutions',
-        color: '#a3a748',
         Icon: FiAward,
     },
     {
-        title: 'When the Team Is Not Working as Well as It Should',
+        title: 'Culture and Employee-Listening Programmes',
         description:
-            'Use team assessment to understand behavioural differences, communication patterns and areas of friction before a planning session, offsite or intervention.',
-        cta: 'Explore Team Assessments',
+            'Combine culture, engagement and feedback tools to understand how employees experience leadership, workplace behaviour and organisational values.',
+        cta: 'Explore Pulse by Zanga',
         color: '#0F3460',
-        Icon: FiUsers,
+        Icon: FiMessageSquare,
     },
     {
-        title: 'When You Need to Know How People Are Really Doing',
+        title: 'Branch and Frontline Engagement',
         description:
-            'Run an engagement survey or targeted pulse check to understand employee experience, culture and retention signals.',
+            'Use targeted surveys and pulse checks to understand employee sentiment, retention drivers and differences across locations or functions.',
         cta: 'Explore Pulse by Zanga',
         color: '#16213E',
-        Icon: FiActivity,
+        Icon: FiMapPin,
+    },
+    {
+        title: 'Leadership Development Following Assessment',
+        description:
+            'Turn assessment results into targeted development, coaching and management programmes for branch leads, functional heads and senior management.',
+        cta: 'Explore Training and Development',
+        color: '#c55e36',
+        Icon: FiTarget,
     },
 ]
 
-export default function SmesHowUseZanga() {
+export default function FinancialInstitutionsHowUseZanga() {
     return (
         <section
             style={{backgroundColor: 'rgb(250, 248, 246)'}}
@@ -70,11 +70,11 @@ export default function SmesHowUseZanga() {
                                 Use Cases
                             </span>
                             <h2 className="text-3xl md:text-[2.75rem] font-bold text-gray-700 mt-3 mb-4 font-MonaSans leading-[1.1]">
-                                How growing businesses<br/> use <strong>Zanga</strong>
+                                How financial institutions<br/> use <strong>Zanga</strong>
                             </h2>
                             <p className="text-gray-500 font-Montserrat leading-relaxed max-w-sm">
-                                See how growing businesses put <strong>Zanga</strong> to work across hiring,
-                                leadership, teams and engagement.
+                                See how financial institutions put <strong>Zanga</strong> to work across
+                                leadership, culture, engagement and development.
                             </p>
                         </div>
 

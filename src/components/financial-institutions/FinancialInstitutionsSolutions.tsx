@@ -28,29 +28,8 @@ const CATEGORIES: SolutionCategory[] = [
     {
         href: '#',
         bg: 'bg-olive-dark',
-        title: 'Talent Intelligence',
-        description: 'Make better hiring and selection decisions.',
-        checklist: [
-            {
-                title: 'Fit by Zanga',
-                description: 'Bring structured insight into hiring, role-fit and candidate-selection decisions.',
-            },
-            {
-                title: 'Psychometric Assessments',
-                description: 'Understand behavioural and personality characteristics relevant to workplace performance.',
-            },
-            {
-                title: 'Recruitment Assessments',
-                description: 'Create greater consistency when comparing candidates for important roles.',
-            },
-        ],
-        cta: 'Explore Talent Solutions',
-    },
-    {
-        href: '#',
-        bg: 'bg-olive',
         title: 'Leadership Intelligence',
-        description: 'Build management capability as the business grows.',
+        description: 'Build visibility into leadership capability, readiness and continuity.',
         checklist: [
             {
                 title: 'Leadership Competency Assessment',
@@ -58,60 +37,78 @@ const CATEGORIES: SolutionCategory[] = [
             },
             {
                 title: '360 Feedback Assessment',
-                description: 'Help managers compare how they see their leadership with how others experience it.',
-            },
-            {
-                title: 'Leadership Potential Assessment',
-                description: 'Identify people who may be ready to take on greater responsibility.',
+                description: 'Compare self-perception with feedback from managers, peers and direct reports.',
             },
         ],
         cta: 'Explore Leadership Solutions',
     },
     {
         href: '#',
-        bg: 'bg-terracotta',
+        bg: 'bg-olive',
         title: 'Workforce Intelligence',
-        description: 'Understand how your people are experiencing the business.',
+        description: 'Understand employee experience across the institution.',
         checklist: [
             {
                 title: 'Pulse by Zanga',
-                description: 'Track employee engagement, culture and retention signals.',
+                description: 'Track engagement, culture, retention and workforce sentiment.',
             },
             {
                 title: 'Employee Engagement Surveys',
-                description: 'Understand the factors shaping employee experience.',
+                description: 'Identify the factors shaping employee experience.',
             },
             {
-                title: 'Team Effectiveness Assessments',
-                description: 'Identify how teams collaborate, communicate and work together.',
+                title: 'Workforce Analytics',
+                description: 'Turn employee and leadership data into insight for executives, HR teams and decision-makers.',
             },
         ],
         cta: 'Explore Workforce Solutions',
     },
     {
         href: '#',
-        bg: 'bg-terracotta-dark',
-        title: 'Leadership Development',
-        description: 'Turn assessment insight into practical development.',
+        bg: 'bg-terracotta',
+        title: 'Talent Intelligence',
+        description: 'Bring greater consistency to recruitment and promotion.',
         checklist: [
             {
-                title: 'Open-Enrolment Programmes',
-                description: 'Develop one or two managers without needing to commission a full in-house programme.',
+                title: 'Fit by Zanga',
+                description: 'Support hiring, role-fit and selection decisions with structured insight.',
             },
             {
-                title: 'Self-Paced Learning',
-                description: 'Give managers structured development they can complete around the working day.',
-            },
-            {
-                title: 'Group Coaching Cohorts',
-                description: 'Give managers access to guided development and peer learning at a more accessible cost.',
+                title: 'Psychometric Assessments',
+                description: 'Understand behavioural and personality characteristics relevant to workplace performance.',
             },
         ],
-        cta: 'Explore Training and Development',
+        cta: 'Explore Talent Solutions',
+    },
+    {
+        href: '#',
+        bg: 'bg-terracotta-dark',
+        title: 'Stakeholder Intelligence',
+        description: 'Listen to the people who shape trust, reputation and service quality.',
+        checklist: [
+            {
+                title: 'Voice by Zanga',
+                description: 'Collect and interpret feedback from employees, customers, agents, suppliers and other stakeholders through structured listening, confidential reporting and grievance-management channels.',
+            },
+        ],
+        cta: 'Explore Voice by Zanga',
+    },
+    {
+        href: '#',
+        bg: 'bg-olive-dark',
+        title: 'Diligence Intelligence (Enterprise and pilot)',
+        description: 'Add people insight to lending and investment decisions.',
+        checklist: [
+            {
+                title: 'Diligence by Zanga',
+                description: 'Structured founder, borrower and management-team assessment designed to provide an additional layer of leadership and people insight within selected lending, investment and portfolio engagements.',
+            },
+        ],
+        cta: 'Talk to Zanga About Diligence',
     },
 ]
 
-export default function SmesSolutions() {
+export default function FinancialInstitutionsSolutions() {
     return (
         <section className="bg-white py-20 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
@@ -121,7 +118,7 @@ export default function SmesSolutions() {
                             Solutions
                         </span>
                         <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
-                            Zanga Solutions for Growing Businesses
+                            Zanga Solutions for Financial Institutions
                         </h2>
                     </div>
                 </Reveal>
@@ -144,7 +141,7 @@ export default function SmesSolutions() {
                                 href={category.href}
                                 className={`${category.bg} rounded-3xl flex flex-col h-full min-h-[440px] hover:shadow-xl transition-all duration-300 group`}
                             >
-                                <div className="p-8 pb-6 min-h-[190px]">
+                                <div className="p-8 pb-6 min-h-[230px]">
                                     <h3 className="text-white text-2xl font-bold font-MonaSans mb-3 leading-snug">
                                         {category.title}
                                     </h3>

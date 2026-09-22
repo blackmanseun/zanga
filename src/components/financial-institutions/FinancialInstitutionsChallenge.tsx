@@ -5,15 +5,15 @@ import Reveal from '@/components/ui/Reveal'
 import EnterprisesPolaroid from '@/components/enterprises/EnterprisesPolaroid'
 
 const challenges: string[] = [
-    'Hiring decisions made with limited structured evidence',
-    'First-time managers promoted without adequate preparation',
-    'Key-person risk concentrated in a few individuals',
-    'Limited visibility into employee engagement and retention',
-    'Teams growing faster than management capability',
-    'Little or no dedicated HR or talent capacity',
+    'Leadership capability and succession readiness',
+    'Inconsistent management quality across branches and functions',
+    'Frontline and branch employee attrition',
+    'Limited visibility into organisational culture and conduct',
+    'Low trust in employee feedback or speak-up channels',
+    'Limited structured insight into leadership quality within lending or investment decisions',
 ]
 
-export default function SmesChallenge() {
+export default function FinancialInstitutionsChallenge() {
     return (
         <section className="relative overflow-hidden bg-white py-20 md:py-28 px-4 sm:px-6 lg:px-8">
             <div className="relative max-w-7xl mx-auto">
@@ -22,17 +22,17 @@ export default function SmesChallenge() {
                         <div className="relative w-full max-w-[420px] h-[420px] sm:h-[460px] mx-auto md:block">
                             <EnterprisesPolaroid
                                 imgClassName="md:h-[250px] h-[200px]"
-                                src="/images/33.jpg"
+                                src="/images/69.jpg"
                                 className="w-[250px] md:h-[280px] h-[250px] md:top-[-10%] top-0 left-0 md:-rotate-3 z-10"
                             />
                             <EnterprisesPolaroid
                                 imgClassName="md:h-[200px] h-[180px]"
-                                src="/images/36.jpg"
+                                src="/images/28.jpg"
                                 className="w-[60%] top-[14%] -right-10 rotate-[8deg] z-20"
                             />
                             <EnterprisesPolaroid
                                 imgClassName="md:h-[220px] h-[180px]"
-                                src="/images/26.jpg"
+                                src="/images/35.jpg"
                                 className="w-[60%] top-[46%] md:left-[-2%] left-2 rotate-[-10deg] z-30"
                             />
                             <span
@@ -45,28 +45,34 @@ export default function SmesChallenge() {
                     <Reveal>
                         <div className="md:max-w-lg xl:max-w-xl">
                             <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
-           Growth Challenge
+           The Challenge for Financial Institutions
           </span>
 
                             <h2 className="mb-6 text-gray-700 text-3xl md:text-[2.8rem] font-bold mt-3 font-MonaSans leading-[1.1]">
-                                The growth challenge
+                                The challenge for financial institutions
                             </h2>
 
                             <div className="space-y-4">
                                 <p className="text-gray-500 font-Montserrat leading-relaxed">
-                                    Growth often puts pressure on people systems before a business has the
-                                    structure to manage them.
+                                    Financial institutions operate in environments where leadership
+                                    quality, organisational culture, employee conduct and customer
+                                    experience can carry significant operational and reputational
+                                    consequences.
                                 </p>
                                 <p className="text-gray-500 font-Montserrat leading-relaxed">
-                                    Hiring may still rely heavily on instinct and referrals. Strong specialists
-                                    are promoted into management without enough preparation. Culture begins to
-                                    shift as teams grow, while engagement problems often become visible only
-                                    when good people leave.
+                                    As institutions grow across branches, regions and subsidiaries, these
+                                    issues become harder to see consistently.
                                 </p>
                                 <p className="text-gray-500 font-Montserrat leading-relaxed">
-                                    <strong>Zanga</strong> helps growing businesses bring more structure and
-                                    evidence into these decisions before people challenges begin to limit
-                                    growth.
+                                    Leadership capability may vary across teams. Succession pipelines may
+                                    be unclear. Culture can differ significantly between head office and
+                                    branches. And important employee or customer signals may remain
+                                    fragmented across surveys, complaints, interviews and reporting
+                                    channels.
+                                </p>
+                                <p className="text-gray-500 font-Montserrat leading-relaxed">
+                                    <strong>Zanga</strong> helps financial institutions bring more
+                                    structure, evidence and context into those decisions.
                                 </p>
                             </div>
 
@@ -74,7 +80,7 @@ export default function SmesChallenge() {
                                 href="#"
                                 className="mt-8 inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                             >
-                                Get started
+                                Speak to us
                                 <FiArrowRight size={16} aria-hidden="true"/>
                             </Link>
                         </div>

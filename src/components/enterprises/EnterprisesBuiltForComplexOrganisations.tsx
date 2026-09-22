@@ -28,7 +28,7 @@ export default function EnterprisesBuiltForComplexOrganisations() {
                     </h2>
                 </div>
 
-                <div className="grid lg:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-start mt-4">
+                <div className="grid lg:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-stretch mt-4">
                     <div>
                         <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
                             Enterprise organisations need solutions that can work across different teams,
@@ -66,11 +66,11 @@ export default function EnterprisesBuiltForComplexOrganisations() {
                         </Link>
                     </div>
 
-                    <div className="relative mt-8 lg:mt-0">
+                    <div className="relative mt-8 lg:mt-0 min-h-[12rem] sm:min-h-[26rem]">
                         <img
                             src="/images/24.jpg"
                             alt="Enterprise team working across a shared workspace"
-                            className="w-full h-[12rem] sm:h-[26rem] object-cover rounded-2xl"
+                            className="w-full h-full object-cover rounded-2xl"
                         />
                     </div>
                 </div>

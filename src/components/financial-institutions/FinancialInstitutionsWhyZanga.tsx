@@ -29,7 +29,7 @@ function Panel({
     )
 }
 
-export default function EnterprisesWhyZanga() {
+export default function FinancialInstitutionsWhyZanga() {
     return (
         <section
             style={{backgroundColor: 'rgb(250, 248, 246)'}}
@@ -40,27 +40,27 @@ export default function EnterprisesWhyZanga() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/22.jpg"
-                                alt="A team celebrating over their annual report findings"
-                                className="h-[320px]"
+                                src="/images/62.jpg"
+                                alt="A senior leader reviewing institutional reporting"
+                                className="h-[350px]"
                             />
                             <Panel
-                                src="/images/20.jpg"
-                                alt="Colleagues working together in an open office"
+                                src="/images/7.jpg"
+                                alt="Colleagues collaborating across branches"
                                 className="h-[200px]"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/23.jpg"
-                                alt="A team bringing their hands together in agreement"
+                                src="/images/44.jpg"
+                                alt="A manager and team member in conversation"
                                 className="h-[200px]"
-                                objectPosition="0% 25%"
+                                objectPosition="50% 20%"
                             />
                             <Panel
-                                src="/images/21.jpg"
-                                alt="A team bringing their hands together in agreement"
-                                className="h-[320px]"
+                                src="/images/40.jpg"
+                                alt="A team member reviewing a report"
+                                className="h-[350px]"
                                 objectPosition="50% 20%"
                             />
                         </div>
@@ -75,14 +75,19 @@ export default function EnterprisesWhyZanga() {
                         Global standards. Contextual intelligence.
                     </h2>
                     <p className="text-gray-500 text-[16px] font-Montserrat leading-relaxed mb-5">
-                        People data is only useful when it is interpreted in the environment in which
-                        people actually work.
+                        People data is more useful when it reflects the environment in which people
+                        actually work.
+                    </p>
+                    <p className="text-gray-500 text-[16px] font-Montserrat leading-relaxed mb-5">
+                        <strong>Zanga</strong> combines research-backed assessment approaches with cultural
+                        intelligence designed for African and other high-context workplaces. In
+                        institutions where hierarchy, relationships and indirect communication norms can
+                        influence what employees will and will not say, how leaders are experienced and
+                        how workplace behaviour is expressed, that context matters.
                     </p>
                     <p className="text-gray-500 text-[16px] font-Montserrat leading-relaxed mb-8">
-                        <strong>Zanga</strong> combines research-backed assessment methodologies with cultural
-                        intelligence designed for African and other high-context workplaces. This helps
-                        organisations understand not just what the data says, but what it means for
-                        their leaders, teams and organisational context.
+                        <strong>Zanga</strong> helps institutions interpret the data with greater
+                        sensitivity to those realities.
                     </p>
                     <Link
                         href="#"

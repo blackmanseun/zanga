@@ -46,7 +46,7 @@ const navItems: NavItem[] = [
           links: [
             { label: 'Enterprises', href: '/solutions/enterprises' },
             { label: 'SMEs & Growth Businesses', href: '/solutions/sme' },
-            { label: 'Financial Institutions', href: '#' },
+            { label: 'Financial Institutions', href: '/solutions/financial-institutions' },
             { label: 'Development Organisations', href: '#' },
             { label: 'Public-Sector Institutions', href: '#' },
             { label: 'Coaches & Consultants', href: '#' },

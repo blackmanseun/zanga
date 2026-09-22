@@ -3,36 +3,38 @@ import Link from 'next/link'
 import {FiArrowRight, FiCheckCircle} from 'react-icons/fi'
 
 const capabilities: string[] = [
-    'Individual assessments',
-    'Small leadership and management cohorts',
-    'Straightforward reports for founders and line managers',
-    'Open-enrolment development programmes',
-    'In-house numbers',
-    'Self-paced learning',
-    'Short engagement and pulse surveys',
-    'Practical recommendations after assessments',
-    'Solutions that can expand as the organisation grows',
+    'Large participant cohorts',
+    'Multi-branch and multi-entity programmes',
+    'Comparative reporting by region, function, level or business unit',
+    'Custom competency frameworks aligned to institutional standards',
+    'Confidential reporting and escalation workflows',
+    'Executive and board-level summaries',
+    'White-labelled reporting',
+    'Data security, privacy and confidentiality standards',
+    'Leadership, workforce and stakeholder dashboards',
+    'Data privacy and access controls aligned to the solution deployed',
 ]
 
-export default function SmesBuiltForSmallerTeams() {
+export default function FinancialInstitutionsBuiltForInstitutions() {
     return (
         <section className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
                 <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
-                    Growth Readiness
+                    Institution Readiness
                 </span>
 
                 <div className="max-w-3xl">
                     <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
-                        Built for smaller <br/>teams
+                        Built for complex, <br/>multi-site institutions
                     </h2>
                 </div>
 
-                <div className="grid lg:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-start mt-4">
+                <div className="grid lg:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-stretch mt-4">
                     <div>
                         <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
-                            Growing businesses should not need enterprise-sized budgets or teams to access
-                            useful people intelligence.
+                            Financial institutions need people intelligence that can work across large,
+                            distributed organisations without reducing every location or employee group to
+                            the same experience.
                         </p>
 
                         <p className="text-xs font-semibold text-olive uppercase tracking-wide font-Montserrat mb-4">
@@ -54,7 +56,7 @@ export default function SmesBuiltForSmallerTeams() {
                             href="#"
                             className="hidden md:inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
-                            Talk to Zanga About Your Team
+                            Talk to Zanga About Institutional Solutions
                             <FiArrowRight size={16} aria-hidden="true"/>
                         </Link>
                         <Link
@@ -66,11 +68,11 @@ export default function SmesBuiltForSmallerTeams() {
                         </Link>
                     </div>
 
-                    <div className="relative mt-8 lg:mt-0">
+                    <div className="relative mt-8 lg:mt-0 min-h-[12rem] xl:min-h-[35rem]">
                         <img
-                            src="/images/55.jpg"
-                            alt="Small team working together"
-                            className="w-full h-[12rem] xl:h-[35rem] object-cover rounded-2xl"
+                            src="/images/29.jpg"
+                            alt="Team coordinating across multiple institution locations"
+                            className="w-full h-full object-cover rounded-2xl"
                         />
                     </div>
                 </div>
