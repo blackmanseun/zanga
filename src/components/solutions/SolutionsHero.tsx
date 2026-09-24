@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import SolutionsLogoMarquee from "@/components/solutions/SolutionsLogoMarquee";
-import HeroImageGrid from "@/components/ui/HeroImageGrid";
+import SolutionsHeroGrid from "@/components/solutions/SolutionsHeroGrid";
 
 export default function SolutionsHero() {
   return (
@@ -11,7 +11,7 @@ export default function SolutionsHero() {
       style={{ backgroundColor: 'rgb(250, 248, 246)' }}
       className="z-10 overflow-hidden relative w-full font-Montserrat px-4 sm:px-6 lg:px-8"
     >
-      <div className="py-16 md:pt-10 md:pb-20 mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-[7fr_5fr] items-center">
+      <div className="py-16 md:pt-10 md:pb-20 mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 md:gap-x-16 items-center">
         <div className="md:pt-8 order-1 md:order-none md:col-start-1 md:row-start-1 text-left">
           <h1 className="text-[2.2rem] md:text-[3rem] font-bold leading-tight text-gray-700 font-MonaSans mb-6">
             Make better hiring <br className="hidden md:block"/>decisions with insight
@@ -41,7 +41,7 @@ export default function SolutionsHero() {
         </div>
 
         <div className="order-2 md:order-none md:col-start-2 md:row-start-1">
-          <HeroImageGrid/>
+          <SolutionsHeroGrid/>
         </div>
         <div className="order-3 md:order-none">
           <SolutionsLogoMarquee/>

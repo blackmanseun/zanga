@@ -33,7 +33,7 @@ const navItems: NavItem[] = [
           heading: 'By Business Need',
           links: [
             { label: 'Hire Better People', href: '/solutions/hire-better-people' },
-            { label: 'Develop Stronger Leaders', href: '#' },
+            { label: 'Develop Stronger Leaders', href: '/solutions/develop-stronger-leaders' },
             { label: 'Build High-Performing Teams', href: '#' },
             { label: 'Improve Engagement & Retention', href: '#' },
             { label: 'Strengthen Succession Planning', href: '#' },

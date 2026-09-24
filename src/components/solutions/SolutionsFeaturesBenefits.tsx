@@ -1,5 +1,5 @@
 import Reveal from '@/components/ui/Reveal'
-import {FiTarget, FiAward, FiTrendingUp, FiZap, FiUsers} from "react-icons/fi";
+import {FiTarget, FiAward, FiTrendingUp} from "react-icons/fi";
 import {CiCircleList} from "react-icons/ci";
 import {AiFillStar} from "react-icons/ai";
 import {FaInstagram, FaTiktok, FaYoutube} from "react-icons/fa";
@@ -454,75 +454,78 @@ export default function SolutionsFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="relative col-span-2 min-h-[280px] md:min-h-[420px] py-10 md:py-0 bg-[url('/images/18.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex items-center justify-center ">
-                                 <div className="relative w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] max-w-full">
-                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full"/>
+                                className="relative col-span-2 min-h-[420px] p-4 bg-[url('/images/18.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl overflow-hidden flex flex-col justify-between gap-2">
+                                <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/75 to-primary/40 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
 
-                                     <div
-                                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[210px] h-[210px] sm:w-[280px] sm:h-[280px] rounded-full border-2 border-dashed border-gray-200"/>
+                                <div className="relative flex items-center justify-between">
+                                    <div className="flex items-center gap-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md px-3 py-1.5">
+                                        <FiTrendingUp className="w-3.5 h-3.5 text-white"/>
+                                        <p className="text-white text-[11px] font-Montserrat font-semibold">Growth Trajectory</p>
+                                    </div>
+                                    <div className="flex items-center gap-3 text-[9px] text-white/70 font-Montserrat">
+                                        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-white/60"/>Performance</span>
+                                        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-terracotta"/>Potential</span>
+                                    </div>
+                                </div>
 
-                                    <div
-                                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full bg-primary p-2">
-                                        <div className="w-full h-full rounded-full overflow-hidden ring-4 ring-white shadow-lg">
-                                            <img
-                                                className="w-full h-full object-cover object-top"
-                                                src="/images/headshot/8.jpg" alt="Chidinma Okoro"/>
+                                <div className="relative flex-1 min-h-[180px] rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md">
+                                    <div className="absolute top-5 bottom-8 left-4 right-16">
+                                        {[0, 33, 66, 100].map((top) => (
+                                            <div key={top} className="absolute left-0 right-0 border-t border-dashed border-white/10"
+                                                 style={{top: `${top}%`}}/>
+                                        ))}
+                                        <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 100 100"
+                                             preserveAspectRatio="none" aria-hidden="true">
+                                            <path d="M0,30 C35,26 65,34 100,44" fill="none" stroke="rgba(255,255,255,0.55)"
+                                                  strokeWidth="2" strokeDasharray="5 4" vectorEffect="non-scaling-stroke"/>
+                                            <path d="M0,72 C40,70 60,30 100,10" fill="none" stroke="#c55e36"
+                                                  strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke"/>
+                                        </svg>
+
+                                        <div className="absolute -translate-x-1/2 -translate-y-1/2" style={{left: '63%', top: '35%'}}>
+                                            <span className="block w-3 h-3 rounded-full bg-white ring-4 ring-white/25"/>
+                                        </div>
+                                        <div className="absolute -translate-x-1/2 rounded-full bg-white px-2 py-0.5 shadow-md"
+                                             style={{left: '63%', top: '47%'}}>
+                                            <p className="text-gray-700 text-[9px] font-Montserrat font-semibold whitespace-nowrap">Overtakes</p>
+                                        </div>
+
+                                        <div className="absolute -translate-y-1/2 w-max" style={{left: '100%', top: '44%'}}>
+                                            <img className="ml-2 w-9 h-9 max-w-none rounded-full object-cover object-top ring-2 ring-white/50 grayscale"
+                                                 src="/images/headshot/2.jpg" alt=""/>
+                                        </div>
+                                        <div className="absolute -translate-y-1/2 w-max" style={{left: '100%', top: '10%'}}>
+                                            <img className="ml-2 w-10 h-10 max-w-none rounded-full object-cover object-top ring-2 ring-terracotta"
+                                                 src="/images/headshot/8.jpg" alt=""/>
                                         </div>
                                     </div>
-
-                                    <div
-                                        className="absolute top-1 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-terracotta shadow-md flex items-center justify-center text-white">
-                                        <FiZap className="w-5 h-5"/>
+                                    <div className="absolute bottom-2.5 left-4 right-16 flex justify-between text-white/50 text-[9px] font-Montserrat uppercase tracking-wide">
+                                        <span>Today</span>
+                                        <span>In 3 years</span>
                                     </div>
+                                </div>
 
-                                    <div
-                                        className="absolute -left-4 top-[26%] -translate-x-1/4 flex items-center gap-2 bg-white rounded-full shadow-md border border-gray-100 pl-1.5 pr-3 py-1.5">
-                                        <span
-                                            className="w-7 h-7 rounded-md bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                                            <FiTrendingUp className="w-4 h-4"/>
-                                        </span>
-                                        <p className="text-gray-700 text-[11px] font-Montserrat font-semibold whitespace-nowrap">Growth
-                                            Signals</p>
-                                    </div>
-
-                                    <div
-                                        className="hidden absolute right-0 top-[36%] translate-x-1/4 md:flex items-center gap-2 bg-white rounded-full shadow-md border border-gray-100 pl-1.5 pr-3 py-1.5">
-                                        <span
-                                            className="w-7 h-7 rounded-md bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                                            <FiUsers className="w-4 h-4"/>
-                                        </span>
-                                        <p className="text-gray-700 text-[11px] font-Montserrat font-semibold whitespace-nowrap">Succession
-                                            Report</p>
-                                    </div>
-
-                                    <div
-                                        className="absolute right-[4%] md:bottom-[16%] bottom-0 bg-white rounded-xl shadow-lg border border-gray-100 px-4 py-3 text-center">
-                                        <p className="text-gray-400 text-[9px] font-Montserrat uppercase tracking-wide">Top
-                                            decile</p>
-                                        <p className="text-gray-900 text-2xl font-bold font-MonaSans leading-tight">92%</p>
-                                        <p className="text-gray-400 text-[9px] font-Montserrat">potential accuracy</p>
-                                    </div>
-
-                                    <div
-                                        className="hidden md:block absolute left-0 -bottom-16 w-[168px] bg-white rounded-xl shadow-lg border border-gray-100 p-3">
-                                        <div className="flex items-center gap-1 mb-2">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-gray-200"/>
-                                            <span className="w-1.5 h-1.5 rounded-full bg-gray-200"/>
-                                            <span className="w-1.5 h-1.5 rounded-full bg-gray-200"/>
+                                <div className="relative rounded-2xl bg-white px-4 py-3 shadow-lg">
+                                    <div className="flex items-center gap-3">
+                                        <img className="w-10 h-10 rounded-xl object-cover object-top shrink-0"
+                                             src="/images/headshot/8.jpg" alt="Chidinma Okoro"/>
+                                        <div className="min-w-0 flex-1">
+                                            <p className="text-gray-400 text-[9px] font-Montserrat uppercase tracking-wide">
+                                                Hidden high potential
+                                            </p>
+                                            <p className="text-gray-900 text-sm font-bold font-MonaSans">Chidinma Okoro</p>
                                         </div>
-                                        <div
-                                            className="h-16 w-full rounded-md bg-primary/10 mb-2 flex items-center justify-center text-primary">
-                                            <FiTarget className="w-5 h-5"/>
-                                        </div>
-                                        <p className="text-gray-800 text-[11px] font-semibold font-Montserrat leading-snug mb-1.5">
-                                            Succession Readiness Report
-                                        </p>
-                                        <div className="h-1.5 rounded-full bg-gray-100 mb-1 w-full"/>
-                                        <div className="h-1.5 rounded-full bg-gray-100 mb-2 w-3/4"/>
-                                        <span
-                                            className="inline-block bg-primary text-white text-[9px] font-semibold font-Montserrat px-3 py-1 rounded-full">
-                                            View Report
+                                        <span className="rounded-full bg-terracotta px-2.5 py-1 text-white text-[10px] font-semibold font-Montserrat shrink-0">
+                                            Top 10%
                                         </span>
+                                    </div>
+                                    <div className="flex flex-wrap gap-1.5 mt-2">
+                                        {['Learning agility', 'Drive', 'Adaptability'].map((signal) => (
+                                            <span key={signal}
+                                                  className="rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-600 text-[10px] font-Montserrat">
+                                                {signal}
+                                            </span>
+                                        ))}
                                     </div>
                                 </div>
                             </div>

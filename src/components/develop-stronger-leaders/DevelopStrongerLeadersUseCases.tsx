@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {FiAward, FiTrendingUp, FiLayers, FiArrowRight} from 'react-icons/fi'
+import {FiUsers, FiBriefcase, FiTrendingUp, FiArrowRight} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
 import BoldZanga from '@/components/ui/BoldZanga'
@@ -10,6 +10,7 @@ type UseCase = {
     tagline: string
     description: string
     cta: string
+    href: string
     image: string
     color: string
     Icon: IconType
@@ -17,38 +18,41 @@ type UseCase = {
 
 const useCases: UseCase[] = [
     {
-        title: 'Growing Businesses',
-        tagline: 'Build the right team as you scale.',
+        title: 'First-Time and Mid-Level Managers',
+        tagline: 'Help managers make the shift from doing the work to leading people.',
         description:
-            'When every hire matters, use Zanga to look beyond qualifications and identify the behavioural attributes, capabilities and potential most relevant to your growing organisation.',
-        cta: 'Explore Fit by Zanga',
+            'Use leadership assessment to identify where managers need support and connect those insights to focused development, coaching or structured learning.',
+        cta: 'Explore Leadership Assessments',
+        href: '/assessments/leadership-assessments',
         image: '/images/14.jpg',
         color: '#c55e36',
-        Icon: FiTrendingUp,
+        Icon: FiUsers,
     },
     {
-        title: 'Established Organisations',
-        tagline: 'Bring greater consistency to recruitment at scale.',
+        title: 'Senior Leaders',
+        tagline: 'Give experienced leaders insight they may not otherwise receive.',
         description:
-            'Use structured assessment insight across roles, teams or recruitment cohorts to support more consistent selection decisions and give hiring managers a shared framework for evaluating talent.',
-        cta: 'Explore Organisational Assessments',
+            'Use 360 feedback and leadership assessment to help senior leaders understand how they are experienced by others and where behaviour change could have the greatest impact.',
+        cta: 'Explore 360 Feedback Leadership Assessment',
+        href: '#',
         image: '/images/12.jpg',
         color: '#a3a748',
-        Icon: FiLayers,
+        Icon: FiBriefcase,
     },
     {
-        title: 'Executive & Leadership Recruitment',
-        tagline: 'Add deeper intelligence to business-critical appointments.',
+        title: 'Emerging Leaders and High-Potential Talent',
+        tagline: 'Prepare future leaders before the role arrives.',
         description:
-            'Complement executive interviews, track record and references with insight into leadership capability, behaviour and future potential before making a senior appointment.',
+            'Assess future capability, readiness and development needs, then use those insights to shape emerging-leader and succession-development programmes.',
         cta: 'Explore Leadership Assessments',
+        href: '/assessments/leadership-assessments',
         image: '/images/10.jpg',
         color: '#0F3460',
-        Icon: FiAward,
+        Icon: FiTrendingUp,
     },
 ]
 
-export default function SolutionsUseCases() {
+export default function DevelopStrongerLeadersUseCases() {
     return (
         <section
             style={{backgroundColor: 'rgb(250, 248, 246)'}}
@@ -59,7 +63,7 @@ export default function SolutionsUseCases() {
                         Use Cases
                     </span>
                     <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
-                        Built for Different Hiring Decisions
+                        Built for Different Leadership Development Needs
                     </h2>
                 </Reveal>
 
@@ -94,7 +98,7 @@ export default function SolutionsUseCases() {
                                         <BoldZanga text={useCase.description}/>
                                     </p>
                                     <Link
-                                        href="#"
+                                        href={useCase.href}
                                         className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                     >
                                         {useCase.cta}

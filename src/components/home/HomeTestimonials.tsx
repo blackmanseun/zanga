@@ -17,44 +17,44 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     quote:
-      'Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible. Consulted admitting oh mr up as described.',
-    name: 'Jane Cooper',
-    location: 'Los Angeles, CA',
+      'The Zanga reports gave our panel a far richer picture than interviews alone. We now go into final rounds knowing exactly what to explore with each candidate.',
+    name: 'Adaeze Nwosu',
+    location: 'Head of Talent Acquisition · Lagos',
     avatar: '/images/headshot/3.jpg',
   },
   {
     quote:
-      'The and collecting motionless difficulty son. His hearing staying ten colonel met. Sex drew six easy four dear cold.',
-    name: 'Robert Fox',
-    location: 'New York City, NY',
+      'The 360 feedback was the first time several of our senior leaders heard how they were really experienced by their teams. It changed the coaching conversations completely.',
+    name: 'Kwame Mensah',
+    location: 'Group HR Director · Accra',
     avatar: '/images/headshot/6.jpg',
   },
   {
     quote:
-      'Sociable on as carriage my position weddings raillery consider. Peculiar trifling absolute and wandered vicinity property yet.',
-    name: 'Leslie Alexander',
-    location: 'Buffalo, NJ',
+      'What sets Zanga apart is the cultural context. The insights reflect how leadership actually works in our organisation, not a model imported from elsewhere.',
+    name: 'Amina Yusuf',
+    location: 'Chief People Officer · Nairobi',
     avatar: '/images/headshot/7.jpg',
   },
   {
     quote:
-      'Am rejoiced no perceive prospect quitting mistress. Bringing yet promise nothing did mrs. Sending oh no you highest boy parties.',
-    name: 'Courtney Henry',
-    location: 'Chicago, IL',
+      'We used to send every new manager on the same programme. Now each development plan starts from their assessment results, and the difference in engagement is clear.',
+    name: 'Thandiwe Dlamini',
+    location: 'Learning & Development Lead · Johannesburg',
     avatar: '/images/headshot/1.jpg',
   },
   {
     quote:
-      'Household in the affronting incommode so an. Sight house has never for.',
-    name: 'Guy Hawkins',
-    location: 'Austin, TX',
+      'Zanga helped us spot high-potential people we might otherwise have overlooked. Our succession pipeline is stronger and far better prepared for promotion.',
+    name: 'Chipo Mwale',
+    location: 'Talent Management Manager · Lusaka',
     avatar: '/images/headshot/8.jpg',
   },
   {
     quote:
-      'Ye on properly handsome returned throwing am no whatever. In music match if young.',
-    name: 'Darlene Robertson',
-    location: 'Seattle, WA',
+      'For senior appointments, the leadership assessment added a level of evidence our board had been missing. We made the final decision with real confidence.',
+    name: 'Emmanuel Okafor',
+    location: 'Managing Director · Abuja',
     avatar: '/images/headshot/2.jpg',
   },
 ]
