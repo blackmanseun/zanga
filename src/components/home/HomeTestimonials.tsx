@@ -7,14 +7,24 @@ import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-type Testimonial = {
+export type Testimonial = {
   quote: string
   name: string
   location: string
-  avatar: string
+  avatar?: string
+  initials?: string
 }
 
-const testimonials: Testimonial[] = [
+function getInitials(name: string) {
+  return name
+    .split(' ')
+    .map((word) => word[0])
+    .slice(0, 2)
+    .join('')
+    .toUpperCase()
+}
+
+const defaultTestimonials: Testimonial[] = [
   {
     quote:
       'The Zanga reports gave our panel a far richer picture than interviews alone. We now go into final rounds knowing exactly what to explore with each candidate.',
@@ -59,7 +69,7 @@ const testimonials: Testimonial[] = [
   },
 ]
 
-export default function HomeTestimonials() {
+export default function HomeTestimonials({ testimonials = defaultTestimonials }: { testimonials?: Testimonial[] }) {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -78,7 +88,8 @@ export default function HomeTestimonials() {
              modules={[Autoplay, Pagination]}
              slidesPerView={1}
              spaceBetween={24}
-             loop
+             loop={testimonials.length > 3}
+             rewind={testimonials.length <= 3}
              autoplay={{ delay: 3500, disableOnInteraction: false }}
              pagination={{ clickable: true }}
              breakpoints={{
@@ -99,11 +110,17 @@ export default function HomeTestimonials() {
                      {testimonial.quote}
                    </p>
                    <div className="flex items-center gap-3">
-                     <img
-                         src={testimonial.avatar}
-                         alt={testimonial.name}
-                         className="w-11 h-11 rounded-full object-cover object-top shrink-0"
-                     />
+                     {testimonial.avatar ? (
+                         <img
+                             src={testimonial.avatar}
+                             alt={testimonial.name}
+                             className="w-11 h-11 rounded-full object-cover object-top shrink-0"
+                         />
+                     ) : (
+                         <span className="w-11 h-11 rounded-full bg-olive/10 text-olive text-sm font-bold font-MonaSans flex items-center justify-center shrink-0">
+                           {testimonial.initials ?? getInitials(testimonial.name)}
+                         </span>
+                     )}
                      <div>
                        <p className="text-sm font-bold text-gray-900 font-Montserrat">{testimonial.name}</p>
                        <p className="text-sm text-gray-400 font-Montserrat">{testimonial.location}</p>

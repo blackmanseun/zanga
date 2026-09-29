@@ -4,7 +4,7 @@ import DevelopStrongerLeadersFeaturesBenefits from '@/components/develop-stronge
 import DevelopStrongerLeadersMethodology from '@/components/develop-stronger-leaders/DevelopStrongerLeadersMethodology'
 import DevelopStrongerLeadersOutcomes from '@/components/develop-stronger-leaders/DevelopStrongerLeadersOutcomes'
 import DevelopStrongerLeadersUseCases from '@/components/develop-stronger-leaders/DevelopStrongerLeadersUseCases'
-import HomeTestimonials from '@/components/home/HomeTestimonials'
+import DevelopStrongerLeadersTestimonials from '@/components/develop-stronger-leaders/DevelopStrongerLeadersTestimonials'
 import DevelopStrongerLeadersFaq from '@/components/develop-stronger-leaders/DevelopStrongerLeadersFaq'
 import DevelopStrongerLeadersCta from '@/components/develop-stronger-leaders/DevelopStrongerLeadersCta'
 
@@ -16,7 +16,7 @@ export default function DevelopStrongerLeadersPage() {
             <DevelopStrongerLeadersMethodology/>
             <DevelopStrongerLeadersOutcomes/>
             <DevelopStrongerLeadersUseCases/>
-            <HomeTestimonials/>
+            <DevelopStrongerLeadersTestimonials/>
             <DevelopStrongerLeadersFaq/>
             <DevelopStrongerLeadersCta/>
         </>
