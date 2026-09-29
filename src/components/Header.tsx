@@ -117,17 +117,6 @@ const navItems: NavItem[] = [
           ],
         },
       ],
-      extraLinks: {
-        heading: 'Platform',
-        links: [
-          { label: 'Organisational Dashboards', href: '#' },
-          { label: 'Reporting and Benchmarking', href: '#' },
-          { label: 'White-Label Solutions', href: '#' },
-          { label: 'Integrations', href: '#' },
-          { label: 'Data Security and Privacy', href: '#' },
-          { label: 'Customisation and Enterprise Solutions', href: '#' },
-        ],
-      },
     },
   },
   {
@@ -141,8 +130,6 @@ const navItems: NavItem[] = [
           links: [
             { label: 'Leadership Competency Assessment', href: '#' },
             { label: '360 Leadership Assessment', href: '#' },
-            { label: 'Leadership Potential Assessment', href: '#' },
-            { label: 'Executive Leadership Assessment', href: '#' },
           ],
         },
         {
@@ -151,8 +138,6 @@ const navItems: NavItem[] = [
             { label: 'Personality Assessment', href: '#' },
             { label: 'Behavioural Assessment', href: '#' },
             { label: 'Cognitive Ability Assessment', href: '#' },
-            { label: 'Emotional Intelligence Assessment', href: '#' },
-            { label: 'Career & Role-Fit Assessment', href: '#' },
           ],
         },
         {
@@ -160,8 +145,8 @@ const navItems: NavItem[] = [
           links: [
             { label: 'Employee Engagement Survey', href: '#' },
             { label: 'Organisational Culture Assessment', href: '#' },
-            { label: 'Team Effectiveness Assessment', href: '#' },
-            { label: 'Custom Workforce Survey', href: '#' },
+            { label: 'Workforce Analytics', href: '#' },
+            { label: 'Workforce Survey', href: '#' },
           ],
         },
         {
@@ -169,7 +154,6 @@ const navItems: NavItem[] = [
           variant: 'promo',
           links: [
             { label: 'Compare Assessments', href: '#' },
-            { label: 'Find the Right Assessment', href: '#' },
             { label: 'View Sample Reports', href: '#' },
             { label: 'Take a Free Assessment', href: '#' },
             { label: 'Assessment FAQs', href: '#' },
@@ -256,11 +240,8 @@ const navItems: NavItem[] = [
         {
           heading: 'Help and Education',
           links: [
-            { label: 'Assessment FAQs', href: '#' },
-            { label: 'Product FAQs', href: '#' },
-            { label: 'Buyer Guides', href: '#' },
+            { label: 'FAQs', href: '#' },
             { label: 'Coach Resources', href: '#' },
-            { label: 'Platform Support', href: '#' },
           ],
         },
         {
@@ -270,7 +251,7 @@ const navItems: NavItem[] = [
             { label: 'Latest Report', href: '#' },
             { label: 'Upcoming Webinar', href: '#' },
             { label: 'Featured Case Study', href: '#' },
-            { label: 'Subscribe', href: '#' },
+            { label: 'Subscribe to newsletter', href: '#' },
           ],
         },
       ],
@@ -364,6 +345,13 @@ function MegaColumnView({ column, onNavigate }: { column: MegaColumn; onNavigate
   )
 }
 
+const OPEN_NAV_MENU_EVENT = 'zanga:open-nav-menu'
+
+/** Opens a header mega menu (e.g. 'Solutions') from elsewhere on the page. */
+export function openNavMenu(label: string) {
+  window.dispatchEvent(new CustomEvent<string>(OPEN_NAV_MENU_EVENT, { detail: label }))
+}
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
@@ -387,6 +375,20 @@ export default function Header() {
     setOpenDropdown(null)
     setOpenMobileGroup(null)
   }, [pathname])
+
+  useEffect(() => {
+    function handleOpenNavMenu(event: Event) {
+      const label = (event as CustomEvent<string>).detail
+      if (window.matchMedia('(min-width: 1024px)').matches) {
+        setOpenDropdown(label)
+      } else {
+        setMenuOpen(true)
+        setOpenMobileGroup(label)
+      }
+    }
+    window.addEventListener(OPEN_NAV_MENU_EVENT, handleOpenNavMenu)
+    return () => window.removeEventListener(OPEN_NAV_MENU_EVENT, handleOpenNavMenu)
+  }, [])
 
   useEffect(() => {
     function handleScroll() {

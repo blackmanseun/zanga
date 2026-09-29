@@ -3,8 +3,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Reveal from '@/components/ui/Reveal'
+import { openNavMenu } from '@/components/Header'
 
-const flipImages = ['/images/7.jpg', '/images/8.jpg', '/images/12.jpg']
+const flipImages = ['/images/100.jpg', '/images/103.jpg', '/images/102.jpg']
 const FLIP_INTERVAL_MS = 5000
 
 function FlipImage() {
@@ -99,12 +100,14 @@ export default function HomeHero() {
             >
               Take a free assessment
             </Link>
-            <Link
-              href="#"
+            <button
+              type="button"
+              onClick={() => openNavMenu('Solutions')}
+              aria-haspopup="menu"
               className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
             >
               Explore Zanga Solutions
-            </Link>
+            </button>
           </div>
         </Reveal>
 
