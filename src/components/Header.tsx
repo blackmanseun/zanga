@@ -34,7 +34,7 @@ const navItems: NavItem[] = [
           links: [
             { label: 'Hire Better People', href: '/solutions/hire-better-people' },
             { label: 'Develop Stronger Leaders', href: '/solutions/develop-stronger-leaders' },
-            { label: 'Build High-Performing Teams', href: '#' },
+            { label: 'Build High-Performing Teams', href: '/solutions/build-high-performing-teams' },
             { label: 'Improve Engagement & Retention', href: '#' },
             { label: 'Strengthen Succession Planning', href: '#' },
             { label: 'Listen to Stakeholders', href: '#' },
@@ -600,7 +600,7 @@ export default function Header() {
 
         {activeMegaItem && (
           <div className="hidden lg:block absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-xl">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 py-8">
               <div
                 className="grid gap-10"
                 style={{ gridTemplateColumns: `repeat(${activeMegaItem.menu.columns.length}, minmax(0, 1fr))` }}
