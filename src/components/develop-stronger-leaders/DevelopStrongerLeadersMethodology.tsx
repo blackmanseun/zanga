@@ -50,7 +50,7 @@ export default function DevelopStrongerLeadersMethodology() {
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-16 items-start">
+                <div className="grid md:grid-cols-2 gap-16 items-start md:items-stretch">
                     <div>
                         <div className="space-y-4">
                             {paragraphs.map((p, i) => (
@@ -74,8 +74,8 @@ export default function DevelopStrongerLeadersMethodology() {
                         </Link>
                     </div>
 
-                    <div className="rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8 bg-gray-50">
-                        <div className="space-y-8">
+                    <div className="rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8 bg-gray-50 flex flex-col">
+                        <div className="flex-1 flex flex-col justify-between gap-8">
                             {steps.map((s) => (
                                 <div key={s.title} className="flex items-start gap-5">
                                     <span

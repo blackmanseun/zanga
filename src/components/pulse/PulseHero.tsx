@@ -70,24 +70,24 @@ export default function PulseHero() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/20.jpg"
+                                src="/images/112.jpg"
                                 alt="A team working together in an open office"
                                 className="md:h-72 h-48"
                             />
                             <Panel
-                                src="/images/26.jpg"
+                                src="/images/113.jpg"
                                 alt="A people leader reviewing a workforce report"
                                 className="md:h-48 h-28"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/9.jpg"
+                                src="/images/114.jpg"
                                 alt="Colleagues bringing their hands together in unity"
                                 className="md:h-48 h-28"
                             />
                             <Panel
-                                src="/images/14.jpg"
+                                src="/images/80.jpg"
                                 alt="An employee focused at her desk"
                                 className="md:h-72 h-48"
                                 objectPosition="50% 20%"

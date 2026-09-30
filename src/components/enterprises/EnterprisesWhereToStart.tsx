@@ -114,7 +114,7 @@ export default function EnterprisesWhereToStart() {
                                     href="#"
                                     className="relative mt-5 inline-flex items-center justify-center gap-2 bg-terracotta text-white px-6 py-3 rounded-md font-semibold text-sm font-Montserrat hover:bg-terracotta/90 transition-colors"
                                 >
-                                    Book a free assessment
+                                    Take a free assessment
                                     <FiArrowRight size={16} aria-hidden="true"/>
                                 </Link>
                             </div>

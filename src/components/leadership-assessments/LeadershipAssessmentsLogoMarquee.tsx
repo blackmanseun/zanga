@@ -25,7 +25,7 @@ export default function LeadershipAssessmentsLogoMarquee() {
     return (
         <div className="mt-12">
             <p className="text-primary/30 text-15px mb-6 font-Montserrat">
-                Trusted by organisations making better people decisions.
+                Trusted by organisations working to assess and grow leadership capability.
             </p>
             <div className="overflow-hidden relative">
                 <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-cream to-transparent z-10 pointer-events-none"/>

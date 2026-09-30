@@ -1,8 +1,11 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import { FiAward, FiBriefcase, FiGlobe, FiArrowRight } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import BoldZanga from '@/components/ui/BoldZanga'
+import { useModal } from '@/components/modal/ModalProvider'
 
 type Track = {
   title: string
@@ -33,6 +36,8 @@ const tracks: Track[] = [
 ]
 
 export default function HomeBuildWithZanga() {
+  const { openModal } = useModal()
+
   return (
     <section className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -82,13 +87,14 @@ export default function HomeBuildWithZanga() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
-              <Link
-                href="#"
+              <button
+                type="button"
+                onClick={() => openModal('partner-with-zanga')}
                 className="inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
               >
                 Partner with Zanga
                 <FiArrowRight size={16} aria-hidden="true" />
-              </Link>
+              </button>
               <Link
                 href="#"
                 className="inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-900 px-7 py-3.5 rounded-md font-semibold text-sm hover:border-gray-400 transition-colors font-Montserrat"
@@ -100,7 +106,7 @@ export default function HomeBuildWithZanga() {
 
           <div className="relative mt-8 lg:mt-0">
             <img
-              src="/images/12.jpg"
+              src="/images/107.jpg"
               alt="Zanga partners collaborating over workforce data"
               className="w-full h-[20rem] sm:h-[26rem] object-cover rounded-2xl"
             />

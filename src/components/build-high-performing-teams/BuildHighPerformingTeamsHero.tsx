@@ -42,7 +42,7 @@ export default function BuildHighPerformingTeamsHero() {
                 </div>
 
                 <BuildHighPerformingTeamsHeroGrid/>
-                <SolutionsLogoMarquee/>
+                <SolutionsLogoMarquee text="Trusted by organisations working to build teams that perform better together."/>
             </div>
         </section>
     )

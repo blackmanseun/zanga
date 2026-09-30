@@ -4,7 +4,7 @@ import BuildHighPerformingTeamsFeaturesBenefits from '@/components/build-high-pe
 import BuildHighPerformingTeamsMethodology from '@/components/build-high-performing-teams/BuildHighPerformingTeamsMethodology'
 import BuildHighPerformingTeamsOutcomes from '@/components/build-high-performing-teams/BuildHighPerformingTeamsOutcomes'
 import BuildHighPerformingTeamsUseCases from '@/components/build-high-performing-teams/BuildHighPerformingTeamsUseCases'
-import HomeTestimonials from '@/components/home/HomeTestimonials'
+import BuildHighPerformingTeamsTestimonials from '@/components/build-high-performing-teams/BuildHighPerformingTeamsTestimonials'
 import BuildHighPerformingTeamsFaq from '@/components/build-high-performing-teams/BuildHighPerformingTeamsFaq'
 import BuildHighPerformingTeamsCta from '@/components/build-high-performing-teams/BuildHighPerformingTeamsCta'
 
@@ -16,7 +16,7 @@ export default function BuildHighPerformingTeamsPage() {
             <BuildHighPerformingTeamsMethodology/>
             <BuildHighPerformingTeamsOutcomes/>
             <BuildHighPerformingTeamsUseCases/>
-            <HomeTestimonials/>
+            <BuildHighPerformingTeamsTestimonials/>
             <BuildHighPerformingTeamsFaq/>
             <BuildHighPerformingTeamsCta/>
         </>

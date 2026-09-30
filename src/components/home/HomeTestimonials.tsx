@@ -30,42 +30,36 @@ const defaultTestimonials: Testimonial[] = [
       'The Zanga reports gave our panel a far richer picture than interviews alone. We now go into final rounds knowing exactly what to explore with each candidate.',
     name: 'Adaeze Nwosu',
     location: 'Head of Talent Acquisition · Lagos',
-    avatar: '/images/headshot/3.jpg',
   },
   {
     quote:
       'The 360 feedback was the first time several of our senior leaders heard how they were really experienced by their teams. It changed the coaching conversations completely.',
     name: 'Kwame Mensah',
     location: 'Group HR Director · Accra',
-    avatar: '/images/headshot/6.jpg',
   },
   {
     quote:
       'What sets Zanga apart is the cultural context. The insights reflect how leadership actually works in our organisation, not a model imported from elsewhere.',
     name: 'Amina Yusuf',
     location: 'Chief People Officer · Nairobi',
-    avatar: '/images/headshot/7.jpg',
   },
   {
     quote:
       'We used to send every new manager on the same programme. Now each development plan starts from their assessment results, and the difference in engagement is clear.',
     name: 'Thandiwe Dlamini',
     location: 'Learning & Development Lead · Johannesburg',
-    avatar: '/images/headshot/1.jpg',
   },
   {
     quote:
       'Zanga helped us spot high-potential people we might otherwise have overlooked. Our succession pipeline is stronger and far better prepared for promotion.',
     name: 'Chipo Mwale',
     location: 'Talent Management Manager · Lusaka',
-    avatar: '/images/headshot/8.jpg',
   },
   {
     quote:
       'For senior appointments, the leadership assessment added a level of evidence our board had been missing. We made the final decision with real confidence.',
     name: 'Emmanuel Okafor',
     location: 'Managing Director · Abuja',
-    avatar: '/images/headshot/2.jpg',
   },
 ]
 

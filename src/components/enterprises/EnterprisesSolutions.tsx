@@ -39,10 +39,6 @@ const CATEGORIES: SolutionCategory[] = [
                 title: '360 Leadership Assessment',
                 description: 'Compare self-perception with feedback from managers, peers and direct reports.',
             },
-            {
-                title: 'Leadership Potential Assessment',
-                description: 'Identify future capability, readiness and high-potential talent.',
-            },
         ],
         cta: 'Explore Leadership Solutions',
     },

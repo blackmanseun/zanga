@@ -5,7 +5,7 @@ import SolutionsMethodology from '@/components/solutions/SolutionsMethodology'
 import SolutionsOutcomes from '@/components/solutions/SolutionsOutcomes'
 import SolutionsUseCases from '@/components/solutions/SolutionsUseCases'
 import SolutionsCta from '@/components/solutions/SolutionsCta'
-import HomeTestimonials from "@/components/home/HomeTestimonials";
+import SolutionsTestimonials from "@/components/solutions/SolutionsTestimonials";
 import HomeFaq from "@/components/home/HomeFaq";
 
 export default function HireBetterPeoplePage() {
@@ -16,7 +16,7 @@ export default function HireBetterPeoplePage() {
             <SolutionsMethodology/>
             <SolutionsOutcomes/>
             <SolutionsUseCases/>
-            <HomeTestimonials/>
+            <SolutionsTestimonials/>
             <HomeFaq/>
             <SolutionsCta/>
         </>

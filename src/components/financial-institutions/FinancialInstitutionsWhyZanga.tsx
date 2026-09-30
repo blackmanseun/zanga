@@ -52,10 +52,10 @@ export default function FinancialInstitutionsWhyZanga() {
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/44.jpg"
+                                src="/images/82.jpg"
                                 alt="A manager and team member in conversation"
                                 className="h-[200px]"
-                                objectPosition="50% 20%"
+                                // objectPosition="50% 20%"
                             />
                             <Panel
                                 src="/images/40.jpg"

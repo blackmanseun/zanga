@@ -22,17 +22,17 @@ export default function SmesChallenge() {
                         <div className="relative w-full max-w-[420px] h-[420px] sm:h-[460px] mx-auto md:block">
                             <EnterprisesPolaroid
                                 imgClassName="md:h-[250px] h-[200px]"
-                                src="/images/33.jpg"
+                                src="/images/74.jpg"
                                 className="w-[250px] md:h-[280px] h-[250px] md:top-[-10%] top-0 left-0 md:-rotate-3 z-10"
                             />
                             <EnterprisesPolaroid
-                                imgClassName="md:h-[200px] h-[180px]"
-                                src="/images/36.jpg"
+                                imgClassName="md:h-[200px] h-[180px] object-center"
+                                src="/images/80.jpg"
                                 className="w-[60%] top-[14%] -right-10 rotate-[8deg] z-20"
                             />
                             <EnterprisesPolaroid
-                                imgClassName="md:h-[220px] h-[180px]"
-                                src="/images/26.jpg"
+                                imgClassName="md:h-[220px] h-[180px] object-top"
+                                src="/images/79.jpg"
                                 className="w-[60%] top-[46%] md:left-[-2%] left-2 rotate-[-10deg] z-30"
                             />
                             <span

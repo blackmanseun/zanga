@@ -25,7 +25,7 @@ export default function EnterprisesHero() {
                             href="#"
                             className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
                         >
-                            Book a free assessment
+                            Take a free assessment
                         </Link>
                         <Link
                             href="#"

@@ -91,7 +91,7 @@ export default function HomeStakeholderIntelligence() {
                             href="#"
                             className="inline-block bg-olive text-white px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-olive/90 transition-colors font-Montserrat mt-10"
                         >
-                            Book a Platform Demo
+                            Book a Demo
                         </Link>
                     </div>
 

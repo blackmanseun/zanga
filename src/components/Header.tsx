@@ -35,7 +35,7 @@ const navItems: NavItem[] = [
             { label: 'Hire Better People', href: '/solutions/hire-better-people' },
             { label: 'Develop Stronger Leaders', href: '/solutions/develop-stronger-leaders' },
             { label: 'Build High-Performing Teams', href: '/solutions/build-high-performing-teams' },
-            { label: 'Improve Engagement & Retention', href: '#' },
+            { label: 'Improve Engagement & Retention', href: '/solutions/improve-engagement-retention' },
             { label: 'Strengthen Succession Planning', href: '#' },
             { label: 'Listen to Stakeholders', href: '#' },
             { label: 'Make Better Investment & Lending Decisions', href: '#' },

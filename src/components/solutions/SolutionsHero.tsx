@@ -44,7 +44,7 @@ export default function SolutionsHero() {
           <SolutionsHeroGrid/>
         </div>
         <div className="order-3 md:order-none">
-          <SolutionsLogoMarquee/>
+          <SolutionsLogoMarquee text="Trusted by organisations working to make better hiring decisions."/>
         </div>
       </div>
     </section>

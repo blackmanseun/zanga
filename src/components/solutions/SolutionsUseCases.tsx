@@ -10,6 +10,7 @@ type UseCase = {
     tagline: string
     description: string
     cta: string
+    href: string
     image: string
     color: string
     Icon: IconType
@@ -22,7 +23,8 @@ const useCases: UseCase[] = [
         description:
             'When every hire matters, use Zanga to look beyond qualifications and identify the behavioural attributes, capabilities and potential most relevant to your growing organisation.',
         cta: 'Explore Fit by Zanga',
-        image: '/images/14.jpg',
+        href: '#',
+        image: '/images/12.jpg',
         color: '#c55e36',
         Icon: FiTrendingUp,
     },
@@ -31,8 +33,9 @@ const useCases: UseCase[] = [
         tagline: 'Bring greater consistency to recruitment at scale.',
         description:
             'Use structured assessment insight across roles, teams or recruitment cohorts to support more consistent selection decisions and give hiring managers a shared framework for evaluating talent.',
-        cta: 'Explore Organisational Assessments',
-        image: '/images/12.jpg',
+        cta: 'Explore Enterprise Solutions',
+        href: '/solutions/enterprises',
+        image: '/images/56.jpg',
         color: '#a3a748',
         Icon: FiLayers,
     },
@@ -42,7 +45,8 @@ const useCases: UseCase[] = [
         description:
             'Complement executive interviews, track record and references with insight into leadership capability, behaviour and future potential before making a senior appointment.',
         cta: 'Explore Leadership Assessments',
-        image: '/images/10.jpg',
+        href: '/assessments/leadership-assessments',
+        image: '/images/77.jpg',
         color: '#0F3460',
         Icon: FiAward,
     },
@@ -94,7 +98,7 @@ export default function SolutionsUseCases() {
                                         <BoldZanga text={useCase.description}/>
                                     </p>
                                     <Link
-                                        href="#"
+                                        href={useCase.href}
                                         className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                     >
                                         {useCase.cta}

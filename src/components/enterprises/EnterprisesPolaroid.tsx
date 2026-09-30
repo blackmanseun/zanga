@@ -18,7 +18,7 @@ export default function EnterprisesPolaroid({
                 src={src}
                 alt=""
                 aria-hidden="true"
-                className={`w-full object-cover object-top ${imgClassName ?? 'h-50'}`}
+                className={`w-full object-cover ${imgClassName ?? 'h-50'}`}
             />
         </div>
     )

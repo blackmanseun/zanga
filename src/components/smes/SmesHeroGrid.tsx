@@ -7,7 +7,7 @@ export default function SmesHeroGrid() {
                     <div className="absolute inset-0 bg-slate-800/30"/>
                 </div>
                 <div className="col-span-2 relative rounded-xl overflow-hidden">
-                    <img className="rounded-xl h-[200px] w-full object-cover" src="/images/43.jpg"/>
+                    <img className="rounded-xl h-[200px] w-full object-cover" src="/images/78.jpg"/>
                     <div className="absolute inset-0 bg-slate-800/30"/>
                 </div>
             </div>

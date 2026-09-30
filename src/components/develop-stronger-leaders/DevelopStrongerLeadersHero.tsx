@@ -41,7 +41,7 @@ export default function DevelopStrongerLeadersHero() {
                 </div>
 
                 <DevelopStrongerLeadersHeroGrid/>
-                <SolutionsLogoMarquee/>
+                <SolutionsLogoMarquee text="Trusted by organisations working to develop stronger leaders."/>
             </div>
         </section>
     )

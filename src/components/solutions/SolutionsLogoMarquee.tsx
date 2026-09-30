@@ -21,11 +21,11 @@ const LOGOS = [
     {src: '/images/logos/zicb-logo.png', alt: 'ZICB'}
 ]
 
-export default function SolutionsLogoMarquee() {
+export default function SolutionsLogoMarquee({text = 'Trusted by organisations making better people decisions.'}: { text?: string }) {
     return (
         <div className="mt-12">
             <p className="text-primary/30 text-15px mb-6 font-Montserrat">
-                Trusted by organisations making better people decisions.
+                {text}
             </p>
             <div className="overflow-hidden relative">
                 <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-cream to-transparent z-10 pointer-events-none"/>

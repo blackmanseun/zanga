@@ -73,7 +73,7 @@ export default function EnterprisesHowUseZanga() {
                                     Use Cases
                                 </span>
                             <h2 className="text-3xl md:text-[2.75rem] font-bold text-gray-700 mt-3 mb-4 font-MonaSans leading-[1.1]">
-                                How enterprises<br/> use <strong>zanga</strong>
+                                How enterprises<br/> use <strong>Zanga</strong>
                             </h2>
                             <p className="text-gray-500 font-Montserrat leading-relaxed max-w-sm">
                                 See how enterprise teams put <strong>Zanga</strong> to work across leadership, succession,

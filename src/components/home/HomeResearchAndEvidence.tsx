@@ -56,7 +56,7 @@ export default function HomeResearchAndEvidence() {
 
             <div className="relative min-h-[16rem] md:min-h-full">
               <img
-                src="/images/6.jpg"
+                src="/images/106.jpg"
                 alt="A diverse team joining hands together"
                 className="absolute inset-0 w-full h-full object-cover"
               />

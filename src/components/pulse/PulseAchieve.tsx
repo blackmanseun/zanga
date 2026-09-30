@@ -122,30 +122,31 @@ export default function PulseAchieve() {
                     <div className="mt-8 lg:mt-0 grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/31.jpg"
+                                src="/images/117.jpg"
                                 alt="A team celebrating over their annual report findings"
                                 className="md:h-96 h-56 rounded-2xl rounded-br-none"
                                 objectPosition="[object-position:50%_32%] md:[object-position:50%_55%]"
                             />
                             <Panel
-                                src="/images/headshot/8.jpg"
+                                src="/images/51.jpg"
                                 alt="Colleagues working together in an open office"
                                 className="md:h-48 h-28 md:w-[50%] w-[80%] ml-auto rounded-2xl rounded-tr-none"
-                                objectPosition="[object-position:50%_10%]"
+                                objectPosition="[object-position:20%_10%]"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <div className="md:h-20 h-16 rounded-2xl rounded-bl-none bg-terracotta/25 md:w-[30%] w-[50%]" aria-hidden="true"/>
                             <Panel
-                                src="/images/3.jpg"
+                                src="/images/77.jpg"
                                 alt="A team bringing their hands together in agreement"
                                 className="md:h-72 h-36 rounded-2xl rounded-bl-none"
                                 objectPosition="[object-position:0%_25%]"
                             />
                             <Panel
-                                src="/images/headshot/2.png"
+                                src="/images/75.jpg"
                                 alt="A team bringing their hands together in agreement"
                                 className="md:h-48 h-28 rounded-2xl rounded-tl-none md:w-[50%] w-[70%]"
+                                objectPosition="[object-position:80%_25%]"
                             />
                         </div>
                     </div>

@@ -40,7 +40,7 @@ export default function EnterprisesWhyZanga() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/22.jpg"
+                                src="/images/72.jpg"
                                 alt="A team celebrating over their annual report findings"
                                 className="h-[320px]"
                             />
