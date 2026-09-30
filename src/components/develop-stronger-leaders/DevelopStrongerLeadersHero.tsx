@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import DevelopStrongerLeadersHeroGrid from '@/components/develop-stronger-leaders/DevelopStrongerLeadersHeroGrid'
 import SolutionsLogoMarquee from '@/components/solutions/SolutionsLogoMarquee'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function DevelopStrongerLeadersHero() {
     return (
@@ -25,12 +26,12 @@ export default function DevelopStrongerLeadersHero() {
                         leadership development.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Request a Demo
-                        </Link>
+                        </OpenModalButton>
                         <Link
                             href="/assessments/leadership-assessments"
                             className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
@@ -41,7 +42,7 @@ export default function DevelopStrongerLeadersHero() {
                 </div>
 
                 <DevelopStrongerLeadersHeroGrid/>
-                <SolutionsLogoMarquee text="Trusted by organisations working to develop stronger leaders."/>
+                <SolutionsLogoMarquee text="Trusted by organisations developing stronger leaders"/>
             </div>
         </section>
     )

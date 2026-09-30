@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {FiArrowRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function SmesWhereToStart() {
     return (
@@ -142,13 +143,10 @@ export default function SmesWhereToStart() {
                                     Tell us what you are trying to solve, and we will help you identify
                                     the most appropriate <strong>Zanga</strong> pathway.
                                 </p>
-                                <Link
-                                    href="#"
-                                    className="relative mt-4 inline-flex items-center justify-center gap-2 bg-terracotta text-white px-6 py-3 rounded-md font-semibold text-sm font-Montserrat hover:bg-terracotta/90 transition-colors"
-                                >
+                                <OpenModalButton modal="book-a-demo" className="relative mt-4 inline-flex items-center justify-center gap-2 bg-terracotta text-white px-6 py-3 rounded-md font-semibold text-sm font-Montserrat hover:bg-terracotta/90 transition-colors">
                                     Book a Demo
                                     <FiArrowRight size={16} aria-hidden="true"/>
-                                </Link>
+                                </OpenModalButton>
                             </div>
                         </Reveal>
                     </div>

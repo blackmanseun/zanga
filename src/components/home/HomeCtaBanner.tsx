@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function HomeCtaBanner() {
   return (
@@ -12,12 +13,9 @@ export default function HomeCtaBanner() {
           Join hundreds of organisations already growing with <strong>Zanga</strong>.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className="bg-olive text-white px-8 py-4 rounded-md font-bold text-base hover:bg-olive/90 transition-colors font-Montserrat"
-          >
+          <OpenModalButton modal="book-a-demo" className="bg-olive text-white px-8 py-4 rounded-md font-bold text-base hover:bg-olive/90 transition-colors font-Montserrat">
             Book a Demo
-          </Link>
+          </OpenModalButton>
           <Link
             href="/about"
             className="border border-terracotta text-terracotta px-8 py-4 rounded-md font-semibold text-base hover:bg-terracotta hover:text-white transition-colors font-Montserrat"

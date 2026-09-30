@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import BoldZanga from '@/components/ui/BoldZanga'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const paragraphs: string[] = [
     'Zanga’s approach begins with understanding the leadership challenge before recommending the development response.',
@@ -66,12 +66,12 @@ export default function DevelopStrongerLeadersMethodology() {
                                 </p>
                             ))}
                         </div>
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="inline-block mt-8 md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Request a Demo
-                        </Link>
+                        </OpenModalButton>
                     </div>
 
                     <div className="rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8 bg-gray-50 flex flex-col">

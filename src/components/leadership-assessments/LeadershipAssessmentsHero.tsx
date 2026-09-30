@@ -4,6 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import LeadershipAssessmentsLogoMarquee from '@/components/leadership-assessments/LeadershipAssessmentsLogoMarquee'
 import LeadershipAssessmentsHeroGrid from '@/components/leadership-assessments/LeadershipAssessmentsHeroGrid'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function LeadershipAssessmentsHero() {
   return (
@@ -21,12 +22,12 @@ export default function LeadershipAssessmentsHero() {
               <br/>Built for African and other high-context workplaces, our assessments combine robust leadership insight with the cultural context needed to make better development, succession and talent decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                  href="#"
+              <OpenModalButton
+                  modal="book-a-demo"
                   className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
               >
                 Request a demo
-              </Link>
+              </OpenModalButton>
               <Link
                   href="#"
                   className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-terracotta hover:text-white transition-colors font-Montserrat"

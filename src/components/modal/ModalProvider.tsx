@@ -3,7 +3,7 @@
 import React, {createContext, useCallback, useContext, useEffect, useState} from 'react'
 import Modal from '@/components/modal/Modal'
 
-export type ModalKey = 'partner-with-zanga'
+export type ModalKey = 'partner-with-zanga' | 'book-a-demo'
 
 type ModalContextValue = {
     modal: ModalKey | null

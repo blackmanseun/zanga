@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiAlertTriangle, FiCheckCircle, FiHome, FiMessageSquare, FiSend, FiSun, FiTruck,} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const includes: string[] = [
     'Individual assessment and development reports',
@@ -87,12 +87,9 @@ export default function HomeStakeholderIntelligence() {
                             ))}
                         </ul>
 
-                        <Link
-                            href="#"
-                            className="inline-block bg-olive text-white px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-olive/90 transition-colors font-Montserrat mt-10"
-                        >
+                        <OpenModalButton modal="book-a-demo" className="inline-block bg-olive text-white px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-olive/90 transition-colors font-Montserrat mt-10">
                             Book a Demo
-                        </Link>
+                        </OpenModalButton>
                     </div>
 
                     <div className="rounded-2xl border border-gray-200 shadow-sm p-3 sm:p-5 bg-gray-50">

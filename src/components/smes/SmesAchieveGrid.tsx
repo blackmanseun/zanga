@@ -2,12 +2,35 @@ import React from 'react'
 import Link from 'next/link'
 import {FiArrowUpRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 
 type Achievement = {
     title: string
     description: string
     cta: string
     color: string
+    // When set, the card actions open this modal instead of linking.
+    modal?: ModalKey
+}
+
+// Renders a card action as a modal trigger or a link, keeping the same look.
+function CardAction({modal, className, style, ariaLabel, children}: {
+    modal?: ModalKey
+    className: string
+    style: React.CSSProperties
+    ariaLabel?: string
+    children: React.ReactNode
+}) {
+    return modal ? (
+        <OpenModalButton modal={modal} aria-label={ariaLabel} className={className} style={style}>
+            {children}
+        </OpenModalButton>
+    ) : (
+        <Link href="#" aria-label={ariaLabel} className={className} style={style}>
+            {children}
+        </Link>
+    )
 }
 
 const achievements: Achievement[] = [
@@ -52,6 +75,7 @@ const achievements: Achievement[] = [
             'Turn assessment and employee feedback into practical information that founders and managers can use in day-to-day business decisions. No specialist HR team required.',
         cta: 'Book a Demo',
         color: '#0F3460',
+        modal: 'book-a-demo',
     },
 ]
 
@@ -79,9 +103,9 @@ export default function SmesAchieveGrid() {
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">
                                         {item.title}
                                     </h3>
-                                    <Link
-                                        href="#"
-                                        aria-label={item.cta}
+                                    <CardAction
+                                        modal={item.modal}
+                                        ariaLabel={item.cta}
                                         className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
                                         style={{backgroundColor: item.color}}
                                     >
@@ -90,13 +114,13 @@ export default function SmesAchieveGrid() {
                                             aria-hidden="true"
                                             className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                         />
-                                    </Link>
+                                    </CardAction>
                                 </div>
                                 <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                                     {item.description}
                                 </p>
-                                <Link
-                                    href="#"
+                                <CardAction
+                                    modal={item.modal}
                                     className="inline-flex items-center gap-2 text-[14px] font-semibold font-Montserrat"
                                     style={{color: item.color}}
                                 >
@@ -106,7 +130,7 @@ export default function SmesAchieveGrid() {
                                         aria-hidden="true"
                                         className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                     />
-                                </Link>
+                                </CardAction>
                             </div>
                         </Reveal>
                     ))}

@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiArrowRight, FiCheckCircle } from 'react-icons/fi'
 import BoldZanga from '@/components/ui/BoldZanga'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const deliverables: string[] = [
     'Individual leadership reports',
@@ -52,13 +52,13 @@ export default function LeadershipAssessmentsWhatYouReceive() {
                             ))}
                         </ul>
 
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-terracotta/90 transition-colors font-Montserrat"
                         >
                             Request a Demo
                             <FiArrowRight size={16} aria-hidden="true"/>
-                        </Link>
+                        </OpenModalButton>
                     </div>
 
                     <div className="relative mt-8 lg:mt-0">

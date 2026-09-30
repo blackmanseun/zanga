@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import FinancialInstitutionsHeroGrid from '@/components/financial-institutions/FinancialInstitutionsHeroGrid'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function FinancialInstitutionsHero() {
     return (
@@ -25,12 +26,9 @@ export default function FinancialInstitutionsHero() {
                         organisation.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Link
-                            href="#"
-                            className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
-                        >
+                        <OpenModalButton modal="book-a-demo" className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat">
                             Book a Demo
-                        </Link>
+                        </OpenModalButton>
                         <Link
                             href="#"
                             className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"

@@ -4,6 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import SolutionsLogoMarquee from "@/components/solutions/SolutionsLogoMarquee";
 import SolutionsHeroGrid from "@/components/solutions/SolutionsHeroGrid";
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function SolutionsHero() {
   return (
@@ -31,12 +32,9 @@ export default function SolutionsHero() {
             >
               Take a Free Assessment
             </Link>
-            <Link
-              href="#"
-              className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
-            >
+            <OpenModalButton modal="book-a-demo" className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-terracotta hover:text-white transition-colors font-Montserrat">
               Book a Demo
-            </Link>
+            </OpenModalButton>
           </div>
         </div>
 
@@ -44,7 +42,7 @@ export default function SolutionsHero() {
           <SolutionsHeroGrid/>
         </div>
         <div className="order-3 md:order-none">
-          <SolutionsLogoMarquee text="Trusted by organisations working to make better hiring decisions."/>
+          <SolutionsLogoMarquee text="Trusted by organisations making better hiring decisions"/>
         </div>
       </div>
     </section>

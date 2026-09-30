@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function SolutionsCta() {
     return (
@@ -22,12 +23,12 @@ export default function SolutionsCta() {
                             <div className="xl:col-span-2 md:col-span-3 md:flex flex-col items-end">
                                 <p className="text-sm text-white/50 font-Montserrat mb-3">Choose how you&apos;d like to start</p>
                                 <div className="flex flex-col sm:flex-row gap-3 mb-3">
-                                    <Link
-                                        href="#"
+                                    <OpenModalButton
+                                        modal="book-a-demo"
                                         className="bg-olive text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat text-center"
                                     >
                                         Request a Demo
-                                    </Link>
+                                    </OpenModalButton>
                                     <Link
                                         href="#"
                                         className="border border-white text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-primary transition-colors font-Montserrat text-center"

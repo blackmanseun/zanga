@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 type AccentColor = 'olive-dark' | 'olive' | 'terracotta' | 'terracotta-dark'
 
@@ -175,12 +176,12 @@ export default function LeadershipAssessmentsComparison() {
                                 >
                                     Find the Right Assessment
                                 </Link>
-                                <Link
-                                    href="#"
+                                <OpenModalButton
+                                    modal="book-a-demo"
                                     className="text-center border border-terracotta text-terracotta px-8 py-2 rounded-md font-semibold text-[14px] hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
                                 >
                                     Request a Demo
-                                </Link>
+                                </OpenModalButton>
                             </div>
                         </div>
                     </div>
