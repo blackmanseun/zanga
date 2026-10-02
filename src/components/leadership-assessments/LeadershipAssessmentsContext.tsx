@@ -86,7 +86,7 @@ export default function LeadershipAssessmentsContext() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/54.jpg"
+                                src="/images/127.jpg"
                                 alt="A leader listening attentively in a team discussion"
                                 className="md:h-[500px] h-56 rounded-2xl rounded-br-none"
                                 objectPosition="[object-position:50%_32%] md:[object-position:50%_55%]"

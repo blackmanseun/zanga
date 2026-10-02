@@ -30,23 +30,7 @@ const rows: Row[] = [
         completedBy: 'Leader + manager + peers + direct reports',
         output: '360° feedback report showing areas of alignment, difference and development priority',
         color: 'olive',
-    },
-    {
-        assessment: 'Leadership Potential Assessment',
-        bestFor: 'Organisations identifying high-potential talent, succession candidates and future leaders',
-        measures: 'Future leadership potential, readiness and indicators of capacity for greater responsibility',
-        completedBy: 'Individual participant',
-        output: 'Potential and readiness report to support talent and succession decisions',
-        color: 'terracotta',
-    },
-    {
-        assessment: 'Executive Leadership Assessment',
-        bestFor: 'Senior executives, C-suite candidates and business-critical leadership appointments',
-        measures: 'Executive capability, leadership strengths, behavioural tendencies, potential risks and readiness for complex leadership roles',
-        completedBy: 'Executive participant; assessment pathway may vary by engagement',
-        output: 'Executive leadership insight report with development and decision-support recommendations',
-        color: 'terracotta-dark',
-    },
+    }
 ]
 
 const rowTint: Record<AccentColor, string> = {

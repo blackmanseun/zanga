@@ -49,7 +49,7 @@ export default function HomeCulturalContext() {
                   are both evidence-based and contextually credible.
                 </p>
                 <Link
-                  href="#"
+                  href="/about"
                   className="inline-flex items-center gap-2 bg-olive text-white px-6 py-3.5 rounded-full font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                 >
                   How Our Approach Works

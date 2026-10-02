@@ -41,7 +41,7 @@ export default function StrengthenSuccessionPlanningHero() {
                 </div>
 
                 <StrengthenSuccessionPlanningHeroGrid/>
-                <SolutionsLogoMarquee text="Trusted by organisations strengthening succession planning"/>
+                <SolutionsLogoMarquee text="Trusted by organisations building stronger leadership pipelines"/>
             </div>
         </section>
     )

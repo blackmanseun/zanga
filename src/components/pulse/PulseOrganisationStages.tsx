@@ -27,9 +27,9 @@ export default function PulseOrganisationStages() {
                                 ways of working become difficult to manage.
                             </p>
                             <img
-                                src="/images/8.jpg"
+                                src="/images/96.jpg"
                                 alt=""
-                                className="w-full h-48 sm:h-56 object-cover rounded-2xl"
+                                className="w-full h-48 sm:h-56 object-cover object-[50%_10%] rounded-2xl"
                             />
                         </div>
                     </Reveal>
@@ -43,25 +43,11 @@ export default function PulseOrganisationStages() {
                                 Track engagement across teams, strengthen management capability and identify
                                 emerging retention or culture risks.
                             </p>
-                            <div className="md:grid grid-cols-4 gap-2">
-                                <img
-                                    src="/images/26.jpg"
-                                    alt=""
-                                    className="hidden md:block w-full h-48 sm:h-56 object-cover rounded-2xl"
-                                />
-                               <div className="col-span-2">
-                                   <img
-                                       src="/images/29.jpg"
-                                       alt=""
-                                       className="w-full h-48 sm:h-56 object-cover rounded-2xl"
-                                   />
-                               </div>
-                                <img
-                                    src="/images/headshot/6.jpg"
-                                    alt=""
-                                    className="hidden md:block w-full h-48 sm:h-56 mt-auto object-cover object-center rounded-2xl"
-                                />
-                            </div>
+                            <img
+                                src="/images/56.jpg"
+                                alt=""
+                                className="w-full h-48 sm:h-56 object-cover object-[50%_10%] rounded-2xl"
+                            />
                         </div>
                     </Reveal>
                 </div>

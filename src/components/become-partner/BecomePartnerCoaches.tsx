@@ -68,7 +68,7 @@ export default function BecomePartnerCoaches() {
                         className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10"
                     >
                         <Image
-                            src="/images/21.jpg"
+                            src="/images/60.jpg"
                             alt=""
                             fill
                             sizes="(min-width: 1280px) 550px, 100vw"

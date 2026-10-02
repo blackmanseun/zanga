@@ -64,13 +64,13 @@ export default function BecomePartnerReseller() {
                         className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10"
                     >
                         <Image
-                            src="/images/35.jpg"
+                            src="/images/63.jpg"
                             alt=""
                             fill
                             sizes="(min-width: 1280px) 550px, 100vw"
                             className="object-cover"
                         />
-                        <div className="absolute inset-0 bg-slate-800/65"/>
+                        <div className="absolute inset-0 bg-slate-800/85"/>
 
                         <div className="relative">
                             <h3 className="text-xl font-bold text-white font-MonaSans mb-2">

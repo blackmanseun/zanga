@@ -63,7 +63,7 @@ export default function LeadershipAssessmentsWhatYouReceive() {
 
                     <div className="relative mt-8 lg:mt-0">
                         <img
-                            src="/images/55.jpg"
+                            src="/images/11.jpg"
                             alt="A leadership team reviewing an assessment report together"
                             className="w-full h-64 md:h-80 xl:h-[650px] object-cover rounded-2xl"
                         />

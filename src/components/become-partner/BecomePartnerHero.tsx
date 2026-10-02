@@ -4,14 +4,14 @@ import Image from 'next/image'
 import Reveal from '@/components/ui/Reveal'
 
 const partnerFaces: { src: string; objectPosition?: string }[] = [
-    { src: '/images/headshot/1.jpg' },
-    { src: '/images/headshot/2.png' },
-    { src: '/images/headshot/3.jpg', objectPosition: '50% 0%' },
-    { src: '/images/headshot/4.png' },
-    { src: '/images/headshot/5.jpg' },
-    { src: '/images/headshot/6.jpg' },
-    { src: '/images/headshot/7.jpg' },
-    { src: '/images/headshot/8.jpg', objectPosition: '50% 8%' },
+    {src: '/images/headshot/1.jpg'},
+    {src: '/images/headshot/6.jpg'},
+    {src: '/images/headshot/13.jpg', objectPosition: '50% 30%'},
+    {src: '/images/headshot/19.jpg', objectPosition: '50% 30%'},
+    {src: '/images/headshot/10.jpg'},
+    {src: '/images/headshot/8.jpg', objectPosition: '50% 8%'},
+    {src: '/images/headshot/15.jpg'},
+    {src: '/images/headshot/16.jpg', objectPosition: '50% 0%'},
 ]
 
 export default function BecomePartnerHero() {
@@ -20,7 +20,8 @@ export default function BecomePartnerHero() {
             style={{backgroundColor: 'rgb(250, 248, 246)'}}
             className="md:py-28 py-14 px-4 sm:px-6 lg:px-8"
         >
-            <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 xl:grid-cols-7 md:gap-16 space-y-10 md:space-y-0 items-center">
+            <div
+                className="max-w-7xl mx-auto md:grid md:grid-cols-2 xl:grid-cols-7 md:gap-16 space-y-10 md:space-y-0 items-center">
                 <Reveal className="xl:col-span-3">
                     <h1 className="text-[2.2rem] md:text-[3rem] leading-[1.1] font-bold mb-6 font-MonaSans text-gray-700">
                         Build with Zanga. <br/>
@@ -57,7 +58,7 @@ export default function BecomePartnerHero() {
                             <div
                                 key={face.src}
                                 className="relative aspect-square border-2 border-terracotta/50 shadow-[0_10px_20px_-10px_rgba(0,0,0,0.3)]"
-                                style={{ backgroundColor: '#dcdcd8' }}
+                                style={{backgroundColor: '#dcdcd8'}}
                             >
                                 <div className="absolute inset-[6%] overflow-hidden">
                                     <Image
@@ -66,7 +67,7 @@ export default function BecomePartnerHero() {
                                         fill
                                         sizes="10vw"
                                         className="border border-olive object-cover"
-                                        style={{ objectPosition: face.objectPosition ?? '50% 22%' }}
+                                        style={{objectPosition: face.objectPosition ?? '50% 22%'}}
                                     />
                                 </div>
                             </div>

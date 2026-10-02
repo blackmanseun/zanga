@@ -24,7 +24,7 @@ export default function BecomePartnerFit() {
                         <div className="relative w-full max-w-[420px] h-[420px] sm:h-[460px] mx-auto md:block mt-16">
                             <EnterprisesPolaroid
                                 imgClassName="md:h-[250px] h-[200px]"
-                                src="/images/32.jpg"
+                                src="/images/130.jpg"
                                 className="w-[250px] md:h-[280px] h-[250px] md:top-[-10%] top-0 left-0 md:-rotate-3 z-10"
                             />
                             <EnterprisesPolaroid

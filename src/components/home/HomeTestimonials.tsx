@@ -63,7 +63,15 @@ const defaultTestimonials: Testimonial[] = [
   },
 ]
 
-export default function HomeTestimonials({ testimonials = defaultTestimonials }: { testimonials?: Testimonial[] }) {
+export default function HomeTestimonials({
+  testimonials = defaultTestimonials,
+  heading = 'What better talent',
+  highlight = 'decisions look like',
+}: {
+  testimonials?: Testimonial[]
+  heading?: string
+  highlight?: string
+}) {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -72,8 +80,8 @@ export default function HomeTestimonials({ testimonials = defaultTestimonials }:
            Testimonials
           </span>
           <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
-            <span className="text-gray-700">What better talent</span><br/>
-            <span className="text-olive">decisions look like</span>
+            <span className="text-gray-700">{heading}</span><br/>
+            <span className="text-olive">{highlight}</span>
           </h2>
         </div>
 

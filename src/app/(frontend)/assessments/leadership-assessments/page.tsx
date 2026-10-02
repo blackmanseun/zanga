@@ -22,8 +22,6 @@ export default function LeadershipAssessmentsPage() {
             <LeadershipAssessmentsClarity/>
             <LeadershipAssessmentsCompetency/>
             <LeadershipAssessments360/>
-            <LeadershipAssessmentsPotential/>
-            <LeadershipAssessmentsExecutive/>
             <LeadershipAssessmentsComparison/>
             <LeadershipAssessmentsAchieve/>
             <LeadershipAssessmentsApproach/>

@@ -66,7 +66,7 @@ export default function LeadershipAssessments360() {
                         className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10 h-full min-h-[420px]"
                     >
                         <Image
-                            src="/images/44.jpg"
+                            src="/images/98.jpg"
                             alt=""
                             fill
                             sizes="(min-width: 1280px) 550px, 100vw"
