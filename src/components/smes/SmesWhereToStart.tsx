@@ -83,7 +83,7 @@ export default function SmesWhereToStart() {
                                         current capability and development priorities.
                                     </p>
                                     <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold font-Montserrat text-white">
-                                        Explore Leadership Assessments
+                                        Fit by Zanga
                                         <FiArrowRight
                                             size={16}
                                             aria-hidden="true"

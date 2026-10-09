@@ -1,25 +1,26 @@
 import React from 'react'
 import HomeTestimonials, {type Testimonial} from '@/components/home/HomeTestimonials'
 
-// Placeholder testimonials written for this page's context. Replace with real client quotes before launch.
 const testimonials: Testimonial[] = [
     {
         quote:
-            'Our leadership team had worked together for years without really understanding how differently we each make decisions. The team assessment gave us a shared language, and our meetings are noticeably more productive.',
-        name: 'Kofi Boateng',
-        location: 'Managing Director · Accra',
+            'Their services have supported personal effectiveness, effective communication, team engagement, management and leadership development and strategic alignment. The positive impact on our performance and working relationships internally and externally is evident.',
+        name: 'Mwamba Peni',
+        location: 'Interim Director General, Emoluments Commission of Zambia',
     },
     {
         quote:
-            'After merging two departments, tension kept surfacing in small ways. Seeing our working styles side by side helped us agree how we would communicate and make decisions together.',
-        name: 'Nomvula Khumalo',
-        location: 'Head of Operations · Johannesburg',
+            'The Zanga Heat Map with Succession Readiness and Nine Box Grid together delivered ... a simple visual segmentation of performance and potential that made strengths, gaps, and development priorities easy to see and explain.',
+        name: 'HR Team',
+        location: 'FQM Kansanshi Mining Plc',
+        initials: 'FK',
     },
     {
         quote:
-            'We used the insight at our offsite and it changed the conversation. Instead of debating personalities, we talked about patterns, and left with clear agreements on how the team will work.',
-        name: 'Grace Mwangi',
-        location: 'HR Business Partner · Nairobi',
+            'We have found the tools to be informative, reliable, and eye-opening for our client managers and leaders. They have become more receptive to making a change in their leadership practice as a result of the increased awareness that the reports from the Zanga tools have created.',
+        name: 'Modupe Taylor-Pearce, PhD',
+        location: 'CEO, BCA Leadership',
+        initials: 'MT',
     },
 ]
 

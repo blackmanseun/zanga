@@ -25,7 +25,7 @@ const useCases: UseCase[] = [
         title: 'Post-Investment Leadership Baselines',
         description:
             'Gain an early understanding of the team. Assess leadership capability shortly after a deal closes, so the first phase of the investment is informed by structured insight.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#0F3460',
         Icon: FiAward,
     },

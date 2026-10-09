@@ -17,7 +17,7 @@ const useCases: UseCase[] = [
         title: 'Executive and Leadership Coaching',
         description:
             'Start coaching with a clearer evidence base. Use leadership assessments to identify strengths, blind spots and development priorities before deeper coaching work begins.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#c55e36',
         Icon: FiAward,
     },
@@ -33,7 +33,7 @@ const useCases: UseCase[] = [
         title: 'Team Development and Offsites',
         description:
             'Bring a shared language into the room. Use team and behavioural assessments to help groups understand working styles, communication patterns and areas of friction.',
-        cta: 'Explore Team Assessments',
+        cta: 'Explore Workforce Assessments',
         color: '#16213E',
         Icon: FiUsers,
     },

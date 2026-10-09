@@ -12,7 +12,6 @@ const capabilities: string[] = [
     'White-labelled reporting',
     'Data security, privacy and confidentiality standards',
     'Leadership, workforce and stakeholder dashboards',
-    'Data privacy and access controls aligned to the solution deployed',
 ]
 
 export default function FinancialInstitutionsBuiltForInstitutions() {

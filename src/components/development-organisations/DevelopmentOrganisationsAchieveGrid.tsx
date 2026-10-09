@@ -22,7 +22,7 @@ const achievements: Achievement[] = [
         title: 'Build Stronger Country & Programme Leadership',
         description:
             'Assess leadership capability across country offices, programme teams and local partners so development support can be directed where it is most needed.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#a3a748',
     },
     {
@@ -36,7 +36,7 @@ const achievements: Achievement[] = [
         title: 'Strengthen Local Partner Capability',
         description:
             'Use structured leadership and organisational insight to better understand the strengths and development needs of implementing partners and grantees.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#a3a748',
     },
     {

@@ -46,7 +46,7 @@ export default function PublicSectorInstitutionsChallenge() {
                     <Reveal>
                         <div className="md:max-w-lg xl:max-w-xl">
                             <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
-           The Challenge for Public-Sector Institutions
+           The Challenge
           </span>
 
                             <h2 className="mb-6 text-gray-700 text-3xl md:text-[2.8rem] font-bold mt-3 font-MonaSans leading-[1.1]">

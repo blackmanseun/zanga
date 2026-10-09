@@ -29,7 +29,7 @@ const achievements: Achievement[] = [
         title: 'Strengthen Post-Investment Leadership Support',
         description:
             'Use assessment insight to identify where founders and management teams may need coaching, development or additional executive capability after investment.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#c55e36',
     },
     {

@@ -32,8 +32,8 @@ const useCases: UseCase[] = [
     {
         title: 'When the Team Is Not Working as Well as It Should',
         description:
-            'Use team assessment to understand behavioural differences, communication patterns and areas of friction before a planning session, offsite or intervention.',
-        cta: 'Explore Team Assessments',
+            'Use workforce assessment to understand behavioural differences, communication patterns and areas of friction before a planning session, offsite or intervention.',
+        cta: 'Explore Workforce Assessments',
         color: '#0F3460',
         Icon: FiUsers,
     },

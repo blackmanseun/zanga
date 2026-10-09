@@ -45,7 +45,7 @@ const achievements: Achievement[] = [
         title: 'Build Stronger Managers',
         description:
             'Help newly promoted and developing managers understand where they are strong, where they need support and what they should focus on next. Assessment can then connect directly into coaching, open-enrolment programmes or self-paced development.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#a3a748',
     },
     {
@@ -59,7 +59,7 @@ const achievements: Achievement[] = [
         title: 'Improve How the Team Works Together',
         description:
             'Understand behavioural differences, communication preferences and predictable areas of friction across the team. Use a shared language to improve collaboration, working relationships and team effectiveness.',
-        cta: 'Explore Team Assessments',
+        cta: 'Explore Workforce Assessments',
         color: '#c55e36',
     },
     {

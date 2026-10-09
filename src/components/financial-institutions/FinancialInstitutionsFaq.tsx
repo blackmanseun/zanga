@@ -38,7 +38,7 @@ const faqs: FaqItem[] = [
         Icon: FiShield,
         question: 'How does Zanga handle confidentiality in employee reporting channels?',
         answer: (
-            <><strong>Voice by Zanga</strong> can support confidential reporting, controlled access and structured escalation. The specific confidentiality, anonymity and case-management configuration should be agreed as part of the implementation so employees understand how information will be handled.</>
+            <><strong>Zanga</strong> can support confidential reporting, controlled access and structured escalation. The specific confidentiality, anonymity and case-management configuration should be agreed as part of the implementation so employees understand how information will be handled.</>
         ),
     },
     {
@@ -57,7 +57,7 @@ const faqs: FaqItem[] = [
 ]
 
 export default function FinancialInstitutionsFaq() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0)
+    const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     return (
         <section

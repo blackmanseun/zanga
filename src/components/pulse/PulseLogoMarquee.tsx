@@ -47,7 +47,7 @@ export default function PulseLogoMarquee() {
                         <img
                             src={src}
                             alt={alt}
-                            className="h-12 w-auto object-contain opacity-40 hover:opacity-100 transition-all duration-300 md:grayscale md:hover:grayscale-0"
+                            className="h-12 w-auto object-contain"
                         />
                     </SwiperSlide>
                 ))}

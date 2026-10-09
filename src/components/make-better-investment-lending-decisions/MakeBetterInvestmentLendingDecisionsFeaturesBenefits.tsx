@@ -41,7 +41,7 @@ export default function MakeBetterInvestmentLendingDecisionsFeaturesBenefits() {
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
                                 className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/17.jpg')] bg-cover bg-top rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
-                                <div className="absolute inset-0 bg-slate-800/40 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
+                                <div className="absolute inset-0 bg-gradient-to-br from-terracotta/80 to-terracotta-dark/85 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
                                     <div className="relative flex items-center justify-between gap-3">
@@ -164,7 +164,7 @@ export default function MakeBetterInvestmentLendingDecisionsFeaturesBenefits() {
                             </div>
                             <div
                                 className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/16.jpg')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
-                                <div className="absolute inset-0 bg-slate-800/40 rounded-b-3xl md:rounded-r-3xl md:rounded-2xl"/>
+                                <div className="absolute inset-0 bg-gradient-to-br from-olive/80 to-olive-dark/85 rounded-b-3xl md:rounded-r-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
                                     <div className="relative flex items-center justify-between gap-3">
@@ -215,7 +215,7 @@ export default function MakeBetterInvestmentLendingDecisionsFeaturesBenefits() {
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
                                 className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/19.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
-                                <div className="absolute inset-0 bg-slate-800/40 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
+                                <div className="absolute inset-0 bg-gradient-to-br from-terracotta/80 to-terracotta-dark/85 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
                                     <div className="relative flex items-center justify-between gap-3">
@@ -412,7 +412,7 @@ export default function MakeBetterInvestmentLendingDecisionsFeaturesBenefits() {
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
                                 className="relative col-span-2 min-h-[280px] md:min-h-[420px] p-4 bg-[url('/images/18.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl overflow-hidden flex flex-col justify-between gap-2">
-                                <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/30 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
+                                <div className="absolute inset-0 bg-gradient-to-t from-terracotta-dark/95 via-terracotta-dark/70 to-terracotta-dark/30 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
 
                                 <div className="relative flex items-center justify-between">
                                     <div className="flex items-center gap-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md pl-1 pr-3 py-1">

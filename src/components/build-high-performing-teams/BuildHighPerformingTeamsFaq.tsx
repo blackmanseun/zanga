@@ -23,16 +23,16 @@ type FaqItem = {
 const faqs: FaqItem[] = [
     {
         Icon: FiBarChart2,
-        question: 'What does a team assessment measure?',
+        question: 'What does a workforce assessment measure?',
         answer: (
-            <>The exact measures depend on the assessment used, but team assessment can help surface behavioural preferences, communication styles, working patterns and differences that may influence how effectively people collaborate.</>
+            <>The exact measures depend on the assessment used, but workforce assessment can help surface behavioural preferences, communication styles, working patterns and differences that may influence how effectively people collaborate.</>
         ),
     },
     {
         Icon: FiTrendingUp,
         question: 'Is this suitable for teams that are already performing well?',
         answer: (
-            <>Yes. Team assessment is not only for teams experiencing problems. It can also help high-performing teams deepen self-awareness, improve collaboration and prepare for growth or change.</>
+            <>Yes. Workforce assessment is not only for teams experiencing problems. It can also help high-performing teams deepen self-awareness, improve collaboration and prepare for growth or change.</>
         ),
     },
     {
@@ -46,7 +46,7 @@ const faqs: FaqItem[] = [
         Icon: FiAward,
         question: 'Can this be used for leadership teams?',
         answer: (
-            <>Yes. Team assessment is particularly useful for leadership and management teams where communication, trust and decision-making patterns have wider organisational consequences.</>
+            <>Yes. Workforce assessment is particularly useful for leadership and management teams where communication, trust and decision-making patterns have wider organisational consequences.</>
         ),
     },
     {

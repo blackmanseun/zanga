@@ -48,7 +48,7 @@ export default function FinancialInstitutionsWhereToStart() {
                                     picture of capability and future readiness.
                                 </p>
                                 <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold font-Montserrat text-white">
-                                    Explore Leadership Assessments
+                                    Fit by Zanga
                                     <FiArrowRight
                                         size={16}
                                         aria-hidden="true"

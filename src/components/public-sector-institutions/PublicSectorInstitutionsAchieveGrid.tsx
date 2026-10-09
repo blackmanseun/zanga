@@ -22,7 +22,7 @@ const achievements: Achievement[] = [
         title: 'Build Leadership Capability Across Grades',
         description:
             'Assess leadership strengths and development priorities across directorates, departments and management levels. Use the resulting insight to target leadership development where it is most needed.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#a3a748',
     },
     {
@@ -50,7 +50,7 @@ const achievements: Achievement[] = [
         title: 'Build Stronger Capacity-Building Programmes',
         description:
             'Establish a clearer capability baseline before training begins and use follow-up assessment where appropriate to understand how capability changes over time.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#c55e36',
     },
 ]

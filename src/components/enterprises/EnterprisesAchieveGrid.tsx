@@ -15,7 +15,7 @@ const achievements: Achievement[] = [
         title: 'Build a Stronger Leadership Pipeline',
         description:
             'Understand leadership strengths, capability gaps and future potential across your organisation so you can identify who is ready now, who needs development and where succession risk exists.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#c55e36',
     },
     {

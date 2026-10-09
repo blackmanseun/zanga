@@ -15,7 +15,7 @@ const achievements: Achievement[] = [
         title: 'Strengthen Leadership and Succession Readiness',
         description:
             'Build a clearer view of leadership capability, potential and readiness across the institution. Use structured assessment insight to identify who is ready now, where development is needed and where continuity risks may exist.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#c55e36',
     },
     {

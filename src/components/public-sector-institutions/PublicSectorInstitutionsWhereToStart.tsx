@@ -18,7 +18,7 @@ const sideCards: StartCard[] = [
         title: 'Building leadership capability across departments?',
         description:
             'Start with the Leadership Competency Assessment to understand strengths and development priorities.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         image: '/images/4.jpg',
         alt: 'Department leaders discussing capability priorities',
     },

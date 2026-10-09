@@ -1,25 +1,13 @@
 import React from 'react'
 import HomeTestimonials, {type Testimonial} from '@/components/home/HomeTestimonials'
 
-// Placeholder testimonials written for this page's context. Replace with real client quotes before launch.
 const testimonials: Testimonial[] = [
     {
         quote:
-            'Our interviews kept rewarding the most confident candidates. The Zanga reports gave our panel a structured view of behaviour and role fit, so we now go into final rounds knowing exactly what to explore with each person.',
-        name: 'Adaeze Nwosu',
-        location: 'Head of Talent Acquisition · Lagos',
-    },
-    {
-        quote:
-            'As a growing business, we could not afford a wrong hire. Assessing candidates against what the role actually required helped us choose people who have stayed and grown with us.',
-        name: 'Tobi Adewale',
-        location: 'Founder & CEO · Kigali',
-    },
-    {
-        quote:
-            'For senior appointments, the leadership assessment added a level of evidence our board had been missing. We made the final decision with far more confidence than a CV and interviews alone could give us.',
-        name: 'Emmanuel Okafor',
-        location: 'Managing Director · Abuja',
+            'We have found the tools to be informative, reliable, and eye-opening for our client managers and leaders. They have become more receptive to making a change in their leadership practice as a result of the increased awareness that the reports from the Zanga tools have created.',
+        name: 'Modupe Taylor-Pearce, PhD',
+        location: 'CEO, BCA Leadership',
+        initials: 'MT',
     },
 ]
 

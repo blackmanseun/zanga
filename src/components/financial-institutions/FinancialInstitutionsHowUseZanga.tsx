@@ -17,7 +17,7 @@ const useCases: UseCase[] = [
         title: 'Institution-Wide Leadership Assessment',
         description:
             'Assess leadership capability across branches, regions, subsidiaries and functions to identify strengths, development priorities and capability gaps.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#c55e36',
         Icon: FiAward,
     },

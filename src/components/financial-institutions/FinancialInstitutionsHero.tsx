@@ -16,7 +16,7 @@ export default function FinancialInstitutionsHero() {
                     </h1>
 
                     <p className="text-gray-500 font-Montserrat leading-relaxed max-w-lg mb-4">
-                        Banks, insurers and financial-services groups depend on the quality of their
+                        Banks, insurers and financial-services depend on the quality of their
                         people as much as the strength of their financial systems.
                     </p>
                     <p className="text-gray-500 font-Montserrat leading-relaxed max-w-lg mb-8">

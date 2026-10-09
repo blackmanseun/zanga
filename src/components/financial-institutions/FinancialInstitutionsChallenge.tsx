@@ -10,7 +10,7 @@ const challenges: string[] = [
     'Frontline and branch employee attrition',
     'Limited visibility into organisational culture and conduct',
     'Low trust in employee feedback or speak-up channels',
-    'Limited structured insight into leadership quality within lending or investment decisions',
+    'Limited insight into leadership quality of borrower or investee',
 ]
 
 export default function FinancialInstitutionsChallenge() {
@@ -45,7 +45,7 @@ export default function FinancialInstitutionsChallenge() {
                     <Reveal>
                         <div className="md:max-w-lg xl:max-w-xl">
                             <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
-           The Challenge for Financial Institutions
+           The Challenge
           </span>
 
                             <h2 className="mb-6 text-gray-700 text-3xl md:text-[2.8rem] font-bold mt-3 font-MonaSans leading-[1.1]">

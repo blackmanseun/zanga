@@ -22,7 +22,7 @@ const achievements: Achievement[] = [
         title: 'Make Coaching and Development More Focused',
         description:
             'Use assessment insight to identify where attention will have the greatest value and build coaching or development plans around clearer evidence.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#a3a748',
     },
     {

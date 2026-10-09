@@ -62,7 +62,7 @@ const faqs: FaqItem[] = [
 ]
 
 export default function PulseFaq() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0)
+    const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     return (
         <section

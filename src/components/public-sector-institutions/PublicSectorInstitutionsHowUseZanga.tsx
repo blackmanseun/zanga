@@ -25,7 +25,7 @@ const useCases: UseCase[] = [
         title: 'Directorate-Wide Capability Baselines',
         description:
             'Understand capability before investing in development. Assess leadership competencies across departments or grades to identify strengths, gaps and priority development areas.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#0F3460',
         Icon: FiAward,
     },

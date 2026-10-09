@@ -90,7 +90,8 @@ export default function SolutionsFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/17.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/17.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                <div className="absolute inset-0 bg-gradient-to-br from-terracotta/80 to-terracotta-dark/85 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
                                 <div
                                     className="p-4 md:rounded-xl rounded-3xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
@@ -119,7 +120,7 @@ export default function SolutionsFeaturesBenefits() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-2">
+                                <div className="relative flex items-center gap-2">
                                     <div
                                         className="flex-1 p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                         <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
@@ -245,7 +246,7 @@ export default function SolutionsFeaturesBenefits() {
                             </div>
                             <div
                                 className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/16.jpg')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
-                                <div className="absolute inset-0 bg-slate-800/40 rounded-b-3xl md:rounded-r-3xl md:rounded-2xl"/>
+                                <div className="absolute inset-0 bg-gradient-to-br from-olive/80 to-olive-dark/85 rounded-b-3xl md:rounded-r-3xl md:rounded-2xl"/>
                                 <div
                                     className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
@@ -288,7 +289,7 @@ export default function SolutionsFeaturesBenefits() {
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
                                 className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/19.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
-                                <div className="absolute inset-0 bg-slate-800/40 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
+                                <div className="absolute inset-0 bg-gradient-to-br from-terracotta/80 to-terracotta-dark/85 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
                                 <div
                                     className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
@@ -455,7 +456,7 @@ export default function SolutionsFeaturesBenefits() {
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
                                 className="relative col-span-2 min-h-[420px] p-4 bg-[url('/images/18.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl overflow-hidden flex flex-col justify-between gap-2">
-                                <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/75 to-primary/40 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
+                                <div className="absolute inset-0 bg-gradient-to-t from-terracotta-dark/95 via-terracotta-dark/75 to-terracotta-dark/40 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
 
                                 <div className="relative flex items-center justify-between">
                                     <div className="flex items-center gap-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md px-3 py-1.5">

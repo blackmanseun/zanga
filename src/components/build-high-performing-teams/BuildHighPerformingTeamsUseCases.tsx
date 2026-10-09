@@ -21,8 +21,8 @@ const useCases: UseCase[] = [
         title: 'Leadership and Management Teams',
         tagline: 'Help senior teams work together more effectively.',
         description:
-            'Use team assessment to understand behavioural differences, decision-making patterns and communication dynamics across the leadership group.',
-        cta: 'Explore Team Assessments',
+            'Use workforce assessment to understand behavioural differences, decision-making patterns and communication dynamics across the leadership group.',
+        cta: 'Explore Workforce Assessments',
         href: '#',
         image: '/images/58.jpg',
         color: '#c55e36',
@@ -44,7 +44,7 @@ const useCases: UseCase[] = [
         tagline: 'Turn recurring tension into a more constructive conversation.',
         description:
             'Use structured insight to surface differences in working style, communication and expectations, then create clearer agreements about how the team will work together.',
-        cta: 'Explore Team Assessments',
+        cta: 'Explore Workforce Assessments',
         href: '#',
         image: '/images/12.jpg',
         color: '#0F3460',

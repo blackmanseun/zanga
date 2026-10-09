@@ -45,7 +45,7 @@ const faqs: FaqItem[] = [
         Icon: FiTrendingUp,
         question: 'Can we start small and expand later?',
         answer:
-            'Yes. A business might begin with a critical hire or manager assessment, then add leadership development, team assessment or employee-engagement tools as the organisation grows.',
+            'Yes. A business might begin with a critical hire or manager assessment, then add leadership development, workforce assessment or employee-engagement tools as the organisation grows.',
     },
     {
         Icon: FiClock,
@@ -56,7 +56,7 @@ const faqs: FaqItem[] = [
 ]
 
 export default function SmesFaq() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0)
+    const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     return (
         <section

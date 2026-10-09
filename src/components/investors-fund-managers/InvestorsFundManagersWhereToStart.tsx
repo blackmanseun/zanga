@@ -17,7 +17,7 @@ const sideCards: StartCard[] = [
         title: 'Building leadership capability across portfolio companies?',
         description:
             'Start with the Leadership Competency Assessment to understand strengths and development priorities across founders and senior teams.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         image: '/images/163.jpg',
         alt: 'Senior team members discussing development priorities',
     },

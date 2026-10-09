@@ -25,7 +25,7 @@ const useCases: UseCase[] = [
         title: 'Country Office & Programme Leadership Reviews',
         description:
             'Understand the leadership capability behind delivery. Assess programme leaders and country teams to identify strengths, development priorities and areas where greater support may be needed.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#0F3460',
         Icon: FiAward,
     },
@@ -41,7 +41,7 @@ const useCases: UseCase[] = [
         title: 'Local Partner Capability Assessment',
         description:
             'Evaluate local implementing partner leadership and governance systems before grant disbursement to de-risk funding allocations and ensure donor alignment.',
-        cta: 'Explore Leadership Assessments',
+        cta: 'Fit by Zanga',
         color: '#c55e36',
         Icon: FiShield,
     },

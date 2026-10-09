@@ -37,7 +37,7 @@ export default function BuildHighPerformingTeamsHero() {
                             href="#"
                             className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
                         >
-                            Explore Team Assessments
+                            Explore Workforce Assessments
                         </Link>
                     </div>
                 </div>
