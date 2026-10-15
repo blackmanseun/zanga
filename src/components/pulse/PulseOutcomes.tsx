@@ -1,13 +1,15 @@
 import React from 'react'
 import Reveal from '@/components/ui/Reveal'
 
-const outcomes: { title: string; text: string }[] = [
+const outcomes: { title: string; text: string; id?: string }[] = [
     {
         title: 'Employee Engagement',
+        id: 'employee-engagement',
         text: 'Understand how connected, motivated and committed employees feel, and the factors influencing that experience.',
     },
     {
         title: 'Culture & Values',
+        id: 'culture-values',
         text: 'Explore whether employees experience organisational values and desired behaviours consistently in their everyday work.',
     },
     {
@@ -55,7 +57,8 @@ export default function PulseOutcomes() {
                         {outcomes.map((o, i) => (
                             <div
                                 key={o.title}
-                                className={`relative flex items-start ${i < outcomes.length - 1 ? 'pb-8' : ''} before:content-[''] before:h-full before:absolute before:top-0 before:left-[27.5px] before:w-px before:bg-terracotta/15 ${i === outcomes.length - 1 ? 'before:hidden' : ''}`}
+                                id={o.id}
+                                className={`relative flex items-start scroll-mt-28 ${i < outcomes.length - 1 ? 'pb-8' : ''} before:content-[''] before:h-full before:absolute before:top-0 before:left-[27.5px] before:w-px before:bg-terracotta/15 ${i === outcomes.length - 1 ? 'before:hidden' : ''}`}
                             >
                                 <div
                                     className="step-number text-terracotta flex justify-center items-center min-h-[55px] min-w-[55px] rounded-full text-[18px] font-MonaSans shadow-lg bg-white shrink-0">

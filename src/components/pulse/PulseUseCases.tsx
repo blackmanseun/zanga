@@ -7,6 +7,7 @@ import BoldZanga from '@/components/ui/BoldZanga'
 
 type UseCase = {
     title: string
+    id?: string
     tagline: string
     description: string
     cta: string
@@ -28,6 +29,7 @@ const useCases: UseCase[] = [
     },
     {
         title: 'Regular Pulse Checks',
+        id: 'pulse-surveys',
         tagline: 'Know what is changing between annual surveys.',
         description:
             'Use shorter, targeted surveys to understand employee sentiment around specific themes, organisational changes or emerging concerns. Ideal for leadership changes, restructuring, policy implementation, new ways of working or post-intervention tracking.',
@@ -66,7 +68,7 @@ export default function PulseUseCases() {
                 <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-stretch">
                     {useCases.map((useCase, i) => (
                         <Reveal key={useCase.title} delayMs={i * 100} className="h-full">
-                            <div className="h-full flex flex-col">
+                            <div id={useCase.id} className="h-full flex flex-col scroll-mt-28">
                                 <div
                                     className="rounded-2xl p-1 bg-white overflow-hidden shrink-0 h-48 md:h-56"
                                 >

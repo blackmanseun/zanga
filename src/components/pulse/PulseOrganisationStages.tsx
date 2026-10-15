@@ -1,9 +1,53 @@
-import React from 'react'
+'use client'
+
+import React, {useState} from 'react'
 import Link from 'next/link'
-import { FiArrowRight, FiBarChart2 } from 'react-icons/fi'
+import {FiArrowRight, FiChevronLeft, FiChevronRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import type {Swiper as SwiperType} from 'swiper'
+import {Autoplay, Pagination} from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+type Stage = {
+    title: string
+    text: string
+    image: string
+    alt: string
+    bg: string
+}
+
+const stages: Stage[] = [
+    {
+        title: 'Growing Organisations',
+        text: 'Build a clearer understanding of culture and employee experience before informal ways of working become difficult to manage.',
+        image: '/images/96.jpg',
+        alt: '',
+        bg: 'bg-[#282A30]',
+    },
+    {
+        title: 'Mid-Sized Organisations',
+        text: 'Track engagement across teams, strengthen management capability and identify emerging retention or culture risks.',
+        image: '/images/56.jpg',
+        alt: '',
+        bg: 'bg-[#282A30]',
+    },
+    {
+        title: 'Enterprises',
+        text: 'Compare experiences across business units, locations and employee groups while giving executives and boards a consolidated view of workforce sentiment.',
+        image: '/images/30.jpg',
+        alt: 'Executives reviewing a consolidated workforce report',
+        bg: 'bg-[#282A30]',
+    },
+]
+
+// Only loop when there are more cards than fit in the desktop view.
+const SLIDES_PER_VIEW_DESKTOP = 3
 
 export default function PulseOrganisationStages() {
+    const [swiper, setSwiper] = useState<SwiperType | null>(null)
+
     return (
         <section className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
@@ -16,75 +60,55 @@ export default function PulseOrganisationStages() {
                     </h2>
                 </Reveal>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <Reveal className="h-full">
-                        <div className="h-full rounded-3xl md:p-8 px-4 py-6 sm:p-10 border border-white/10 bg-[#282A30]">
-                            <h3 className="text-xl font-bold text-white font-MonaSans mb-3">
-                                Growing Organisations
-                            </h3>
-                            <p className="text-white/70 text-[15px] font-Montserrat leading-relaxed mb-6">
-                                Build a clearer understanding of culture and employee experience before informal
-                                ways of working become difficult to manage.
-                            </p>
-                            <img
-                                src="/images/96.jpg"
-                                alt=""
-                                className="w-full h-48 sm:h-56 object-cover object-[50%_10%] rounded-2xl"
-                            />
-                        </div>
-                    </Reveal>
-
-                    <Reveal className="h-full">
-                        <div className="h-full rounded-3xl md:p-8 px-4 py-6 sm:p-10 border border-white/10 bg-[#282A30]">
-                            <h3 className="text-xl font-bold text-white font-MonaSans mb-3">
-                                Mid-Sized Organisations
-                            </h3>
-                            <p className="text-white/70 text-[15px] font-Montserrat leading-relaxed mb-6">
-                                Track engagement across teams, strengthen management capability and identify
-                                emerging retention or culture risks.
-                            </p>
-                            <img
-                                src="/images/56.jpg"
-                                alt=""
-                                className="w-full h-48 sm:h-56 object-cover object-[50%_10%] rounded-2xl"
-                            />
-                        </div>
-                    </Reveal>
+                <div className="relative">
+                    <Swiper
+                        modules={[Autoplay, Pagination]}
+                        onSwiper={setSwiper}
+                        slidesPerView={1}
+                        spaceBetween={24}
+                        loop={stages.length > SLIDES_PER_VIEW_DESKTOP}
+                        autoplay={{delay: 3500, disableOnInteraction: false}}
+                        pagination={{clickable: true}}
+                        breakpoints={{
+                            768: {slidesPerView: SLIDES_PER_VIEW_DESKTOP},
+                        }}
+                        className="!pb-14 [&_.swiper-pagination-bullet]:bg-gray-300 [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet-active]:bg-terracotta"
+                    >
+                        {stages.map((stage) => (
+                            <SwiperSlide key={stage.title} className="!h-auto">
+                                <div className={`${stage.bg} h-full flex flex-col rounded-3xl border border-white/10 md:p-8 px-4 py-6 sm:p-10`}>
+                                    <h3 className="text-xl font-bold text-white font-MonaSans mb-3">
+                                        {stage.title}
+                                    </h3>
+                                    <p className="text-white/70 text-[15px] font-Montserrat leading-relaxed mb-6">
+                                        {stage.text}
+                                    </p>
+                                    <img
+                                        src={stage.image}
+                                        alt={stage.alt}
+                                        className="mt-auto w-full h-48 sm:h-56 object-cover object-[50%_10%] rounded-2xl"
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                    <button
+                        type="button"
+                        onClick={() => swiper?.slidePrev()}
+                        aria-label="Previous organisation stage"
+                        className="absolute left-0 md:-left-5 top-[calc(50%-1.75rem)] -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-gray-700 hover:bg-terracotta hover:text-white hover:border-terracotta transition-colors"
+                    >
+                        <FiChevronLeft size={20} aria-hidden="true"/>
+                    </button>
+                    <button
+                        type="button"
+                        onClick={() => swiper?.slideNext()}
+                        aria-label="Next organisation stage"
+                        className="absolute right-0 md:-right-5 top-[calc(50%-1.75rem)] -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-gray-700 hover:bg-terracotta hover:text-white hover:border-terracotta transition-colors"
+                    >
+                        <FiChevronRight size={20} aria-hidden="true"/>
+                    </button>
                 </div>
-
-                <Reveal delayMs={100} className="mt-6">
-                    <div className="rounded-3xl border border-white/10 bg-[#282A30] overflow-hidden grid md:grid-cols-[1.2fr_1fr]">
-                        <div className="md:p-8 px-4 py-6 sm:p-10 flex flex-col justify-center">
-                            <h3 className="text-xl font-bold text-white font-MonaSans mb-3">
-                                Enterprises
-                            </h3>
-                            <p className="text-white/70 text-[15px] font-Montserrat leading-relaxed max-w-md">
-                                Compare experiences across business units, locations and employee groups
-                                while giving executives and boards a consolidated view of workforce sentiment.
-                            </p>
-                        </div>
-
-                        <div className="relative min-h-[12rem] md:min-h-[15rem] p-2">
-                            <div className="absolute inset-0 w-full h-full p-2 rounded-3xl">
-                            <img
-                                src="/images/30.jpg"
-                                alt="Executives reviewing a consolidated workforce report"
-                                className="h-full rounded-3xl w-full object-cover border-2 border-white/50"
-                            />
-                            </div>
-                            <div
-                                className="absolute inset-0"
-                                style={{
-                                    background:
-                                        'linear-gradient(to top, rgba(40,42,48,0.75) 0%, rgba(40,42,48,0.05) 45%, transparent 70%)',
-                                }}
-                            />
-                            <span className="absolute top-8 left-8 w-11 h-11 rounded-full bg-olive text-white flex items-center justify-center shadow-lg">
-                                <FiBarChart2 size={18} aria-hidden="true"/>
-                            </span>
-                        </div>
-                    </div>
-                </Reveal>
 
                 <Reveal delayMs={150} className="mt-10">
                     <Link

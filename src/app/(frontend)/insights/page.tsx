@@ -71,7 +71,7 @@ export default function InsightsPage() {
             Insights
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6 font-MonaSans leading-tight max-w-3xl">
-            Thinking That Moves the Needle
+            Thinking that moves the needle
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl font-Montserrat leading-relaxed">
             Research, perspectives, and practical knowledge from <strong>Zanga</strong>'s coaches, data team,

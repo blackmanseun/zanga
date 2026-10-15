@@ -34,8 +34,9 @@ const advantages: { title: string; text: string }[] = [
 export default function BecomePartnerAdvantage() {
     return (
         <section
+            id="benefits"
             style={{ backgroundColor: 'rgb(250, 248, 246)' }}
-            className="relative overflow-hidden py-16 md:py-28 px-4 sm:px-6 lg:px-8">
+            className="scroll-mt-24 relative overflow-hidden py-16 md:py-28 px-4 sm:px-6 lg:px-8">
             <div className="absolute inset-0">
                 <div className="bg-[#282A30] w-full md:h-[45%] h-[35%]"/>
             </div>

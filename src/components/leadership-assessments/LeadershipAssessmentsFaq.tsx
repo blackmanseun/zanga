@@ -70,7 +70,8 @@ export default function LeadershipAssessmentsFaq() {
 
     return (
         <section
-            className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            id="assessment-faqs"
+            className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-14">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
@@ -79,7 +80,7 @@ export default function LeadershipAssessmentsFaq() {
                                 FAQs
                             </span>
                             <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
-                                Frequently Asked Questions
+                                Frequently asked questions
                             </h2>
                         </div>
                     </div>

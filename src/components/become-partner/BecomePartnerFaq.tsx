@@ -69,8 +69,9 @@ export default function BecomePartnerFaq() {
 
     return (
         <section
+            id="partner-faqs"
             style={{ backgroundColor: 'rgb(250, 248, 246)' }}
-            className="py-20 px-4 sm:px-6 lg:px-8">
+            className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-14">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">

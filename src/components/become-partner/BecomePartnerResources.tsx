@@ -5,6 +5,7 @@ import type { IconType } from 'react-icons'
 
 type Resource = {
     title: string
+    id?: string
     description: string
     cta?: string
     color: string
@@ -29,6 +30,7 @@ const resources: Resource[] = [
     },
     {
         title: 'Practitioner Training & Certification',
+        id: 'certification',
         description: 'Learn what is required to use selected Zanga assessments professionally.',
         cta: 'Explore Certification',
         color: '#16213E',
@@ -36,6 +38,7 @@ const resources: Resource[] = [
     },
     {
         title: 'Sales & Product Resources',
+        id: 'sales-materials',
         description:
             'Approved partners can access relevant product and commercial materials through their agreed partner channels.',
         cta: 'Download resources',
@@ -64,7 +67,7 @@ export default function BecomePartnerResources() {
 
                     <div className="col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
                         {resources.map((resource) => (
-                            <div key={resource.title} className="h-full flex flex-col">
+                            <div key={resource.title} id={resource.id} className="h-full flex flex-col scroll-mt-28">
                                 <span
                                     className="w-12 h-12 rounded-full flex items-center justify-center mb-4"
                                     style={{ backgroundColor: `${resource.color}1F`, color: resource.color }}

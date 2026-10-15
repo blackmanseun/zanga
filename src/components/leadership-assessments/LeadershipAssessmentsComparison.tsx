@@ -51,8 +51,9 @@ const columns: { key: keyof Row; label: string }[] = [
 export default function LeadershipAssessmentsComparison() {
     return (
         <section
+            id="compare-assessments"
             style={{ backgroundColor: 'rgb(250, 248, 246)' }}
-            className="relative overflow-hidden md:py-20 py-14 px-4 sm:px-6 lg:px-8">
+            className="scroll-mt-24 relative overflow-hidden md:py-20 py-14 px-4 sm:px-6 lg:px-8">
             <div className="absolute inset-0">
                 <div className="bg-[#282A30] w-full h-[40%]"/>
             </div>
@@ -61,8 +62,11 @@ export default function LeadershipAssessmentsComparison() {
                     <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
                         Compare Assessments
                     </span>
-                    <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-4 font-MonaSans leading-tight text-white">
-                        Which Leadership <br className="hidden md:block"/>Assessment is Right for You?
+                    <h2 className="hidden md:block text-3xl md:text-[2.8rem] font-bold mt-3 mb-4 font-MonaSans leading-tight text-white">
+                        Which Leadership <br className="hidden md:block"/>Assessment Is Right for You?
+                    </h2>
+                    <h2 className="block md:hidden text-3xl md:text-[2.8rem] font-bold mt-3 mb-4 font-MonaSans leading-tight text-white">
+                        Which leadership assessment is right for you?
                     </h2>
                     <p className="text-gray-200 font-Montserrat leading-relaxed max-w-2xl md:mx-auto">
                         Compare <strong>Zanga&apos;s</strong> leadership assessments by purpose, measurement approach and

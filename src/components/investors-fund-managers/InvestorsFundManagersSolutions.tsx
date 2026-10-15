@@ -98,8 +98,11 @@ export default function InvestorsFundManagersSolutions() {
                         <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
                             Solutions
                         </span>
-                        <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
+                        <h2 className="hidden md:block text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
                             Zanga Solutions for Investors and Fund Managers
+                        </h2>
+                        <h2 className="block md:hidden text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
+                            Zanga solutions for investors and fund managers
                         </h2>
                     </div>
                 </Reveal>

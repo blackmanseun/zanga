@@ -7,7 +7,7 @@ export default function HomeCtaBanner() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 text-center border-t border-gray-200">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 font-MonaSans text-gray-900">
-          Ready to elevate your leadership?
+          Ready to Elevate Your Leadership?
         </h2>
         <p className="text-gray-500 mb-8 text-lg font-Montserrat">
           Join hundreds of organisations already growing with <strong>Zanga</strong>.

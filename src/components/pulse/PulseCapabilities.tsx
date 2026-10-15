@@ -5,6 +5,7 @@ import Reveal from '@/components/ui/Reveal'
 
 type Card = {
     label: string
+    id?: string
     description: string
     cta: string
     color: string
@@ -34,6 +35,7 @@ const cards: Card[] = [
     },
     {
         label: 'Identify Emerging Retention Risks',
+        id: 'retention-intelligence',
         description:
             'Employee turnover rarely begins with a resignation letter. Changes in sentiment, trust, motivation, leadership experience or intent to stay can provide useful early signals. Pulse helps organisations identify where potential retention concerns may be emerging, so leaders can investigate and respond before valuable people disengage completely.',
         cta: 'Explore Retention Intelligence',
@@ -76,7 +78,7 @@ export default function PulseCapabilities() {
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                     {cards.map((card, i) => (
                         <Reveal key={card.label} delayMs={(i % 3) * 90} className="h-full">
-                            <div className="group h-full flex flex-col rounded-2xl p-6 sm:p-8 bg-white border border-slate-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                            <div id={card.id} className="group scroll-mt-28 h-full flex flex-col rounded-2xl p-6 sm:p-8 bg-white border border-slate-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                                 <div className="flex items-start justify-between gap-4 mb-3">
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">{card.label}</h3>
                                     <Link

@@ -12,7 +12,7 @@ export default function MakeBetterInvestmentLendingDecisionsCta() {
                         <div className="grid md:grid-cols-5 gap-10 items-center">
                             <div className="xl:col-span-3 md:col-span-2">
                                 <h2 className="text-3xl md:text-[2.5rem] font-bold font-MonaSans leading-[1.1] text-white mb-4">
-                                    Make Capital Decisions With a Clearer View of the People Behind Them
+                                    Make capital decisions with a clearer view of the people behind them
                                 </h2>
                                 <p className="text-white/60 font-Montserrat leading-relaxed max-w-lg text-md">
                                     Add structured leadership and people insight to lending, investment and portfolio

@@ -15,9 +15,9 @@ export default function HomeWhiteLabel() {
             White-Label & Customisation
           </span>
           <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
-            <span className="text-white">Built Around Your Organisation.</span>
+            <span className="text-white">Built around your organisation.</span>
             <br />
-            <span className="text-olive">Branded as Your Own.</span>
+            <span className="text-olive">Branded as your own.</span>
           </h2>
           <p className="text-white/70 font-Montserrat leading-relaxed mb-4">
             Every organisation is different. That&apos;s why <strong>Zanga</strong>&apos;s platform can be customised to reflect your

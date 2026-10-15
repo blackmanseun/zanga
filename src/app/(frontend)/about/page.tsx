@@ -45,7 +45,7 @@ export default function AboutPage() {
             About <strong>Zanga</strong>
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6 font-MonaSans leading-tight max-w-3xl">
-            We Exist to Grow the Leaders Africa Needs
+            We exist to grow the leaders Africa needs
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl font-Montserrat leading-relaxed">
 <strong>Zanga</strong> was founded on the belief that Africa's most pressing challenges demand its most capable leaders.
@@ -62,7 +62,7 @@ export default function AboutPage() {
               Our Mission
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-3 mb-4 font-MonaSans">
-              Democratising Access to World-Class Coaching
+              Democratising access to world-class coaching
             </h2>
             <p className="text-gray-600 font-Montserrat leading-relaxed">
               We make exceptional coaching accessible to organisations of all sizes across Africa and beyond.
@@ -75,7 +75,7 @@ export default function AboutPage() {
               Our Vision
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-3 mb-4 font-MonaSans">
-              A Continent of Transformational Leaders
+              A continent of transformational leaders
             </h2>
             <p className="text-gray-600 font-Montserrat leading-relaxed">
               We envision a future where every organisation in Africa has access to coaching that develops

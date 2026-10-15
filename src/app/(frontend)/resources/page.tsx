@@ -96,7 +96,7 @@ export default function ResourcesPage() {
             Resources
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6 font-MonaSans leading-tight max-w-3xl">
-            Tools and Knowledge for African Leaders
+            Tools and knowledge for African leaders
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl font-Montserrat leading-relaxed">
             Download whitepapers, case studies, toolkits, and more — all free for leaders and HR

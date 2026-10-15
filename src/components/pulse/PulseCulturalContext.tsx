@@ -4,10 +4,10 @@ import { FiArrowRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
 
 const tiles: { src: string; shape: string; position?: string }[] = [
-    {src: '/images/114.jpg', shape: 'rounded rounded-br-[50%]'},
-    {src: '/images/25.jpg', shape: 'rounded rounded-bl-[50%]'},
-    {src: '/images/106.jpg', shape: 'rounded rounded-tr-[50%]'},
-    {src: '/images/79.jpg', shape: 'rounded rounded-tl-[50%]', position: 'center 20%'},
+    {src: '/images/114.jpg', shape: 'rounded-2xl rounded-br-[50%]'},
+    {src: '/images/25.jpg', shape: 'rounded-2xl rounded-bl-[50%]'},
+    {src: '/images/106.jpg', shape: 'rounded-2xl rounded-tr-[50%]'},
+    {src: '/images/79.jpg', shape: 'rounded-2xl rounded-tl-[50%]', position: 'center 20%'},
 ]
 
 export default function PulseCulturalContext() {

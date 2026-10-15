@@ -40,7 +40,8 @@ const audiences: Audience[] = [
 
 export default function PulseDashboardQuestions() {
     return (
-        <section className="md:py-28 py-14 px-4 sm:px-6 lg:px-8 bg-white">
+        <section
+            id="workforce-dashboards" className="scroll-mt-24 md:py-28 py-14 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
                     <Reveal>

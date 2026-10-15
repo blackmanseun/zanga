@@ -46,8 +46,11 @@ export default function HomeSolutionCards() {
           <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
            ASSESSMENT AUTHORITY
           </span>
-                    <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
+                    <h2 className="hidden md:block text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
                         World-Class Leadership Development. Grounded in African Context.
+                    </h2>
+                    <h2 className="block md:hidden text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
+                        World-class leadership development. Grounded in African context.
                     </h2>
                     <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed font-Montserrat mt-5 max-w-3xl mx-auto">
                         Generic leadership tools often overlook the relational dynamics, communication patterns and

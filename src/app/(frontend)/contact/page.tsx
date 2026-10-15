@@ -43,7 +43,7 @@ export default function ContactPage() {
             Contact Us
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6 font-MonaSans leading-tight max-w-2xl">
-            Let's Build Something Together
+            Let's build something together
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl font-Montserrat leading-relaxed">
             Whether you're ready to start a coaching programme or just exploring options,
@@ -57,7 +57,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Form */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2 font-MonaSans">Send Us a Message</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2 font-MonaSans">Send us a message</h2>
             <p className="text-gray-500 text-sm mb-8 font-Montserrat">We respond to all enquiries within 1 business day.</p>
             <form className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -122,7 +122,7 @@ export default function ContactPage() {
 
           {/* Book Demo */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2 font-MonaSans">Book a Demo</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2 font-MonaSans">Book a demo</h2>
             <p className="text-gray-500 text-sm mb-8 font-Montserrat">
               Schedule a 30-minute call with a <strong>Zanga</strong> advisor to see the platform in action and discuss your needs.
             </p>

@@ -25,8 +25,9 @@ const opportunities: string[] = [
 export default function BecomePartnerTechnology() {
     return (
         <section
+            id="technology-partner"
             style={{ backgroundColor: 'rgb(250, 248, 246)' }}
-            className="md:py-20 py-14 px-4 sm:px-6 lg:px-8">
+            className="scroll-mt-24 md:py-20 py-14 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
                     Technology &amp; Embedded Partners

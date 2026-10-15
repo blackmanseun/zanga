@@ -61,16 +61,20 @@ const MODELS: PartnerModel[] = [
 export default function BecomePartnerModels() {
     return (
         <section
+            id="commercial-models"
             style={{ backgroundColor: 'rgb(250, 248, 246)' }}
-            className="py-20 md:py-24 px-4 sm:px-6 lg:px-8">
+            className="scroll-mt-24 py-20 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <Reveal className="mb-14">
                     <div className="md:text-center">
                         <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
                             Partner Models
                         </span>
-                        <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
+                        <h2 className="hidden md:block text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
                             Choose How You Want to Work With Zanga
+                        </h2>
+                        <h2 className="block md:hidden text-3xl md:text-[2.8rem] leading-[1.1] font-bold text-gray-700 mt-3 font-MonaSans max-w-2xl mx-auto">
+                            Choose how you want to work with Zanga
                         </h2>
                         <p className="text-gray-500 font-Montserrat leading-relaxed mt-5 max-w-2xl mx-auto">
                             Zanga offers different partnership routes depending on whether you want to use our
