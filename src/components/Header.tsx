@@ -263,9 +263,24 @@ const navItems: NavItem[] = [
   { type: 'link', label: 'About', href: '/about' },
 ]
 
-const navButtons: (SimpleLink & { variant: 'text' | 'outline' | 'solid' })[] = [
+const allNavButtons: (SimpleLink & { variant: 'text' | 'outline' | 'solid' })[] = [
   { label: 'Business Partner Login', href: '#', variant: 'solid' },
 ]
+
+/** Links still on '#' have no page yet, so they're hidden until one exists. */
+const hasPage = (href?: string) => !!href && href !== '#'
+
+const visibleNavItems: NavItem[] = navItems.flatMap((item): NavItem[] => {
+  if (item.type === 'link') return hasPage(item.href) ? [item] : []
+
+  const columns = item.menu.columns.flatMap((column): MegaColumn[] => {
+    const links = column.links?.filter((link) => hasPage(link.href))
+    return links?.length || hasPage(column.headingHref) ? [{ ...column, links }] : []
+  })
+  return columns.length ? [{ ...item, menu: { ...item.menu, columns } }] : []
+})
+
+const navButtons = allNavButtons.filter((button) => hasPage(button.href))
 
 function ChevronIcon({ open }: { open: boolean }) {
   return (
@@ -405,7 +420,7 @@ export default function Header() {
   const isActive = (item: NavItem) =>
     item.type === 'link' ? item.href === pathname : menuHasPathname(item.menu, pathname)
 
-  const activeMegaItem = navItems.find(
+  const activeMegaItem = visibleNavItems.find(
     (item): item is Extract<NavItem, { type: 'mega' }> =>
       item.type === 'mega' && item.label === openDropdown,
   )
@@ -424,7 +439,7 @@ export default function Header() {
             </Link>
 
             <nav className="hidden lg:flex items-center gap-1">
-              {navItems.map((item) => {
+              {visibleNavItems.map((item) => {
                 const active = isActive(item)
 
                 if (item.type === 'mega') {
@@ -489,7 +504,7 @@ export default function Header() {
           {menuOpen && (
             <div className="lg:hidden my-4 pt-2 border-t border-gray-200">
               <nav className="flex flex-col gap-1">
-                {navItems.map((item) => {
+                {visibleNavItems.map((item) => {
                   const active = isActive(item)
 
                   if (item.type === 'mega') {

@@ -11,7 +11,7 @@ const footerColumns = [
             {label: 'Pricing', href: '#'},
             {label: 'Partners', href: '#'},
             {label: 'Resources', href: '#'},
-            {label: 'About', href: '#'},
+            {label: 'About', href: '/about'},
         ],
     },
     {
@@ -20,7 +20,7 @@ const footerColumns = [
             {label: 'Coach Login', href: '#'},
             {label: 'Insights', href: '#'},
             {label: 'Big Data Report', href: '#'},
-            {label: 'Contact', href: '#'},
+            {label: 'Contact', href: '/contact'},
         ],
     },
     {
@@ -57,6 +57,15 @@ const socialLinks = [
     },
 ]
 
+/** Links still on '#' have no page yet, so they're hidden until one exists. */
+const hasPage = (href: string) => href !== '#'
+
+const visibleFooterColumns = footerColumns
+    .map((column) => ({...column, links: column.links.filter((link) => hasPage(link.href))}))
+    .filter((column) => column.links.length > 0)
+
+const visibleSocialLinks = socialLinks.filter((social) => hasPage(social.href))
+
 export default function Footer() {
     return (
         <footer className="bg-white border-t border-gray-200">
@@ -92,7 +101,7 @@ export default function Footer() {
                         </p>
                         <p className="text-gray-500 text-md font-Montserrat mb-6">AfricaWorks, 4 Bishops Rd, Lusaka</p>
                         <div className="flex gap-3">
-                            {socialLinks.map((social) => (
+                            {visibleSocialLinks.map((social) => (
                                 <a
                                     key={social.label}
                                     href={social.href}
@@ -106,7 +115,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {footerColumns.map((column) => (
+                    {visibleFooterColumns.map((column) => (
                         <div key={column.heading}>
                             <h3 className="text-gray-700 font-semibold text-md mb-4 font-MonaSans">{column.heading}</h3>
                             <ul className="space-y-3">
