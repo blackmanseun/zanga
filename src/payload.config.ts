@@ -7,8 +7,9 @@ import { payloadCloudinaryPlugin } from '@jhb.software/payload-cloudinary-plugin
 import { Authors } from './collections/Authors'
 import { Categories } from './collections/Categories'
 import { ContactEnquiries } from './collections/ContactEnquiries'
+import { DemoRequests } from './collections/DemoRequests'
 import { Media } from './collections/Media'
-import { NewsletterSubscribers } from './collections/NewsletterSubscribers'
+import { PartnerApplications } from './collections/PartnerApplications'
 import { Posts } from './collections/Posts'
 import { TeamMembers } from './collections/TeamMembers'
 import { Users } from './collections/Users'
@@ -34,7 +35,17 @@ export default buildConfig({
     },
   },
 
-  collections: [Posts, Authors, Categories, ContactEnquiries, Media, NewsletterSubscribers, TeamMembers, Users],
+  collections: [
+    Posts,
+    Authors,
+    Categories,
+    DemoRequests,
+    PartnerApplications,
+    ContactEnquiries,
+    Media,
+    TeamMembers,
+    Users,
+  ],
 
   editor: lexicalEditor({}),
 

@@ -142,35 +142,6 @@ export default function InsightsPage() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter */}
-      <section className="py-16 px-4 bg-secondary text-white">
-        <div className="max-w-xl mx-auto text-center">
-          <span className="text-highlight text-sm uppercase tracking-widest font-Montserrat font-semibold">
-            Stay Informed
-          </span>
-          <h2 className="text-2xl md:text-3xl font-bold mt-3 mb-4 font-MonaSans">
-            Get Insights Delivered to Your Inbox
-          </h2>
-          <p className="text-gray-400 text-sm mb-8 font-Montserrat">
-            Join 5,000+ leaders who receive our weekly digest of coaching insights, data, and leadership thinking.
-          </p>
-          <form className="flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              placeholder="Enter your work email"
-              className="flex-1 px-4 py-3 rounded-md bg-primary border border-accent/40 text-white placeholder-gray-500 focus:outline-none focus:border-highlight text-sm font-Montserrat"
-            />
-            <button
-              type="submit"
-              className="bg-highlight text-white px-6 py-3 rounded-md font-semibold text-sm hover:bg-highlight/85 transition-colors font-Montserrat whitespace-nowrap"
-            >
-              Subscribe
-            </button>
-          </form>
-          <p className="text-gray-600 text-xs mt-3 font-Montserrat">No spam. Unsubscribe anytime.</p>
-        </div>
-      </section>
     </>
   )
 }

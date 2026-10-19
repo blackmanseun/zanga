@@ -254,7 +254,6 @@ const navItems: NavItem[] = [
             { label: 'Latest Report', href: '#' },
             { label: 'Upcoming Webinar', href: '#' },
             { label: 'Featured Case Study', href: '#' },
-            { label: 'Subscribe to newsletter', href: '#' },
           ],
         },
       ],

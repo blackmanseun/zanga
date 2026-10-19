@@ -1,17 +1,10 @@
 import React from 'react'
+import ContactForm from '@/components/contact/ContactForm'
 
 const offices = [
   { city: 'Lagos', country: 'Nigeria', address: '14 Adeola Odeku Street, Victoria Island', email: 'lagos@zanga.com', phone: '+234 800 000 0000' },
   { city: 'Nairobi', country: 'Kenya', address: 'Delta Offices, Waiyaki Way, Westlands', email: 'nairobi@zanga.com', phone: '+254 700 000 000' },
   { city: 'Johannesburg', country: 'South Africa', address: 'Sandton City Office Tower, Level 5', email: 'jhb@zanga.com', phone: '+27 11 000 0000' },
-]
-
-const reasons = [
-  'I want to explore coaching solutions for my organisation',
-  "I'm interested in joining the Zanga coach network",
-  "I'd like to request the Big Data Report briefing",
-  'I want to explore a partnership opportunity',
-  'I have a general enquiry',
 ]
 
 const faqs = [
@@ -59,65 +52,7 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2 font-MonaSans">Send us a message</h2>
             <p className="text-gray-500 text-sm mb-8 font-Montserrat">We respond to all enquiries within 1 business day.</p>
-            <form className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1.5 font-Montserrat">First Name</label>
-                  <input
-                    type="text"
-                    placeholder="Amara"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:border-highlight font-Montserrat"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1.5 font-Montserrat">Last Name</label>
-                  <input
-                    type="text"
-                    placeholder="Osei"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:border-highlight font-Montserrat"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5 font-Montserrat">Work Email</label>
-                <input
-                  type="email"
-                  placeholder="amara@yourcompany.com"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:border-highlight font-Montserrat"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5 font-Montserrat">Organisation</label>
-                <input
-                  type="text"
-                  placeholder="Your Company Ltd"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:border-highlight font-Montserrat"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5 font-Montserrat">Reason for Contact</label>
-                <select className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:border-highlight text-gray-500 font-Montserrat">
-                  <option value="">Select a reason</option>
-                  {reasons.map((r) => (
-                    <option key={r}>{r}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5 font-Montserrat">Message</label>
-                <textarea
-                  rows={5}
-                  placeholder="Tell us about your organisation's coaching needs or questions..."
-                  className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:border-highlight resize-none font-Montserrat"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-highlight text-white py-4 rounded-md font-bold hover:bg-highlight/85 transition-colors font-Montserrat"
-              >
-                Send Message
-              </button>
-            </form>
+            <ContactForm />
           </div>
 
           {/* Book Demo */}

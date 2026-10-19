@@ -2,6 +2,7 @@
 
 import React from 'react'
 import {FiX, FiChevronDown, FiCheckCircle} from 'react-icons/fi'
+import {HONEYPOT_FIELD} from '@/forms/options'
 
 export const inputClasses =
     'w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 font-Montserrat placeholder:text-gray-400 focus:outline-none focus:border-olive focus:ring-1 focus:ring-olive'
@@ -142,14 +143,34 @@ export function RequiredNote() {
     )
 }
 
-export function SubmitButton({children = 'Submit'}: { children?: React.ReactNode }) {
+export function SubmitButton({children = 'Submit', pending}: { children?: React.ReactNode; pending?: boolean }) {
     return (
         <button
             type="submit"
-            className="w-full md:w-auto bg-olive text-white px-8 py-3 rounded-md font-bold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
+            disabled={pending}
+            className="w-full md:w-auto bg-olive text-white px-8 py-3 rounded-md font-bold text-sm hover:bg-olive/90 transition-colors font-Montserrat disabled:opacity-60 disabled:cursor-wait"
         >
-            {children}
+            {pending ? 'Sending…' : children}
         </button>
+    )
+}
+
+/** Hidden from people (and screen readers) so only bots fill it in. */
+export function HoneypotField() {
+    return (
+        <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
+            <label htmlFor={`hp-${HONEYPOT_FIELD}`}>Leave this field empty</label>
+            <input id={`hp-${HONEYPOT_FIELD}`} name={HONEYPOT_FIELD} type="text" tabIndex={-1} autoComplete="off"/>
+        </div>
+    )
+}
+
+export function FormError({message}: { message: string }) {
+    if (!message) return null
+    return (
+        <p role="alert" className="text-sm text-terracotta font-Montserrat">
+            {message}
+        </p>
     )
 }
 

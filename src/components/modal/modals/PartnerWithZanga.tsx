@@ -4,7 +4,9 @@ import React, {useEffect, useState} from 'react'
 import {useModal} from '@/components/modal/ModalProvider'
 import {
     CheckboxGroup,
+    FormError,
     FormSection,
+    HoneypotField,
     ModalHeader,
     RequiredNote,
     SelectField,
@@ -12,35 +14,19 @@ import {
     SuccessMessage,
     TextField,
 } from '@/components/modal/ModalFormFields'
-
-const services = [
-    'Leadership Assessments',
-    'Psychometric Assessments',
-    'Workforce Analytics',
-    'Employee Engagement Surveys',
-    'Leadership Development, Training & Coaching',
-    'Other / Not sure',
-]
-
-const partnershipTypes = [
-    'Coach / Practitioner',
-    'Referral Partner',
-    'Reseller / Franchise',
-    'White Label',
-    'Technology Partner',
-    'Research Partner',
-    'Not sure yet',
-]
+import {submitPartnerApplication} from '@/forms/actions'
+import {partnerServices, partnershipTypes} from '@/forms/options'
+import {useFormSubmission} from '@/forms/useFormSubmission'
 
 export default function PartnerWithZanga() {
     const {isOpen, closeModal} = useModal()
-    const [submitted, setSubmitted] = useState(false)
+    const {submitted, error, pending, submit, reset} = useFormSubmission(submitPartnerApplication)
     const [partnershipError, setPartnershipError] = useState('')
 
     // Show a fresh form the next time the modal opens.
     useEffect(() => {
         if (!isOpen) {
-            setSubmitted(false)
+            reset()
             setPartnershipError('')
         }
     }, [isOpen])
@@ -53,8 +39,7 @@ export default function PartnerWithZanga() {
             return
         }
         setPartnershipError('')
-        // TODO: send the form data to its destination (not wired up yet).
-        setSubmitted(true)
+        submit(event.currentTarget)
     }
 
     return (
@@ -77,7 +62,7 @@ export default function PartnerWithZanga() {
                                        autoComplete="country-name" placeholder="Country"/>
                         </div>
                         <SelectField id="partner-service" name="service" label="Type of Zanga service interested in?"
-                                     options={services} required/>
+                                     options={partnerServices} required/>
                     </FormSection>
 
                     <FormSection title="About your partnership">
@@ -86,8 +71,10 @@ export default function PartnerWithZanga() {
                                        options={partnershipTypes} required error={partnershipError}/>
                     </FormSection>
 
+                    <HoneypotField/>
                     <RequiredNote/>
-                    <SubmitButton/>
+                    <FormError message={error}/>
+                    <SubmitButton pending={pending}/>
                 </form>
             )}
         </div>

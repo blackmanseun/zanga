@@ -70,9 +70,10 @@ export interface Config {
     posts: Post;
     authors: Author;
     categories: Category;
+    'demo-requests': DemoRequest;
+    'partner-applications': PartnerApplication;
     'contact-enquiries': ContactEnquiry;
     media: Media;
-    'newsletter-subscribers': NewsletterSubscriber;
     'team-members': TeamMember;
     users: User;
     'payload-kv': PayloadKv;
@@ -85,9 +86,10 @@ export interface Config {
     posts: PostsSelect<false> | PostsSelect<true>;
     authors: AuthorsSelect<false> | AuthorsSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
+    'demo-requests': DemoRequestsSelect<false> | DemoRequestsSelect<true>;
+    'partner-applications': PartnerApplicationsSelect<false> | PartnerApplicationsSelect<true>;
     'contact-enquiries': ContactEnquiriesSelect<false> | ContactEnquiriesSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
-    'newsletter-subscribers': NewsletterSubscribersSelect<false> | NewsletterSubscribersSelect<true>;
     'team-members': TeamMembersSelect<false> | TeamMembersSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
@@ -221,27 +223,82 @@ export interface Category {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "contact-enquiries".
+ * via the `definition` "demo-requests".
  */
-export interface ContactEnquiry {
+export interface DemoRequest {
   id: string;
-  name: string;
+  fullName: string;
   email: string;
-  subject?: string | null;
-  message: string;
-  status?: ('new' | 'read' | 'responded') | null;
+  phone?: string | null;
+  jobTitle: string;
+  location: string;
+  explore:
+    | 'hire-better-people'
+    | 'develop-stronger-leaders'
+    | 'build-high-performing-teams'
+    | 'improve-engagement-and-retention'
+    | 'strengthen-succession-planning'
+    | 'listen-to-stakeholders'
+    | 'make-better-investment-and-lending-decisions'
+    | 'i-m-not-sure-yet';
+  organisationSize:
+    '1-49-employees' | '50-199-employees' | '200-499-employees' | '500-999-employees' | '1-000-employees';
+  message?: string | null;
+  status: 'new' | 'contacted' | 'closed';
   updatedAt: string;
   createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "newsletter-subscribers".
+ * via the `definition` "partner-applications".
  */
-export interface NewsletterSubscriber {
+export interface PartnerApplication {
+  id: string;
+  fullName: string;
+  email: string;
+  jobTitle: string;
+  location: string;
+  service:
+    | 'leadership-assessments'
+    | 'psychometric-assessments'
+    | 'workforce-analytics'
+    | 'employee-engagement-surveys'
+    | 'leadership-development-training-and-coaching'
+    | 'other-not-sure';
+  partnershipTypes: (
+    | 'coach-practitioner'
+    | 'referral-partner'
+    | 'reseller-franchise'
+    | 'white-label'
+    | 'technology-partner'
+    | 'research-partner'
+    | 'not-sure-yet'
+  )[];
+  status: 'new' | 'contacted' | 'closed';
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact-enquiries".
+ */
+export interface ContactEnquiry {
   id: string;
   firstName: string;
   lastName?: string | null;
   email: string;
+  organisation?: string | null;
+  reason?:
+    | (
+        | 'i-want-to-explore-coaching-solutions-for-my-organisation'
+        | 'i-m-interested-in-joining-the-zanga-coach-network'
+        | 'i-d-like-to-request-the-big-data-report-briefing'
+        | 'i-want-to-explore-a-partnership-opportunity'
+        | 'i-have-a-general-enquiry'
+      )
+    | null;
+  message: string;
+  status: 'new' | 'contacted' | 'closed';
   updatedAt: string;
   createdAt: string;
 }
@@ -330,16 +387,20 @@ export interface PayloadLockedDocument {
         value: string | Category;
       } | null)
     | ({
+        relationTo: 'demo-requests';
+        value: string | DemoRequest;
+      } | null)
+    | ({
+        relationTo: 'partner-applications';
+        value: string | PartnerApplication;
+      } | null)
+    | ({
         relationTo: 'contact-enquiries';
         value: string | ContactEnquiry;
       } | null)
     | ({
         relationTo: 'media';
         value: string | Media;
-      } | null)
-    | ({
-        relationTo: 'newsletter-subscribers';
-        value: string | NewsletterSubscriber;
       } | null)
     | ({
         relationTo: 'team-members';
@@ -439,12 +500,46 @@ export interface CategoriesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "demo-requests_select".
+ */
+export interface DemoRequestsSelect<T extends boolean = true> {
+  fullName?: T;
+  email?: T;
+  phone?: T;
+  jobTitle?: T;
+  location?: T;
+  explore?: T;
+  organisationSize?: T;
+  message?: T;
+  status?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "partner-applications_select".
+ */
+export interface PartnerApplicationsSelect<T extends boolean = true> {
+  fullName?: T;
+  email?: T;
+  jobTitle?: T;
+  location?: T;
+  service?: T;
+  partnershipTypes?: T;
+  status?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "contact-enquiries_select".
  */
 export interface ContactEnquiriesSelect<T extends boolean = true> {
-  name?: T;
+  firstName?: T;
+  lastName?: T;
   email?: T;
-  subject?: T;
+  organisation?: T;
+  reason?: T;
   message?: T;
   status?: T;
   updatedAt?: T;
@@ -468,17 +563,6 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "newsletter-subscribers_select".
- */
-export interface NewsletterSubscribersSelect<T extends boolean = true> {
-  firstName?: T;
-  lastName?: T;
-  email?: T;
-  updatedAt?: T;
-  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

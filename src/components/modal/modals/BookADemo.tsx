@@ -1,9 +1,11 @@
 'use client'
 
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import {useModal} from '@/components/modal/ModalProvider'
 import {
+    FormError,
     FormSection,
+    HoneypotField,
     ModalHeader,
     RequiredNote,
     SelectField,
@@ -12,39 +14,22 @@ import {
     TextAreaField,
     TextField,
 } from '@/components/modal/ModalFormFields'
-
-const explorationOptions = [
-    'Hire Better People',
-    'Develop Stronger Leaders',
-    'Build High-Performing Teams',
-    'Improve Engagement & Retention',
-    'Strengthen Succession Planning',
-    'Listen to Stakeholders',
-    'Make Better Investment & Lending Decisions',
-    "I'm not sure yet",
-]
-
-const organisationSizes = [
-    '1–49 employees',
-    '50–199 employees',
-    '200–499 employees',
-    '500–999 employees',
-    '1,000+ employees',
-]
+import {submitDemoRequest} from '@/forms/actions'
+import {explorationOptions, organisationSizes} from '@/forms/options'
+import {useFormSubmission} from '@/forms/useFormSubmission'
 
 export default function BookADemo() {
     const {isOpen, closeModal} = useModal()
-    const [submitted, setSubmitted] = useState(false)
+    const {submitted, error, pending, submit, reset} = useFormSubmission(submitDemoRequest)
 
     // Show a fresh form the next time the modal opens.
     useEffect(() => {
-        if (!isOpen) setSubmitted(false)
+        if (!isOpen) reset()
     }, [isOpen])
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        // TODO: send the form data to its destination (not wired up yet).
-        setSubmitted(true)
+        submit(event.currentTarget)
     }
 
     return (
@@ -82,8 +67,10 @@ export default function BookADemo() {
                                        placeholder="A short description of what you're looking to solve"/>
                     </FormSection>
 
+                    <HoneypotField/>
                     <RequiredNote/>
-                    <SubmitButton/>
+                    <FormError message={error}/>
+                    <SubmitButton pending={pending}/>
                 </form>
             )}
         </div>

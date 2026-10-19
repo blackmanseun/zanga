@@ -1,52 +1,47 @@
 import type { CollectionConfig } from 'payload'
-import { isAdmin } from '../access'
+import { contactReasons, toSelectOptions } from '../forms/options'
+import { submissionAccess, submissionStatus } from './submissionFields'
 
 export const ContactEnquiries: CollectionConfig = {
   slug: 'contact-enquiries',
   admin: {
-    useAsTitle: 'name',
-    defaultColumns: ['name', 'email', 'subject', 'status', 'createdAt'],
-    group: 'Audience',
+    useAsTitle: 'email',
+    defaultColumns: ['firstName', 'lastName', 'email', 'reason', 'status', 'createdAt'],
+    group: 'Submissions',
   },
-  access: {
-    create: () => true,
-    read: isAdmin,
-    update: isAdmin,
-    delete: isAdmin,
-  },
+  access: submissionAccess,
   fields: [
     {
-      name: 'name',
+      name: 'firstName',
       type: 'text',
       required: true,
     },
     {
+      name: 'lastName',
+      type: 'text',
+    },
+    {
       name: 'email',
+      label: 'Work Email',
       type: 'email',
       required: true,
     },
     {
-      name: 'subject',
+      name: 'organisation',
       type: 'text',
+    },
+    {
+      name: 'reason',
+      label: 'Reason for Contact',
+      type: 'select',
+      options: toSelectOptions(contactReasons),
     },
     {
       name: 'message',
       type: 'textarea',
       required: true,
     },
-    {
-      name: 'status',
-      type: 'select',
-      defaultValue: 'new',
-      options: [
-        { label: 'New', value: 'new' },
-        { label: 'Read', value: 'read' },
-        { label: 'Responded', value: 'responded' },
-      ],
-      admin: {
-        position: 'sidebar',
-      },
-    },
+    submissionStatus,
   ],
   timestamps: true,
 }
