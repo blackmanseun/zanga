@@ -27,7 +27,7 @@ export default function BuildHighPerformingTeamsFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/17.jpg')] bg-cover bg-top rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/17')] bg-cover bg-top rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-terracotta/80 to-terracotta-dark/85 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
@@ -40,11 +40,11 @@ export default function BuildHighPerformingTeamsFeaturesBenefits() {
                                         </div>
                                         <div className="flex -space-x-3">
                                             <img className="w-8 h-8 rounded-full ring-2 ring-white/40 object-cover object-top"
-                                                 src="/images/headshot/5.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/5" alt=""/>
                                             <img className="w-8 h-8 rounded-full ring-2 ring-white/40 object-cover object-top"
-                                                 src="/images/headshot/2.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/2" alt=""/>
                                             <img className="w-8 h-8 rounded-full ring-2 ring-white/40 object-cover object-top"
-                                                 src="/images/headshot/8.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/8" alt=""/>
                                             <div
                                                 className="w-8 h-8 rounded-full ring-2 ring-white/40 bg-white/20 flex items-center justify-center text-white text-[10px] font-semibold font-Montserrat">
                                                 +3
@@ -193,7 +193,7 @@ export default function BuildHighPerformingTeamsFeaturesBenefits() {
                                 </div>
                             </div>
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/16.jpg')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/16')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-olive/80 to-olive-dark/85 rounded-b-3xl md:rounded-r-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
@@ -209,7 +209,7 @@ export default function BuildHighPerformingTeamsFeaturesBenefits() {
                                         </div>
                                     </div>
                                     <div className="relative flex items-center gap-2 mt-3">
-                                        {['/images/headshot/1.jpg', '/images/headshot/3.jpg', '/images/headshot/7.jpg', '/images/headshot/5.jpg', '/images/headshot/8.jpg'].map((src) => (
+                                        {['https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/1', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/3', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/7', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/5', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/8'].map((src) => (
                                             <img key={src}
                                                  className={`w-8 h-8 rounded-full object-cover object-top ${src.endsWith('/7.jpg') ? 'ring-2 ring-terracotta' : 'ring-2 ring-white/30 opacity-70'}`}
                                                  src={src} alt=""/>
@@ -222,7 +222,7 @@ export default function BuildHighPerformingTeamsFeaturesBenefits() {
                                         <div className="flex items-center justify-between gap-3 mb-3">
                                             <div className="flex items-center gap-3">
                                                 <img className="w-10 h-10 rounded-full object-cover object-top shrink-0"
-                                                     src="/images/headshot/7.jpg" alt="Kofi Asante"/>
+                                                     src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/7" alt="Kofi Asante"/>
                                                 <div>
                                                     <p className="text-white text-sm font-semibold font-Montserrat">Kofi
                                                         Asante</p>
@@ -267,7 +267,7 @@ export default function BuildHighPerformingTeamsFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/19.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/19')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-terracotta/80 to-terracotta-dark/85 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
@@ -289,9 +289,9 @@ export default function BuildHighPerformingTeamsFeaturesBenefits() {
                                     <div className="relative">
                                         <div className="space-y-3">
                                             {[
-                                                {pair: ['/images/headshot/1.jpg', '/images/headshot/7.jpg'], area: 'Pace', detail: 'Fast movers vs. deliberate planners', level: 'Rising'},
-                                                {pair: ['/images/headshot/3.jpg', '/images/headshot/2.jpg'], area: 'Communication', detail: 'Direct feedback vs. diplomatic tone', level: 'Watch'},
-                                                {pair: ['/images/headshot/5.jpg', '/images/headshot/8.jpg'], area: 'Expectations', detail: 'Unclear ownership of handovers', level: 'Low'},
+                                                {pair: ['https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/1', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/7'], area: 'Pace', detail: 'Fast movers vs. deliberate planners', level: 'Rising'},
+                                                {pair: ['https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/3', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/2'], area: 'Communication', detail: 'Direct feedback vs. diplomatic tone', level: 'Watch'},
+                                                {pair: ['https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/5', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/8'], area: 'Expectations', detail: 'Unclear ownership of handovers', level: 'Low'},
                                             ].map((signal) => (
                                                 <div key={signal.area}
                                                      className="flex items-center gap-3 pb-3 border-b border-white/15 last:border-0 last:pb-0">
@@ -413,14 +413,14 @@ export default function BuildHighPerformingTeamsFeaturesBenefits() {
                                 </div>
                             </div>
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/13.jpg')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/13')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-olive/80 to-[#6b7027]/85 rounded-b-3xl md:rounded-r-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
                                     <div className="relative flex items-center justify-between gap-3">
                                         <div className="flex items-center gap-3">
                                             <img className="w-11 h-11 object-cover object-top rounded-full shrink-0"
-                                                 src="/images/headshot/6.jpg" alt="Funmi Adeyemi"/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/6" alt="Funmi Adeyemi"/>
                                             <div>
                                                 <p className="text-white text-sm font-semibold font-Montserrat">Funmi
                                                     Adeyemi</p>
@@ -450,9 +450,9 @@ export default function BuildHighPerformingTeamsFeaturesBenefits() {
                                         </div>
                                         <div className="space-y-3">
                                             {[
-                                                {src: '/images/headshot/1.jpg', name: 'Amara', style: 'Driver', approach: 'Give the outcome, not the steps.'},
-                                                {src: '/images/headshot/7.jpg', name: 'Kofi', style: 'Analytical', approach: 'Share full context and success criteria.'},
-                                                {src: '/images/headshot/3.jpg', name: 'Ngozi', style: 'Supportive', approach: 'Agree early check-ins and offer backing.'},
+                                                {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/1', name: 'Amara', style: 'Driver', approach: 'Give the outcome, not the steps.'},
+                                                {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/7', name: 'Kofi', style: 'Analytical', approach: 'Share full context and success criteria.'},
+                                                {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/3', name: 'Ngozi', style: 'Supportive', approach: 'Agree early check-ins and offer backing.'},
                                             ].map((member) => (
                                                 <div key={member.name}
                                                      className="flex items-center gap-3 pb-3 border-b border-white/15 last:border-0 last:pb-0">
@@ -480,23 +480,23 @@ export default function BuildHighPerformingTeamsFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="relative col-span-2 min-h-[280px] md:min-h-[420px] p-4 bg-[url('/images/18.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl overflow-hidden flex flex-col justify-between gap-2">
+                                className="relative col-span-2 min-h-[280px] md:min-h-[420px] p-4 bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/18')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl overflow-hidden flex flex-col justify-between gap-2">
                                 <div className="absolute inset-0 bg-gradient-to-t from-terracotta-dark/95 via-terracotta-dark/70 to-terracotta-dark/30 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
 
                                 <div className="relative flex items-center justify-between">
                                     <div className="flex items-center gap-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md pl-1 pr-3 py-1">
                                         <div className="flex -space-x-2">
                                             <img className="w-7 h-7 rounded-full ring-2 ring-white/40 object-cover object-top"
-                                                 src="/images/headshot/2.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/2" alt=""/>
                                             <img className="w-7 h-7 rounded-full ring-2 ring-white/40 object-cover object-top"
-                                                 src="/images/headshot/5.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/5" alt=""/>
                                         </div>
                                         <span className="text-white/70 text-[11px] font-Montserrat">+</span>
                                         <div className="flex -space-x-2">
                                             <img className="w-7 h-7 rounded-full ring-2 ring-terracotta object-cover object-top"
-                                                 src="/images/headshot/8.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/8" alt=""/>
                                             <img className="w-7 h-7 rounded-full ring-2 ring-terracotta object-cover object-top"
-                                                 src="/images/headshot/1.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/1" alt=""/>
                                         </div>
                                         <p className="text-white text-[11px] font-Montserrat font-semibold ml-1">Merged team</p>
                                     </div>

@@ -49,7 +49,7 @@ export default function LeadershipAssessmentsApproach() {
                 <div className="grid md:grid-cols-2 gap-8">
                     <div className="relative mt-8 md:mt-0 min-h-[20rem] rounded-2xl overflow-hidden">
                         <Image
-                            src="/images/40.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/40"
                             alt="A Zanga facilitator walking a leader through their assessment results"
                             fill
                             sizes="(min-width: 768px) 50vw, 100vw"

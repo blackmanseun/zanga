@@ -48,13 +48,13 @@ export default function LeadershipAssessmentsClarity() {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="flex flex-col gap-4">
                                 <Panel
-                                    src="/images/5.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/5"
                                     alt="A leader reviewing work on a laptop"
                                     className="md:h-[500px] h-56 rounded-2xl rounded-br-none"
                                     objectPosition="[object-position:50%_20%]"
                                 />
                                 <Panel
-                                    src="/images/49.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/49"
                                     alt="Two colleagues in a feedback conversation"
                                     className="md:h-44 h-28 md:w-[50%] w-[80%] ml-auto rounded-2xl rounded-tr-none"
                                 />
@@ -62,13 +62,13 @@ export default function LeadershipAssessmentsClarity() {
                             <div className="flex flex-col gap-4">
                                 <div className="md:h-20 h-16 rounded-2xl rounded-bl-none bg-terracotta/25 md:w-[30%] w-[50%]" aria-hidden="true"/>
                                 <Panel
-                                    src="/images/47.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/47"
                                     alt="A leader focused on his laptop at a desk"
                                     className="md:h-[400px] h-36 rounded-2xl rounded-bl-none"
                                     objectPosition="[object-position:50%_25%]"
                                 />
                                 <Panel
-                                    src="/images/48.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/48"
                                     alt="A leader working at his desk"
                                     className="md:h-44 h-28 rounded-2xl rounded-tl-none md:w-[50%] w-[70%]"
                                     objectPosition="[object-position:50%_20%]"

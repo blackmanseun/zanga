@@ -25,7 +25,7 @@ export default function CoachesConsultantsPartner() {
                 <div className="grid lg:grid-cols-[1fr_550px] gap-10 lg:gap-16 items-stretch">
                     <div className="relative order-2 lg:order-1 min-h-[16rem] sm:min-h-[22rem] lg:min-h-0">
                         <img
-                            src="/images/200.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/200"
                             alt="A coach and a Zanga partner working together"
                             className="absolute inset-0 w-full h-full object-cover object-top rounded-2xl"
                         />

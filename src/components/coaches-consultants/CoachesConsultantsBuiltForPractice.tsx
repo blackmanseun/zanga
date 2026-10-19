@@ -65,7 +65,7 @@ export default function CoachesConsultantsBuiltForPractice() {
 
                     <div className="relative mt-8 lg:mt-0 min-h-[16rem] sm:min-h-[22rem] lg:min-h-0">
                         <img
-                            src="/images/168.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/168"
                             alt="A coach working through an assessment report with a client"
                             className="absolute inset-0 w-full h-full object-cover object-[50%_65%] rounded-2xl"
                         />

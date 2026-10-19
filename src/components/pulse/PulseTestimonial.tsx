@@ -20,42 +20,42 @@ const testimonials: Testimonial[] = [
             "Our overall engagement score looked healthy, but attrition kept rising in one region and we couldn't explain why. Pulse showed us that managers there were coming through as far less supportive and recognition felt inconsistent, even though the headline score didn't show it. We ran targeted coaching for that management team and adjusted how we recognised people locally. Within two quarters, voluntary turnover in the region had come down, and it was the fastest-improving region in our next pulse survey.",
         name: 'Chiamaka Nwosu',
         role: 'Head of People, Meridian Logistics Group',
-        avatar: '/images/headshot/3.jpg',
+        avatar: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/3',
     },
     {
         quote:
             'We knew turnover was highest in the first six months, but not why. Pulse showed new hires felt unsupported in their first few weeks, especially outside our head office. We rebuilt onboarding around a 90-day check-in cadence and gave line managers a simple playbook. Early-tenure attrition is down significantly since we made the change.',
         name: 'Ngozi Adeyemi',
         role: 'Chief People Officer, FirstBank Group',
-        avatar: '/images/headshot/7.jpg',
+        avatar: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/7',
     },
     {
         quote:
             'Our values were clear on paper, but employees in different regions were experiencing them very differently. Pulse surfaced exactly where that gap was widest. We ran targeted culture workshops with those store teams instead of a blanket, company-wide programme. Our next survey showed those regions closing the gap faster than anywhere else.',
         name: 'Kwena Mshindi',
         role: 'HR Director, Regional Retail Group',
-        avatar: '/images/headshot/6.jpg',
+        avatar: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/6',
     },
     {
         quote:
             "Leadership assumed communication was working because nobody complained. Pulse told a different story: frontline teams felt genuinely uninformed about decisions that affected them. We introduced regular manager-led briefings and a simple monthly update from the executive team. Our 'feeling informed' score moved more in one quarter than it had in three years.",
         name: 'Ademola Bamidele',
         role: 'VP People Operations, Continental Manufacturing',
-        avatar: '/images/headshot/1.jpg',
+        avatar: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/1',
     },
     {
         quote:
             "We were losing strong performers who, on paper, had nothing to complain about. Pulse showed they simply couldn't see a path forward here. We built out clearer development conversations and internal mobility options. It's still early, but retention among our top performers has already improved.",
         name: 'Amaka Johnson',
         role: 'Head of Talent & Culture, Savanna Logistics',
-        avatar: '/images/headshot/2.jpg',
+        avatar: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/2',
     },
     {
         quote:
             'After bringing two teams together, leadership assumed things had settled. Pulse showed people still felt like two separate groups, with real gaps in trust and collaboration. We used the results to design joint working sessions and changed how we recognised cross-team work. Belonging scores in the merged team are now among the highest in the business.',
         name: 'Fatima Bello',
         role: 'People Experience Lead, Northbridge Financial Services',
-        avatar: '/images/headshot/5.jpg',
+        avatar: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/5',
     },
 ]
 

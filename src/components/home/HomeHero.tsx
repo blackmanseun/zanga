@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Reveal from '@/components/ui/Reveal'
 import { openNavMenu } from '@/components/Header'
 
-const flipImages = ['/images/100.jpg', '/images/103.jpg', '/images/102.jpg']
+const flipImages = ['https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/100', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/103', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/102']
 const FLIP_INTERVAL_MS = 5000
 
 function FlipImage() {

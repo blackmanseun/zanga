@@ -32,7 +32,7 @@ export default function FinancialInstitutionsWhereToStart() {
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
-                                src="/images/41.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/41"
                                 alt="Senior leaders reviewing leadership readiness"
                                 fill
                                 sizes="(min-width: 1024px) 55vw, 100vw"
@@ -66,7 +66,7 @@ export default function FinancialInstitutionsWhereToStart() {
                                 className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
-                                    src="/images/39.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/39"
                                     alt="Team discussing workforce sentiment"
                                     fill
                                     sizes="(min-width: 1024px) 25vw, 100vw"
@@ -99,7 +99,7 @@ export default function FinancialInstitutionsWhereToStart() {
                                 className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
-                                    src="/images/65.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/65"
                                     alt="Colleagues reviewing a feedback channel"
                                     fill
                                     sizes="(min-width: 1024px) 25vw, 100vw"

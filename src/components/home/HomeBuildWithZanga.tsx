@@ -106,7 +106,7 @@ export default function HomeBuildWithZanga() {
 
           <div className="relative mt-8 lg:mt-0">
             <img
-              src="/images/107.jpg"
+              src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/107"
               alt="Zanga partners collaborating over workforce data"
               className="w-full h-[20rem] sm:h-[26rem] object-cover rounded-2xl"
             />

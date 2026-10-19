@@ -66,7 +66,7 @@ export default function InvestorsFundManagersBuiltForFunds() {
 
                     <div className="relative mt-8 lg:mt-0 min-h-[16rem] sm:min-h-[22rem] lg:min-h-0">
                         <img
-                            src="/images/164.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/164"
                             alt="An investment team reviewing a portfolio company"
                             className="absolute inset-0 w-full h-full object-cover rounded-2xl"
                         />

@@ -86,13 +86,13 @@ export default function LeadershipAssessmentsContext() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/127.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/127"
                                 alt="A leader listening attentively in a team discussion"
                                 className="md:h-[500px] h-56 rounded-2xl rounded-br-none"
                                 objectPosition="[object-position:50%_32%] md:[object-position:50%_55%]"
                             />
                             <Panel
-                                src="/images/57.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/57"
                                 alt="Colleagues in conversation across a table"
                                 className="md:h-44 h-28 md:w-[50%] w-[80%] ml-auto rounded-2xl rounded-tr-none"
                             />
@@ -100,13 +100,13 @@ export default function LeadershipAssessmentsContext() {
                         <div className="flex flex-col gap-4">
                             <div className="md:h-20 h-16 rounded-2xl rounded-bl-none bg-terracotta/25 md:w-[30%] w-[50%]" aria-hidden="true"/>
                             <Panel
-                                src="/images/56.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/56"
                                 alt="A team collaborating in an open workspace"
                                 className="md:h-[400px] h-36 rounded-2xl rounded-bl-none"
                                 overlayClassName="bg-slate-800/30"
                             />
                             <Panel
-                                src="/images/42.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/42"
                                 alt="A leader reviewing notes with a colleague"
                                 className="md:h-44 h-28 rounded-2xl rounded-tl-none md:w-[50%] w-[70%]"
                                 objectPosition="[object-position:50%_20%]"

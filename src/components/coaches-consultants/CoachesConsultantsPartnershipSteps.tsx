@@ -68,7 +68,7 @@ export default function CoachesConsultantsPartnershipSteps() {
                     </div>
 
                     <div className="order-3 md:order-2 relative rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 min-h-[16rem] sm:min-h-[22rem] md:min-h-0">
-                        <img src="/images/205.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover"/>
+                        <img src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/205" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover"/>
                     </div>
                 </div>
             </div>

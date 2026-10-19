@@ -64,7 +64,7 @@ export default function LeadershipAssessmentsWhatYouReceive() {
 
                     <div className="relative mt-8 lg:mt-0">
                         <img
-                            src="/images/20.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/20"
                             alt="A leadership team reviewing an assessment report together"
                             className="w-full h-64 md:h-80 xl:h-[650px] object-cover rounded-2xl"
                         />

@@ -70,24 +70,24 @@ export default function DiligenceHero() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/186.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/186"
                                 alt="A team working together in an open office"
                                 className="md:h-72 h-48"
                             />
                             <Panel
-                                src="/images/213.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/213"
                                 alt="A people leader reviewing a workforce report"
                                 className="md:h-48 h-28"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/164.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/164"
                                 alt="Colleagues bringing their hands together in unity"
                                 className="md:h-48 h-28"
                             />
                             <Panel
-                                src="/images/217.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/217"
                                 alt="An employee focused at her desk"
                                 className="md:h-72 h-48"
                                 objectPosition="60% 40%"

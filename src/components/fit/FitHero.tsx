@@ -71,24 +71,24 @@ export default function FitHero() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/208.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/208"
                                 alt="A team working together in an open office"
                                 className="md:h-72 h-48"
                             />
                             <Panel
-                                src="/images/118.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/118"
                                 alt="A people leader reviewing a workforce report"
                                 className="md:h-48 h-28"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/177.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/177"
                                 alt="Colleagues bringing their hands together in unity"
                                 className="md:h-48 h-28"
                             />
                             <Panel
-                                src="/images/179.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/179"
                                 alt="An employee focused at her desk"
                                 className="md:h-72 h-48"
                                 objectPosition="50% 20%"

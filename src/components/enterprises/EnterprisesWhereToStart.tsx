@@ -32,7 +32,7 @@ export default function EnterprisesWhereToStart() {
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
-                                src="/images/7.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/7"
                                 alt="A senior leader guiding members of her team"
                                 fill
                                 sizes="(min-width: 1024px) 55vw, 100vw"
@@ -67,7 +67,7 @@ export default function EnterprisesWhereToStart() {
                                 className="group relative flex xl:min-h-[200px] min-h-[300px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
-                                    src="/images/8.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/8"
                                     alt="Colleagues collaborating together in an open office"
                                     fill
                                     sizes="(min-width: 1024px) 25vw, 100vw"

@@ -40,25 +40,25 @@ export default function PublicSectorInstitutionsWhyZanga() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/72.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/72"
                                 alt="A senior leader reviewing institutional reporting"
                                 className="h-[350px]"
                             />
                             <Panel
-                                src="/images/153.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/153"
                                 alt="Colleagues collaborating across branches"
                                 className="h-[200px]"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/67.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/67"
                                 alt="A manager and team member in conversation"
                                 className="h-[200px]"
                                 // objectPosition="50% 20%"
                             />
                             <Panel
-                                src="/images/154.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/154"
                                 alt="A team member reviewing a report"
                                 className="h-[350px]"
                                 objectPosition="50% 20%"

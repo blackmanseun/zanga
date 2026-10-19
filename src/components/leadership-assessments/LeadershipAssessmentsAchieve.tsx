@@ -89,17 +89,17 @@ export default function LeadershipAssessmentsAchieve() {
                     <div className="relative w-full max-w-[420px] h-[420px] sm:h-[460px] mx-auto mt-8 lg:mt-16">
                         <EnterprisesPolaroid
                             imgClassName="md:h-[250px] h-[200px] object-bottom"
-                            src="/images/50.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/50"
                             className="w-[250px] md:h-[280px] h-[250px] md:top-[-10%] top-0 left-0 md:-rotate-3 z-10"
                         />
                         <EnterprisesPolaroid
                             imgClassName="md:h-[200px] h-[180px]"
-                            src="/images/51.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/51"
                             className="object-cover w-[60%] top-[14%] -right-10 rotate-[8deg] z-20"
                         />
                         <EnterprisesPolaroid
                             imgClassName="md:h-[220px] h-[180px] object-cover"
-                            src="/images/53.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/53"
                             className="w-[60%] top-[46%] md:left-[-2%] left-2 rotate-[-10deg] z-30"
                         />
                         <span

@@ -66,7 +66,7 @@ export default function BecomePartnerWhyPartner() {
 
                     <div className="relative mt-8 lg:mt-0 xl:h-[650px] md:h-auto h-[200px]">
                         <img
-                            src="/images/34.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/34"
                             alt="A team of partners reviewing materials together"
                             className="w-full h-full object-cover rounded-2xl"
                         />

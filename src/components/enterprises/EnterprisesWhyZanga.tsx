@@ -40,25 +40,25 @@ export default function EnterprisesWhyZanga() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/72.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/72"
                                 alt="A team celebrating over their annual report findings"
                                 className="h-[320px]"
                             />
                             <Panel
-                                src="/images/20.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/20"
                                 alt="Colleagues working together in an open office"
                                 className="h-[200px]"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/23.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/23"
                                 alt="A team bringing their hands together in agreement"
                                 className="h-[200px]"
                                 objectPosition="0% 25%"
                             />
                             <Panel
-                                src="/images/21.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/21"
                                 alt="A team bringing their hands together in agreement"
                                 className="h-[320px]"
                                 objectPosition="50% 20%"

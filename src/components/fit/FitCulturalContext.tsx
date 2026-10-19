@@ -4,10 +4,10 @@ import { FiArrowRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
 
 const tiles: { src: string; shape: string; position?: string }[] = [
-    {src: '/images/204.jpg', shape: 'rounded-2xl rounded-br-[50%]'},
-    {src: '/images/176.jpg', shape: 'rounded-2xl rounded-bl-[50%]'},
-    {src: '/images/202.jpg', shape: 'rounded-2xl rounded-tr-[50%]'},
-    {src: '/images/182.jpg', shape: 'rounded-2xl rounded-tl-[50%]', position: 'center 20%'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/204', shape: 'rounded-2xl rounded-br-[50%]'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/176', shape: 'rounded-2xl rounded-bl-[50%]'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/202', shape: 'rounded-2xl rounded-tr-[50%]'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/182', shape: 'rounded-2xl rounded-tl-[50%]', position: 'center 20%'},
 ]
 
 export default function FitCulturalContext() {

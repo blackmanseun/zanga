@@ -59,25 +59,25 @@ export default function CoachesConsultantsWhyZanga() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/173.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/173"
                                 alt="A coach reviewing an assessment report"
                                 className="h-[420px]"
                             />
                             <Panel
-                                src="/images/169.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/169"
                                 alt="A team development session"
                                 className="h-[260px] shrink-0"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/174.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/174"
                                 alt="A manager and team member in conversation"
                                 className="h-[260px] shrink-0"
                                 objectPosition="50% 20%"
                             />
                             <Panel
-                                src="/images/207.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/207"
                                 alt="A team member reviewing a report"
                                 className="h-[420px]"
                                 objectPosition="50% 20%"

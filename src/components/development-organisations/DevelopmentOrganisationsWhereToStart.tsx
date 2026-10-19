@@ -33,7 +33,7 @@ export default function DevelopmentOrganisationsWhereToStart() {
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
-                                src="/images/136.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/136"
                                 alt="Community members sharing feedback with a programme team"
                                 fill
                                 sizes="(min-width: 1024px) 55vw, 100vw"
@@ -67,7 +67,7 @@ export default function DevelopmentOrganisationsWhereToStart() {
                                 className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
-                                    src="/images/126.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/126"
                                     alt="Country office leaders in discussion"
                                     fill
                                     sizes="(min-width: 1024px) 25vw, 100vw"
@@ -100,7 +100,7 @@ export default function DevelopmentOrganisationsWhereToStart() {
                                 className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
-                                    src="/images/143.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/143"
                                     alt="Programme team members in conversation"
                                     fill
                                     sizes="(min-width: 1024px) 25vw, 100vw"

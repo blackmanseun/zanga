@@ -18,7 +18,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with the Leadership Competency Assessment to understand strengths and development priorities across founders and senior teams.',
         cta: 'Fit by Zanga',
-        image: '/images/163.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/163',
         alt: 'Senior team members discussing development priorities',
     },
     {
@@ -26,7 +26,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with Fit by Zanga to bring structured assessment insight into executive recruitment.',
         cta: 'Explore Fit by Zanga',
-        image: '/images/62.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/62',
         alt: 'An executive candidate in conversation',
     },
     {
@@ -34,7 +34,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with Pulse by Zanga to understand workforce sentiment and employee experience.',
         cta: 'Explore Pulse by Zanga',
-        image: '/images/76.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/76',
         alt: 'Colleagues discussing workplace culture',
     },
 ]
@@ -67,7 +67,7 @@ export default function InvestorsFundManagersWhereToStart() {
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
-                                src="/images/167.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/167"
                                 alt="An investor reviewing a founder and management team"
                                 fill
                                 sizes="(min-width: 1024px) 55vw, 100vw"

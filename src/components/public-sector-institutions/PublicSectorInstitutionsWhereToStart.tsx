@@ -19,7 +19,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with the Leadership Competency Assessment to understand strengths and development priorities.',
         cta: 'Fit by Zanga',
-        image: '/images/4.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/4',
         alt: 'Department leaders discussing capability priorities',
     },
     {
@@ -27,7 +27,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with the Succession Heat Map to assess internal talent readiness and succession depth.',
         cta: 'Explore Succession Heat Map',
-        image: '/images/33.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/33',
         alt: 'A senior leader reviewing succession readiness',
     },
     {
@@ -35,7 +35,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with Voice by Zanga to create a more structured way to listen and respond.',
         cta: 'Explore Voice by Zanga',
-        image: '/images/98.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/98',
         alt: 'Colleagues reviewing citizen feedback',
     },
 ]
@@ -68,7 +68,7 @@ export default function PublicSectorInstitutionsWhereToStart() {
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
-                                src="/images/156.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/156"
                                 alt="A selection panel reviewing candidate assessments"
                                 fill
                                 sizes="(min-width: 1024px) 55vw, 100vw"

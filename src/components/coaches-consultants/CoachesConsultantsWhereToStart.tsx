@@ -18,7 +18,7 @@ const sideCards: StartCard[] = [
         description:
             'Use Zanga assessment tools to create a stronger baseline and focus development around identified needs.',
         cta: 'Explore Leadership & Team Solutions',
-        image: '/images/170.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/170',
         alt: 'A facilitator running a leadership programme',
     },
     {
@@ -26,7 +26,7 @@ const sideCards: StartCard[] = [
         description:
             'Explore the Zanga Business Partner Programme and the tools, commercial models and support available to practitioners.',
         cta: 'Become a Zanga Partner',
-        image: '/images/203.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/203',
         alt: 'A coach preparing for a client session',
     },
     {
@@ -34,7 +34,7 @@ const sideCards: StartCard[] = [
         description:
             'Explore the partnership options available for practitioners and consulting firms that want to integrate Zanga more deeply into their own client proposition.',
         cta: 'Explore Partnership Options',
-        image: '/images/82.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/82',
         alt: 'Consultants reviewing a client proposition',
     },
 ]
@@ -67,7 +67,7 @@ export default function CoachesConsultantsWhereToStart() {
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
-                                src="/images/175.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/175"
                                 alt="A coach in a one-to-one session with a client"
                                 fill
                                 sizes="(min-width: 1024px) 55vw, 100vw"

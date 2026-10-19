@@ -77,7 +77,7 @@ export default function BecomePartnerHowItWorks() {
 
                     <div className="h-full">
                         <div className="relative rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 xl:h-[600px] md:h-[89%]">
-                            <img src="/images/38.jpg" alt="" aria-hidden="true" className="w-full h-full object-cover"/>
+                            <img src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/38" alt="" aria-hidden="true" className="w-full h-full object-cover"/>
                         </div>
                     </div>
                 </div>

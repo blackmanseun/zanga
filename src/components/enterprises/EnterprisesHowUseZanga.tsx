@@ -65,7 +65,7 @@ export default function EnterprisesHowUseZanga() {
                             className="absolute w-[15rem] h-[13rem] left-14 bottom-2 rounded-[80%] border-2 border-gray-200/70"/>
                     </div>
                     <div className="md:block hidden absolute -bottom-32 -left-32 w-[30rem]">
-                        <img src="/images/chair.png"/>
+                        <img src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/chair"/>
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
                         <div className="col-span-2">

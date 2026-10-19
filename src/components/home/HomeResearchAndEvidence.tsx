@@ -56,7 +56,7 @@ export default function HomeResearchAndEvidence() {
 
             <div className="relative min-h-[16rem] md:min-h-full">
               <img
-                src="/images/106.jpg"
+                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/106"
                 alt="A diverse team joining hands together"
                 className="absolute inset-0 w-full h-full object-cover"
               />

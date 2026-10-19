@@ -123,13 +123,13 @@ export default function FitAchieve() {
                     <div className="mt-8 lg:mt-0 grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/207.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/207"
                                 alt="A team celebrating over their annual report findings"
                                 className="md:h-96 h-56 rounded-2xl rounded-br-none"
                                 objectPosition="[object-position:50%_22%] xl:[object-position:50%_55%]"
                             />
                             <Panel
-                                src="/images/165.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/165"
                                 alt="Colleagues working together in an open office"
                                 className="md:h-48 h-28 md:w-[50%] w-[80%] ml-auto rounded-2xl rounded-tr-none"
                                 objectPosition="[object-position:20%_10%]"
@@ -138,13 +138,13 @@ export default function FitAchieve() {
                         <div className="flex flex-col gap-4">
                             <div className="md:h-20 h-16 rounded-2xl rounded-bl-none bg-terracotta/25 md:w-[30%] w-[50%]" aria-hidden="true"/>
                             <Panel
-                                src="/images/178.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/178"
                                 alt="A team bringing their hands together in agreement"
                                 className="md:h-72 h-36 rounded-2xl rounded-bl-none"
                                 objectPosition="[object-position:0%_25%]"
                             />
                             <Panel
-                                src="/images/166.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/166"
                                 alt="A team bringing their hands together in agreement"
                                 className="md:h-48 h-28 rounded-2xl rounded-tl-none md:w-[50%] w-[70%]"
                                 objectPosition="[object-position:80%_25%]"

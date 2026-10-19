@@ -66,7 +66,7 @@ export default function BecomePartnerTechnology() {
                         className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10"
                     >
                         <Image
-                            src="/images/70.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/70"
                             alt=""
                             fill
                             sizes="(min-width: 1280px) 550px, 100vw"

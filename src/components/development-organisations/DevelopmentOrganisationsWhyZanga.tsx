@@ -40,12 +40,12 @@ export default function DevelopmentOrganisationsWhyZanga() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/140.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/140"
                                 alt="A programme lead reviewing stakeholder feedback"
                                 className="h-[350px]"
                             />
                             <Panel
-                                src="/images/104.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/104"
                                 alt="Colleagues collaborating across locations"
                                 className="h-[200px]"
                             />
@@ -58,7 +58,7 @@ export default function DevelopmentOrganisationsWhyZanga() {
                                 // objectPosition="50% 20%"
                             />
                             <Panel
-                                src="/images/142.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/142"
                                 alt="A team member reviewing a report"
                                 className="h-[350px]"
                                 objectPosition="50% 0%"

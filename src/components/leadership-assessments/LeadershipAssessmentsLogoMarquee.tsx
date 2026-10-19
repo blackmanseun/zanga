@@ -6,19 +6,19 @@ import 'swiper/css'
 import 'swiper/css/free-mode'
 
 const LOGOS = [
-    {src: '/images/logos/africa-finance-corporation-logo.png', alt: 'Africa Finance Corporation'},
-    {src: '/images/logos/africa-works-logo.png', alt: 'Africa Works'},
-    {src: '/images/logos/airtel-logo.png', alt: 'Airtel'},
-    {src: '/images/logos/bca-leadership-logo.png', alt: 'BCA Leadership'},
-    {src: '/images/logos/bnr-logo.png', alt: 'BNR'},
-    {src: '/images/logos/cabinet-office-logo.png', alt: 'Cabinet Office'},
-    {src: '/images/logos/cdi-africa-logo.png', alt: 'CDI Africa'},
-    {src: '/images/logos/ctl-leadership-logo.png', alt: 'CTL Leadership'},
-    {src: '/images/logos/fnb-logo.png', alt: 'FNB'},
-    {src: '/images/logos/giz-logo.png', alt: 'GIZ'},
-    {src: '/images/logos/grz-logo.png', alt: 'GRZ'},
-    {src: '/images/logos/who-logo.png', alt: 'WHO'},
-    {src: '/images/logos/zicb-logo.png', alt: 'ZICB'}
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/africa-finance-corporation-logo', alt: 'Africa Finance Corporation'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/africa-works-logo', alt: 'Africa Works'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/airtel-logo', alt: 'Airtel'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/bca-leadership-logo', alt: 'BCA Leadership'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/bnr-logo', alt: 'BNR'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/cabinet-office-logo', alt: 'Cabinet Office'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/cdi-africa-logo', alt: 'CDI Africa'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/ctl-leadership-logo', alt: 'CTL Leadership'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/fnb-logo', alt: 'FNB'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/giz-logo', alt: 'GIZ'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/grz-logo', alt: 'GRZ'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/who-logo', alt: 'WHO'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/logos/zicb-logo', alt: 'ZICB'}
 ]
 
 export default function LeadershipAssessmentsLogoMarquee() {

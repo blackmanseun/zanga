@@ -69,8 +69,8 @@ type ParallaxVinylProps = {
 }
 
 export default function EnterprisesParallaxVinyl({
-    leftImages = '/images/13.jpg',
-    rightImages = '/images/13.jpg',
+    leftImages = 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/13',
+    rightImages = 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/13',
     intervalMs = 4000,
 }: ParallaxVinylProps) {
     const leftList = Array.isArray(leftImages) ? leftImages : [leftImages]

@@ -104,24 +104,24 @@ export default function HomeInsightsReport() {
           <div className="grid grid-cols-2 gap-4">
             <div className="flex flex-col gap-4">
               <Panel
-                src="/images/farming-one.jpg"
+                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/farming-one"
                 alt="A team celebrating over their annual report findings"
                 className="h-64"
               />
               <Panel
-                src="/images/farming-four.jpg"
+                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/farming-four"
                 alt="A worker on site carrying rolled-up plans"
                 className="h-40"
               />
             </div>
             <div className="flex flex-col gap-4">
               <Panel
-                src="/images/farming-three.jpg"
+                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/farming-three"
                 alt="A diverse team reviewing documents together in the office"
                 className="h-40"
               />
               <Panel
-                src="/images/farming-two.jpg"
+                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/farming-two"
                 alt="A leader holding a folder of assessment findings"
                 className="h-64"
                 objectPosition="50% 20%"

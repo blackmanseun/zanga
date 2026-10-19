@@ -40,7 +40,7 @@ export default function ImproveEngagementRetentionFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/17.jpg')] bg-cover bg-top rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/17')] bg-cover bg-top rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-terracotta/80 to-terracotta-dark/85 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
@@ -168,7 +168,7 @@ export default function ImproveEngagementRetentionFeaturesBenefits() {
                                 </div>
                             </div>
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/16.jpg')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/16')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-olive/80 to-olive-dark/85 rounded-b-3xl md:rounded-r-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
@@ -238,7 +238,7 @@ export default function ImproveEngagementRetentionFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/19.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/19')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-terracotta/80 to-terracotta-dark/85 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
@@ -380,14 +380,14 @@ export default function ImproveEngagementRetentionFeaturesBenefits() {
                                 </div>
                             </div>
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/13.jpg')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/13')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-olive/80 to-[#6b7027]/85 rounded-b-3xl md:rounded-r-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
                                     <div className="relative flex items-center justify-between gap-3">
                                         <div className="flex items-center gap-3">
                                             <img className="w-11 h-11 object-cover object-top rounded-full shrink-0"
-                                                 src="/images/headshot/2.jpg" alt="Chidi Okeke"/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/2" alt="Chidi Okeke"/>
                                             <div>
                                                 <p className="text-white text-sm font-semibold font-Montserrat">Chidi
                                                     Okeke</p>
@@ -450,7 +450,7 @@ export default function ImproveEngagementRetentionFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="relative col-span-2 min-h-[280px] md:min-h-[420px] p-4 bg-[url('/images/18.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl overflow-hidden flex flex-col justify-between gap-2">
+                                className="relative col-span-2 min-h-[280px] md:min-h-[420px] p-4 bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/18')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl overflow-hidden flex flex-col justify-between gap-2">
                                 <div className="absolute inset-0 bg-gradient-to-t from-terracotta-dark/95 via-terracotta-dark/70 to-terracotta-dark/30 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
 
                                 <div className="relative flex items-center justify-between">

@@ -26,7 +26,7 @@ const useCases: UseCase[] = [
             'Use structured assessment for specialist, leadership or other business-critical positions where a deeper understanding of the candidate is valuable.',
         cta: 'Request a Demo',
         demo: true,
-        image: '/images/87.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/87',
         color: '#c55e36',
         Icon: FiAward,
     },
@@ -36,7 +36,7 @@ const useCases: UseCase[] = [
         description:
             'Apply a structured assessment process across candidates to support shortlisting and give hiring teams a common basis for comparison.',
         cta: 'Explore Psychometric Assessments',
-        image: '/images/77.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/77',
         color: '#a3a748',
         Icon: FiUsers,
     },
@@ -46,7 +46,7 @@ const useCases: UseCase[] = [
         description:
             'Integrate Fit into recurring recruitment across business units, functions or locations so the quality of assessment does not depend entirely on who is running each hiring process.',
         cta: 'Talk to Zanga About Hiring Programmes',
-        image: '/images/172.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/172',
         color: '#0F3460',
         Icon: FiRepeat,
     },

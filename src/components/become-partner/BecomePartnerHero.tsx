@@ -4,14 +4,14 @@ import Image from 'next/image'
 import Reveal from '@/components/ui/Reveal'
 
 const partnerFaces: { src: string; objectPosition?: string }[] = [
-    {src: '/images/headshot/1.jpg'},
-    {src: '/images/headshot/6.jpg'},
-    {src: '/images/headshot/13.jpg', objectPosition: '50% 30%'},
-    {src: '/images/headshot/19.jpg', objectPosition: '50% 30%'},
-    {src: '/images/headshot/10.jpg'},
-    {src: '/images/headshot/8.jpg', objectPosition: '50% 8%'},
-    {src: '/images/headshot/15.jpg'},
-    {src: '/images/headshot/16.jpg', objectPosition: '50% 0%'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/1'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/6'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/13', objectPosition: '50% 30%'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/19', objectPosition: '50% 30%'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/10'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/8', objectPosition: '50% 8%'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/15'},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/16', objectPosition: '50% 0%'},
 ]
 
 export default function BecomePartnerHero() {

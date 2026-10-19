@@ -13,14 +13,14 @@ type OrbitPhoto = {
 }
 
 const orbitPhotos: OrbitPhoto[] = [
-  { src: '/images/2.jpg', size: 80, x: '50%', y: '10.7%', rotate: -6, delay: 0 },
-  { src: '/images/9.jpg', size: 64, x: '77.8%', y: '22.2%', rotate: 4, delay: 0.25 },
+  { src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/2', size: 80, x: '50%', y: '10.7%', rotate: -6, delay: 0 },
+  { src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/9', size: 64, x: '77.8%', y: '22.2%', rotate: 4, delay: 0.25 },
   { src: '/images/11.jpg', size: 80, x: '89.3%', y: '50%', rotate: -3, delay: 0.5 },
-  { src: '/images/13.jpg', size: 64, x: '77.8%', y: '77.8%', rotate: 5, delay: 0.75 },
-  { src: '/images/15.jpg', size: 80, x: '50%', y: '89.3%', rotate: -5, delay: 1 },
-  { src: '/images/7.jpg', size: 64, x: '22.2%', y: '77.8%', rotate: 3, delay: 1.25 },
-  { src: '/images/10.jpg', size: 80, x: '10.7%', y: '50%', rotate: -4, delay: 1.5 },
-  { src: '/images/3.jpg', size: 64, x: '22.2%', y: '22.2%', rotate: 6, delay: 1.75 },
+  { src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/13', size: 64, x: '77.8%', y: '77.8%', rotate: 5, delay: 0.75 },
+  { src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/15', size: 80, x: '50%', y: '89.3%', rotate: -5, delay: 1 },
+  { src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/7', size: 64, x: '22.2%', y: '77.8%', rotate: 3, delay: 1.25 },
+  { src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/10', size: 80, x: '10.7%', y: '50%', rotate: -4, delay: 1.5 },
+  { src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/3', size: 64, x: '22.2%', y: '22.2%', rotate: 6, delay: 1.75 },
 ]
 
 export default function HomeCulturalContext() {
@@ -100,7 +100,7 @@ export default function HomeCulturalContext() {
                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
                     <div className="w-28 h-28 lg:w-36 lg:h-36 rounded-full overflow-hidden shadow-2xl ring-4 ring-white/40">
                       <img
-                        src="/images/14.jpg"
+                        src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/14"
                         alt="Zanga helps organisations understand the people behind the data"
                         className="w-full h-full object-cover"
                       />

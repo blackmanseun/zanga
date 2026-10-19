@@ -69,7 +69,7 @@ export default function FinancialInstitutionsBuiltForInstitutions() {
 
                     <div className="relative mt-8 lg:mt-0 min-h-[12rem] xl:min-h-[35rem]">
                         <img
-                            src="/images/29.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/29"
                             alt="Team coordinating across multiple institution locations"
                             className="w-full h-full object-cover rounded-2xl"
                         />

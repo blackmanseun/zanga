@@ -40,25 +40,25 @@ export default function InvestorsFundManagersWhyZanga() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/166.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/166"
                                 alt="An investor reviewing leadership insight"
                                 className="h-[350px] object-center"
                             />
                             <Panel
-                                src="/images/205.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/205"
                                 alt="A founder and management team in discussion"
                                 className="h-[200px]"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/110.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/110"
                                 alt="A manager and team member in conversation"
                                 className="h-[200px]"
                                 objectPosition="50% 20%"
                             />
                             <Panel
-                                src="/images/165.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/165"
                                 alt="A team member reviewing a report"
                                 className="h-[350px]"
                                 objectPosition="50% 20%"

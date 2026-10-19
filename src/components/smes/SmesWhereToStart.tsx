@@ -33,7 +33,7 @@ export default function SmesWhereToStart() {
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
-                                src="/images/61.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/61"
                                 alt="A candidate being interviewed for an important role"
                                 fill
                                 sizes="(min-width: 1024px) 55vw, 100vw"
@@ -67,7 +67,7 @@ export default function SmesWhereToStart() {
                                 className="group relative flex min-h-[180px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
-                                    src="/images/21.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/21"
                                     alt="A newly promoted manager in a one-to-one"
                                     fill
                                     sizes="(min-width: 1024px) 25vw, 100vw"
@@ -100,7 +100,7 @@ export default function SmesWhereToStart() {
                                 className="group relative flex min-h-[180px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
-                                    src="/images/44.jpg"
+                                    src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/44"
                                     alt="Colleagues discussing employee engagement results"
                                     fill
                                     sizes="(min-width: 1024px) 25vw, 100vw"

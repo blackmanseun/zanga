@@ -34,7 +34,7 @@ const solutions: Solution[] = [
 
 export default function HomeSolutionsCardDraft() {
     return (
-        <section className="bg-[url('/images/footer_bg.webp')] bg-contain py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/footer_bg')] bg-contain py-20 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="md:max-w-[80%] mx-auto">
                 <div className="md:text-center mb-16">
           <span className="text-olive text-md uppercase tracking-widest font-Montserrat font-semibold">

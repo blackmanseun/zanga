@@ -11,7 +11,7 @@ const lora = Lora({ subsets: ['latin'], variable: '--font-lora' })
 
 export const metadata: Metadata = {
   icons: {
-    icon: '/images/favicon.png',
+    icon: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/favicon',
   },
 }
 

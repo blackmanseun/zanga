@@ -40,25 +40,25 @@ export default function FinancialInstitutionsWhyZanga() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/62.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/62"
                                 alt="A senior leader reviewing institutional reporting"
                                 className="h-[350px]"
                             />
                             <Panel
-                                src="/images/7.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/7"
                                 alt="Colleagues collaborating across branches"
                                 className="h-[200px]"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/82.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/82"
                                 alt="A manager and team member in conversation"
                                 className="h-[200px]"
                                 // objectPosition="50% 20%"
                             />
                             <Panel
-                                src="/images/40.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/40"
                                 alt="A team member reviewing a report"
                                 className="h-[350px]"
                                 objectPosition="50% 20%"

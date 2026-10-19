@@ -68,7 +68,7 @@ export default function SmesBuiltForSmallerTeams() {
 
                     <div className="relative mt-8 lg:mt-0">
                         <img
-                            src="/images/55.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/55"
                             alt="Small team working together"
                             className="w-full h-[12rem] xl:h-[35rem] object-cover rounded-2xl"
                         />

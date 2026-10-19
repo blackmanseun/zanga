@@ -67,7 +67,7 @@ export default function LeadershipAssessments360() {
                         className="relative overflow-hidden mt-8 lg:mt-0 rounded-2xl p-8 lg:p-10 h-full min-h-[420px]"
                     >
                         <Image
-                            src="/images/98.jpg"
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/98"
                             alt=""
                             fill
                             sizes="(min-width: 1280px) 550px, 100vw"

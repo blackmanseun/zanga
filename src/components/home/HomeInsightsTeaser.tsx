@@ -44,28 +44,28 @@ const articles: Article[] = [
         description: 'A look at the traits and habits shaping resilient leadership across African markets.',
         author: 'Zanga Research Team',
         category: 'Leadership',
-        image: '/images/10.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/10',
     },
     {
         title: 'Turning Workforce Data Into Boardroom-Ready Insights',
         description: 'How aggregated assessment data becomes a strategic asset for HR and the board.',
         author: 'Amara Okafor',
         category: 'Workforce Analytics',
-        image: '/images/6.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/6',
     },
     {
         title: 'Why Organisational Culture Audits Matter More Than Ever',
         description: 'A practical framework for measuring and strengthening organisational culture.',
         author: 'Zanga Research Team',
         category: 'Organisational Culture',
-        image: '/images/3.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/3',
     },
     {
         title: 'Designing Coaching Programmes That Actually Stick',
         description: 'Lessons from coaching engagements that lead to lasting behaviour change.',
         author: 'David Mwangi',
         category: 'Coaching & Development',
-        image: '/images/8.jpg',
+        image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/8',
     },
 ]
 

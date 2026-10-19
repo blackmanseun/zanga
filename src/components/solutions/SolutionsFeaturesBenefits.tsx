@@ -22,13 +22,13 @@ function MiniBar({label, value}: { label: string; value: number }) {
 }
 
 const networkNodes = [
-    {src: '/images/headshot/5.jpg', top: '38%', left: '44%', size: 48, center: true},
-    {src: '/images/headshot/1.jpg', top: '8%', left: '14%', size: 34},
-    {src: '/images/headshot/2.jpg', top: '6%', left: '76%', size: 34},
-    {src: '/images/headshot/3.jpg', top: '44%', left: '8%', size: 30},
-    {src: '/images/headshot/6.jpg', top: '48%', left: '84%', size: 30},
-    {src: '/images/headshot/7.jpg', top: '82%', left: '22%', size: 32},
-    {src: '/images/headshot/8.jpg', top: '80%', left: '70%', size: 32},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/5', top: '38%', left: '44%', size: 48, center: true},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/1', top: '8%', left: '14%', size: 34},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/2', top: '6%', left: '76%', size: 34},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/3', top: '44%', left: '8%', size: 30},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/6', top: '48%', left: '84%', size: 30},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/7', top: '82%', left: '22%', size: 32},
+    {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/8', top: '80%', left: '70%', size: 32},
 ]
 
 const networkDots = [
@@ -90,7 +90,7 @@ export default function SolutionsFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/17.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/17')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-terracotta/80 to-terracotta-dark/85 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
                                 <div
                                     className="p-4 md:rounded-xl rounded-3xl border border-white/20 relative overflow-hidden shadow-lg">
@@ -99,7 +99,7 @@ export default function SolutionsFeaturesBenefits() {
                                         <div className="flex items-center gap-3">
                                             <img
                                                 className="w-[56px] h-[56px] object-cover object-top rounded-xl shrink-0"
-                                                src="/images/headshot/1.jpg" alt="Amaka Johnson"/>
+                                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/1" alt="Amaka Johnson"/>
                                             <div>
                                                 <p className="text-white text-sm font-semibold font-Montserrat">Amaka
                                                     Johnson</p>
@@ -128,7 +128,7 @@ export default function SolutionsFeaturesBenefits() {
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center gap-2">
                                                     <img className="w-8 h-8 object-cover object-top rounded-full"
-                                                         src="/images/headshot/2.jpg" alt="Ademola Bamidele"/>
+                                                         src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/2" alt="Ademola Bamidele"/>
                                                     <div>
                                                         <p className="text-white text-[12px] font-semibold font-Montserrat">Ademola
                                                             Bamidele</p>
@@ -245,7 +245,7 @@ export default function SolutionsFeaturesBenefits() {
                                 </div>
                             </div>
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/16.jpg')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/16')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-olive/80 to-olive-dark/85 rounded-b-3xl md:rounded-r-3xl md:rounded-2xl"/>
                                 <div
                                     className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
@@ -288,7 +288,7 @@ export default function SolutionsFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/19.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/19')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-terracotta/80 to-terracotta-dark/85 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
                                 <div
                                     className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
@@ -396,20 +396,20 @@ export default function SolutionsFeaturesBenefits() {
                                 </div>
                             </div>
                             <div
-                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('/images/13.jpg')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
+                                className="md:p-6 p-2 col-span-2 min-h-[280px] md:min-h-[420px] bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/13')] bg-cover bg-center rounded-b-3xl md:rounded-r-3xl md:rounded-2xl flex flex-col justify-between gap-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-olive/80 to-[#6b7027]/85 rounded-b-3xl md:rounded-r-3xl md:rounded-2xl"/>
                                 <div className="p-4 rounded-xl border border-white/20 relative overflow-hidden shadow-lg">
                                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl"/>
                                     <div className="relative flex items-center gap-2">
                                         <div className="flex -space-x-3">
                                             <img className="w-9 h-9 rounded-full ring-2 ring-white/40 object-cover object-top"
-                                                 src="/images/headshot/2.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/2" alt=""/>
                                             <img className="w-9 h-9 rounded-full ring-2 ring-white/40 object-cover object-top"
-                                                 src="/images/headshot/3.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/3" alt=""/>
                                             <img className="w-9 h-9 rounded-full ring-2 ring-white/40 object-cover object-top"
-                                                 src="/images/headshot/4.png" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/4" alt=""/>
                                             <img className="w-9 h-9 rounded-full ring-2 ring-white/40 object-cover object-top"
-                                                 src="/images/headshot/7.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/7" alt=""/>
                                         </div>
                                         <div
                                             className="w-9 h-9 rounded-full bg-white/20 border border-white/30 flex items-center justify-center text-white text-[10px] font-semibold font-Montserrat shrink-0">
@@ -425,7 +425,7 @@ export default function SolutionsFeaturesBenefits() {
                                         <div className="flex items-center gap-4">
                                             <img
                                                 className="w-16 h-20 rounded-lg object-cover object-top shrink-0"
-                                                src="/images/headshot/6.jpg" alt="Ngozi Adeyemi"/>
+                                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/6" alt="Ngozi Adeyemi"/>
                                             <div className="min-w-0">
                                                 <span
                                                     className="inline-block bg-white/15 text-white text-[9px] font-semibold font-Montserrat px-2 py-0.5 rounded-full mb-1 uppercase tracking-wide">
@@ -455,7 +455,7 @@ export default function SolutionsFeaturesBenefits() {
                     <div className="bg-gray-50 rounded-3xl border border-gray-200 p-1 shadow-sm w-full xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                             <div
-                                className="relative col-span-2 min-h-[420px] p-4 bg-[url('/images/18.jpg')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl overflow-hidden flex flex-col justify-between gap-2">
+                                className="relative col-span-2 min-h-[420px] p-4 bg-[url('https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/18')] bg-cover bg-center rounded-t-3xl md:rounded-l-3xl md:rounded-2xl overflow-hidden flex flex-col justify-between gap-2">
                                 <div className="absolute inset-0 bg-gradient-to-t from-terracotta-dark/95 via-terracotta-dark/75 to-terracotta-dark/40 rounded-t-3xl md:rounded-l-3xl md:rounded-2xl"/>
 
                                 <div className="relative flex items-center justify-between">
@@ -493,11 +493,11 @@ export default function SolutionsFeaturesBenefits() {
 
                                         <div className="absolute -translate-y-1/2 w-max" style={{left: '100%', top: '44%'}}>
                                             <img className="ml-2 w-9 h-9 max-w-none rounded-full object-cover object-top ring-2 ring-white/50 grayscale"
-                                                 src="/images/headshot/2.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/2" alt=""/>
                                         </div>
                                         <div className="absolute -translate-y-1/2 w-max" style={{left: '100%', top: '10%'}}>
                                             <img className="ml-2 w-10 h-10 max-w-none rounded-full object-cover object-top ring-2 ring-terracotta"
-                                                 src="/images/headshot/8.jpg" alt=""/>
+                                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/8" alt=""/>
                                         </div>
                                     </div>
                                     <div className="absolute bottom-2.5 left-4 right-16 flex justify-between text-white/50 text-[9px] font-Montserrat uppercase tracking-wide">
@@ -509,7 +509,7 @@ export default function SolutionsFeaturesBenefits() {
                                 <div className="relative rounded-2xl bg-white px-4 py-3 shadow-lg">
                                     <div className="flex items-center gap-3">
                                         <img className="w-10 h-10 rounded-xl object-cover object-top shrink-0"
-                                             src="/images/headshot/8.jpg" alt="Chidinma Okoro"/>
+                                             src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/8" alt="Chidinma Okoro"/>
                                         <div className="min-w-0 flex-1">
                                             <p className="text-gray-400 text-[9px] font-Montserrat uppercase tracking-wide">
                                                 Hidden high potential
