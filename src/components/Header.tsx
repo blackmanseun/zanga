@@ -2,8 +2,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useModal, type ModalKey } from '@/components/modal/ModalProvider'
 
-type SimpleLink = { label: string; href: string }
+type SimpleLink = { label: string; href: string; hidden?: boolean }
 
 type MegaColumn = {
   heading: string
@@ -20,7 +21,7 @@ type MegaMenu = {
 }
 
 type NavItem =
-  | { type: 'link'; label: string; href: string }
+  | { type: 'link'; label: string; href: string; hidden?: boolean }
   | { type: 'mega'; label: string; menu: MegaMenu }
 
 const navItems: NavItem[] = [
@@ -60,7 +61,7 @@ const navItems: NavItem[] = [
             { label: 'Not sure which Zanga tool you need?', href: '#' },
             { label: 'Discover the wider intelligence ecosystem', href: '#' },
             { label: 'Explore our latest research', href: '#' },
-            { label: 'Talk to us about your organisation', href: '/contact' },
+            { label: 'Talk to us about your organisation', href: '/contact', hidden: true },
           ],
         },
       ],
@@ -122,97 +123,12 @@ const navItems: NavItem[] = [
       ],
     },
   },
-  {
-    type: 'mega',
-    label: 'Assessments',
-    menu: {
-      columns: [
-        {
-          heading: 'Leadership Assessments',
-          headingHref: '/assessments/leadership-assessments',
-          links: [
-            { label: 'Leadership Competency Assessment', href: '/assessments/leadership-assessments#competency-assessment' },
-            { label: '360 Leadership Assessment', href: '/assessments/leadership-assessments#leadership-360' },
-          ],
-        },
-        {
-          heading: 'Psychometric Assessments',
-          links: [
-            { label: 'Personality Assessment', href: '#' },
-            { label: 'Behavioural Assessment', href: '#' },
-            { label: 'Cognitive Ability Assessment', href: '#' },
-          ],
-        },
-        {
-          heading: 'Workforce Assessments',
-          links: [
-            { label: 'Employee Engagement Survey', href: '/products/pulse-by-zanga#employee-engagement' },
-            { label: 'Organisational Culture Assessment', href: '/products/pulse-by-zanga#culture-values' },
-            { label: 'Workforce Analytics', href: '/products/pulse-by-zanga#workforce-dashboards' },
-            { label: 'Workforce Survey', href: '/products/pulse-by-zanga#pulse-surveys' },
-          ],
-        },
-        {
-          heading: 'Explore',
-          variant: 'promo',
-          links: [
-            { label: 'Compare Assessments', href: '/assessments/leadership-assessments#compare-assessments' },
-            { label: 'View Sample Reports', href: '/assessments/leadership-assessments#sample-reports' },
-            { label: 'Take a Free Assessment', href: '#' },
-            { label: 'Assessment FAQs', href: '/assessments/leadership-assessments#assessment-faqs' },
-          ],
-        },
-      ],
-    },
-  },
+  // The Assessments dropdown (Leadership, Psychometric, Workforce, Explore) is parked in git history
+  // while Leadership Assessments is the only one live — the nav item links straight to it for now.
+  { type: 'link', label: 'Assessments', href: '/assessments/leadership-assessments' },
   { type: 'link', label: 'Pricing', href: '#' },
-  {
-    type: 'mega',
-    label: 'Partners',
-    menu: {
-      columns: [
-        {
-          heading: 'Become a Partner',
-          headingHref: '/partners/become-a-partner',
-          links: [
-            { label: 'Coach / Practitioner', href: '/partners/become-a-partner#coach-practitioner' },
-            { label: 'Referral Partner', href: '/partners/become-a-partner#referral-partner' },
-            { label: 'Reseller / Franchise', href: '/partners/become-a-partner#reseller-franchise' },
-            { label: 'White Label', href: '/partners/become-a-partner#white-label' },
-            { label: 'Technology Partner', href: '/partners/become-a-partner#technology-partner' },
-            { label: 'Research Partner', href: '/partners/become-a-partner#research-partner' },
-          ],
-        },
-        {
-          heading: 'Partner Models',
-          links: [
-            { label: 'Benefits', href: '/partners/become-a-partner#benefits' },
-            { label: 'Commercial Models', href: '/partners/become-a-partner#commercial-models' },
-            { label: 'Certification', href: '/partners/become-a-partner#certification' },
-            { label: 'Implementation Support', href: '#' },
-            { label: 'Market Rights', href: '#' },
-          ],
-        },
-        {
-          heading: 'Partner Resources',
-          links: [
-            { label: 'Partner FAQs', href: '/partners/become-a-partner#partner-faqs' },
-            { label: 'Sales Materials', href: '/partners/become-a-partner#sales-materials' },
-            { label: 'Certification Information', href: '/partners/become-a-partner#certification' },
-            { label: 'Support', href: '#' },
-          ],
-        },
-        {
-          heading: 'Existing Partners',
-          links: [
-            { label: 'Business Partner Login', href: '#' },
-            { label: 'Partner Login (future)', href: '#' },
-            { label: 'Contact Partner Team', href: '/contact' },
-          ],
-        },
-      ],
-    },
-  },
+  // The Partners dropdown is parked in git history while Become a Partner is the only live page.
+  { type: 'link', label: 'Partners', href: '/partners/become-a-partner' },
   {
     type: 'mega',
     label: 'Resources',
@@ -259,27 +175,33 @@ const navItems: NavItem[] = [
       ],
     },
   },
-  { type: 'link', label: 'About', href: '/about' },
+  { type: 'link', label: 'About', href: '/about', hidden: true },
 ]
 
-const allNavButtons: (SimpleLink & { variant: 'text' | 'outline' | 'solid' })[] = [
-  { label: 'Business Partner Login', href: '#', variant: 'solid' },
+type NavButton = SimpleLink & {
+  variant: 'text' | 'outline' | 'solid'
+  /** Opens a modal instead of navigating — used while the destination doesn't exist yet. */
+  modal?: ModalKey
+}
+
+const allNavButtons: NavButton[] = [
+  { label: 'Business Partner Login', href: '#', variant: 'solid', modal: 'partner-login-unavailable' },
 ]
 
 /** Links still on '#' have no page yet, so they're hidden until one exists. */
 const hasPage = (href?: string) => !!href && href !== '#'
 
 const visibleNavItems: NavItem[] = navItems.flatMap((item): NavItem[] => {
-  if (item.type === 'link') return hasPage(item.href) ? [item] : []
+  if (item.type === 'link') return !item.hidden && hasPage(item.href) ? [item] : []
 
   const columns = item.menu.columns.flatMap((column): MegaColumn[] => {
-    const links = column.links?.filter((link) => hasPage(link.href))
+    const links = column.links?.filter((link) => !link.hidden && hasPage(link.href))
     return links?.length || hasPage(column.headingHref) ? [{ ...column, links }] : []
   })
   return columns.length ? [{ ...item, menu: { ...item.menu, columns } }] : []
 })
 
-const navButtons = allNavButtons.filter((button) => hasPage(button.href))
+const navButtons = allNavButtons.filter((button) => button.modal || hasPage(button.href))
 
 function ChevronIcon({ open }: { open: boolean }) {
   return (
@@ -376,6 +298,7 @@ export default function Header() {
   const [isFixed, setIsFixed] = useState(false)
   const pathname = usePathname()
   const headerRef = useRef<HTMLElement>(null)
+  const { openModal } = useModal()
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -472,15 +395,18 @@ export default function Header() {
             </nav>
 
             <div className="hidden lg:flex items-center gap-2">
-              {navButtons.map((button) => (
-                <Link
-                  key={button.label}
-                  href={button.href}
-                  className={`text-xs font-semibold font-Montserrat transition-colors ${navButtonClasses(button.variant)}`}
-                >
-                  {button.label}
-                </Link>
-              ))}
+              {navButtons.map((button) => {
+                const className = `text-xs font-semibold font-Montserrat transition-colors ${navButtonClasses(button.variant)}`
+                return button.modal ? (
+                  <button key={button.label} type="button" onClick={() => openModal(button.modal!)} className={className}>
+                    {button.label}
+                  </button>
+                ) : (
+                  <Link key={button.label} href={button.href} className={className}>
+                    {button.label}
+                  </Link>
+                )
+              })}
             </div>
 
             <button
@@ -601,16 +527,26 @@ export default function Header() {
                   )
                 })}
                 <div className="flex flex-col gap-2 mt-3">
-                  {navButtons.map((button) => (
-                    <Link
-                      key={button.label}
-                      href={button.href}
-                      onClick={() => setMenuOpen(false)}
-                      className={`text-sm font-semibold font-Montserrat text-center transition-colors ${navButtonClasses(button.variant)}`}
-                    >
-                      {button.label}
-                    </Link>
-                  ))}
+                  {navButtons.map((button) => {
+                    const className = `text-sm font-semibold font-Montserrat text-center transition-colors ${navButtonClasses(button.variant)}`
+                    return button.modal ? (
+                      <button
+                        key={button.label}
+                        type="button"
+                        onClick={() => {
+                          setMenuOpen(false)
+                          openModal(button.modal!)
+                        }}
+                        className={className}
+                      >
+                        {button.label}
+                      </button>
+                    ) : (
+                      <Link key={button.label} href={button.href} onClick={() => setMenuOpen(false)} className={className}>
+                        {button.label}
+                      </Link>
+                    )
+                  })}
                 </div>
               </nav>
             </div>

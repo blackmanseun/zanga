@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const footerColumns = [
+const footerColumns: { heading: string; links: { label: string; href: string; hidden?: boolean }[] }[] = [
     {
         heading: 'Navigate',
         links: [
@@ -11,7 +11,7 @@ const footerColumns = [
             {label: 'Pricing', href: '#'},
             {label: 'Partners', href: '#'},
             {label: 'Resources', href: '#'},
-            {label: 'About', href: '/about'},
+            {label: 'About', href: '/about', hidden: true},
         ],
     },
     {
@@ -20,7 +20,7 @@ const footerColumns = [
             {label: 'Coach Login', href: '#'},
             {label: 'Insights', href: '#'},
             {label: 'Big Data Report', href: '#'},
-            {label: 'Contact', href: '/contact'},
+            {label: 'Contact', href: '/contact', hidden: true},
         ],
     },
     {
@@ -61,7 +61,7 @@ const socialLinks = [
 const hasPage = (href: string) => href !== '#'
 
 const visibleFooterColumns = footerColumns
-    .map((column) => ({...column, links: column.links.filter((link) => hasPage(link.href))}))
+    .map((column) => ({...column, links: column.links.filter((link) => !link.hidden && hasPage(link.href))}))
     .filter((column) => column.links.length > 0)
 
 const visibleSocialLinks = socialLinks.filter((social) => hasPage(social.href))
