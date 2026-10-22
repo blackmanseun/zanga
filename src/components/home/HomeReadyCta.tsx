@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import OpenModalButton from '@/components/modal/OpenModalButton'
+import OpenNavMenuButton from '@/components/ui/OpenNavMenuButton'
 
 export default function HomeReadyCta() {
     return (
@@ -25,18 +25,18 @@ export default function HomeReadyCta() {
                                 <OpenModalButton modal="book-a-demo" className="bg-olive text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat text-center">
                                     Book a Demo
                                 </OpenModalButton>
-                                <Link
-                                    href="#"
+                                <OpenNavMenuButton
+                                    menu="Solutions"
                                     className="border border-white text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-primary transition-colors font-Montserrat text-center"
                                 >
-                                    Take an Assessment
-                                </Link>
+                                    Explore Zanga Solutions
+                                </OpenNavMenuButton>
                             </div>
                             <p className="text-white/40 font-Montserrat text-sm">
                                 Prefer to talk it through first?{' '}
-                                <Link href="#" className="text-white hover:text-olive hover:no-underline transition-colors">
+                                <OpenModalButton modal="book-a-demo" className="text-white hover:text-olive hover:no-underline transition-colors">
                                     Contact our team
-                                </Link>
+                                </OpenModalButton>
                                 .
                             </p>
                         </div>

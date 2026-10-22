@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiHome, FiShoppingBag, FiTruck, FiArrowRight} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
 import BoldZanga from '@/components/ui/BoldZanga'
+import CardAction from '@/components/ui/CardAction'
 
 type UseCase = {
     title: string
@@ -23,7 +23,7 @@ const useCases: UseCase[] = [
         description:
             'Use Voice by Zanga to collect grievances, track escalation, and build a clearer picture of recurring community issues.',
         cta: 'Explore Voice by Zanga',
-        href: '#',
+        href: '/products/voice-by-zanga',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/farming-three',
         color: '#c55e36',
         Icon: FiHome,
@@ -34,7 +34,7 @@ const useCases: UseCase[] = [
         description:
             'Bring together complaints, recurring issues and sentiment so decision-makers can see what needs attention across products, services or locations.',
         cta: 'Explore Voice by Zanga',
-        href: '#',
+        href: '/products/voice-by-zanga',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/114',
         color: '#a3a748',
         Icon: FiShoppingBag,
@@ -45,7 +45,7 @@ const useCases: UseCase[] = [
         description:
             'Use structured listening channels to understand concerns, track issues, and improve engagement with suppliers, farmers or other ecosystem participants.',
         cta: 'Explore Voice by Zanga',
-        href: '#',
+        href: '/products/voice-by-zanga',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/farming-five',
         color: '#0F3460',
         Icon: FiTruck,
@@ -97,13 +97,13 @@ export default function ListenToStakeholdersUseCases() {
                                     <p className="text-gray-500 text-sm font-Montserrat leading-relaxed mb-5">
                                         <BoldZanga text={useCase.description}/>
                                     </p>
-                                    <Link
+                                    <CardAction
                                         href={useCase.href}
                                         className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                     >
                                         {useCase.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    </CardAction>
                                 </div>
                             </div>
                         </Reveal>

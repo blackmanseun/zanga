@@ -1,7 +1,6 @@
 'use client'
 
 import React, {useState} from 'react'
-import Link from 'next/link'
 import {FaRegCheckSquare} from 'react-icons/fa'
 import {FiArrowRight, FiChevronLeft, FiChevronRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
@@ -10,6 +9,7 @@ import type {Swiper as SwiperType} from 'swiper'
 import {Pagination} from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import CardAction from '@/components/ui/CardAction'
 
 type ChecklistItem = {
     title: string
@@ -27,7 +27,7 @@ type SolutionCategory = {
 
 const CATEGORIES: SolutionCategory[] = [
     {
-        href: '#',
+        href: '/assessments/leadership-assessments',
         bg: 'bg-olive-dark',
         title: 'Leadership Intelligence',
         description: 'Strengthen leadership capability across portfolio companies.',
@@ -123,8 +123,9 @@ export default function InvestorsFundManagersSolutions() {
                     >
                         {CATEGORIES.map((category) => (
                             <SwiperSlide key={category.title} className="!h-auto">
-                                <Link
+                                <CardAction
                                     href={category.href}
+                                    wholeCard
                                     className={`${category.bg} rounded-3xl flex flex-col h-full min-h-[440px] hover:shadow-xl transition-all duration-300 group`}
                                 >
                                     <div className="p-8 pb-6 min-h-[230px]">
@@ -164,7 +165,7 @@ export default function InvestorsFundManagersSolutions() {
                                             ))}
                                         </ul>
                                     </div>
-                                </Link>
+                                </CardAction>
                             </SwiperSlide>
                         ))}
                     </Swiper>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { FiCheckCircle, FiArrowRight } from 'react-icons/fi'
 
@@ -15,8 +14,9 @@ const canSupport: string[] = [
 export default function LeadershipAssessmentsPotential() {
     return (
         <section
+            id="leadership-potential-assessment"
             style={{ backgroundColor: 'rgb(250, 248, 246)' }}
-            className="md:py-20 py-14 px-4 sm:px-6 lg:px-8">
+            className="scroll-mt-24 md:py-20 py-14 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
                     Leadership assessments for different decisions
@@ -50,13 +50,15 @@ export default function LeadershipAssessmentsPotential() {
                             Best suited for: Organisations making succession, high-potential and future-readiness decisions.
                         </p>
 
-                        <Link
-                            href="#"
-                            className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-terracotta/90 transition-colors font-Montserrat mt-auto self-start"
+                        {/* Greyed out until this assessment has its own page. */}
+                        <span
+                            aria-disabled="true"
+                            title="Coming soon"
+                            className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm font-Montserrat mt-auto self-start opacity-50 cursor-not-allowed"
                         >
                             Explore Leadership Potential Assessment
                             <FiArrowRight size={16} aria-hidden="true"/>
-                        </Link>
+                        </span>
                     </div>
 
                     <div

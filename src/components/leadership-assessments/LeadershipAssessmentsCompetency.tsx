@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { FiCheckCircle, FiArrowRight } from 'react-icons/fi'
 
@@ -53,13 +52,15 @@ export default function LeadershipAssessmentsCompetency() {
                             capability.
                         </p>
 
-                        <Link
-                            href="#"
-                            className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-terracotta/90 transition-colors font-Montserrat mt-auto self-start"
+                        {/* Greyed out until this assessment has its own page. */}
+                        <span
+                            aria-disabled="true"
+                            title="Coming soon"
+                            className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm font-Montserrat mt-auto self-start opacity-50 cursor-not-allowed"
                         >
                             Explore the Leadership Competency Assessment
                             <FiArrowRight size={16} aria-hidden="true"/>
-                        </Link>
+                        </span>
                     </div>
 
                     <div

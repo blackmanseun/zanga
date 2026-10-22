@@ -11,6 +11,7 @@ import { DemoRequests } from './collections/DemoRequests'
 import { Media } from './collections/Media'
 import { PartnerApplications } from './collections/PartnerApplications'
 import { Posts } from './collections/Posts'
+import { ReportRequests } from './collections/ReportRequests'
 import { TeamMembers } from './collections/TeamMembers'
 import { Users } from './collections/Users'
 
@@ -42,6 +43,7 @@ export default buildConfig({
     DemoRequests,
     PartnerApplications,
     ContactEnquiries,
+    ReportRequests,
     Media,
     TeamMembers,
     Users,

@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Reveal from '@/components/ui/Reveal'
 import OpenModalButton from '@/components/modal/OpenModalButton'
 
@@ -28,18 +27,20 @@ export default function PulseCta() {
                                     >
                                         Request a Demo
                                     </OpenModalButton>
-                                    <Link
-                                        href="#"
-                                        className="border border-white text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-primary transition-colors font-Montserrat text-center"
+                                    {/* Greyed out until the free assessment is ready. */}
+                                    <span
+                                        aria-disabled="true"
+                                        title="Coming soon"
+                                        className="border border-white text-white px-8 py-3 rounded-full font-semibold text-sm font-Montserrat text-center opacity-50 cursor-not-allowed"
                                     >
                                         Take a Free Assessment
-                                    </Link>
+                                    </span>
                                 </div>
                                 <p className="text-white/40 font-Montserrat text-sm">
                                     Prefer to talk it through first?{' '}
-                                    <Link href="#" className="text-white hover:text-olive hover:no-underline transition-colors">
+                                    <OpenModalButton modal="book-a-demo" className="text-white hover:text-olive hover:no-underline transition-colors">
                                         Contact our team
-                                    </Link>
+                                    </OpenModalButton>
                                 </p>
                             </div>
                         </div>

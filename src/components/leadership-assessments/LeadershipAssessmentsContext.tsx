@@ -1,10 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { FiArrowRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
 import BoldZanga from '@/components/ui/BoldZanga'
 import { FaQuoteLeft } from "react-icons/fa"
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 function Panel({
     src,
@@ -73,13 +73,13 @@ export default function LeadershipAssessmentsContext() {
                         </p>
                     </div>
 
-                    <Link
-                        href="#"
+                    <OpenModalButton
+                        modal="methodology-leadership"
                         className="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-8 py-3 rounded-md font-semibold text-base hover:bg-terracotta/90 transition-colors font-Montserrat"
                     >
                         Explore Our Methodology
                         <FiArrowRight size={16} aria-hidden="true"/>
-                    </Link>
+                    </OpenModalButton>
                 </Reveal>
 
                 <Reveal delayMs={120}>

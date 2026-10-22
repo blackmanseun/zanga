@@ -4,11 +4,13 @@ import Image from 'next/image'
 import {FiArrowRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
 import OpenModalButton from '@/components/modal/OpenModalButton'
+import CardAction from '@/components/ui/CardAction'
 
 type StartCard = {
     title: string
     description: string
     cta: string
+    href?: string
     image: string
     alt: string
 }
@@ -19,6 +21,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with the Leadership Competency Assessment to understand strengths and development priorities.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/4',
         alt: 'Department leaders discussing capability priorities',
     },
@@ -35,6 +38,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with Voice by Zanga to create a more structured way to listen and respond.',
         cta: 'Explore Voice by Zanga',
+        href: '/products/voice-by-zanga',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/98',
         alt: 'Colleagues reviewing citizen feedback',
     },
@@ -64,7 +68,7 @@ export default function PublicSectorInstitutionsWhereToStart() {
                 <div className="mt-10 md:mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-[1.4fr_1fr]">
                     <Reveal delayMs={90}>
                         <Link
-                            href="#"
+                            href="/products/fit-by-zanga"
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
@@ -98,8 +102,9 @@ export default function PublicSectorInstitutionsWhereToStart() {
                     <div className="flex flex-col gap-6">
                         {sideCards.map((card, i) => (
                             <Reveal key={card.title} delayMs={150 + i * 30}>
-                                <Link
-                                    href="#"
+                                <CardAction
+                                    href={card.href}
+                                    wholeCard
                                     className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
                                 >
                                     <Image
@@ -126,7 +131,7 @@ export default function PublicSectorInstitutionsWhereToStart() {
                                             />
                                         </span>
                                     </div>
-                                </Link>
+                                </CardAction>
                             </Reveal>
                         ))}
                     </div>

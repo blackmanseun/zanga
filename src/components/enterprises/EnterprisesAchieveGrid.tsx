@@ -1,12 +1,16 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiArrowUpRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 
 type Achievement = {
     title: string
     description: string
     cta: string
+    href?: string
+    // When set, the card actions open this modal instead of linking.
+    modal?: ModalKey
     color: string
 }
 
@@ -16,6 +20,7 @@ const achievements: Achievement[] = [
         description:
             'Understand leadership strengths, capability gaps and future potential across your organisation so you can identify who is ready now, who needs development and where succession risk exists.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#c55e36',
     },
     {
@@ -23,6 +28,7 @@ const achievements: Achievement[] = [
         description:
             'Use structured, culturally relevant assessment data to support recruitment, promotion, role-fit and talent-development decisions with greater consistency.',
         cta: 'Explore Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#a3a748',
     },
     {
@@ -30,6 +36,7 @@ const achievements: Achievement[] = [
         description:
             'Understand what employees are experiencing, what is driving engagement or disengagement, and where intervention may be needed.',
         cta: 'Explore Pulse by Zanga',
+        href: '/products/pulse-by-zanga',
         color: '#0F3460',
     },
     {
@@ -44,6 +51,7 @@ const achievements: Achievement[] = [
         description:
             'Translate workforce and leadership data into dashboards, reports and insights that executives and boards can use to make more informed decisions.',
         cta: 'Book an Enterprise Demo',
+        modal: 'book-a-demo',
         color: '#0F3460',
     },
     {
@@ -51,6 +59,7 @@ const achievements: Achievement[] = [
         description:
             'Capture structured feedback from customers, suppliers, communities, and other external stakeholders so you can identify grievances early, manage social risk, and respond before issues escalate.',
         cta: 'Explore Voice by Zanga',
+        href: '/products/voice-by-zanga',
         color: '#a3a748',
     },
 ]
@@ -79,9 +88,10 @@ export default function EnterprisesAchieveGrid() {
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">
                                         {item.title}
                                     </h3>
-                                    <Link
-                                        href="#"
-                                        aria-label={item.cta}
+                                    <CardAction
+                                        href={item.href}
+                                        modal={item.modal}
+                                        ariaLabel={item.cta}
                                         className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
                                         style={{backgroundColor: item.color}}
                                     >
@@ -90,13 +100,14 @@ export default function EnterprisesAchieveGrid() {
                                             aria-hidden="true"
                                             className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                         />
-                                    </Link>
+                                    </CardAction>
                                 </div>
                                 <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                                     {item.description}
                                 </p>
-                                <Link
-                                    href="#"
+                                <CardAction
+                                    href={item.href}
+                                        modal={item.modal}
                                     className="inline-flex items-center gap-2 text-[14px] font-semibold font-Montserrat"
                                     style={{color: item.color}}
                                 >
@@ -106,7 +117,7 @@ export default function EnterprisesAchieveGrid() {
                                         aria-hidden="true"
                                         className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                     />
-                                </Link>
+                                </CardAction>
                             </div>
                         </Reveal>
                     ))}

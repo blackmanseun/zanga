@@ -1,8 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { FiBriefcase, FiCheckCircle, FiArrowRight } from 'react-icons/fi'
 import BoldZanga from '@/components/ui/BoldZanga'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const idealFor: string[] = [
     'Executive coaches',
@@ -94,19 +94,19 @@ export default function BecomePartnerCoaches() {
                             </ul>
 
                             <div className="mt-8 pt-6 border-t border-white/20">
-                                <Link
-                                    href="#"
+                                <OpenModalButton
+                                    modal="partner-with-zanga"
                                     className="w-full inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                                 >
                                     Become a Zanga Business Partner
                                     <FiArrowRight size={16} aria-hidden="true"/>
-                                </Link>
-                                <Link
-                                    href="#"
+                                </OpenModalButton>
+                                <OpenModalButton
+                                    modal="partner-login-unavailable"
                                     className="block text-center mt-4 text-sm text-gray-300 font-Montserrat hover:text-green-100 transition-colors"
                                 >
                                     Existing Business partner? <span className="text-green-100 font-semibold">Log In</span>
-                                </Link>
+                                </OpenModalButton>
                             </div>
                         </div>
                     </div>

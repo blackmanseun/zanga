@@ -38,7 +38,7 @@ export default function CoachesConsultantsCertification() {
                         </div>
 
                         <Link
-                            href="#"
+                            href="/partners/become-a-partner#certification"
                             className="relative self-start lg:self-center inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Explore Certification

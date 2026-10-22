@@ -1,13 +1,15 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import {FiArrowRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
+import CardAction from '@/components/ui/CardAction'
 
 type StartCard = {
     title: string
     description: string
     cta: string
+    href?: string
     image: string
     alt: string
 }
@@ -18,6 +20,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with the Leadership Competency Assessment to understand strengths and development priorities across founders and senior teams.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/163',
         alt: 'Senior team members discussing development priorities',
     },
@@ -26,6 +29,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with Fit by Zanga to bring structured assessment insight into executive recruitment.',
         cta: 'Explore Fit by Zanga',
+        href: '/products/fit-by-zanga',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/62',
         alt: 'An executive candidate in conversation',
     },
@@ -34,6 +38,7 @@ const sideCards: StartCard[] = [
         description:
             'Start with Pulse by Zanga to understand workforce sentiment and employee experience.',
         cta: 'Explore Pulse by Zanga',
+        href: '/products/pulse-by-zanga',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/76',
         alt: 'Colleagues discussing workplace culture',
     },
@@ -62,9 +67,9 @@ export default function InvestorsFundManagersWhereToStart() {
 
                 <div className="mt-10 md:mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-[1.4fr_1fr]">
                     <Reveal delayMs={90}>
-                        <Link
-                            href="#"
-                            className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
+                        <OpenModalButton
+                            modal="book-a-demo"
+                            className="group relative flex w-full text-left h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/167"
@@ -91,14 +96,15 @@ export default function InvestorsFundManagersWhereToStart() {
                                     />
                                 </span>
                             </div>
-                        </Link>
+                        </OpenModalButton>
                     </Reveal>
 
                     <div className="flex flex-col gap-6">
                         {sideCards.map((card, i) => (
                             <Reveal key={card.title} delayMs={150 + i * 30}>
-                                <Link
-                                    href="#"
+                                <CardAction
+                                    href={card.href}
+                                    wholeCard
                                     className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
                                 >
                                     <Image
@@ -125,7 +131,7 @@ export default function InvestorsFundManagersWhereToStart() {
                                             />
                                         </span>
                                     </div>
-                                </Link>
+                                </CardAction>
                             </Reveal>
                         ))}
                     </div>

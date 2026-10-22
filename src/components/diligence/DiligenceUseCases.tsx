@@ -1,9 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiSearch, FiFlag, FiGrid, FiArrowRight } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
 import BoldZanga from '@/components/ui/BoldZanga'
+import CardAction from '@/components/ui/CardAction'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 
 type UseCase = {
     title: string
@@ -12,6 +13,9 @@ type UseCase = {
     description: string
     bestFor: string
     cta: string
+    // When set, the card opens this modal instead of linking.
+    modal?: ModalKey
+    href?: string
     image: string
     color: string
     Icon: IconType
@@ -26,6 +30,7 @@ const useCases: UseCase[] = [
             'Use Diligence alongside financial, commercial and legal diligence to bring structured founder and management insight into the decision.',
         bestFor: 'New investments, significant lending decisions and selected follow-on transactions.',
         cta: 'Talk to Zanga About Early Access',
+        modal: 'book-a-demo',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/190',
         color: '#c55e36',
         Icon: FiSearch,
@@ -37,6 +42,7 @@ const useCases: UseCase[] = [
             'Assess founders and management teams after investment or disbursement to understand development priorities and support needs.',
         bestFor: 'Founder development, management strengthening and early value-creation planning.',
         cta: 'Explore Leadership Assessment',
+        href: '/assessments/leadership-assessments',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/167',
         color: '#a3a748',
         Icon: FiFlag,
@@ -49,6 +55,7 @@ const useCases: UseCase[] = [
             'Apply a structured approach across selected portfolio companies or borrowers to identify shared capability gaps and areas requiring more support.',
         bestFor: 'Portfolio reviews, value-creation planning and leadership-development programmes.',
         cta: 'Talk to Zanga About Diligence',
+        modal: 'book-a-demo',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/217',
         color: '#0F3460',
         Icon: FiGrid,
@@ -103,13 +110,14 @@ export default function DiligenceUseCases() {
                                     <p className="pt-4 mb-5 border-t border-gray-100 text-sm font-Montserrat leading-relaxed text-gray-500">
                                         <span className="font-semibold text-gray-700">Best for:</span> {useCase.bestFor}
                                     </p>
-                                    <Link
-                                        href="#"
+                                    <CardAction
+                                        href={useCase.href}
+                                        modal={useCase.modal}
                                         className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                     >
                                         {useCase.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    </CardAction>
                                 </div>
                             </div>
                         </Reveal>

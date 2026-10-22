@@ -3,12 +3,14 @@ import Link from 'next/link'
 import { FiActivity, FiTarget, FiMic, FiShield, FiArrowRight, FiArrowUpRight } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
+import OpenNavMenuButton from '@/components/ui/OpenNavMenuButton'
 import classNames from "classnames";
 
 type Product = {
   name: string
   description: string
   cta: string
+  href: string
   color: string
   Icon: IconType
 }
@@ -18,6 +20,7 @@ const products: Product[] = [
     name: 'Pulse by Zanga',
     description: 'Understand employee engagement, culture, retention and performance sentiment.',
     cta: 'Explore Pulse',
+    href: '/products/pulse-by-zanga',
     color: '#a3a748',
     Icon: FiActivity,
   },
@@ -25,6 +28,7 @@ const products: Product[] = [
     name: 'Fit by Zanga',
     description: 'Improve recruitment, role-fit and leadership-selection decisions.',
     cta: 'Explore Fit',
+    href: '/products/fit-by-zanga',
     color: '#ba8908',
     Icon: FiTarget,
   },
@@ -32,6 +36,7 @@ const products: Product[] = [
     name: 'Voice by Zanga',
     description: 'Listen to customers, suppliers, farmers and communities, and manage issues through to resolution.',
     cta: 'Explore Voice',
+    href: '/products/voice-by-zanga',
     color: '#c55e36',
     Icon: FiMic,
   },
@@ -39,6 +44,7 @@ const products: Product[] = [
     name: 'Diligence by Zanga',
     description: 'Strengthen founder, borrower, investment and portfolio intelligence.',
     cta: 'Explore Diligence',
+    href: '/products/diligence-by-zanga',
     color: '#0F3460',
     Icon: FiShield,
   },
@@ -71,20 +77,20 @@ export default function HomeProducts() {
                   Four purpose-built products working together to give you a complete view of your
                   people and stakeholders.
                 </p>
-                <Link
-                  href="#"
+                <OpenNavMenuButton
+                  menu="Products"
                   className="inline-flex items-center gap-2 bg-olive text-white px-6 py-3.5 rounded-full font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                 >
                   Explore all products
                   <FiArrowRight size={16} aria-hidden="true" />
-                </Link>
+                </OpenNavMenuButton>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
                 {products.map((product) => (
                   <Link
                     key={product.name}
-                    href="#"
+                    href={product.href}
                     aria-label={product.cta}
                     className="group block"
                     style={{ '--product-color': product.color } as React.CSSProperties}

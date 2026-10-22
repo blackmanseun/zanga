@@ -1,12 +1,13 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiArrowUpRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
 
 type Achievement = {
     title: string
     description: string
     cta: string
+    href?: string
     color: string
 }
 
@@ -16,6 +17,7 @@ const achievements: Achievement[] = [
         description:
             'Bring structured assessment insight into appointment, promotion and selection processes so decision-makers have a clearer, more consistent basis for evaluating candidates.',
         cta: 'Explore Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#c55e36',
     },
     {
@@ -23,6 +25,7 @@ const achievements: Achievement[] = [
         description:
             'Assess leadership strengths and development priorities across directorates, departments and management levels. Use the resulting insight to target leadership development where it is most needed.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#a3a748',
     },
     {
@@ -37,6 +40,7 @@ const achievements: Achievement[] = [
         description:
             'Give citizens, service users and other stakeholders clearer ways to provide feedback, raise concerns and report service issues.',
         cta: 'Explore Voice by Zanga',
+        href: '/products/voice-by-zanga',
         color: '#a3a748',
     },
     {
@@ -44,6 +48,7 @@ const achievements: Achievement[] = [
         description:
             'Track workforce sentiment, culture, and employee experience across departments, locations or administrative levels. Use that insight to identify where engagement, communication or management attention may be needed.',
         cta: 'Explore Pulse by Zanga',
+        href: '/products/pulse-by-zanga',
         color: '#0F3460',
     },
     {
@@ -51,6 +56,7 @@ const achievements: Achievement[] = [
         description:
             'Establish a clearer capability baseline before training begins and use follow-up assessment where appropriate to understand how capability changes over time.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#c55e36',
     },
 ]
@@ -79,9 +85,9 @@ export default function PublicSectorInstitutionsAchieveGrid() {
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">
                                         {item.title}
                                     </h3>
-                                    <Link
-                                        href="#"
-                                        aria-label={item.cta}
+                                    <CardAction
+                                        href={item.href}
+                                        ariaLabel={item.cta}
                                         className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
                                         style={{backgroundColor: item.color}}
                                     >
@@ -90,13 +96,13 @@ export default function PublicSectorInstitutionsAchieveGrid() {
                                             aria-hidden="true"
                                             className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                         />
-                                    </Link>
+                                    </CardAction>
                                 </div>
                                 <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                                     {item.description}
                                 </p>
-                                <Link
-                                    href="#"
+                                <CardAction
+                                    href={item.href}
                                     className="inline-flex items-center gap-2 text-[14px] font-semibold font-Montserrat"
                                     style={{color: item.color}}
                                 >
@@ -106,7 +112,7 @@ export default function PublicSectorInstitutionsAchieveGrid() {
                                         aria-hidden="true"
                                         className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                     />
-                                </Link>
+                                </CardAction>
                             </div>
                         </Reveal>
                     ))}

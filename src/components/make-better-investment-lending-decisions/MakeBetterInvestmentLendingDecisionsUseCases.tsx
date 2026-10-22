@@ -1,16 +1,19 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiBriefcase, FiSearch, FiPieChart, FiArrowRight} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
 import BoldZanga from '@/components/ui/BoldZanga'
+import CardAction from '@/components/ui/CardAction'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 
 type UseCase = {
     title: string
     tagline: string
     description: string
     cta: string
-    href: string
+    // When set, the card opens this modal instead of linking.
+    modal?: ModalKey
+    href?: string
     image: string
     imagePosition?: string
     color: string
@@ -24,7 +27,7 @@ const useCases: UseCase[] = [
         description:
             'Use Diligence by Zanga to understand the leadership and management capability behind businesses where the founder remains central to performance.',
         cta: 'Explore Diligence by Zanga',
-        href: '#',
+        href: '/products/diligence-by-zanga',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/79',
         imagePosition: 'center 22%',
         color: '#c55e36',
@@ -36,7 +39,7 @@ const useCases: UseCase[] = [
         description:
             'Complement financial, legal and commercial diligence with structured insight into founder and management capability.',
         cta: 'Talk to Zanga About Diligence',
-        href: '/contact',
+        modal: 'book-a-demo',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/104',
         color: '#a3a748',
         Icon: FiSearch,
@@ -100,13 +103,14 @@ export default function MakeBetterInvestmentLendingDecisionsUseCases() {
                                     <p className="text-gray-500 text-sm font-Montserrat leading-relaxed mb-5">
                                         <BoldZanga text={useCase.description}/>
                                     </p>
-                                    <Link
+                                    <CardAction
                                         href={useCase.href}
+                                        modal={useCase.modal}
                                         className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                     >
                                         {useCase.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    </CardAction>
                                 </div>
                             </div>
                         </Reveal>

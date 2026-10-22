@@ -1,8 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import {FiArrowRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 function Panel({
     src,
@@ -89,20 +89,20 @@ export default function FinancialInstitutionsWhyZanga() {
                         <strong>Zanga</strong> helps institutions interpret the data with greater
                         sensitivity to those realities.
                     </p>
-                    <Link
-                        href="#"
+                    <OpenModalButton
+                        modal="methodology-investment"
                         className="hidden md:inline-flex items-center justify-center gap-2 bg-olive text-white px-8 py-3 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat"
                     >
                         Learn About Our Methodology
                         <FiArrowRight size={16} aria-hidden="true"/>
-                    </Link>
-                    <Link
-                        href="#"
+                    </OpenModalButton>
+                    <OpenModalButton
+                        modal="methodology-investment"
                         className="md:hidden inline-flex items-center justify-center gap-2 bg-olive text-white px-8 py-3 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat"
                     >
                         Learn more
                         <FiArrowRight size={16} aria-hidden="true"/>
-                    </Link>
+                    </OpenModalButton>
                 </Reveal>
             </div>
         </section>

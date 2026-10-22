@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
 import SolutionsLogoMarquee from "@/components/solutions/SolutionsLogoMarquee";
 import SolutionsHeroGrid from "@/components/solutions/SolutionsHeroGrid";
 import OpenModalButton from '@/components/modal/OpenModalButton'
@@ -26,12 +25,14 @@ export default function SolutionsHero() {
             actionable talent insights to help you select with greater confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="#"
-              className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
+            {/* Greyed out until the free assessment is ready. */}
+            <span
+              aria-disabled="true"
+              title="Coming soon"
+              className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold font-Montserrat opacity-50 cursor-not-allowed"
             >
               Take a Free Assessment
-            </Link>
+            </span>
             <OpenModalButton modal="book-a-demo" className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-terracotta hover:text-white transition-colors font-Montserrat">
               Book a Demo
             </OpenModalButton>

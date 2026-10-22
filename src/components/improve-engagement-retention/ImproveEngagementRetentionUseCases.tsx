@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiGlobe, FiUserMinus, FiRefreshCw, FiArrowRight} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
 import BoldZanga from '@/components/ui/BoldZanga'
+import CardAction from '@/components/ui/CardAction'
 
 type UseCase = {
     title: string
@@ -34,7 +34,7 @@ const useCases: UseCase[] = [
         description:
             'Use targeted listening and workforce analysis to explore what may be driving disengagement or turnover in specific teams, locations or employee groups.',
         cta: 'Explore Retention Intelligence',
-        href: '#',
+        href: '/products/pulse-by-zanga#retention-intelligence',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/102',
         color: '#a3a748',
         Icon: FiUserMinus,
@@ -45,7 +45,7 @@ const useCases: UseCase[] = [
         description:
             'Use pulse surveys during restructuring, leadership transitions, growth or other periods of change to understand employee sentiment and identify where additional communication or support may be needed.',
         cta: 'Explore Pulse Surveys',
-        href: '#',
+        href: '/products/pulse-by-zanga#pulse-surveys',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/4',
         color: '#0F3460',
         Icon: FiRefreshCw,
@@ -97,13 +97,13 @@ export default function ImproveEngagementRetentionUseCases() {
                                     <p className="text-gray-500 text-sm font-Montserrat leading-relaxed mb-5">
                                         <BoldZanga text={useCase.description}/>
                                     </p>
-                                    <Link
+                                    <CardAction
                                         href={useCase.href}
                                         className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                     >
                                         {useCase.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    </CardAction>
                                 </div>
                             </div>
                         </Reveal>

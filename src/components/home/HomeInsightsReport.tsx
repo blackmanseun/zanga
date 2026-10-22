@@ -85,18 +85,20 @@ export default function HomeInsightsReport() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="#"
+              href="/products/voice-by-zanga"
               className="inline-flex items-center justify-center gap-2 bg-olive text-white px-8 py-3 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat"
             >
               Explore Voice by Zanga
               <FiArrowRight size={16} aria-hidden="true" />
             </Link>
-            <Link
-              href="#"
-              className="inline-flex items-center justify-center gap-2 border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold text-base hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
+            {/* Greyed out until the case study page is ready. */}
+            <span
+              aria-disabled="true"
+              title="Coming soon"
+              className="inline-flex items-center justify-center gap-2 border border-terracotta/30 text-terracotta/40 px-8 py-3 rounded-md font-semibold text-base font-Montserrat cursor-not-allowed"
             >
               Read Full Case Study
-            </Link>
+            </span>
           </div>
         </Reveal>
 

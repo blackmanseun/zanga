@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiArrowRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 type OrbitPhoto = {
   src: string
@@ -48,13 +48,13 @@ export default function HomeCulturalContext() {
                   This helps organisations move beyond imported assumptions and make decisions that
                   are both evidence-based and contextually credible.
                 </p>
-                <Link
-                  href="/about"
+                <OpenModalButton
+                  modal="methodology-leadership"
                   className="inline-flex items-center gap-2 bg-olive text-white px-6 py-3.5 rounded-full font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                 >
                   How Our Approach Works
                   <FiArrowRight size={16} aria-hidden="true" />
-                </Link>
+                </OpenModalButton>
               </div>
 
               <div className="hidden md:flex items-center justify-center">

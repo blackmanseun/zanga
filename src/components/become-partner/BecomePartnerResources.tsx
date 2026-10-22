@@ -1,5 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
+import CardAction from '@/components/ui/CardAction'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 import { FiLogIn, FiHelpCircle, FiAward, FiBriefcase, FiArrowRight } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 
@@ -8,6 +9,9 @@ type Resource = {
     id?: string
     description: string
     cta?: string
+    href?: string
+    // When set, the call to action opens this modal instead of linking.
+    modal?: ModalKey
     color: string
     Icon: IconType
 }
@@ -17,6 +21,7 @@ const resources: Resource[] = [
         title: 'Coach Portal',
         description: 'Access assessments, reports and practitioner resources.',
         cta: 'Business Partner Login',
+        modal: 'partner-login-unavailable',
         color: '#a3a748',
         Icon: FiLogIn,
     },
@@ -25,6 +30,7 @@ const resources: Resource[] = [
         description:
             "Answers to common questions about Zanga's partner models, certification and commercial arrangements.",
         cta: 'View Partner FAQs',
+        href: '#partner-faqs',
         color: '#c55e36',
         Icon: FiHelpCircle,
     },
@@ -81,14 +87,15 @@ export default function BecomePartnerResources() {
                                     {resource.description}
                                 </p>
                                 {resource.cta && (
-                                    <Link
-                                        href="#"
+                                    <CardAction
+                                        href={resource.href}
+                                        modal={resource.modal}
                                         className="mt-auto inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                         style={{ color: resource.color }}
                                     >
                                         {resource.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    </CardAction>
                                 )}
                             </div>
                         ))}

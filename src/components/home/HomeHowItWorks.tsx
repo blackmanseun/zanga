@@ -1,6 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
-import { FiInbox, FiBarChart2, FiCheckCircle, FiArrowUpRight } from 'react-icons/fi'
+import { FiInbox, FiBarChart2, FiCheckCircle } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
 
@@ -171,18 +170,13 @@ export default function HomeHowItWorks() {
                   <div className="flex items-center gap-2">
                     <h3 className="text-[24px] font-bold font-MonaSans text-gray-900">{card.label}</h3>
                   </div>
-                  <Link
-                    href="#"
-                    aria-label={`Explore ${card.label}`}
-                    className={`w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center ${card.arrowFg} hover:brightness-95 transition-all`}
+                  <span
+                    aria-hidden="true"
+                    className={`w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center ${card.arrowFg}`}
                     style={{ backgroundColor: card.color }}
                   >
-                    <FiArrowUpRight
-                      size={18}
-                      aria-hidden="true"
-                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    />
-                  </Link>
+                    <card.Icon size={18} />
+                  </span>
                 </div>
                 <p className="text-gray-700 text-sm font-Montserrat leading-relaxed mb-6">{card.description}</p>
                 <div className="bg-white rounded-xl shadow-sm p-4">{card.mockup}</div>

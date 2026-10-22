@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiArrowRight } from 'react-icons/fi'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const steps: { number: string; title: string; text: string }[] = [
     {
@@ -66,13 +66,13 @@ export default function BecomePartnerHowItWorks() {
                             </div>
                         </div>
 
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="partner-with-zanga"
                             className="mt-8 inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Request to Become a Partner
                             <FiArrowRight size={16} aria-hidden="true"/>
-                        </Link>
+                        </OpenModalButton>
                     </div>
 
                     <div className="h-full">

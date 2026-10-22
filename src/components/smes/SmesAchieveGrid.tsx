@@ -1,36 +1,17 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiArrowUpRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
-import OpenModalButton from '@/components/modal/OpenModalButton'
+import CardAction from '@/components/ui/CardAction'
 import type {ModalKey} from '@/components/modal/ModalProvider'
 
 type Achievement = {
     title: string
     description: string
     cta: string
+    href?: string
     color: string
     // When set, the card actions open this modal instead of linking.
     modal?: ModalKey
-}
-
-// Renders a card action as a modal trigger or a link, keeping the same look.
-function CardAction({modal, className, style, ariaLabel, children}: {
-    modal?: ModalKey
-    className: string
-    style: React.CSSProperties
-    ariaLabel?: string
-    children: React.ReactNode
-}) {
-    return modal ? (
-        <OpenModalButton modal={modal} aria-label={ariaLabel} className={className} style={style}>
-            {children}
-        </OpenModalButton>
-    ) : (
-        <Link href="#" aria-label={ariaLabel} className={className} style={style}>
-            {children}
-        </Link>
-    )
 }
 
 const achievements: Achievement[] = [
@@ -39,6 +20,7 @@ const achievements: Achievement[] = [
         description:
             'Look beyond the CV and interview to understand behavioural fit, working style and other factors that may influence performance. Use structured assessment insight to make critical hires with more evidence and less guesswork.',
         cta: 'Explore Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#c55e36',
     },
     {
@@ -46,6 +28,7 @@ const achievements: Achievement[] = [
         description:
             'Help newly promoted and developing managers understand where they are strong, where they need support and what they should focus on next. Assessment can then connect directly into coaching, open-enrolment programmes or self-paced development.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#a3a748',
     },
     {
@@ -53,6 +36,7 @@ const achievements: Achievement[] = [
         description:
             'Get a clearer picture of employee engagement, culture and retention before concerns become resignations or performance problems. Short, structured surveys help smaller businesses identify what is working and where action may be needed.',
         cta: 'Explore Pulse by Zanga',
+        href: '/products/pulse-by-zanga',
         color: '#0F3460',
     },
     {
@@ -67,6 +51,7 @@ const achievements: Achievement[] = [
         description:
             'Identify who may be ready for greater responsibility, where capability is concentrated and which roles would be most difficult to replace. This helps growing businesses begin building succession depth earlier.',
         cta: 'Explore Leadership Potential',
+        href: '/assessments/leadership-assessments#leadership-potential-assessment',
         color: '#a3a748',
     },
     {
@@ -104,6 +89,7 @@ export default function SmesAchieveGrid() {
                                         {item.title}
                                     </h3>
                                     <CardAction
+                                        href={item.href}
                                         modal={item.modal}
                                         ariaLabel={item.cta}
                                         className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
@@ -120,7 +106,8 @@ export default function SmesAchieveGrid() {
                                     {item.description}
                                 </p>
                                 <CardAction
-                                    modal={item.modal}
+                                    href={item.href}
+                                        modal={item.modal}
                                     className="inline-flex items-center gap-2 text-[14px] font-semibold font-Montserrat"
                                     style={{color: item.color}}
                                 >

@@ -1,8 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import {FiArrowRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 function Panel({
     src,
@@ -52,7 +52,7 @@ export default function DevelopmentOrganisationsWhyZanga() {
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
-                                src="/images/141.jpg"
+                                src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/37"
                                 alt="A manager and team member in conversation"
                                 className="h-[200px]"
                                 // objectPosition="50% 20%"
@@ -87,20 +87,20 @@ export default function DevelopmentOrganisationsWhyZanga() {
                         leadership data with greater sensitivity to the realities in which programmes
                         are being delivered.
                     </p>
-                    <Link
-                        href="#"
+                    <OpenModalButton
+                        modal="methodology-stakeholders"
                         className="hidden md:inline-flex items-center justify-center gap-2 bg-olive text-white px-8 py-3 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat"
                     >
                         Learn About Our Methodology
                         <FiArrowRight size={16} aria-hidden="true"/>
-                    </Link>
-                    <Link
-                        href="#"
+                    </OpenModalButton>
+                    <OpenModalButton
+                        modal="methodology-stakeholders"
                         className="md:hidden inline-flex items-center justify-center gap-2 bg-olive text-white px-8 py-3 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat"
                     >
                         Learn more
                         <FiArrowRight size={16} aria-hidden="true"/>
-                    </Link>
+                    </OpenModalButton>
                 </Reveal>
             </div>
         </section>

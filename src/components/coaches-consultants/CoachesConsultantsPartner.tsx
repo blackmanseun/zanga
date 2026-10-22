@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiArrowRight, FiCheckCircle} from 'react-icons/fi'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const inclusions: string[] = [
     'Assessment tools and reports',
@@ -59,13 +59,13 @@ export default function CoachesConsultantsPartner() {
                             ))}
                         </ul>
 
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="partner-with-zanga"
                             className="inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Become a Zanga Partner
                             <FiArrowRight size={16} aria-hidden="true"/>
-                        </Link>
+                        </OpenModalButton>
                     </div>
                 </div>
             </div>

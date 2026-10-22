@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 import InvestorsFundManagersHeroGrid from '@/components/investors-fund-managers/InvestorsFundManagersHeroGrid'
+import OpenNavMenuButton from '@/components/ui/OpenNavMenuButton'
 
 export default function InvestorsFundManagersHero() {
     return (
@@ -25,18 +26,18 @@ export default function InvestorsFundManagersHero() {
                         people-related risks and development priorities more clearly.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
                         >
-                            Take a Free Assessment
-                        </Link>
-                        <Link
-                            href="#"
+                            Book a Demo
+                        </OpenModalButton>
+                        <OpenNavMenuButton
+                            menu="Solutions"
                             className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
                         >
                             Explore Zanga Solutions
-                        </Link>
+                        </OpenNavMenuButton>
                     </div>
                 </div>
 

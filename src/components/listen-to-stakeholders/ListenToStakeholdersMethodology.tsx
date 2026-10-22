@@ -2,7 +2,10 @@ import React from 'react'
 import BoldZanga from '@/components/ui/BoldZanga'
 import OpenModalButton from '@/components/modal/OpenModalButton'
 
-const paragraphs: string[] = [
+// Also shown in the Methodology side panel (modal/modals/Methodology.tsx).
+export const heading = {lead: 'Better stakeholder engagement starts with ', highlight: 'better listening'}
+
+export const paragraphs: string[] = [
     'Zanga’s approach begins by understanding who the organisation needs to hear from, what information matters and how those stakeholders are most likely to engage.',
     'Feedback can then be collected through the most appropriate channels, structured into consistent categories and analysed to identify themes, concerns and patterns.',
     'What makes the Zanga approach different is context.',
@@ -10,7 +13,7 @@ const paragraphs: string[] = [
     'Zanga combines structured stakeholder listening with cultural intelligence to help organisations interpret not only the feedback received, but the context surrounding it.',
 ]
 
-const steps: { number: string; title: string; text: string }[] = [
+export const steps: { number: string; title: string; text: string }[] = [
     {
         number: '01',
         title: 'Listen',
@@ -45,8 +48,8 @@ export default function ListenToStakeholdersMethodology() {
 
                 <div className="grid md:grid-cols-2 md:gap-16 items-center">
                     <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
-                        <span className="text-gray-700">Better stakeholder engagement starts with </span>
-                        <span className="text-olive">better listening</span>
+                        <span className="text-gray-700">{heading.lead}</span>
+                        <span className="text-olive">{heading.highlight}</span>
                     </h2>
                 </div>
 

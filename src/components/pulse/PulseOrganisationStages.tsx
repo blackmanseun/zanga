@@ -1,7 +1,6 @@
 'use client'
 
 import React, {useState} from 'react'
-import Link from 'next/link'
 import {FiArrowRight, FiChevronLeft, FiChevronRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
 import {Swiper, SwiperSlide} from 'swiper/react'
@@ -9,6 +8,7 @@ import type {Swiper as SwiperType} from 'swiper'
 import {Autoplay, Pagination} from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 type Stage = {
     title: string
@@ -111,13 +111,13 @@ export default function PulseOrganisationStages() {
                 </div>
 
                 <Reveal delayMs={150} className="mt-10">
-                    <Link
-                        href="#"
+                    <OpenModalButton
+                        modal="book-a-demo"
                         className="inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                     >
                         Talk to Zanga About Your Organisation
                         <FiArrowRight size={16} aria-hidden="true"/>
-                    </Link>
+                    </OpenModalButton>
                 </Reveal>
             </div>
         </section>

@@ -73,6 +73,7 @@ export interface Config {
     'demo-requests': DemoRequest;
     'partner-applications': PartnerApplication;
     'contact-enquiries': ContactEnquiry;
+    'report-requests': ReportRequest;
     media: Media;
     'team-members': TeamMember;
     users: User;
@@ -89,6 +90,7 @@ export interface Config {
     'demo-requests': DemoRequestsSelect<false> | DemoRequestsSelect<true>;
     'partner-applications': PartnerApplicationsSelect<false> | PartnerApplicationsSelect<true>;
     'contact-enquiries': ContactEnquiriesSelect<false> | ContactEnquiriesSelect<true>;
+    'report-requests': ReportRequestsSelect<false> | ReportRequestsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'team-members': TeamMembersSelect<false> | TeamMembersSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
@@ -304,6 +306,18 @@ export interface ContactEnquiry {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "report-requests".
+ */
+export interface ReportRequest {
+  id: string;
+  email: string;
+  report: string;
+  status: 'pending' | 'sent';
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "team-members".
  */
 export interface TeamMember {
@@ -397,6 +411,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'contact-enquiries';
         value: string | ContactEnquiry;
+      } | null)
+    | ({
+        relationTo: 'report-requests';
+        value: string | ReportRequest;
       } | null)
     | ({
         relationTo: 'media';
@@ -541,6 +559,17 @@ export interface ContactEnquiriesSelect<T extends boolean = true> {
   organisation?: T;
   reason?: T;
   message?: T;
+  status?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "report-requests_select".
+ */
+export interface ReportRequestsSelect<T extends boolean = true> {
+  email?: T;
+  report?: T;
   status?: T;
   updatedAt?: T;
   createdAt?: T;

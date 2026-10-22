@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import Link from 'next/link'
 import {
     FiArrowRight,
     FiChevronDown,
@@ -13,6 +12,7 @@ import {
     FiFileText,
 } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 type FaqItem = {
     Icon: IconType
@@ -134,13 +134,13 @@ export default function LeadershipAssessmentsFaq() {
                     <p className="text-gray-500 font-Montserrat mb-2">
                         Can&apos;t find what you&apos;re looking for?
                     </p>
-                    <Link
-                        href="#"
+                    <OpenModalButton
+                        modal="book-a-demo"
                         className="inline-flex items-center gap-2 text-gray-900 font-semibold font-Montserrat hover:text-olive transition-colors"
                     >
                         Talk to our team
                         <FiArrowRight size={16} aria-hidden="true"/>
-                    </Link>
+                    </OpenModalButton>
                 </div>
             </div>
         </section>

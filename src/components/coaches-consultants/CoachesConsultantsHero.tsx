@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 import CoachesConsultantsHeroGrid from '@/components/coaches-consultants/CoachesConsultantsHeroGrid'
+import OpenNavMenuButton from '@/components/ui/OpenNavMenuButton'
 
 export default function CoachesConsultantsHero() {
     return (
@@ -24,18 +25,18 @@ export default function CoachesConsultantsHero() {
                         focus interventions and strengthen the value you deliver.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Link
-                            href="#"
+                        <OpenNavMenuButton
+                            menu="Solutions"
                             className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Explore Zanga Solutions
-                        </Link>
-                        <Link
-                            href="#"
+                        </OpenNavMenuButton>
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
                         >
-                            Take a Free Assessment
-                        </Link>
+                            Book a Demo
+                        </OpenModalButton>
                     </div>
                 </div>
 

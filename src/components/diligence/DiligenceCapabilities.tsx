@@ -1,6 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
-import { FiArrowUpRight } from 'react-icons/fi'
+import { FiShield } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
 
 type Card = {
@@ -84,18 +83,13 @@ export default function DiligenceCapabilities() {
                             <div className="group h-full flex flex-col rounded-2xl p-6 sm:p-8 bg-white border border-slate-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                                 <div className="flex items-start justify-between gap-4 mb-3">
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">{card.label}</h3>
-                                    <Link
-                                        href="#"
-                                        aria-label={card.label}
-                                        className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
+                                    <span
+                                        aria-hidden="true"
+                                        className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center"
                                         style={{ backgroundColor: card.color }}
                                     >
-                                        <FiArrowUpRight
-                                            size={18}
-                                            aria-hidden="true"
-                                            className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                                        />
-                                    </Link>
+                                        <FiShield size={18}/>
+                                    </span>
                                 </div>
                                 <div className="space-y-4">
                                     {card.paragraphs.map((paragraph) => (

@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiBarChart2, FiRepeat, FiUsers, FiArrowRight } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
 import BoldZanga from '@/components/ui/BoldZanga'
+import CardAction from '@/components/ui/CardAction'
 
 type UseCase = {
     title: string
@@ -11,6 +11,7 @@ type UseCase = {
     tagline: string
     description: string
     cta: string
+    href?: string
     image: string
     color: string
     Icon: IconType
@@ -23,6 +24,7 @@ const useCases: UseCase[] = [
         description:
             'Run a comprehensive engagement and culture assessment to understand employee experience across the organisation, identify priority issues and create a baseline for future tracking. Ideal for annual workforce reviews, strategy cycles and organisational transformation.',
         cta: 'Explore Engagement Surveys',
+        href: '/products/pulse-by-zanga#employee-engagement',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/27',
         color: '#c55e36',
         Icon: FiBarChart2,
@@ -34,6 +36,7 @@ const useCases: UseCase[] = [
         description:
             'Use shorter, targeted surveys to understand employee sentiment around specific themes, organisational changes or emerging concerns. Ideal for leadership changes, restructuring, policy implementation, new ways of working or post-intervention tracking.',
         cta: 'Explore Pulse Surveys',
+        href: '/products/pulse-by-zanga#pulse-surveys',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/28',
         color: '#a3a748',
         Icon: FiRepeat,
@@ -44,6 +47,7 @@ const useCases: UseCase[] = [
         description:
             'Explore how leadership, communication, trust and team dynamics are experienced across departments or business units. Use the results to support leadership development, team interventions and management conversations.',
         cta: 'Explore Leadership Solutions',
+        href: '/assessments/leadership-assessments',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/23',
         color: '#0F3460',
         Icon: FiUsers,
@@ -95,13 +99,13 @@ export default function PulseUseCases() {
                                     <p className="text-gray-500 text-sm font-Montserrat leading-relaxed mb-5">
                                         <BoldZanga text={useCase.description}/>
                                     </p>
-                                    <Link
-                                        href="#"
+                                    <CardAction
+                                        href={useCase.href}
                                         className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                     >
                                         {useCase.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    </CardAction>
                                 </div>
                             </div>
                         </Reveal>

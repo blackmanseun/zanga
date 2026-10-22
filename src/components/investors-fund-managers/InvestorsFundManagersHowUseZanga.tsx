@@ -1,13 +1,17 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiAward, FiBarChart2, FiSearch, FiUserCheck, FiArrowRight} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 
 type UseCase = {
     title: string
     description: string
     cta: string
+    // When set, the card opens this modal instead of linking.
+    modal?: ModalKey
+    href?: string
     color: string
     Icon: IconType
 }
@@ -18,6 +22,7 @@ const useCases: UseCase[] = [
         description:
             'Understand the team behind the investment case. Use Diligence by Zanga to add structured leadership and behavioural insight alongside the usual due diligence procedures.',
         cta: 'Talk to Zanga About Diligence',
+        modal: 'book-a-demo',
         color: '#c55e36',
         Icon: FiSearch,
     },
@@ -26,6 +31,7 @@ const useCases: UseCase[] = [
         description:
             'Gain an early understanding of the team. Assess leadership capability shortly after a deal closes, so the first phase of the investment is informed by structured insight.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#0F3460',
         Icon: FiAward,
     },
@@ -34,6 +40,7 @@ const useCases: UseCase[] = [
         description:
             'Evaluate capability across portfolio companies. Apply a consistent assessment approach across your portfolio to understand where capability is strongest and where support should be prioritised.',
         cta: 'Explore Leadership Solutions',
+        href: '/assessments/leadership-assessments',
         color: '#16213E',
         Icon: FiBarChart2,
     },
@@ -42,6 +49,7 @@ const useCases: UseCase[] = [
         description:
             'Bring more structure to critical leadership appointments. Use structured assessment insight alongside interviews, experience and references to support senior leadership hiring and promotion decisions.',
         cta: 'Explore Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#c55e36',
         Icon: FiUserCheck,
     },
@@ -93,14 +101,15 @@ export default function InvestorsFundManagersHowUseZanga() {
                                     <p className="text-gray-600 text-sm font-Montserrat leading-relaxed mb-3">
                                         {useCase.description}
                                     </p>
-                                    <Link
-                                        href="#"
+                                    <CardAction
+                                        href={useCase.href}
+                                        modal={useCase.modal}
                                         className="mt-auto inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                         style={{color: useCase.color}}
                                     >
                                         {useCase.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    </CardAction>
                                 </div>
                             ))}
                         </div>

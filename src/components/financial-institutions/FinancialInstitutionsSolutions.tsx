@@ -1,7 +1,6 @@
 'use client'
 
 import React, {useState} from 'react'
-import Link from 'next/link'
 import {FaRegCheckSquare} from 'react-icons/fa'
 import {FiArrowRight, FiChevronLeft, FiChevronRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
@@ -10,6 +9,8 @@ import type {Swiper as SwiperType} from 'swiper'
 import {Pagination} from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import CardAction from '@/components/ui/CardAction'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 
 type ChecklistItem = {
     title: string
@@ -17,17 +18,19 @@ type ChecklistItem = {
 }
 
 type SolutionCategory = {
-    href: string
+    href?: string
     bg: string
     title: string
     description: string
     checklist: ChecklistItem[]
     cta: string
+    // When set, the card opens this modal instead of linking.
+    modal?: ModalKey
 }
 
 const CATEGORIES: SolutionCategory[] = [
     {
-        href: '#',
+        href: '/assessments/leadership-assessments',
         bg: 'bg-olive-dark',
         title: 'Leadership Intelligence',
         description: 'Build visibility into leadership capability, readiness and continuity.',
@@ -82,7 +85,7 @@ const CATEGORIES: SolutionCategory[] = [
         cta: 'Explore Talent Solutions',
     },
     {
-        href: '#',
+        href: '/products/voice-by-zanga',
         bg: 'bg-terracotta-dark',
         title: 'Stakeholder Intelligence',
         description: 'Listen to the people who shape trust, reputation and service quality.',
@@ -106,6 +109,7 @@ const CATEGORIES: SolutionCategory[] = [
             },
         ],
         cta: 'Talk to Zanga About Diligence',
+        modal: 'book-a-demo',
     },
 ]
 
@@ -144,9 +148,10 @@ export default function FinancialInstitutionsSolutions() {
                     >
                         {CATEGORIES.map((category) => (
                             <SwiperSlide key={category.title} className="!h-auto">
-                                <Link
+                                <CardAction
                                     href={category.href}
-                                    className={`${category.bg} rounded-3xl flex flex-col h-full min-h-[440px] hover:shadow-xl transition-all duration-300 group`}
+                                    modal={category.modal}
+                                    className={`${category.bg} w-full text-left rounded-3xl flex flex-col h-full min-h-[440px] hover:shadow-xl transition-all duration-300 group`}
                                 >
                                     <div className="p-8 pb-6 min-h-[230px]">
                                         <h3 className="text-white text-2xl font-bold font-MonaSans mb-3 leading-snug">
@@ -185,7 +190,7 @@ export default function FinancialInstitutionsSolutions() {
                                             ))}
                                         </ul>
                                     </div>
-                                </Link>
+                                </CardAction>
                             </SwiperSlide>
                         ))}
                     </Swiper>

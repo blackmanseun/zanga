@@ -48,14 +48,14 @@ export default function CoachesConsultantsBuiltForPractice() {
                         </ul>
 
                         <Link
-                            href="#"
+                            href="/partners/become-a-partner#commercial-models"
                             className="hidden md:inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Explore the Zanga Partner Model
                             <FiArrowRight size={16} aria-hidden="true"/>
                         </Link>
                         <Link
-                            href="#"
+                            href="/partners/become-a-partner#commercial-models"
                             className="md:hidden inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Explore Partner Model

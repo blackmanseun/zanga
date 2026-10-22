@@ -2,7 +2,10 @@ import React from 'react'
 import BoldZanga from '@/components/ui/BoldZanga'
 import OpenModalButton from '@/components/modal/OpenModalButton'
 
-const paragraphs: string[] = [
+// Also shown in the Methodology side panel (modal/modals/Methodology.tsx).
+export const heading = {lead: 'Better capital decisions need ', highlight: 'a clearer view of leadership'}
+
+export const paragraphs: string[] = [
     'Zanga’s approach is designed to complement, not replace, conventional financial and commercial diligence.',
     'We begin by understanding the decision being made, whether that is a lending decision, investment assessment, portfolio review or post-investment development need.',
     'The relevant founder, executive or management team then completes the appropriate assessment pathway. Results are translated into structured insight around leadership capability, behavioural strengths, potential risks and development priorities.',
@@ -10,7 +13,7 @@ const paragraphs: string[] = [
     'Founder and management behaviour is shaped by the environment in which the business operates. Zanga combines assessment science with cultural intelligence to help institutions interpret leadership insight within African and other high-context business environments.',
 ]
 
-const steps: { number: string; title: string; text: string }[] = [
+export const steps: { number: string; title: string; text: string }[] = [
     {
         number: '01',
         title: 'Assess',
@@ -46,8 +49,8 @@ export default function MakeBetterInvestmentLendingDecisionsMethodology() {
 
                 <div className="grid md:grid-cols-2 md:gap-16 items-center">
                     <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
-                        <span className="text-gray-700">Better capital decisions need </span>
-                        <span className="text-olive">a clearer view of leadership</span>
+                        <span className="text-gray-700">{heading.lead}</span>
+                        <span className="text-olive">{heading.highlight}</span>
                     </h2>
                 </div>
 

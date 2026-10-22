@@ -34,7 +34,7 @@ export default function ListenToStakeholdersHero() {
                             Request a Demo
                         </OpenModalButton>
                         <Link
-                            href="#"
+                            href="/products/voice-by-zanga"
                             className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
                         >
                             Explore Voice by Zanga

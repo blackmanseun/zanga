@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import PublicSectorInstitutionsHeroGrid from '@/components/public-sector-institutions/PublicSectorInstitutionsHeroGrid'
 import OpenModalButton from '@/components/modal/OpenModalButton'
+import OpenNavMenuButton from '@/components/ui/OpenNavMenuButton'
 
 export default function PublicSectorInstitutionsHero() {
     return (
@@ -28,12 +28,12 @@ export default function PublicSectorInstitutionsHero() {
                         <OpenModalButton modal="book-a-demo" className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat">
                             Book a Demo
                         </OpenModalButton>
-                        <Link
-                            href="#"
+                        <OpenNavMenuButton
+                            menu="Solutions"
                             className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
                         >
                             Explore Zanga Solutions
-                        </Link>
+                        </OpenNavMenuButton>
                     </div>
                 </div>
 

@@ -110,7 +110,7 @@ export default function ImproveEngagementRetentionFeaturesBenefits() {
                                             <p className="text-[13px]">Pulse by Zanga</p>
                                         </Link>
                                         <Link
-                                            href="#"
+                                            href="/products/pulse-by-zanga#employee-engagement"
                                             className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
                                             <FiMessageSquare/>
                                             <p className="text-[13px]">Employee Engagement Surveys</p>
@@ -159,7 +159,7 @@ export default function ImproveEngagementRetentionFeaturesBenefits() {
                                             <p className="text-[13px]">Pulse by Zanga</p>
                                         </Link>
                                         <Link
-                                            href="#"
+                                            href="/products/pulse-by-zanga#retention-intelligence"
                                             className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
                                             <FiShield/>
                                             <p className="text-[13px]">Retention Intelligence</p>
@@ -319,12 +319,14 @@ export default function ImproveEngagementRetentionFeaturesBenefits() {
                                         <span><FaArrowTrendDown className="text-terracotta" size={18}/></span>
                                     </p>
                                     <div className="flex md:flex-row flex-col items-center gap-2">
-                                        <Link
-                                            href="#"
-                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
+                                        {/* Greyed out until this page is ready. */}
+                                        <span
+                                            aria-disabled="true"
+                                            title="Coming soon"
+                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 opacity-50 cursor-not-allowed">
                                             <FiCompass/>
                                             <p className="text-[13px]">Culture Assessments</p>
-                                        </Link>
+                                        </span>
                                         <Link
                                             href="/products/pulse-by-zanga"
                                             className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
@@ -364,12 +366,14 @@ export default function ImproveEngagementRetentionFeaturesBenefits() {
                                         <span><FaArrowTrendDown className="text-terracotta" size={18}/></span>
                                     </p>
                                     <div className="flex md:flex-row flex-col items-center gap-2">
-                                        <Link
-                                            href="#"
-                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
+                                        {/* Greyed out until this page is ready. */}
+                                        <span
+                                            aria-disabled="true"
+                                            title="Coming soon"
+                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 opacity-50 cursor-not-allowed">
                                             <FiBarChart2/>
                                             <p className="text-[13px]">Workforce Analytics</p>
-                                        </Link>
+                                        </span>
                                         <Link
                                             href="/products/pulse-by-zanga"
                                             className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
@@ -535,17 +539,19 @@ export default function ImproveEngagementRetentionFeaturesBenefits() {
                                     </p>
                                     <div className="flex md:flex-row flex-col items-center gap-2">
                                         <Link
-                                            href="#"
+                                            href="/products/pulse-by-zanga#pulse-surveys"
                                             className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
                                             <FiRefreshCw/>
                                             <p className="text-[13px]">Pulse Surveys</p>
                                         </Link>
-                                        <Link
-                                            href="#"
-                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
+                                        {/* Greyed out until this page is ready. */}
+                                        <span
+                                            aria-disabled="true"
+                                            title="Coming soon"
+                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 opacity-50 cursor-not-allowed">
                                             <FiBarChart2/>
                                             <p className="text-[13px]">Workforce Analytics</p>
-                                        </Link>
+                                        </span>
                                     </div>
                                 </div>
                             </div>

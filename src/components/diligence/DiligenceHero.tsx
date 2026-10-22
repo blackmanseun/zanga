@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { FiArrowRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
@@ -57,12 +56,12 @@ export default function DiligenceHero() {
                             Request a Demo
                             <FiArrowRight size={16} aria-hidden="true"/>
                         </OpenModalButton>
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="inline-flex items-center justify-center gap-2 border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold text-base hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
                         >
                             Talk to Zanga About Early Access
-                        </Link>
+                        </OpenModalButton>
                     </div>
                 </Reveal>
 

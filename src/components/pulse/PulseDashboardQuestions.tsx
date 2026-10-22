@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiArrowRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const questions: string[] = [
     'Where is engagement strongest and weakest?',
@@ -62,13 +62,13 @@ export default function PulseDashboardQuestions() {
                                 </li>
                             ))}
                         </ul>
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Request a Product Demo
                             <FiArrowRight size={16} aria-hidden="true"/>
-                        </Link>
+                        </OpenModalButton>
                     </Reveal>
 
                     <Reveal delayMs={100} className="lg:mt-40">

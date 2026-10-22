@@ -1,13 +1,17 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiAward, FiBriefcase, FiTarget, FiUsers, FiArrowRight} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
+import OpenNavMenuButton from '@/components/ui/OpenNavMenuButton'
+import CardAction from '@/components/ui/CardAction'
 
 type UseCase = {
     title: string
     description: string
     cta: string
+    href?: string
+    // When set, the card opens this navbar dropdown instead of linking.
+    menu?: string
     color: string
     Icon: IconType
 }
@@ -18,6 +22,7 @@ const useCases: UseCase[] = [
         description:
             'Start coaching with a clearer evidence base. Use leadership assessments to identify strengths, blind spots and development priorities before deeper coaching work begins.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#c55e36',
         Icon: FiAward,
     },
@@ -26,6 +31,7 @@ const useCases: UseCase[] = [
         description:
             'Make development more targeted. Use assessment before a leadership programme to identify what participants actually need and shape development around those priorities.',
         cta: 'Explore Leadership Solutions',
+        href: '/assessments/leadership-assessments',
         color: '#0F3460',
         Icon: FiTarget,
     },
@@ -42,6 +48,7 @@ const useCases: UseCase[] = [
         description:
             'Add people intelligence to broader transformation work. Bring leadership, engagement or workforce data into organisational-development, culture or change engagements where people insight can strengthen the diagnosis.',
         cta: 'Explore Zanga Solutions',
+        menu: 'Solutions',
         color: '#c55e36',
         Icon: FiBriefcase,
     },
@@ -93,14 +100,25 @@ export default function CoachesConsultantsWaysToUse() {
                                     <p className="text-gray-600 text-sm font-Montserrat leading-relaxed mb-3">
                                         {useCase.description}
                                     </p>
-                                    <Link
-                                        href="#"
-                                        className="mt-auto inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
-                                        style={{color: useCase.color}}
-                                    >
-                                        {useCase.cta}
-                                        <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    {useCase.menu ? (
+                                        <OpenNavMenuButton
+                                            menu={useCase.menu}
+                                            className="mt-auto inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
+                                            style={{color: useCase.color}}
+                                        >
+                                            {useCase.cta}
+                                            <FiArrowRight size={14} aria-hidden="true"/>
+                                        </OpenNavMenuButton>
+                                    ) : (
+                                        <CardAction
+                                            href={useCase.href}
+                                            className="mt-auto inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
+                                            style={{color: useCase.color}}
+                                        >
+                                            {useCase.cta}
+                                            <FiArrowRight size={14} aria-hidden="true"/>
+                                        </CardAction>
+                                    )}
                                 </div>
                             ))}
                         </div>

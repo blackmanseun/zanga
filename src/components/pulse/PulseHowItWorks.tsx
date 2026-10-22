@@ -1,13 +1,17 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiHeadphones, FiEye, FiLayers, FiZap, FiArrowRight } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 
 type Step = {
     title: string
     description: string
     cta: string
+    // When set, the card opens this modal instead of linking.
+    modal?: ModalKey
+    href?: string
     color: string
     Icon: IconType
 }
@@ -18,6 +22,7 @@ const steps: Step[] = [
         description:
             'Collect structured employee feedback through engagement surveys, pulse surveys and culture-focused assessments. Survey design can be aligned to the questions your organisation needs to understand.',
         cta: 'Explore Pulse Surveys',
+        href: '/products/pulse-by-zanga#pulse-surveys',
         color: '#a3a748',
         Icon: FiHeadphones,
     },
@@ -26,6 +31,7 @@ const steps: Step[] = [
         description:
             'Bring responses together to identify patterns, strengths, gaps and changes in employee sentiment. Explore the factors influencing engagement, culture, leadership experience and retention.',
         cta: 'Explore Employee Engagement',
+        href: '/products/pulse-by-zanga#employee-engagement',
         color: '#FDBF12',
         Icon: FiEye,
     },
@@ -34,6 +40,7 @@ const steps: Step[] = [
         description:
             'Understand how experiences differ across teams, functions, locations or other relevant employee groups. Track changes over time and identify where greater attention may be required.',
         cta: 'Explore Workforce Dashboards',
+        href: '/products/pulse-by-zanga#workforce-dashboards',
         color: '#c55e36',
         Icon: FiLayers,
     },
@@ -42,6 +49,7 @@ const steps: Step[] = [
         description:
             'Translate findings into clear priorities for leaders and managers. Use dashboards, organisational reports and recommendations to guide conversations, interventions and workforce decisions.',
         cta: 'Talk to Our Team',
+        modal: 'book-a-demo',
         color: '#0F3460',
         Icon: FiZap,
     },
@@ -100,14 +108,15 @@ export default function PulseHowItWorks() {
                                     <p className="text-gray-600 text-sm font-Montserrat leading-relaxed mb-3">
                                         {step.description}
                                     </p>
-                                    <Link
-                                        href="#"
+                                    <CardAction
+                                        href={step.href}
+                                        modal={step.modal}
                                         className="mt-auto inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                         style={{ color: step.color }}
                                     >
                                         {step.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    </CardAction>
                                 </div>
                             ))}
                         </div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiAward, FiUsers, FiRepeat, FiArrowRight } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
@@ -46,6 +45,7 @@ const useCases: UseCase[] = [
         description:
             'Integrate Fit into recurring recruitment across business units, functions or locations so the quality of assessment does not depend entirely on who is running each hiring process.',
         cta: 'Talk to Zanga About Hiring Programmes',
+        demo: true,
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/172',
         color: '#0F3460',
         Icon: FiRepeat,
@@ -106,13 +106,15 @@ export default function FitUseCases() {
                                             <FiArrowRight size={14} aria-hidden="true"/>
                                         </OpenModalButton>
                                     ) : (
-                                        <Link
-                                            href="#"
-                                            className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
+                                        // Greyed out until this page is ready.
+                                        <span
+                                            aria-disabled="true"
+                                            title="Coming soon"
+                                            className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat opacity-50 cursor-not-allowed"
                                         >
                                             {useCase.cta}
                                             <FiArrowRight size={14} aria-hidden="true"/>
-                                        </Link>
+                                        </span>
                                     )}
                                 </div>
                             </div>

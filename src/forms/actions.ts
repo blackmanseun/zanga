@@ -21,7 +21,7 @@ const option = (formData: FormData, name: string) => optional(toOptionValue(text
 const isBot = (formData: FormData) => text(formData, HONEYPOT_FIELD) !== ''
 
 async function save(
-  collection: 'demo-requests' | 'partner-applications' | 'contact-enquiries',
+  collection: 'demo-requests' | 'partner-applications' | 'contact-enquiries' | 'report-requests',
   data: Record<string, unknown>,
 ): Promise<FormResult> {
   try {
@@ -60,6 +60,13 @@ export async function submitPartnerApplication(formData: FormData): Promise<Form
       .getAll('partnershipTypes')
       .filter((value): value is string => typeof value === 'string')
       .map(toOptionValue),
+  })
+}
+
+export async function submitReportRequest(formData: FormData): Promise<FormResult> {
+  if (isBot(formData)) return { ok: true }
+  return save('report-requests', {
+    email: text(formData, 'email'),
   })
 }
 

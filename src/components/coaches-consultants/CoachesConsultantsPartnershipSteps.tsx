@@ -59,7 +59,7 @@ export default function CoachesConsultantsPartnershipSteps() {
 
                     <div className="order-2 md:order-3">
                         <Link
-                            href="#"
+                            href="/partners/become-a-partner"
                             className="inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Explore the Business Partner Opportunity

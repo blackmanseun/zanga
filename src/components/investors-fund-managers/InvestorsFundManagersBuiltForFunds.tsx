@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiArrowRight, FiCheckCircle} from 'react-icons/fi'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const capabilities: string[] = [
     'Pre-investment founder and management due diligence',
@@ -48,20 +48,20 @@ export default function InvestorsFundManagersBuiltForFunds() {
                             ))}
                         </ul>
 
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="hidden md:inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Talk to Zanga About Diligence
                             <FiArrowRight size={16} aria-hidden="true"/>
-                        </Link>
-                        <Link
-                            href="#"
+                        </OpenModalButton>
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="md:hidden inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Talk to Zanga
                             <FiArrowRight size={16} aria-hidden="true"/>
-                        </Link>
+                        </OpenModalButton>
                     </div>
 
                     <div className="relative mt-8 lg:mt-0 min-h-[16rem] sm:min-h-[22rem] lg:min-h-0">

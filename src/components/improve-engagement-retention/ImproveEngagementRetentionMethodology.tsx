@@ -2,7 +2,10 @@ import React from 'react'
 import BoldZanga from '@/components/ui/BoldZanga'
 import OpenModalButton from '@/components/modal/OpenModalButton'
 
-const paragraphs: string[] = [
+// Also shown in the Methodology side panel (modal/modals/Methodology.tsx).
+export const heading = {lead: 'Better employee experience starts with ', highlight: 'better listening'}
+
+export const paragraphs: string[] = [
     'Zanga’s approach combines structured employee listening with contextual interpretation.',
     'We begin by understanding what the organisation needs to learn; whether the priority is engagement, culture, retention, leadership experience or a specific workforce issue. Employees then respond through the most appropriate survey or pulse format.',
     'The results are analysed to identify patterns, differences and priority areas across relevant teams, functions or groups.',
@@ -10,7 +13,7 @@ const paragraphs: string[] = [
     'Employee feedback is shaped by workplace culture, hierarchy, trust and communication norms. Zanga combines structured measurement with cultural intelligence to help organisations interpret what employees are saying, and what they may be signalling indirectly.',
 ]
 
-const steps: { number: string; title: string; text: string }[] = [
+export const steps: { number: string; title: string; text: string }[] = [
     {
         number: '01',
         title: 'Listen',
@@ -46,8 +49,8 @@ export default function ImproveEngagementRetentionMethodology() {
 
                 <div className="grid md:grid-cols-2 md:gap-16 items-center">
                     <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
-                        <span className="text-gray-700">Better employee experience starts with </span>
-                        <span className="text-olive">better listening</span>
+                        <span className="text-gray-700">{heading.lead}</span>
+                        <span className="text-olive">{heading.highlight}</span>
                     </h2>
                 </div>
 

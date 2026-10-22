@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import BuildHighPerformingTeamsHeroGrid from '@/components/build-high-performing-teams/BuildHighPerformingTeamsHeroGrid'
 import SolutionsLogoMarquee from '@/components/solutions/SolutionsLogoMarquee'
 import OpenModalButton from '@/components/modal/OpenModalButton'
@@ -33,12 +32,14 @@ export default function BuildHighPerformingTeamsHero() {
                         >
                             Request a Demo
                         </OpenModalButton>
-                        <Link
-                            href="#"
-                            className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
+                        {/* Greyed out until this page is ready. */}
+                        <span
+                            aria-disabled="true"
+                            title="Coming soon"
+                            className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] font-Montserrat opacity-50 cursor-not-allowed"
                         >
                             Explore Workforce Assessments
-                        </Link>
+                        </span>
                     </div>
                 </div>
 

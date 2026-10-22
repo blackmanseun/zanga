@@ -29,7 +29,7 @@ export default function DevelopmentOrganisationsWhereToStart() {
                 <div className="mt-10 md:mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-[1.4fr_1fr]">
                     <Reveal delayMs={90}>
                         <Link
-                            href="#"
+                            href="/products/voice-by-zanga"
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
@@ -63,7 +63,7 @@ export default function DevelopmentOrganisationsWhereToStart() {
                     <div className="flex flex-col gap-6">
                         <Reveal delayMs={150}>
                             <Link
-                                href="#"
+                                href="/products/fit-by-zanga"
                                 className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
@@ -96,7 +96,7 @@ export default function DevelopmentOrganisationsWhereToStart() {
 
                         <Reveal delayMs={180}>
                             <Link
-                                href="#"
+                                href="/products/pulse-by-zanga"
                                 className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image

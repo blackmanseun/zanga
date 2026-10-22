@@ -1,13 +1,15 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiArrowRight, FiUsers, FiClipboard, FiMessageCircle, FiBookOpen} from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
 
 type Solution = {
     category: string
     description: string
     cta: string
+    /** Left out while the page isn't ready — the CTA is greyed out instead. */
+    href?: string
     Icon: IconType
 }
 
@@ -16,6 +18,7 @@ const solutions: Solution[] = [
         category: 'Leadership Assessments',
         description: 'Understand current capability, future potential and leadership-development priorities.',
         cta: 'Explore Leadership Assessments',
+        href: '/assessments/leadership-assessments',
         Icon: FiUsers,
     },
     {
@@ -28,6 +31,7 @@ const solutions: Solution[] = [
         category: 'Engagement Surveys',
         description: 'Measure employee sentiment, culture, engagement and the drivers of retention.',
         cta: 'Explore Engagement Surveys',
+        href: '/products/pulse-by-zanga#employee-engagement',
         Icon: FiMessageCircle,
     },
     {
@@ -71,13 +75,24 @@ export default function HomeSolutionCards() {
                                 <p className="text-sm text-gray-600 leading-relaxed font-Montserrat mb-3">
                                     {solution.description}
                                 </p>
-                                <Link
-                                    href="#"
-                                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta font-Montserrat hover:underline"
-                                >
-                                    {solution.cta}
-                                    <FiArrowRight size={13} className="shrink-0" aria-hidden="true"/>
-                                </Link>
+                                {solution.href ? (
+                                    <CardAction
+                                        href={solution.href}
+                                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta font-Montserrat hover:underline"
+                                    >
+                                        {solution.cta}
+                                        <FiArrowRight size={13} className="shrink-0" aria-hidden="true"/>
+                                    </CardAction>
+                                ) : (
+                                    <span
+                                        aria-disabled="true"
+                                        title="Coming soon"
+                                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-400 font-Montserrat cursor-not-allowed"
+                                    >
+                                        {solution.cta}
+                                        <FiArrowRight size={13} className="shrink-0" aria-hidden="true"/>
+                                    </span>
+                                )}
                             </div>
                         </Reveal>
                     ))}

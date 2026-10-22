@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {FiArrowRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function EnterprisesWhereToStart() {
     return (
@@ -28,7 +29,7 @@ export default function EnterprisesWhereToStart() {
                 <div className="mt-10 md:mt-14 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
                     <Reveal delayMs={90}>
                         <Link
-                            href="#"
+                            href="/products/fit-by-zanga"
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
@@ -63,7 +64,7 @@ export default function EnterprisesWhereToStart() {
                     <div className="flex flex-col gap-6">
                         <Reveal delayMs={150}>
                             <Link
-                                href="#"
+                                href="/products/pulse-by-zanga"
                                 className="group relative flex xl:min-h-[200px] min-h-[300px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
@@ -110,13 +111,13 @@ export default function EnterprisesWhereToStart() {
                                     Tell us what you are trying to solve, and we will recommend the most
                                     appropriate <strong>Zanga</strong> pathway.
                                 </p>
-                                <Link
-                                    href="#"
+                                <OpenModalButton
+                                    modal="book-a-demo"
                                     className="relative mt-5 inline-flex items-center justify-center gap-2 bg-terracotta text-white px-6 py-3 rounded-md font-semibold text-sm font-Montserrat hover:bg-terracotta/90 transition-colors"
                                 >
-                                    Take a free assessment
+                                    Book a Demo
                                     <FiArrowRight size={16} aria-hidden="true"/>
-                                </Link>
+                                </OpenModalButton>
                             </div>
                         </Reveal>
                     </div>

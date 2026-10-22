@@ -3,6 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {FiArrowRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
+import type {ModalKey} from '@/components/modal/ModalProvider'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 type StartCard = {
     title: string
@@ -10,6 +13,9 @@ type StartCard = {
     cta: string
     image: string
     alt: string
+    href?: string
+    // When set, the card opens this modal instead of linking.
+    modal?: ModalKey
 }
 
 const sideCards: StartCard[] = [
@@ -26,6 +32,7 @@ const sideCards: StartCard[] = [
         description:
             'Explore the Zanga Business Partner Programme and the tools, commercial models and support available to practitioners.',
         cta: 'Become a Zanga Partner',
+        modal: 'partner-with-zanga',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/203',
         alt: 'A coach preparing for a client session',
     },
@@ -34,6 +41,7 @@ const sideCards: StartCard[] = [
         description:
             'Explore the partnership options available for practitioners and consulting firms that want to integrate Zanga more deeply into their own client proposition.',
         cta: 'Explore Partnership Options',
+        href: '/partners/become-a-partner#commercial-models',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/82',
         alt: 'Consultants reviewing a client proposition',
     },
@@ -63,7 +71,7 @@ export default function CoachesConsultantsWhereToStart() {
                 <div className="mt-10 md:mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-[1.4fr_1fr]">
                     <Reveal delayMs={90}>
                         <Link
-                            href="#"
+                            href="/products/fit-by-zanga"
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
@@ -97,9 +105,10 @@ export default function CoachesConsultantsWhereToStart() {
                     <div className="flex flex-col gap-6">
                         {sideCards.map((card, i) => (
                             <Reveal key={card.title} delayMs={150 + i * 30}>
-                                <Link
-                                    href="#"
-                                    className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
+                                <CardAction
+                                    href={card.href}
+                                    modal={card.modal}
+                                    className="group relative flex w-full text-left min-h-[200px] h-full overflow-hidden rounded-2xl"
                                 >
                                     <Image
                                         src={card.image}
@@ -125,7 +134,7 @@ export default function CoachesConsultantsWhereToStart() {
                                             />
                                         </span>
                                     </div>
-                                </Link>
+                                </CardAction>
                             </Reveal>
                         ))}
                     </div>
@@ -149,13 +158,13 @@ export default function CoachesConsultantsWhereToStart() {
                                 your practice.
                             </p>
                         </div>
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="relative shrink-0 self-start md:self-auto inline-flex items-center justify-center gap-2 bg-terracotta text-white px-6 py-3 rounded-md font-semibold text-sm font-Montserrat hover:bg-terracotta/90 transition-colors"
                         >
                             Talk to Zanga
                             <FiArrowRight size={16} aria-hidden="true"/>
-                        </Link>
+                        </OpenModalButton>
                     </div>
                 </Reveal>
             </div>

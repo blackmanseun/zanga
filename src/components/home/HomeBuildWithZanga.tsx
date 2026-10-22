@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
 import { FiAward, FiBriefcase, FiGlobe, FiArrowRight } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import BoldZanga from '@/components/ui/BoldZanga'
@@ -95,12 +94,13 @@ export default function HomeBuildWithZanga() {
                 Partner with Zanga
                 <FiArrowRight size={16} aria-hidden="true" />
               </button>
-              <Link
-                href="#"
+              <button
+                type="button"
+                onClick={() => openModal('coach-login-unavailable')}
                 className="inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-900 px-7 py-3.5 rounded-md font-semibold text-sm hover:border-gray-400 transition-colors font-Montserrat"
               >
                 Coach Login
-              </Link>
+              </button>
             </div>
           </div>
 

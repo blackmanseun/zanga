@@ -1,12 +1,13 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
 
 type Card = {
   label: string
   description: string
   cta: string
+  href: string
   color: string
 }
 
@@ -16,6 +17,7 @@ const cards: Card[] = [
     description:
       'Use culturally relevant psychometric and fit insights to improve selection and reduce costly hiring mistakes.',
     cta: 'Explore Hiring Solutions',
+    href: '/solutions/hire-better-people',
     color: '#a3a748',
   },
   {
@@ -23,12 +25,14 @@ const cards: Card[] = [
     description:
       'Identify capability, potential and development priorities with leadership assessments and 360 feedback.',
     cta: 'Explore Leadership Solutions',
+    href: '/solutions/develop-stronger-leaders',
     color: '#FDBF12',
   },
   {
     label: 'Strengthen succession decisions',
     description: 'Identify high-potential talent, leadership readiness and organisational capability gaps.',
     cta: 'Explore Succession Solutions',
+    href: '/solutions/strengthen-succession-planning',
     color: '#a3a748',
   },
   {
@@ -36,6 +40,7 @@ const cards: Card[] = [
     description:
       'Understand employee sentiment, culture and the conditions shaping performance and retention.',
     cta: 'Explore Pulse',
+    href: '/products/pulse-by-zanga',
     color: '#c55e36',
   },
   {
@@ -43,12 +48,14 @@ const cards: Card[] = [
     description:
       'Collect, manage and interpret stakeholder feedback across confidential, digital and assisted channels.',
     cta: 'Explore Voice',
+    href: '/products/voice-by-zanga',
     color: '#FDBF12',
   },
   {
     label: 'Understand founder and portfolio risk',
     description: 'Add leadership and sentiment intelligence to lending, investment and portfolio decisions.',
     cta: 'Explore Diligence',
+    href: '/products/diligence-by-zanga',
     color: '#c55e36',
   },
 ]
@@ -77,9 +84,9 @@ export default function HomeWhatZangaDoes() {
               <div className="group h-full flex flex-col rounded-2xl p-6 sm:p-8 bg-white border border-slate-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">{card.label}</h3>
-                  <Link
-                    href="#"
-                    aria-label={card.cta}
+                  <CardAction
+                    href={card.href}
+                    ariaLabel={card.cta}
                     className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
                     style={{ backgroundColor: card.color }}
                   >
@@ -88,13 +95,13 @@ export default function HomeWhatZangaDoes() {
                       aria-hidden="true"
                       className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                     />
-                  </Link>
+                  </CardAction>
                 </div>
                 <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                   {card.description}
                 </p>
-                <Link
-                  href="#"
+                <CardAction
+                  href={card.href}
                   className="inline-flex items-center gap-2 text-[14px] font-semibold font-Montserrat"
                   style={{ color: card.color }}
                 >
@@ -104,7 +111,7 @@ export default function HomeWhatZangaDoes() {
                     aria-hidden="true"
                     className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   />
-                </Link>
+                </CardAction>
               </div>
             </Reveal>
           ))}

@@ -91,13 +91,13 @@ export default function Footer() {
                         </p>
                         <p className="text-gray-500 text-md font-Montserrat">
                             <span className="font-semibold text-gray-700">Email:</span>{' '}
-                            <a href="mailto:office@zangametrics.com"
-                               className="text-terracotta hover:text-terracotta-dark transition-colors">office@zangametrics.com</a>
+                            <a href="mailto:commercial@zangametrics.com"
+                               className="text-terracotta hover:text-terracotta-dark transition-colors">commercial@zangametrics.com</a>
                         </p>
                         <p className="text-gray-500 text-md font-Montserrat">
                             <span className="font-semibold text-gray-700">Tel:</span>{' '}
-                            <a href="tel:+260966349850"
-                               className="text-terracotta hover:text-terracotta-dark transition-colors">+260 966 349 850</a>
+                            <a href="tel:+260764104552"
+                               className="text-terracotta hover:text-terracotta-dark transition-colors">+260 764 104 552</a>
                         </p>
                         <p className="text-gray-500 text-md font-Montserrat mb-6">AfricaWorks, 4 Bishops Rd, Lusaka</p>
                         <div className="flex gap-3">

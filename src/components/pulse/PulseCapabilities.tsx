@@ -1,13 +1,14 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
 
 type Card = {
     label: string
     id?: string
     description: string
     cta: string
+    href?: string
     color: string
 }
 
@@ -17,6 +18,7 @@ const cards: Card[] = [
         description:
             'Pulse gives employees a structured way to share how they experience the organisation. From leadership and communication to culture, wellbeing, recognition and opportunities for growth. Give leaders a clearer picture of what is working, what is changing and where intervention may be needed.',
         cta: 'Explore Pulse Surveys',
+        href: '/products/pulse-by-zanga#pulse-surveys',
         color: '#a3a748',
     },
     {
@@ -24,6 +26,7 @@ const cards: Card[] = [
         description:
             'Knowing that engagement has increased or declined is only the starting point. Pulse helps organisations explore the factors behind employee sentiment so leadership teams can understand what is influencing motivation, commitment and workplace experience. Identify the issues that matter most rather than responding to symptoms alone.',
         cta: 'Explore Employee Engagement',
+        href: '/products/pulse-by-zanga#employee-engagement',
         color: '#FDBF12',
     },
     {
@@ -31,6 +34,7 @@ const cards: Card[] = [
         description:
             'Organisational culture is not simply what is written in a values statement. Pulse helps organisations compare the culture they intend to create with what employees experience in practice; surfacing patterns around leadership, communication, trust, belonging, collaboration and workplace behaviour.',
         cta: 'Explore Culture & Values',
+        href: '/products/pulse-by-zanga#culture-values',
         color: '#c55e36',
     },
     {
@@ -39,6 +43,7 @@ const cards: Card[] = [
         description:
             'Employee turnover rarely begins with a resignation letter. Changes in sentiment, trust, motivation, leadership experience or intent to stay can provide useful early signals. Pulse helps organisations identify where potential retention concerns may be emerging, so leaders can investigate and respond before valuable people disengage completely.',
         cta: 'Explore Retention Intelligence',
+        href: '/products/pulse-by-zanga#retention-intelligence',
         color: '#a3a748',
     },
     {
@@ -46,6 +51,7 @@ const cards: Card[] = [
         description:
             'Move beyond isolated survey results. Pulse can help leadership teams understand differences across departments, teams, locations, employee groups or other relevant segments, making it easier to see where experiences differ and where action should be prioritised.',
         cta: 'Explore Workforce Dashboards',
+        href: '/products/pulse-by-zanga#workforce-dashboards',
         color: '#FDBF12',
     },
     {
@@ -81,9 +87,9 @@ export default function PulseCapabilities() {
                             <div id={card.id} className="group scroll-mt-28 h-full flex flex-col rounded-2xl p-6 sm:p-8 bg-white border border-slate-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                                 <div className="flex items-start justify-between gap-4 mb-3">
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">{card.label}</h3>
-                                    <Link
-                                        href="#"
-                                        aria-label={card.cta}
+                                    <CardAction
+                                        href={card.href}
+                                        ariaLabel={card.cta}
                                         className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
                                         style={{ backgroundColor: card.color }}
                                     >
@@ -92,13 +98,13 @@ export default function PulseCapabilities() {
                                             aria-hidden="true"
                                             className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                         />
-                                    </Link>
+                                    </CardAction>
                                 </div>
                                 <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                                     {card.description}
                                 </p>
-                                <Link
-                                    href="#"
+                                <CardAction
+                                    href={card.href}
                                     className="inline-flex items-center gap-2 text-[14px] font-semibold font-Montserrat"
                                     style={{ color: card.color }}
                                 >
@@ -108,7 +114,7 @@ export default function PulseCapabilities() {
                                         aria-hidden="true"
                                         className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                     />
-                                </Link>
+                                </CardAction>
                             </div>
                         </Reveal>
                     ))}

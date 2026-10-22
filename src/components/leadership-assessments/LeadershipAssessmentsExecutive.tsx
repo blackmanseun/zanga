@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { FiCheckCircle, FiArrowRight } from 'react-icons/fi'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const canSupport: string[] = [
     'Executive recruitment',
@@ -15,7 +15,8 @@ const canSupport: string[] = [
 export default function LeadershipAssessmentsExecutive() {
     return (
         <section
-            className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
+            id="executive-leadership-assessment"
+            className="scroll-mt-24 md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
                 <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
                     Leadership assessments for different decisions
@@ -49,13 +50,13 @@ export default function LeadershipAssessmentsExecutive() {
                             Best suited for: C-suite, executive and other business-critical leadership roles.
                         </p>
 
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-terracotta/90 transition-colors font-Montserrat mt-auto self-start"
                         >
                             Request an Executive Leadership Assessment
                             <FiArrowRight size={16} aria-hidden="true"/>
-                        </Link>
+                        </OpenModalButton>
                     </div>
 
                     <div

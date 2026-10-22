@@ -1,8 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiHeadphones, FiClipboard, FiShield, FiArrowRight, FiCheck } from 'react-icons/fi'
 import type { IconType } from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 type UseCase = {
     title: string
@@ -146,13 +146,13 @@ export default function VoiceUseCases() {
                 </div>
 
                 <Reveal className="mt-12 text-center">
-                    <Link
-                        href="#"
+                    <OpenModalButton
+                        modal="book-a-demo"
                         className="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm font-Montserrat hover:bg-terracotta/90 transition-colors"
                     >
                         Talk to Zanga About the Right Package
                         <FiArrowRight size={16} aria-hidden="true"/>
-                    </Link>
+                    </OpenModalButton>
                 </Reveal>
             </div>
         </section>

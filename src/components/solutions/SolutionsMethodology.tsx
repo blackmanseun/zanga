@@ -1,7 +1,10 @@
 import React from 'react'
 import BoldZanga from '@/components/ui/BoldZanga'
 
-const paragraphs: string[] = [
+// Also shown in the Methodology side panel (modal/modals/Methodology.tsx).
+export const heading = {lead: 'Better decisions start with ', highlight: 'better context'}
+
+export const paragraphs: string[] = [
     'Zanga does not use assessment scores as stand-alone hiring decisions.',
     'We begin by understanding what success in the role requires. Candidates then complete the appropriate psychometric, behavioural or leadership assessments. Their results are translated into practical insights that help hiring teams understand strengths, potential concerns, role alignment and areas to explore further.',
     'What makes the Zanga approach different is context.',
@@ -9,7 +12,7 @@ const paragraphs: string[] = [
     'Zanga combines assessment science with cultural intelligence to help organisations understand not simply how someone scores, but what that insight means for the role and environment they are entering.',
 ]
 
-const steps: { number: string; title: string; text: string }[] = [
+export const steps: { number: string; title: string; text: string }[] = [
     {
         number: '01',
         title: 'Define',
@@ -45,8 +48,8 @@ export default function SolutionsMethodology() {
 
                 <div className="grid md:grid-cols-2 md:gap-16 items-center">
                     <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
-                        <span className="text-gray-700">Better decisions start with </span>
-                        <span className="text-olive">better context</span>
+                        <span className="text-gray-700">{heading.lead}</span>
+                        <span className="text-olive">{heading.highlight}</span>
                     </h2>
                 </div>
 

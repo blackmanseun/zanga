@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function BecomePartnerCta() {
     return (
@@ -22,24 +22,24 @@ export default function BecomePartnerCta() {
                             <div className="col-span-3 md:flex flex-col items-end">
                                 <p className="text-sm text-white/50 font-Montserrat mb-3">Choose how you&apos;d like to start</p>
                                 <div className="flex flex-col sm:flex-row gap-3 mb-3">
-                                    <Link
-                                        href="#"
+                                    <OpenModalButton
+                                        modal="partner-with-zanga"
                                         className="bg-olive text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat text-center"
                                     >
                                         Become a Partner
-                                    </Link>
-                                    <Link
-                                        href="#"
+                                    </OpenModalButton>
+                                    <OpenModalButton
+                                        modal="book-a-demo"
                                         className="border border-white text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-primary transition-colors font-Montserrat text-center"
                                     >
                                         Talk to the Zanga Team
-                                    </Link>
+                                    </OpenModalButton>
                                 </div>
                                 <p className="text-white/40 font-Montserrat text-sm">
                                     Prefer to talk it through first?{' '}
-                                    <Link href="#" className="text-white hover:text-olive hover:no-underline transition-colors">
+                                    <OpenModalButton modal="book-a-demo" className="text-white hover:text-olive hover:no-underline transition-colors">
                                         Contact our team
-                                    </Link>
+                                    </OpenModalButton>
                                 </p>
                             </div>
                         </div>

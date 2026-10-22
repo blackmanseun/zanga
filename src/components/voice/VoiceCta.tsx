@@ -37,9 +37,9 @@ export default function VoiceCta() {
                                 </div>
                                 <p className="text-white/40 font-Montserrat text-sm">
                                     Prefer to talk it through first?{' '}
-                                    <Link href="#" className="text-white hover:text-olive hover:no-underline transition-colors">
+                                    <OpenModalButton modal="book-a-demo" className="text-white hover:text-olive hover:no-underline transition-colors">
                                         Contact our team
-                                    </Link>
+                                    </OpenModalButton>
                                 </p>
                             </div>
                         </div>

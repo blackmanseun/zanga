@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiFileText, FiArrowRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function HomeResearchAndEvidence() {
   return (
@@ -38,19 +38,21 @@ export default function HomeResearchAndEvidence() {
                 future of work across African organisations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="#"
+                <OpenModalButton
+                  modal="download-report"
                   className="inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                 >
                   Download the Report
                   <FiArrowRight size={16} aria-hidden="true" />
-                </Link>
-                <Link
-                  href="#"
-                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-white/10 transition-colors font-Montserrat"
+                </OpenModalButton>
+                {/* Greyed out until the research page is ready. */}
+                <span
+                  aria-disabled="true"
+                  title="Coming soon"
+                  className="inline-flex items-center justify-center gap-2 border border-white/15 text-white/40 px-7 py-3.5 rounded-md font-semibold text-sm font-Montserrat cursor-not-allowed"
                 >
                   Explore Zanga Research
-                </Link>
+                </span>
               </div>
             </div>
 

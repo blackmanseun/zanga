@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
 import LeadershipAssessmentsLogoMarquee from '@/components/leadership-assessments/LeadershipAssessmentsLogoMarquee'
 import LeadershipAssessmentsHeroGrid from '@/components/leadership-assessments/LeadershipAssessmentsHeroGrid'
 import OpenModalButton from '@/components/modal/OpenModalButton'
@@ -28,12 +27,14 @@ export default function LeadershipAssessmentsHero() {
               >
                 Request a demo
               </OpenModalButton>
-              <Link
-                  href="#"
-                  className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
+              {/* Greyed out until the free assessment is ready. */}
+              <span
+                  aria-disabled="true"
+                  title="Coming soon"
+                  className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] font-Montserrat opacity-50 cursor-not-allowed"
               >
                 Take a Free Assessment
-              </Link>
+              </span>
             </div>
             <LeadershipAssessmentsLogoMarquee/>
           </div>

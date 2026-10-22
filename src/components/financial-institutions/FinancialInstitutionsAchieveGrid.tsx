@@ -1,12 +1,16 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiArrowUpRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 
 type Achievement = {
     title: string
     description: string
     cta: string
+    // When set, the card opens this modal instead of linking.
+    modal?: ModalKey
+    href?: string
     color: string
 }
 
@@ -16,6 +20,7 @@ const achievements: Achievement[] = [
         description:
             'Build a clearer view of leadership capability, potential and readiness across the institution. Use structured assessment insight to identify who is ready now, where development is needed and where continuity risks may exist.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#c55e36',
     },
     {
@@ -23,6 +28,7 @@ const achievements: Achievement[] = [
         description:
             'Identify the factors shaping employee experience across branches, contact centres and operational teams. Use engagement and sentiment data to understand why people stay, disengage or leave — and where intervention may have the greatest value.',
         cta: 'Explore Pulse by Zanga',
+        href: '/products/pulse-by-zanga',
         color: '#a3a748',
     },
     {
@@ -30,6 +36,7 @@ const achievements: Achievement[] = [
         description:
             'Bring structured psychometric, leadership and role-fit insight into recruitment and promotion decisions. Support hiring managers with a more consistent evidence base for roles ranging from relationship management and branch leadership to specialist and executive appointments.',
         cta: 'Explore Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#c55e36',
     },
     {
@@ -37,6 +44,7 @@ const achievements: Achievement[] = [
         description:
             'Give stakeholders a structured way to raise concerns, provide feedback and report issues. Voice by Zanga can support confidential reporting, grievance management and controlled escalation so concerns can be identified and managed more consistently.',
         cta: 'Explore Voice by Zanga',
+        href: '/products/voice-by-zanga',
         color: '#a3a748',
     },
     {
@@ -44,6 +52,7 @@ const achievements: Achievement[] = [
         description:
             'Collect structured feedback from customers, agents and intermediaries and turn dispersed feedback into insight leadership teams can use.',
         cta: 'Explore Voice by Zanga',
+        href: '/products/voice-by-zanga',
         color: '#0F3460',
     },
     {
@@ -51,6 +60,7 @@ const achievements: Achievement[] = [
         description:
             'Management quality is an important part of understanding business resilience, yet it is often assessed informally. Zanga is working with selected institutions to bring structured founder, borrower and management-team insight to lending, investment and portfolio decisions.',
         cta: 'Talk to Zanga About Diligence',
+        modal: 'book-a-demo',
         color: '#c55e36',
     },
 ]
@@ -79,9 +89,10 @@ export default function FinancialInstitutionsAchieveGrid() {
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">
                                         {item.title}
                                     </h3>
-                                    <Link
-                                        href="#"
-                                        aria-label={item.cta}
+                                    <CardAction
+                                        href={item.href}
+                                        modal={item.modal}
+                                        ariaLabel={item.cta}
                                         className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
                                         style={{backgroundColor: item.color}}
                                     >
@@ -90,13 +101,14 @@ export default function FinancialInstitutionsAchieveGrid() {
                                             aria-hidden="true"
                                             className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                         />
-                                    </Link>
+                                    </CardAction>
                                 </div>
                                 <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                                     {item.description}
                                 </p>
-                                <Link
-                                    href="#"
+                                <CardAction
+                                    href={item.href}
+                                    modal={item.modal}
                                     className="inline-flex items-center gap-2 text-[14px] font-semibold font-Montserrat"
                                     style={{color: item.color}}
                                 >
@@ -106,7 +118,7 @@ export default function FinancialInstitutionsAchieveGrid() {
                                         aria-hidden="true"
                                         className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                     />
-                                </Link>
+                                </CardAction>
                             </div>
                         </Reveal>
                     ))}

@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 import { openNavMenu } from '@/components/Header'
 
 const flipImages = ['https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/100', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/103', 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/102']
@@ -94,12 +94,12 @@ export default function HomeHero() {
             engagement and stakeholder risk.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="#"
+            <OpenModalButton
+              modal="book-a-demo"
               className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
             >
-              Take a free assessment
-            </Link>
+              Book a Demo
+            </OpenModalButton>
             <button
               type="button"
               onClick={() => openNavMenu('Solutions')}

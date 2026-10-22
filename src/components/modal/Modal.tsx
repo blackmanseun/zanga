@@ -4,7 +4,9 @@ import React from 'react'
 import {useModal} from '@/components/modal/ModalProvider'
 import PartnerWithZanga from '@/components/modal/modals/PartnerWithZanga'
 import BookADemo from '@/components/modal/modals/BookADemo'
-import PartnerLoginUnavailable from '@/components/modal/modals/PartnerLoginUnavailable'
+import LoginUnavailable from '@/components/modal/modals/LoginUnavailable'
+import DownloadReport from '@/components/modal/modals/DownloadReport'
+import Methodology, {type MethodologyVersion} from '@/components/modal/modals/Methodology'
 
 export default function Modal() {
     const {modal, isOpen} = useModal()
@@ -21,7 +23,12 @@ export default function Modal() {
         >
             {modal === 'partner-with-zanga' && <PartnerWithZanga/>}
             {modal === 'book-a-demo' && <BookADemo/>}
-            {modal === 'partner-login-unavailable' && <PartnerLoginUnavailable/>}
+            {modal === 'download-report' && <DownloadReport/>}
+            {modal?.startsWith('methodology-') && (
+                <Methodology version={modal.replace('methodology-', '') as MethodologyVersion}/>
+            )}
+            {modal === 'partner-login-unavailable' && <LoginUnavailable audience="Business Partner"/>}
+            {modal === 'coach-login-unavailable' && <LoginUnavailable audience="Coach"/>}
         </div>
     )
 }

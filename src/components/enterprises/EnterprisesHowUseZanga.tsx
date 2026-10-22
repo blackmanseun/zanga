@@ -1,13 +1,14 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiAward, FiTrendingUp, FiActivity, FiTarget, FiArrowRight} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
 
 type UseCase = {
     title: string
     description: string
     cta: string
+    href?: string
     color: string
     Icon: IconType
 }
@@ -18,6 +19,7 @@ const useCases: UseCase[] = [
         description:
             'Assess leadership capability across business units, functions or geographies to identify strengths, development priorities and organisational leadership gaps.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#c55e36',
         Icon: FiAward,
     },
@@ -26,6 +28,7 @@ const useCases: UseCase[] = [
         description:
             'Bring structured evidence into succession conversations and identify high-potential talent for future leadership roles.',
         cta: 'Explore Leadership Potential',
+        href: '/assessments/leadership-assessments#leadership-potential-assessment',
         color: '#a3a748',
         Icon: FiTrendingUp,
     },
@@ -34,6 +37,7 @@ const useCases: UseCase[] = [
         description:
             'Understand how employees experience the organisation and identify the factors affecting engagement, culture and retention.',
         cta: 'Explore Pulse by Zanga',
+        href: '/products/pulse-by-zanga',
         color: '#0F3460',
         Icon: FiActivity,
     },
@@ -96,14 +100,14 @@ export default function EnterprisesHowUseZanga() {
                                     <p className="text-gray-600 text-sm font-Montserrat leading-relaxed mb-3">
                                         {useCase.description}
                                     </p>
-                                    <Link
-                                        href="#"
+                                    <CardAction
+                                        href={useCase.href}
                                         className="mt-auto inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                         style={{color: useCase.color}}
                                     >
                                         {useCase.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    </CardAction>
                                 </div>
                             ))}
                         </div>

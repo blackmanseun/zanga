@@ -1,12 +1,13 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiArrowUpRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
 
 type Achievement = {
     title: string
     description: string
     cta: string
+    href?: string
     color: string
 }
 
@@ -16,6 +17,7 @@ const achievements: Achievement[] = [
         description:
             'Give beneficiaries, communities and local partners clearer ways to provide feedback, raise concerns and share their experience of programme delivery.',
         cta: 'Explore Voice by Zanga',
+        href: '/products/voice-by-zanga',
         color: '#c55e36',
     },
     {
@@ -23,6 +25,7 @@ const achievements: Achievement[] = [
         description:
             'Assess leadership capability across country offices, programme teams and local partners so development support can be directed where it is most needed.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#a3a748',
     },
     {
@@ -30,6 +33,7 @@ const achievements: Achievement[] = [
         description:
             'Track engagement, culture and workforce sentiment across dispersed project teams to identify emerging concerns before they affect delivery.',
         cta: 'Explore Pulse by Zanga',
+        href: '/products/pulse-by-zanga',
         color: '#c55e36',
     },
     {
@@ -37,6 +41,7 @@ const achievements: Achievement[] = [
         description:
             'Use structured leadership and organisational insight to better understand the strengths and development needs of implementing partners and grantees.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#a3a748',
     },
     {
@@ -44,6 +49,7 @@ const achievements: Achievement[] = [
         description:
             'Bring stakeholder feedback into a more structured format so programme teams and leadership can identify recurring themes, track concerns and support more informed reporting.',
         cta: 'Explore Voice by Zanga',
+        href: '/products/voice-by-zanga',
         color: '#0F3460',
     },
     {
@@ -79,9 +85,9 @@ export default function DevelopmentOrganisationsAchieveGrid() {
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">
                                         {item.title}
                                     </h3>
-                                    <Link
-                                        href="#"
-                                        aria-label={item.cta}
+                                    <CardAction
+                                        href={item.href}
+                                        ariaLabel={item.cta}
                                         className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
                                         style={{backgroundColor: item.color}}
                                     >
@@ -90,13 +96,13 @@ export default function DevelopmentOrganisationsAchieveGrid() {
                                             aria-hidden="true"
                                             className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                         />
-                                    </Link>
+                                    </CardAction>
                                 </div>
                                 <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                                     {item.description}
                                 </p>
-                                <Link
-                                    href="#"
+                                <CardAction
+                                    href={item.href}
                                     className="inline-flex items-center gap-2 text-[14px] font-semibold font-Montserrat"
                                     style={{color: item.color}}
                                 >
@@ -106,7 +112,7 @@ export default function DevelopmentOrganisationsAchieveGrid() {
                                         aria-hidden="true"
                                         className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                     />
-                                </Link>
+                                </CardAction>
                             </div>
                         </Reveal>
                     ))}

@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const partnerFaces: { src: string; objectPosition?: string }[] = [
     {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/headshot/1'},
@@ -37,14 +38,14 @@ export default function BecomePartnerHero() {
                         clients and grow alongside our platform.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Link
-                            href="#"
+                        <OpenModalButton
+                            modal="partner-with-zanga"
                             className="text-center bg-olive text-white px-8 py-3 rounded-md font-semibold text-base hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Become a Partner
-                        </Link>
+                        </OpenModalButton>
                         <Link
-                            href="#"
+                            href="#commercial-models"
                             className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold text-base hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
                         >
                             Explore Partner Models

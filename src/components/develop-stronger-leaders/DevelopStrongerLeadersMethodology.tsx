@@ -2,14 +2,17 @@ import React from 'react'
 import BoldZanga from '@/components/ui/BoldZanga'
 import OpenModalButton from '@/components/modal/OpenModalButton'
 
-const paragraphs: string[] = [
+// Also shown in the Methodology side panel (modal/modals/Methodology.tsx).
+export const heading = {lead: 'Better leadership development starts with ', highlight: 'better insight'}
+
+export const paragraphs: string[] = [
     'Zanga’s approach begins with understanding the leadership challenge before recommending the development response.',
     'Leaders complete the assessment most relevant to their role, level and development objective. Results are translated into clear strengths, development priorities and areas requiring greater attention.',
     'What makes Zanga’s approach different is context.',
     'Leadership behaviour is influenced by hierarchy, relationships, communication norms and cultural expectations. Zanga combines assessment science with cultural intelligence to help organisations understand not simply how a leader scores, but what those insights mean within the environment in which they lead.',
 ]
 
-const steps: { number: string; title: string; text: string }[] = [
+export const steps: { number: string; title: string; text: string }[] = [
     {
         number: '01',
         title: 'Assess',
@@ -45,8 +48,8 @@ export default function DevelopStrongerLeadersMethodology() {
 
                 <div className="grid md:grid-cols-2 md:gap-16 items-center">
                     <h2 className="text-3xl md:text-[2.75rem] font-bold mt-3 mb-6 font-MonaSans leading-tight">
-                        <span className="text-gray-700">Better leadership development starts with </span>
-                        <span className="text-olive">better insight</span>
+                        <span className="text-gray-700">{heading.lead}</span>
+                        <span className="text-olive">{heading.highlight}</span>
                     </h2>
                 </div>
 

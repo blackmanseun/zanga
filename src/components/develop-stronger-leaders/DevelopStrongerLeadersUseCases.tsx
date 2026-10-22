@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiUsers, FiBriefcase, FiTrendingUp, FiArrowRight} from 'react-icons/fi'
 import type {IconType} from 'react-icons'
 import Reveal from '@/components/ui/Reveal'
 import BoldZanga from '@/components/ui/BoldZanga'
+import CardAction from '@/components/ui/CardAction'
 
 type UseCase = {
     title: string
@@ -34,7 +34,7 @@ const useCases: UseCase[] = [
         description:
             'Use 360 feedback and leadership assessment to help senior leaders understand how they are experienced by others and where behaviour change could have the greatest impact.',
         cta: 'Explore 360 Feedback Leadership Assessment',
-        href: '#',
+        href: '/assessments/leadership-assessments#leadership-360',
         image: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/41',
         color: '#a3a748',
         Icon: FiBriefcase,
@@ -97,13 +97,13 @@ export default function DevelopStrongerLeadersUseCases() {
                                     <p className="text-gray-500 text-sm font-Montserrat leading-relaxed mb-5">
                                         <BoldZanga text={useCase.description}/>
                                     </p>
-                                    <Link
+                                    <CardAction
                                         href={useCase.href}
                                         className="mt-auto inline-flex items-center gap-1.5 text-terracotta font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
                                     >
                                         {useCase.cta}
                                         <FiArrowRight size={14} aria-hidden="true"/>
-                                    </Link>
+                                    </CardAction>
                                 </div>
                             </div>
                         </Reveal>

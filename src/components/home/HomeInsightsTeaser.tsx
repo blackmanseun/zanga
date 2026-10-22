@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import {
     FiArrowRight,
@@ -87,13 +86,15 @@ export default function HomeInsightsTeaser() {
                 <Reveal delayMs={10}>
                     <div className="flex items-center justify-between gap-2 flex-wrap mb-4">
                         <h3 className="text-xl font-bold text-gray-700 font-MonaSans">Latest Releases</h3>
-                        <Link
-                            href="#"
-                            className="text-[14px] md:text-[16px] font-semibold text-gray-500 hover:text-olive font-Montserrat inline-flex items-center gap-1 transition-colors"
+                        {/* Greyed out until the insights page is ready. */}
+                        <span
+                            aria-disabled="true"
+                            title="Coming soon"
+                            className="text-[14px] md:text-[16px] font-semibold text-gray-500 font-Montserrat inline-flex items-center gap-1 opacity-50 cursor-not-allowed"
                         >
                             Explore insights
                             <FiArrowRight size={14} aria-hidden="true"/>
-                        </Link>
+                        </span>
                     </div>
                     <div className="h-px bg-gray-200 mb-6" aria-hidden="true"/>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">

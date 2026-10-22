@@ -116,7 +116,7 @@ export default function StrengthenSuccessionPlanningFeaturesBenefits() {
                                     </p>
                                     <div className="flex md:flex-row flex-col items-center gap-2">
                                         <Link
-                                            href="#"
+                                            href="/products/fit-by-zanga"
                                             className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
                                             <FiTarget/>
                                             <p className="text-[13px]">Fit by Zanga</p>
@@ -319,12 +319,14 @@ export default function StrengthenSuccessionPlanningFeaturesBenefits() {
                                             <FiAward/>
                                             <p className="text-[13px]">Leadership Assessment</p>
                                         </Link>
-                                        <Link
-                                            href="#"
-                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
+                                        {/* Greyed out until this page is ready. */}
+                                        <span
+                                            aria-disabled="true"
+                                            title="Coming soon"
+                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 opacity-50 cursor-not-allowed">
                                             <FiBarChart2/>
                                             <p className="text-[13px]">Organisational Leadership Analytics</p>
-                                        </Link>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -364,12 +366,14 @@ export default function StrengthenSuccessionPlanningFeaturesBenefits() {
                                             <FiAward/>
                                             <p className="text-[13px]">Leadership Assessments</p>
                                         </Link>
-                                        <Link
-                                            href="#"
-                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
+                                        {/* Greyed out until this page is ready. */}
+                                        <span
+                                            aria-disabled="true"
+                                            title="Coming soon"
+                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 opacity-50 cursor-not-allowed">
                                             <FiUsers/>
                                             <p className="text-[13px]">Talent Reviews</p>
-                                        </Link>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -520,12 +524,14 @@ export default function StrengthenSuccessionPlanningFeaturesBenefits() {
                                             <FiAward/>
                                             <p className="text-[13px]">Leadership Assessments</p>
                                         </Link>
-                                        <Link
-                                            href="#"
-                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 hover:bg-terracotta hover:text-white transition-colors">
+                                        {/* Greyed out until this page is ready. */}
+                                        <span
+                                            aria-disabled="true"
+                                            title="Coming soon"
+                                            className="md:w-fit w-full flex items-center justify-center gap-1 rounded-full border border-terracotta text-terracotta px-5 py-2 opacity-50 cursor-not-allowed">
                                             <FiBookOpen/>
                                             <p className="text-[13px]">Training &amp; Development</p>
-                                        </Link>
+                                        </span>
                                     </div>
                                 </div>
                             </div>

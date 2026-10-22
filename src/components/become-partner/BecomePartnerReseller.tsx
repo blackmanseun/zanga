@@ -1,8 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { FiGlobe, FiCheckCircle, FiArrowRight } from 'react-icons/fi'
 import BoldZanga from '@/components/ui/BoldZanga'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const idealFor: string[] = [
     'Established HR consultancies',
@@ -93,13 +93,13 @@ export default function BecomePartnerReseller() {
                             </ul>
 
                             <div className="mt-8 pt-6 border-t border-white/20">
-                                <Link
-                                    href="#"
+                                <OpenModalButton
+                                    modal="partner-with-zanga"
                                     className="w-full inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                                 >
                                     Explore Reseller &amp; Franchise Opportunities
                                     <FiArrowRight size={16} aria-hidden="true"/>
-                                </Link>
+                                </OpenModalButton>
                             </div>
                         </div>
                     </div>

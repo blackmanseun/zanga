@@ -1,12 +1,16 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiArrowUpRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import CardAction from '@/components/ui/CardAction'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 
 type Achievement = {
     title: string
     description: string
     cta: string
+    // When set, the card opens this modal instead of linking.
+    modal?: ModalKey
+    href?: string
     color: string
 }
 
@@ -16,6 +20,7 @@ const achievements: Achievement[] = [
         description:
             'Add structured leadership insight to investment diligence so you can better understand the people expected to deliver the investment case.',
         cta: 'Talk to Zanga About Diligence',
+        modal: 'book-a-demo',
         color: '#c55e36',
     },
     {
@@ -30,6 +35,7 @@ const achievements: Achievement[] = [
         description:
             'Use assessment insight to identify where founders and management teams may need coaching, development or additional executive capability after investment.',
         cta: 'Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#c55e36',
     },
     {
@@ -37,6 +43,7 @@ const achievements: Achievement[] = [
         description:
             'Use psychometric assessments and analytics to support C-suite and senior leadership recruitment across portfolio companies.',
         cta: 'Explore Fit by Zanga',
+        href: '/products/fit-by-zanga',
         color: '#a3a748',
     },
     {
@@ -44,6 +51,7 @@ const achievements: Achievement[] = [
         description:
             'Track engagement, culture and retention signals where workforce dynamics may affect growth or execution.',
         cta: 'Explore Pulse by Zanga',
+        href: '/products/pulse-by-zanga',
         color: '#0F3460',
     },
     {
@@ -51,6 +59,7 @@ const achievements: Achievement[] = [
         description:
             'For founder-led or management-dependent businesses, Zanga can provide an additional layer of structured leadership insight alongside conventional credit and financial analysis.',
         cta: 'Talk to Zanga About Diligence',
+        modal: 'book-a-demo',
         color: '#c55e36',
     },
 ]
@@ -79,9 +88,10 @@ export default function InvestorsFundManagersAchieveGrid() {
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">
                                         {item.title}
                                     </h3>
-                                    <Link
-                                        href="#"
-                                        aria-label={item.cta}
+                                    <CardAction
+                                        href={item.href}
+                                        modal={item.modal}
+                                        ariaLabel={item.cta}
                                         className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
                                         style={{backgroundColor: item.color}}
                                     >
@@ -90,13 +100,14 @@ export default function InvestorsFundManagersAchieveGrid() {
                                             aria-hidden="true"
                                             className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                         />
-                                    </Link>
+                                    </CardAction>
                                 </div>
                                 <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                                     {item.description}
                                 </p>
-                                <Link
-                                    href="#"
+                                <CardAction
+                                    href={item.href}
+                                    modal={item.modal}
                                     className="inline-flex items-center gap-2 text-[14px] font-semibold font-Montserrat"
                                     style={{color: item.color}}
                                 >
@@ -106,7 +117,7 @@ export default function InvestorsFundManagersAchieveGrid() {
                                         aria-hidden="true"
                                         className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                     />
-                                </Link>
+                                </CardAction>
                             </div>
                         </Reveal>
                     ))}

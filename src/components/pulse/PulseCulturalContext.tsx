@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import { FiArrowRight } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const tiles: { src: string; shape: string; position?: string }[] = [
     {src: 'https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/114', shape: 'rounded-2xl rounded-br-[50%]'},
@@ -67,13 +67,13 @@ export default function PulseCulturalContext() {
                                 </p>
                             </div>
 
-                            <Link
-                                href="#"
+                            <OpenModalButton
+                                modal="methodology-engagement"
                                 className="mt-8 inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                             >
                                 Learn About Zanga&apos;s Methodology
                                 <FiArrowRight size={16} aria-hidden="true"/>
-                            </Link>
+                            </OpenModalButton>
                         </div>
                     </Reveal>
                 </div>

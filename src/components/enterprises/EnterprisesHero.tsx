@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import EnterprisesHeroGrid from '@/components/enterprises/EnterprisesHeroGrid'
 import OpenModalButton from '@/components/modal/OpenModalButton'
+import OpenNavMenuButton from '@/components/ui/OpenNavMenuButton'
 
 export default function EnterprisesHero() {
     return (
@@ -22,29 +22,31 @@ export default function EnterprisesHero() {
                         stakeholder insights to help enterprise teams make better decisions at scale.
                     </p>
                     <div className="hidden xl:flex flex-col sm:flex-row gap-4">
-                        <Link
-                            href="#"
-                            className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
+                        {/* Greyed out until the free assessment is ready. */}
+                        <span
+                            aria-disabled="true"
+                            title="Coming soon"
+                            className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold font-Montserrat opacity-50 cursor-not-allowed"
                         >
                             Take a free assessment
-                        </Link>
-                        <Link
-                            href="#"
+                        </span>
+                        <OpenModalButton
+                            modal="book-a-demo"
                             className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
                         >
                             Book an enterprise demo
-                        </Link>
+                        </OpenModalButton>
                     </div>
                     <div className="xl:hidden flex flex-col sm:flex-row gap-4">
                         <OpenModalButton modal="book-a-demo" className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat">
                             Book a Demo
                         </OpenModalButton>
-                        <Link
-                            href="#"
+                        <OpenNavMenuButton
+                            menu="Solutions"
                             className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
                         >
                             Explore Zanga Solutions
-                        </Link>
+                        </OpenNavMenuButton>
                     </div>
                 </div>
 

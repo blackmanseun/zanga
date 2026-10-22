@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 import Reveal from '@/components/ui/Reveal'
+import OpenNavMenuButton from '@/components/ui/OpenNavMenuButton'
 
 export default function CoachesConsultantsCta() {
     return (
@@ -21,24 +22,24 @@ export default function CoachesConsultantsCta() {
                             <div className="col-span-2 xl:flex flex-col items-end">
                                 <p className="text-sm text-white/50 font-Montserrat mb-3">Choose how you&apos;d like to start</p>
                                 <div className="flex flex-col sm:flex-row gap-3 mb-3">
-                                    <Link
-                                        href="#"
+                                    <OpenModalButton
+                                        modal="book-a-demo"
                                         className="bg-olive text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat text-center"
                                     >
-                                        Take a Free Assessment
-                                    </Link>
-                                    <Link
-                                        href="#"
+                                        Book a Demo
+                                    </OpenModalButton>
+                                    <OpenNavMenuButton
+                                        menu="Solutions"
                                         className="border border-white text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-primary transition-colors font-Montserrat text-center"
                                     >
                                         Explore Zanga Solutions
-                                    </Link>
+                                    </OpenNavMenuButton>
                                 </div>
                                 <p className="text-white/40 font-Montserrat text-sm">
                                     Prefer to talk it through first?{' '}
-                                    <Link href="#" className="text-white hover:text-olive hover:no-underline transition-colors">
+                                    <OpenModalButton modal="book-a-demo" className="text-white hover:text-olive hover:no-underline transition-colors">
                                         Contact our team
-                                    </Link>
+                                    </OpenModalButton>
                                 </p>
                             </div>
                         </div>

@@ -159,7 +159,7 @@ export default function LeadershipAssessmentsComparison() {
                             </div>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
-                                    href="#"
+                                    href="#compare-assessments"
                                     className="text-[14px] text-center bg-olive text-white px-8 py-2 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
                                 >
                                     Find the Right Assessment

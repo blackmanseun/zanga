@@ -1,8 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
 import {FiArrowRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
 import EnterprisesPolaroid from '@/components/enterprises/EnterprisesPolaroid'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const challenges: string[] = [
     'Uneven leadership capability across teams',
@@ -68,13 +68,13 @@ export default function EnterprisesChallenge() {
                                 </p>
                             </div>
 
-                            <Link
-                                href="#"
+                            <OpenModalButton
+                                modal="book-a-demo"
                                 className="mt-8 inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                             >
                                 Speak to us
                                 <FiArrowRight size={16} aria-hidden="true"/>
-                            </Link>
+                            </OpenModalButton>
                         </div>
                     </Reveal>
                 </div>

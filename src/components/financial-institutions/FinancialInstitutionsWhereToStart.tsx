@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {FiArrowRight} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
+import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function FinancialInstitutionsWhereToStart() {
     return (
@@ -28,7 +29,7 @@ export default function FinancialInstitutionsWhereToStart() {
                 <div className="mt-10 md:mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-[1.4fr_1fr]">
                     <Reveal delayMs={90}>
                         <Link
-                            href="#"
+                            href="/products/fit-by-zanga"
                             className="group relative flex h-[420px] sm:h-full overflow-hidden rounded-2xl"
                         >
                             <Image
@@ -62,7 +63,7 @@ export default function FinancialInstitutionsWhereToStart() {
                     <div className="flex flex-col gap-6">
                         <Reveal delayMs={150}>
                             <Link
-                                href="#"
+                                href="/products/pulse-by-zanga"
                                 className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
@@ -95,7 +96,7 @@ export default function FinancialInstitutionsWhereToStart() {
 
                         <Reveal delayMs={180}>
                             <Link
-                                href="#"
+                                href="/products/voice-by-zanga"
                                 className="group relative flex min-h-[200px] h-full overflow-hidden rounded-2xl"
                             >
                                 <Image
@@ -142,13 +143,13 @@ export default function FinancialInstitutionsWhereToStart() {
                                     <strong>Diligence by Zanga</strong> is currently available through
                                     selected enterprise and pilot engagements.
                                 </p>
-                                <Link
-                                    href="#"
+                                <OpenModalButton
+                                    modal="book-a-demo"
                                     className="relative mt-4 inline-flex items-center justify-center gap-2 bg-terracotta text-white px-6 py-3 rounded-md font-semibold text-sm font-Montserrat hover:bg-terracotta/90 transition-colors"
                                 >
                                     Talk to Zanga About Diligence
                                     <FiArrowRight size={16} aria-hidden="true"/>
-                                </Link>
+                                </OpenModalButton>
                             </div>
                         </Reveal>
                     </div>
