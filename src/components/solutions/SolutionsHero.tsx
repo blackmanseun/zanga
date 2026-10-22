@@ -26,7 +26,7 @@ export default function SolutionsHero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             {/* "Take a Free Assessment" button hidden until its page is ready. */}
-            <OpenModalButton modal="book-a-demo" className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-terracotta hover:text-white transition-colors font-Montserrat">
+            <OpenModalButton modal="book-a-demo" className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat">
               Book a Demo
             </OpenModalButton>
           </div>
