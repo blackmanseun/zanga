@@ -191,7 +191,7 @@ export default function VoiceWhatYouReceive() {
                     </h2>
                 </div>
 
-                <div className="grid lg:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-start lg:items-stretch mt-4">
+                <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,550px)_minmax(0,1fr)] gap-10 lg:gap-16 items-start lg:items-stretch mt-4">
                     <div className="flex flex-col">
                         <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
                             Depending on the scope of implementation, <strong>Voice by Zanga</strong> can include:

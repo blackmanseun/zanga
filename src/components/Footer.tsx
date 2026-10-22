@@ -68,8 +68,8 @@ const visibleSocialLinks = socialLinks.filter((social) => hasPage(social.href))
 
 export default function Footer() {
     return (
-        <footer className="bg-white border-t border-gray-200">
-            <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 md:py-16 py-8">
+        <footer className="bg-white border-t border-gray-200 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto md:py-16 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[2fr_1fr_1fr_1fr] gap-10">
                     <div>
                         <Link href="/" className="block mb-4">

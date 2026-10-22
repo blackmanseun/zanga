@@ -185,7 +185,7 @@ export default function DevelopmentOrganisationsSolutions() {
                         type="button"
                         onClick={() => swiper?.slidePrev()}
                         aria-label="Previous solutions"
-                        className="absolute left-0 md:-left-5 top-[calc(50%-1.75rem)] -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-gray-700 hover:bg-terracotta hover:text-white hover:border-terracotta transition-colors"
+                        className="absolute left-0 lg:-left-5 top-[calc(50%-1.75rem)] -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-gray-700 hover:bg-terracotta hover:text-white hover:border-terracotta transition-colors"
                     >
                         <FiChevronLeft size={20} aria-hidden="true"/>
                     </button>
@@ -193,7 +193,7 @@ export default function DevelopmentOrganisationsSolutions() {
                         type="button"
                         onClick={() => swiper?.slideNext()}
                         aria-label="Next solutions"
-                        className="absolute right-0 md:-right-5 top-[calc(50%-1.75rem)] -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-gray-700 hover:bg-terracotta hover:text-white hover:border-terracotta transition-colors"
+                        className="absolute right-0 lg:-right-5 top-[calc(50%-1.75rem)] -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-gray-700 hover:bg-terracotta hover:text-white hover:border-terracotta transition-colors"
                     >
                         <FiChevronRight size={20} aria-hidden="true"/>
                     </button>

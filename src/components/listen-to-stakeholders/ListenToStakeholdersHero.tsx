@@ -10,7 +10,7 @@ export default function ListenToStakeholdersHero() {
             className="relative overflow-hidden py-16 md:pt-10 md:pb-20 px-4 sm:px-6 lg:px-8"
             style={{backgroundColor: 'rgb(250, 248, 246)'}}
         >
-            <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-x-16 items-center">
+            <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-16 items-center">
                 <div className="md:pt-8">
                     <h1 className="text-[2.2rem] md:text-[2.8rem] font-bold text-gray-700 leading-[1.1] font-MonaSans mb-6">
                         Listen to what your stakeholders tell you, and act on it.
