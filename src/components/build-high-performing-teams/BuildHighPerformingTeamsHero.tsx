@@ -32,14 +32,7 @@ export default function BuildHighPerformingTeamsHero() {
                         >
                             Request a Demo
                         </OpenModalButton>
-                        {/* Greyed out until this page is ready. */}
-                        <span
-                            aria-disabled="true"
-                            title="Coming soon"
-                            className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] font-Montserrat opacity-50 cursor-not-allowed"
-                        >
-                            Explore Workforce Assessments
-                        </span>
+                        {/* "Explore Workforce Assessments" button hidden until its page is ready. */}
                     </div>
                 </div>
 

@@ -22,17 +22,10 @@ export default function EnterprisesHero() {
                         stakeholder insights to help enterprise teams make better decisions at scale.
                     </p>
                     <div className="hidden xl:flex flex-col sm:flex-row gap-4">
-                        {/* Greyed out until the free assessment is ready. */}
-                        <span
-                            aria-disabled="true"
-                            title="Coming soon"
-                            className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold font-Montserrat opacity-50 cursor-not-allowed"
-                        >
-                            Take a free assessment
-                        </span>
+                        {/* "Take a free assessment" button hidden until its page is ready. */}
                         <OpenModalButton
                             modal="book-a-demo"
-                            className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px]  hover:bg-terracotta hover:text-white transition-colors font-Montserrat"
+                            className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Book an enterprise demo
                         </OpenModalButton>

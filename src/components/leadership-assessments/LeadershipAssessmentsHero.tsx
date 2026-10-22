@@ -27,14 +27,7 @@ export default function LeadershipAssessmentsHero() {
               >
                 Request a demo
               </OpenModalButton>
-              {/* Greyed out until the free assessment is ready. */}
-              <span
-                  aria-disabled="true"
-                  title="Coming soon"
-                  className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] font-Montserrat opacity-50 cursor-not-allowed"
-              >
-                Take a Free Assessment
-              </span>
+              {/* "Take a Free Assessment" button hidden until its page is ready. */}
             </div>
             <LeadershipAssessmentsLogoMarquee/>
           </div>

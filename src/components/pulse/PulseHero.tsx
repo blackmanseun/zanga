@@ -57,14 +57,7 @@ export default function PulseHero() {
                             Request a Demo
                             <FiArrowRight size={16} aria-hidden="true"/>
                         </OpenModalButton>
-                        {/* Greyed out until the free assessment is ready. */}
-                        <span
-                            aria-disabled="true"
-                            title="Coming soon"
-                            className="inline-flex items-center justify-center gap-2 border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold text-base font-Montserrat opacity-50 cursor-not-allowed"
-                        >
-                            Take a Free Assessment
-                        </span>
+                        {/* "Take a Free Assessment" button hidden until its page is ready. */}
                     </div>
                 </Reveal>
 

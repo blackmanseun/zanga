@@ -25,14 +25,7 @@ export default function SolutionsHero() {
             actionable talent insights to help you select with greater confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            {/* Greyed out until the free assessment is ready. */}
-            <span
-              aria-disabled="true"
-              title="Coming soon"
-              className="md:text-[16px] text-[14px] text-center bg-olive text-white px-8 py-3 rounded-md font-bold font-Montserrat opacity-50 cursor-not-allowed"
-            >
-              Take a Free Assessment
-            </span>
+            {/* "Take a Free Assessment" button hidden until its page is ready. */}
             <OpenModalButton modal="book-a-demo" className="text-center border border-terracotta text-terracotta px-8 py-3 rounded-md font-semibold md:text-[16px] text-[14px] hover:bg-terracotta hover:text-white transition-colors font-Montserrat">
               Book a Demo
             </OpenModalButton>
