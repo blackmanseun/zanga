@@ -26,19 +26,20 @@ export default function CoachesConsultantsCertification() {
                                     Start With Zanga Certification
                                 </span>
                                 <h2 className="text-2xl md:text-[2rem] font-bold mt-3 mb-4 font-MonaSans leading-tight text-gray-700 max-w-3xl">
-                                    Build the foundation for using Zanga&apos;s assessment tools confidently in
-                                    your practice
+                                    Build the knowledge and confidence to use Zanga&apos;s assessment tools
+                                    effectively in your coaching or consulting practice
                                 </h2>
                                 <p className="text-gray-500 font-Montserrat leading-relaxed max-w-3xl">
-                                    Zanga Certification Training introduces coaches and practitioners to the
-                                    relevant methodologies, assessments and reporting approaches, helping you
-                                    apply <strong>Zanga</strong> tools effectively within client engagements.
+                                    <strong>Zanga</strong> Certification Training introduces practitioners to
+                                    relevant assessment methodologies, reporting approaches and practical
+                                    applications, providing a foundation for integrating evidence-based people
+                                    insight into client engagements.
                                 </p>
                             </div>
                         </div>
 
                         <Link
-                            href="/partners/become-a-partner#certification"
+                            href="/partners/become-a-partner#coach-practitioner"
                             className="relative self-start lg:self-center inline-flex items-center justify-center gap-2 bg-olive text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-olive/90 transition-colors font-Montserrat"
                         >
                             Explore Certification

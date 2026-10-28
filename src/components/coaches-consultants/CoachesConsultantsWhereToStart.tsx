@@ -61,8 +61,7 @@ export default function CoachesConsultantsWhereToStart() {
                                 Where should you start?
                             </h2>
                             <p className="md:max-w-xl mt-4 text-gray-500 text-[16px] font-Montserrat leading-relaxed lg:pb-1">
-                                What are you trying to achieve? Choose the path that matches where your
-                                practice is right now.
+                                What are you trying to achieve?
                             </p>
                         </div>
                     </div>

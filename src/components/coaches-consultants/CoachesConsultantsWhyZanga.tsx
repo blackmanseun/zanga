@@ -51,8 +51,9 @@ function Panel({
 export default function CoachesConsultantsWhyZanga() {
     return (
         <section
+            id="why-zanga"
             style={{backgroundColor: 'rgb(250, 248, 246)'}}
-            className="md:py-20 py-14 px-4 sm:px-6 lg:px-8"
+            className="scroll-mt-24 md:py-20 py-14 px-4 sm:px-6 lg:px-8"
         >
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <Reveal>
@@ -61,25 +62,25 @@ export default function CoachesConsultantsWhyZanga() {
                             <Panel
                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/173"
                                 alt="A coach reviewing an assessment report"
-                                className="h-[420px]"
+                                className="h-[300px] sm:h-[420px]"
                             />
                             <Panel
                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/169"
                                 alt="A team development session"
-                                className="h-[260px] shrink-0"
+                                className="h-[190px] sm:h-[260px] shrink-0"
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <Panel
                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/174"
                                 alt="A manager and team member in conversation"
-                                className="h-[260px] shrink-0"
+                                className="h-[190px] sm:h-[260px] shrink-0"
                                 objectPosition="50% 20%"
                             />
                             <Panel
                                 src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/207"
                                 alt="A team member reviewing a report"
-                                className="h-[420px]"
+                                className="h-[300px] sm:h-[420px]"
                                 objectPosition="50% 20%"
                             />
                         </div>

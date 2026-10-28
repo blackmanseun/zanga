@@ -4,14 +4,37 @@ import Reveal from '@/components/ui/Reveal'
 import EnterprisesPolaroid from '@/components/enterprises/EnterprisesPolaroid'
 import OpenModalButton from '@/components/modal/OpenModalButton'
 
-const challenges: string[] = [
-    'Limited structured evidence behind coaching or consulting insight',
-    'Difficulty identifying underlying strengths and development priorities',
-    'Coaching conversations that remain broad rather than focused',
-    'Limited ways to demonstrate development over time',
-    'Need for credible assessment capability within an existing offer',
-    'Clients asking for deeper leadership, team or organisational insight',
-    'Limited access to tools designed for African and other high-context workplaces',
+const challenges: { text: string; label: string; href: string }[] = [
+    {
+        text: 'Limited scientific data behind coaching and consulting insights.',
+        label: 'Leadership Intelligence',
+        href: '#solutions-leadership-intelligence',
+    },
+    {
+        text: 'Difficulty identifying underlying strengths and development priorities.',
+        label: 'Leadership Intelligence',
+        href: '#solutions-leadership-intelligence',
+    },
+    {
+        text: 'Coaching conversations that remain broad rather than focused.',
+        label: 'Leadership Intelligence',
+        href: '#solutions-leadership-intelligence',
+    },
+    {
+        text: 'Limited ways to demonstrate development over time.',
+        label: 'Training & Development',
+        href: '#solutions-training-development',
+    },
+    {
+        text: 'Need for credible assessment capability within an existing offering.',
+        label: 'Leadership Intelligence',
+        href: '#solutions-leadership-intelligence',
+    },
+    {
+        text: 'Limited access to assessment tools designed for African and other high-context workplaces.',
+        label: 'Zanga Assessments',
+        href: '#why-zanga',
+    },
 ]
 
 export default function CoachesConsultantsChallenge() {
@@ -92,12 +115,19 @@ export default function CoachesConsultantsChallenge() {
                     </p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
                         {challenges.map((challenge, i) => (
-                            <div key={challenge}>
+                            <div key={challenge.text}>
                                 <p className="text-terracotta/70 text-[18px]">0{i + 1}</p>
                                 <span className="block w-8 h-[2px] bg-terracotta mb-3" aria-hidden="true"/>
                                 <p className="text-gray-900 font-semibold font-Montserrat leading-snug md:w-[80%]">
-                                    {challenge}
+                                    {challenge.text}
                                 </p>
+                                <a
+                                    href={challenge.href}
+                                    className="mt-3 inline-flex items-center gap-1.5 text-olive text-sm font-semibold font-Montserrat hover:gap-2.5 transition-all"
+                                >
+                                    {challenge.label}
+                                    <FiArrowRight size={14} aria-hidden="true"/>
+                                </a>
                             </div>
                         ))}
                     </div>

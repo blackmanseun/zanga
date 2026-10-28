@@ -1,60 +1,61 @@
 import React from 'react'
-import {FiAward, FiBriefcase, FiTarget, FiUsers, FiArrowRight} from 'react-icons/fi'
-import type {IconType} from 'react-icons'
+import {FiArrowRight} from 'react-icons/fi'
+import type {ModalKey} from '@/components/modal/ModalProvider'
 import Reveal from '@/components/ui/Reveal'
 import OpenNavMenuButton from '@/components/ui/OpenNavMenuButton'
 import CardAction from '@/components/ui/CardAction'
 
-type UseCase = {
+type Stage = {
+    number: string
     title: string
     description: string
     cta: string
-    href?: string
-    // When set, the card opens this navbar dropdown instead of linking.
-    menu?: string
     color: string
-    Icon: IconType
+    // The card's action either opens a navbar dropdown or a modal.
+    menu?: string
+    modal?: ModalKey
 }
 
-const useCases: UseCase[] = [
+const stages: Stage[] = [
     {
-        title: 'Executive and Leadership Coaching',
+        number: '01',
+        title: 'Explore the Opportunity',
         description:
-            'Start coaching with a clearer evidence base. Use leadership assessments to identify strengths, blind spots and development priorities before deeper coaching work begins.',
-        cta: 'Fit by Zanga',
-        href: '/products/fit-by-zanga',
-        color: '#c55e36',
-        Icon: FiAward,
-    },
-    {
-        title: 'Leadership Development Programmes',
-        description:
-            'Make development more targeted. Use assessment before a leadership programme to identify what participants actually need and shape development around those priorities.',
-        cta: 'Explore Leadership Solutions',
-        href: '/assessments/leadership-assessments',
-        color: '#0F3460',
-        Icon: FiTarget,
-    },
-    {
-        title: 'Team Development and Offsites',
-        description:
-            'Bring a shared language into the room. Use team and behavioural assessments to help groups understand working styles, communication patterns and areas of friction.',
-        cta: 'Explore Workforce Assessments',
-        color: '#16213E',
-        Icon: FiUsers,
-    },
-    {
-        title: 'Organisational Consulting',
-        description:
-            'Add people intelligence to broader transformation work. Bring leadership, engagement or workforce data into organisational-development, culture or change engagements where people insight can strengthen the diagnosis.',
+            "Discover how Zanga's culturally intelligent assessments and reporting tools can strengthen your coaching, leadership development or consulting engagements, and understand the available solutions, practitioner requirements and partnership options.",
         cta: 'Explore Zanga Solutions',
         menu: 'Solutions',
         color: '#c55e36',
-        Icon: FiBriefcase,
+    },
+    {
+        number: '02',
+        title: 'Build Your Capability',
+        description:
+            'Develop the knowledge and practical skills to interpret assessment results and apply them confidently in client engagements. Zanga Certification Training and practitioner resources provide a foundation for assessment-led coaching, development and consulting.',
+        cta: 'Explore Certification',
+        menu: 'Solutions',
+        color: '#0F3460',
+    },
+    {
+        number: '03',
+        title: 'Integrate Zanga Into Your Practice',
+        description:
+            'Apply Zanga assessments across existing client relationships, coaching programmes, leadership development engagements and organisational consulting assignments, using structured insight to focus interventions and inform more targeted development.',
+        cta: 'Explore Practitioner Solutions',
+        menu: 'Solutions',
+        color: '#16213E',
+    },
+    {
+        number: '04',
+        title: 'Deliver and Grow',
+        description:
+            'Expand your service offering through assessment-led engagements, client-ready reports and structured development programmes. Depending on your partnership model, opportunities may include recurring assessment delivery, collaborative engagements and wider business-development support.',
+        cta: 'Become a Zanga Partner',
+        modal: 'partner-with-zanga',
+        color: '#c55e36',
     },
 ]
 
-export default function CoachesConsultantsWaysToUse() {
+export default function CoachesConsultantsJourney() {
     return (
         <section
             style={{backgroundColor: 'rgb(250, 248, 246)'}}
@@ -74,48 +75,49 @@ export default function CoachesConsultantsWaysToUse() {
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
                         <div className="col-span-2">
                             <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
-                                Use Cases
+                                The Pathway
                             </span>
                             <h2 className="text-3xl md:text-[2.75rem] font-bold text-gray-700 mt-3 mb-4 font-MonaSans leading-[1.1]">
-                                Ways to use <strong>Zanga</strong><br/> in your practice
+                                Your journey with <strong>Zanga</strong>
                             </h2>
                             <p className="text-gray-500 font-Montserrat leading-relaxed max-w-sm">
-                                See how coaches and consultants put <strong>Zanga</strong> to work across
-                                coaching, leadership programmes, team work and consulting.
+                                From discovering <strong>Zanga</strong>'s assessment tools to integrating them into
+                                client engagements, there is a clear pathway to building a more evidence-led practice.
                             </p>
                         </div>
 
                         <div className="col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
-                            {useCases.map((useCase) => (
-                                <div key={useCase.title} className="h-full flex flex-col">
+                            {stages.map((stage) => (
+                                <div key={stage.number} className="h-full flex flex-col">
                                     <span
-                                        className="w-12 h-12 rounded-full flex items-center justify-center mb-4"
-                                        style={{backgroundColor: `${useCase.color}1F`, color: useCase.color}}
+                                        className="text-4xl font-bold font-MonaSans leading-none mb-4"
+                                        style={{color: stage.color}}
+                                        aria-hidden="true"
                                     >
-                                        <useCase.Icon size={20} aria-hidden="true"/>
+                                        {stage.number}
                                     </span>
                                     <h3 className="text-lg font-bold text-gray-900 font-MonaSans mb-1.5">
-                                        {useCase.title}
+                                        {stage.title}
                                     </h3>
                                     <p className="text-gray-600 text-sm font-Montserrat leading-relaxed mb-3">
-                                        {useCase.description}
+                                        {stage.description}
                                     </p>
-                                    {useCase.menu ? (
+                                    {stage.menu ? (
                                         <OpenNavMenuButton
-                                            menu={useCase.menu}
+                                            menu={stage.menu}
                                             className="mt-auto inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
-                                            style={{color: useCase.color}}
+                                            style={{color: stage.color}}
                                         >
-                                            {useCase.cta}
+                                            {stage.cta}
                                             <FiArrowRight size={14} aria-hidden="true"/>
                                         </OpenNavMenuButton>
                                     ) : (
                                         <CardAction
-                                            href={useCase.href}
+                                            modal={stage.modal}
                                             className="mt-auto inline-flex items-center gap-1.5 font-semibold text-sm font-Montserrat hover:gap-2.5 transition-all"
-                                            style={{color: useCase.color}}
+                                            style={{color: stage.color}}
                                         >
-                                            {useCase.cta}
+                                            {stage.cta}
                                             <FiArrowRight size={14} aria-hidden="true"/>
                                         </CardAction>
                                     )}

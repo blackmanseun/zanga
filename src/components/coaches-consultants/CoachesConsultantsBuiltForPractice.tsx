@@ -3,37 +3,38 @@ import Link from 'next/link'
 import {FiArrowRight, FiCheckCircle} from 'react-icons/fi'
 
 const capabilities: string[] = [
-    'Individual assessment reports',
-    'Leadership and 360 assessments',
-    'Team and psychometric tools',
-    'Client-ready reports',
+    'Leadership, 360 and psychometric assessments',
+    'Team and workforce assessment tools',
+    'Individual and client-ready reports',
     'Assessment debrief resources',
     'Zanga Certification Training',
     'Coach Portal access',
     'Assessment credits or bundles',
-    'Client-specific programme support',
-    'Co-branded or white-labelled options where applicable',
-    'Ongoing product and methodology support',
+    'Product and methodology support',
 ]
 
 export default function CoachesConsultantsBuiltForPractice() {
     return (
-        <section className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
+        <section style={{backgroundColor: 'rgb(250, 248, 246)'}} className="md:py-20 py-14 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
                     Built for Practice
                 </span>
 
                 <div className="max-w-3xl">
-                    <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
+                    <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-5 font-MonaSans leading-tight text-gray-700">
                         Tools you can use within <br/>the work you already do
                     </h2>
+                    <p className="text-gray-500 text-[16px] font-Montserrat leading-relaxed">
+                        <strong>Zanga</strong> provides coaches and consultants with assessment tools, reporting
+                        resources and practitioner support that can be integrated into existing client engagements.
+                    </p>
                 </div>
 
                 <div className="grid lg:grid-cols-[550px_1fr] gap-10 lg:gap-16 items-stretch mt-4">
                     <div>
-                        <p className="text-xs font-semibold text-olive uppercase tracking-wide font-Montserrat mb-4">
-                            <strong>Zanga</strong> can support practitioners with
+                        <p className="text-gray-600 text-sm font-Montserrat leading-relaxed mb-5">
+                            Depending on the solution and partnership model, this may include:
                         </p>
                         <ul className="space-y-3 mb-10">
                             {capabilities.map((item) => (

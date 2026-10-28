@@ -3,16 +3,11 @@ import {FiArrowRight, FiCheckCircle} from 'react-icons/fi'
 import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const inclusions: string[] = [
-    'Assessment tools and reports',
-    'Zanga Certification Training',
-    'Coach Portal access',
-    'Product guides and delivery resources',
-    'Client-ready collateral',
-    'Co-branded or white-labelled reporting',
+    'Access to practitioner resources',
     'Commercial partner arrangements',
-    'Ongoing learning, refresher training and certification renewal',
-    'Partner community, peer learning and knowledge sharing',
-    'Joint client or business-development opportunities',
+    'Professional development',
+    'Collaborative opportunities',
+    'Ongoing support',
 ]
 
 export default function CoachesConsultantsPartner() {
@@ -40,12 +35,12 @@ export default function CoachesConsultantsPartner() {
                         </h2>
                         <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
                             For coaches and consultants who want to use <strong>Zanga</strong> tools regularly
-                            with clients, a formal partnership can provide access to the relevant assessments,
-                            resources, commercial structures and support.
+                            with clients, formal partnership provides a pathway to integrating assessment-led
+                            services into their practice.
                         </p>
 
-                        <p className="text-xs font-semibold text-olive uppercase tracking-wide font-Montserrat mb-4">
-                            Depending on the partnership model, this may include
+                        <p className="text-gray-600 text-sm font-Montserrat leading-relaxed mb-5">
+                            Depending on the partnership model, this may include:
                         </p>
                         <ul className="space-y-3 mb-10">
                             {inclusions.map((item) => (

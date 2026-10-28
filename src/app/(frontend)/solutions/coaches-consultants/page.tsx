@@ -2,9 +2,8 @@ import React from 'react'
 import CoachesConsultantsHero from '@/components/coaches-consultants/CoachesConsultantsHero'
 import CoachesConsultantsChallenge from '@/components/coaches-consultants/CoachesConsultantsChallenge'
 import CoachesConsultantsCertification from '@/components/coaches-consultants/CoachesConsultantsCertification'
-import CoachesConsultantsAchieveGrid from '@/components/coaches-consultants/CoachesConsultantsAchieveGrid'
 import CoachesConsultantsSolutions from '@/components/coaches-consultants/CoachesConsultantsSolutions'
-import CoachesConsultantsWaysToUse from '@/components/coaches-consultants/CoachesConsultantsWaysToUse'
+import CoachesConsultantsJourney from '@/components/coaches-consultants/CoachesConsultantsJourney'
 import CoachesConsultantsBuiltForPractice from '@/components/coaches-consultants/CoachesConsultantsBuiltForPractice'
 import CoachesConsultantsTestimonials from '@/components/coaches-consultants/CoachesConsultantsTestimonials'
 import CoachesConsultantsPartner from '@/components/coaches-consultants/CoachesConsultantsPartner'
@@ -20,15 +19,14 @@ export default function CoachesConsultantsPage() {
             <CoachesConsultantsHero/>
             <CoachesConsultantsChallenge/>
             <CoachesConsultantsCertification/>
-            <CoachesConsultantsAchieveGrid/>
+            <CoachesConsultantsJourney/>
             <CoachesConsultantsSolutions/>
-            <CoachesConsultantsWaysToUse/>
             <CoachesConsultantsBuiltForPractice/>
+            <CoachesConsultantsTestimonials/>
             <CoachesConsultantsPartner/>
             <CoachesConsultantsPartnershipSteps/>
             <CoachesConsultantsWhyZanga/>
             <CoachesConsultantsWhereToStart/>
-            <CoachesConsultantsTestimonials/>
             <CoachesConsultantsFaq/>
             <CoachesConsultantsCta/>
         </>
