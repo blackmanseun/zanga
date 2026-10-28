@@ -7,6 +7,7 @@ import {
     FormSection,
     HoneypotField,
     ModalHeader,
+    PhoneField,
     RequiredNote,
     SelectField,
     SubmitButton,
@@ -46,8 +47,7 @@ export default function BookADemo() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <TextField id="demo-email" name="email" label="Work Email" type="email" required
                                        autoComplete="email" placeholder="you@company.com"/>
-                            <TextField id="demo-phone" name="phone" label="Phone Number" type="tel"
-                                       autoComplete="tel" placeholder="Phone number"/>
+                            <PhoneField id="demo-phone" name="phone" label="Phone Number"/>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <TextField id="demo-job-title" name="jobTitle" label="Job Title / Role" required

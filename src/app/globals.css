@@ -31,6 +31,42 @@
   animation: float 4.5s ease-in-out infinite;
 }
 
+/* Country-code phone field (react-international-phone) — matched to the site's text inputs. */
+.zanga-phone-input.react-international-phone-input-container {
+  width: 100%;
+}
+
+.zanga-phone-input .react-international-phone-country-selector-button {
+  height: 100%;
+  padding: 0 0.5rem 0 0.75rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-right: none;
+  border-radius: 0.375rem 0 0 0.375rem;
+  background-color: #fff;
+}
+
+.zanga-phone-input .react-international-phone-input {
+  width: 100%;
+  height: auto;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0 0.375rem 0.375rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  color: #111827; /* gray-900 */
+  background-color: #fff;
+}
+
+.zanga-phone-input .react-international-phone-input::placeholder {
+  color: #9ca3af; /* gray-400 */
+}
+
+.zanga-phone-input:focus-within .react-international-phone-country-selector-button,
+.zanga-phone-input:focus-within .react-international-phone-input {
+  border-color: #a3a748; /* olive */
+  outline: none;
+}
+
 @layer utilities {
   .step-number {
     visibility: visible;

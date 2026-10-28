@@ -1,7 +1,9 @@
 'use client'
 
-import React from 'react'
+import React, {useState} from 'react'
 import {FiX, FiChevronDown, FiCheckCircle} from 'react-icons/fi'
+import {PhoneInput} from 'react-international-phone'
+import 'react-international-phone/style.css'
 import {HONEYPOT_FIELD} from '@/forms/options'
 
 export const inputClasses =
@@ -80,6 +82,37 @@ export function TextAreaField({id, name, label, required, placeholder}: {
             <Label htmlFor={id} label={label} required={required}/>
             <textarea id={id} name={name} required={required} rows={4} placeholder={placeholder}
                       className={`${inputClasses} resize-y`}/>
+        </div>
+    )
+}
+
+export function PhoneField({id, name, label, required, defaultCountry = 'ng'}: {
+    id: string
+    name: string
+    label: string
+    required?: boolean
+    defaultCountry?: string
+}) {
+    const [phone, setPhone] = useState('')
+    // The picker always carries the country's dial code, so only submit a value once a
+    // national number is typed — keeps this optional field empty when left untouched.
+    const [hasNationalNumber, setHasNationalNumber] = useState(false)
+
+    return (
+        <div>
+            <Label htmlFor={id} label={label} required={required}/>
+            <PhoneInput
+                defaultCountry={defaultCountry}
+                value={phone}
+                onChange={(value, meta) => {
+                    setPhone(value)
+                    const digits = value.replace(/\D/g, '')
+                    setHasNationalNumber(digits.length > meta.country.dialCode.length)
+                }}
+                inputProps={{id}}
+                className="zanga-phone-input"
+            />
+            <input type="hidden" name={name} value={hasNationalNumber ? phone : ''}/>
         </div>
     )
 }
