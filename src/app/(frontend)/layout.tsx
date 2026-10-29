@@ -5,6 +5,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import ScrollToTop from '../../components/ui/ScrollToTop'
 import ModalProvider from '../../components/modal/ModalProvider'
+import LiveChat from '../../components/LiveChat'
 import '../globals.css'
 
 const lora = Lora({ subsets: ['latin'], variable: '--font-lora' })
@@ -24,6 +25,7 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
           <main>{children}</main>
           <Footer />
           <ScrollToTop />
+          <LiveChat />
         </ModalProvider>
       </body>
     </html>
