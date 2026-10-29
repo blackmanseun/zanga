@@ -1,5 +1,5 @@
 import React from 'react'
-import {FiArrowUpRight} from 'react-icons/fi'
+import {FiArrowUpRight, FiTrendingUp} from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
 import CardAction from '@/components/ui/CardAction'
 import type {ModalKey} from '@/components/modal/ModalProvider'
@@ -86,19 +86,13 @@ export default function CoachesConsultantsAchieveGrid() {
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">
                                         {item.title}
                                     </h3>
-                                    <CardAction
-                                        href={item.href}
-                                        modal={item.modal}
-                                        ariaLabel={item.cta}
-                                        className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
+                                    <span
+                                        aria-hidden="true"
+                                        className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center"
                                         style={{backgroundColor: item.color}}
                                     >
-                                        <FiArrowUpRight
-                                            size={18}
-                                            aria-hidden="true"
-                                            className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                                        />
-                                    </CardAction>
+                                        <FiTrendingUp size={18}/>
+                                    </span>
                                 </div>
                                 <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                                     {item.description}

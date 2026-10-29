@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiArrowUpRight } from 'react-icons/fi'
+import { FiArrowUpRight, FiActivity } from 'react-icons/fi'
 import Reveal from '@/components/ui/Reveal'
 import CardAction from '@/components/ui/CardAction'
 
@@ -87,18 +87,13 @@ export default function PulseCapabilities() {
                             <div id={card.id} className="group scroll-mt-28 h-full flex flex-col rounded-2xl p-6 sm:p-8 bg-white border border-slate-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                                 <div className="flex items-start justify-between gap-4 mb-3">
                                     <h3 className="text-[20px] font-semibold font-MonaSans text-gray-800/90">{card.label}</h3>
-                                    <CardAction
-                                        href={card.href}
-                                        ariaLabel={card.cta}
-                                        className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center hover:brightness-95 transition-all"
+                                    <span
+                                        aria-hidden="true"
+                                        className="w-9 h-9 text-white shrink-0 rounded-full flex items-center justify-center"
                                         style={{ backgroundColor: card.color }}
                                     >
-                                        <FiArrowUpRight
-                                            size={18}
-                                            aria-hidden="true"
-                                            className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                                        />
-                                    </CardAction>
+                                        <FiActivity size={18}/>
+                                    </span>
                                 </div>
                                 <p className="text-gray-700 text-[16px] font-Montserrat leading-relaxed mb-6 flex-1">
                                     {card.description}
