@@ -4,7 +4,7 @@ import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function DevelopmentOrganisationsCta() {
     return (
-        <section className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="md:pb-20 pb-14 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
                 <Reveal>
                     <div className="md:rounded-3xl rounded-xl bg-[#282A30] py-10 px-4 md:p-14">

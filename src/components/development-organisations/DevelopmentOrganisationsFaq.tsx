@@ -84,8 +84,7 @@ export default function DevelopmentOrganisationsFaq() {
 
     return (
         <section
-            style={{backgroundColor: 'rgb(250, 248, 246)'}}
-            className="py-20 px-4 sm:px-6 lg:px-8">
+            className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-14">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">

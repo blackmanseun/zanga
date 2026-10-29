@@ -3,7 +3,6 @@ import DevelopmentOrganisationsHero from '@/components/development-organisations
 import DevelopmentOrganisationsChallenge from '@/components/development-organisations/DevelopmentOrganisationsChallenge'
 import DevelopmentOrganisationsAchieveGrid from '@/components/development-organisations/DevelopmentOrganisationsAchieveGrid'
 import DevelopmentOrganisationsSolutions from '@/components/development-organisations/DevelopmentOrganisationsSolutions'
-import DevelopmentOrganisationsHowUseZanga from '@/components/development-organisations/DevelopmentOrganisationsHowUseZanga'
 import DevelopmentOrganisationsBuiltForDispersedOrganisations from '@/components/development-organisations/DevelopmentOrganisationsBuiltForDispersedOrganisations'
 import DevelopmentOrganisationsWhyZanga from '@/components/development-organisations/DevelopmentOrganisationsWhyZanga'
 import DevelopmentOrganisationsWhereToStart from '@/components/development-organisations/DevelopmentOrganisationsWhereToStart'
@@ -17,7 +16,6 @@ export default function DevelopmentOrganisationsPage() {
             <DevelopmentOrganisationsChallenge/>
             <DevelopmentOrganisationsAchieveGrid/>
             <DevelopmentOrganisationsSolutions/>
-            <DevelopmentOrganisationsHowUseZanga/>
             <DevelopmentOrganisationsBuiltForDispersedOrganisations/>
             <DevelopmentOrganisationsWhyZanga/>
             <DevelopmentOrganisationsWhereToStart/>

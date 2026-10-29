@@ -7,7 +7,9 @@ import OpenModalButton from '@/components/modal/OpenModalButton'
 
 export default function DevelopmentOrganisationsWhereToStart() {
     return (
-        <section className="bg-white md:py-20 py-14 px-4 sm:px-6 lg:px-8">
+        <section
+            style={{backgroundColor: 'rgb(250, 248, 246)'}}
+            className="bg-white md:py-20 py-14 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <Reveal>
                     <div className="grid gap-8 lg:grid-cols-[3.5fr_2fr] items-end">

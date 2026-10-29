@@ -5,7 +5,7 @@ import EnterprisesPolaroid from '@/components/enterprises/EnterprisesPolaroid'
 import OpenModalButton from '@/components/modal/OpenModalButton'
 
 const challenges: string[] = [
-    'Limited visibility into beneficiary and community experience',
+    'Limited insight into beneficiary and community experience',
     'Inconsistent stakeholder and grievance channels across project sites',
     'Uneven leadership capability across country offices and programme teams',
     'Staff engagement and retention challenges in demanding delivery environments',

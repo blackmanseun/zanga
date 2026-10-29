@@ -32,8 +32,7 @@ function Panel({
 export default function DevelopmentOrganisationsWhyZanga() {
     return (
         <section
-            style={{backgroundColor: 'rgb(250, 248, 246)'}}
-            className="md:py-20 py-14 px-4 sm:px-6 lg:px-8"
+            className="md:py-20 py-14 px-4 sm:px-6 lg:px-8 bg-white"
         >
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <Reveal>
