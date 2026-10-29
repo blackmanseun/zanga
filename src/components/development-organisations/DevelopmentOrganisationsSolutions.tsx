@@ -12,7 +12,7 @@ import 'swiper/css/pagination'
 import CardAction from '@/components/ui/CardAction'
 
 type ChecklistItem = {
-    title: string
+    title?: string
     description: string
 }
 
@@ -22,6 +22,7 @@ type SolutionCategory = {
     title: string
     description: string
     checklist: ChecklistItem[]
+    useCase: string
     cta: string
 }
 
@@ -34,9 +35,10 @@ const CATEGORIES: SolutionCategory[] = [
         checklist: [
             {
                 title: 'Voice by Zanga',
-                description: 'Collect and structure feedback from beneficiaries, communities, local partners, and other stakeholders through accessible listening channels. Use stakeholder insight to identify recurring concerns, strengthen response and build a clearer picture of programme experience.',
+                description: 'Helps organisations collect and structure feedback from beneficiaries, communities, local partners and other stakeholders through accessible listening and grievance channels.',
             },
         ],
+        useCase: 'Establish community feedback and grievance mechanisms across programme locations to identify recurring concerns, strengthen follow-up and improve accountability.',
         cta: 'Explore Voice by Zanga',
     },
     {
@@ -51,9 +53,10 @@ const CATEGORIES: SolutionCategory[] = [
             },
             {
                 title: '360 Feedback Assessment',
-                description: 'Compare self-perception with feedback from colleagues and teams to deepen leadership insight. Identify individuals with the capacity to take on greater leadership responsibility.',
+                description: 'Combine self-assessment with feedback from colleagues and teams to deepen leadership insight.',
             },
         ],
+        useCase: 'Assess country office and programme leadership to inform development priorities, succession planning and targeted support.',
         cta: 'Explore Leadership Solutions',
     },
     {
@@ -64,22 +67,32 @@ const CATEGORIES: SolutionCategory[] = [
         checklist: [
             {
                 title: 'Pulse by Zanga',
-                description: 'Track employee engagement, culture, and retention signals across dispersed teams.',
-            },
-            {
-                title: 'Employee Engagement Surveys',
-                description: 'Understand the factors shaping employee experience and morale.',
+                description: 'Track employee engagement, culture and retention signals across dispersed programme teams.',
             },
             {
                 title: 'Workforce Analytics',
-                description: 'Bring workforce sentiment and people data together into clearer organisational insight.',
+                description: 'Bring workforce sentiment and people data together to generate actionable organisational insights.',
             },
         ],
+        useCase: 'Conduct engagement surveys and pulse checks across country offices and field teams to identify morale, communication and retention concerns.',
         cta: 'Explore Workforce Assessments',
     },
     {
-        href: '#',
+        href: '/products/diligence-by-zanga',
         bg: 'bg-terracotta-dark',
+        title: 'Diligence by Zanga',
+        description: 'Make better-informed decisions about local implementing partners.',
+        checklist: [
+            {
+                description: 'Use structured assessments and organisational insight to understand the capabilities, leadership strengths and development needs of potential or existing implementing partners.',
+            },
+        ],
+        useCase: 'Support partner selection, capacity-building priorities and grant oversight through more structured evidence about implementing partner capability.',
+        cta: 'Explore Diligence by Zanga',
+    },
+    {
+        href: '#',
+        bg: 'bg-primary',
         title: 'Talent Intelligence',
         description: 'Bring more structure to critical appointments.',
         checklist: [
@@ -89,13 +102,10 @@ const CATEGORIES: SolutionCategory[] = [
             },
             {
                 title: 'Personality Assessments',
-                description: 'Understand behavioural and personality characteristics relevant to workplace performance.',
-            },
-            {
-                title: 'Leadership Assessments',
-                description: 'Add structured leadership insight to senior and programme-critical appointments.',
+                description: 'Understand behavioural characteristics relevant to workplace performance.',
             },
         ],
+        useCase: 'Apply structured assessments to programme-critical recruitment decisions to strengthen candidate evaluation and role fit.',
         cta: 'Explore Talent Solutions',
     },
 ]
@@ -166,9 +176,11 @@ export default function DevelopmentOrganisationsSolutions() {
                                                         aria-hidden="true"
                                                     />
                                                     <div>
-                                                        <p className="text-gray-900 text-sm font-bold font-Montserrat mb-0.5">
-                                                            {item.title}
-                                                        </p>
+                                                        {item.title && (
+                                                            <p className="text-gray-900 text-sm font-bold font-Montserrat mb-0.5">
+                                                                {item.title}
+                                                            </p>
+                                                        )}
                                                         <p className="text-gray-500 text-[13px] font-Montserrat leading-relaxed">
                                                             {item.description}
                                                         </p>
@@ -176,6 +188,12 @@ export default function DevelopmentOrganisationsSolutions() {
                                                 </li>
                                             ))}
                                         </ul>
+                                        <div className="mt-5 pt-4 border-t border-slate-100">
+                                            <p className="text-gray-500 text-[13px] font-Montserrat leading-relaxed">
+                                                <span className="font-bold text-gray-900">Use case: </span>
+                                                {category.useCase}
+                                            </p>
+                                        </div>
                                     </div>
                                 </CardAction>
                             </SwiperSlide>
