@@ -123,9 +123,37 @@ const navItems: NavItem[] = [
       ],
     },
   },
-  // The Assessments dropdown (Leadership, Psychometric, Workforce, Explore) is parked in git history
-  // while Leadership Assessments is the only one live — the nav item links straight to it for now.
-  { type: 'link', label: 'Assessments', href: '/assessments/leadership-assessments' },
+  // Psychometric Assessments and the Explore promo column are still parked in git history while their
+  // pages don't exist — only the Leadership and Workforce columns (both live) are shown for now.
+  {
+    type: 'mega',
+    label: 'Assessments',
+    menu: {
+      columns: [
+        {
+          heading: 'Leadership Assessments',
+          headingHref: '/assessments/leadership-assessments',
+          links: [
+            { label: 'Leadership Competency Assessment', href: '/assessments/leadership-assessments#competency-assessment' },
+            { label: '360° Feedback Leadership Assessment', href: '/assessments/leadership-assessments#leadership-360' },
+            { label: 'Leadership Potential Assessment', href: '/assessments/leadership-assessments#leadership-potential-assessment' },
+            { label: 'Executive Leadership Assessment', href: '/assessments/leadership-assessments#executive-leadership-assessment' },
+          ],
+        },
+        {
+          heading: 'Workforce Assessments',
+          headingHref: '/assessments/workforce-assessments',
+          links: [
+            { label: 'Employee Engagement Survey', href: '/assessments/workforce-assessments#employee-engagement' },
+            { label: 'Organisational Culture Assessment', href: '/assessments/workforce-assessments#organisational-culture' },
+            { label: 'Team Effectiveness Assessment', href: '/assessments/workforce-assessments#team-effectiveness' },
+            { label: 'Custom Workforce Survey', href: '/assessments/workforce-assessments#workforce-survey' },
+            { label: 'Workforce Analytics', href: '/assessments/workforce-assessments#workforce-analytics' },
+          ],
+        },
+      ],
+    },
+  },
   { type: 'link', label: 'Pricing', href: '#' },
   // The Partners dropdown is parked in git history while Become a Partner is the only live page.
   { type: 'link', label: 'Partners', href: '/partners/become-a-partner' },

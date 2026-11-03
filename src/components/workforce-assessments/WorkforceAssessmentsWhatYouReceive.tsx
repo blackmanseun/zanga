@@ -1,0 +1,75 @@
+import React from 'react'
+import { FiArrowRight, FiCheckCircle } from 'react-icons/fi'
+import BoldZanga from '@/components/ui/BoldZanga'
+import OpenModalButton from '@/components/modal/OpenModalButton'
+
+const deliverables: string[] = [
+    'Workforce survey results',
+    'Employee engagement and sentiment insights',
+    'Culture findings',
+    'Team effectiveness insights',
+    'Organisational reports',
+    'Workforce dashboards',
+    'Comparative reporting across teams or groups',
+    'Trend and pattern analysis',
+    'Priority areas for action',
+    'Facilitated results debriefs',
+    'Follow-up measurement and reporting',
+]
+
+export default function WorkforceAssessmentsWhatYouReceive() {
+    return (
+        <section
+            id="sample-reports"
+            style={{ backgroundColor: 'rgb(250, 248, 246)' }}
+            className="scroll-mt-24 md:py-20 py-14 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+                <span className="text-olive text-sm uppercase tracking-widest font-Montserrat font-semibold">
+                    Workforce Assessments
+                </span>
+
+                <div className="max-w-3xl">
+                    <h2 className="text-3xl md:text-[2.8rem] font-bold mt-3 mb-6 font-MonaSans leading-tight text-gray-700">
+                        What you receive
+                    </h2>
+                </div>
+
+                <div className="grid lg:grid-cols-[550px_1fr] gap-8 md:gap-16 items-start mt-4">
+                    <div>
+                        <p className="text-gray-500 font-Montserrat leading-relaxed mb-8">
+                            <BoldZanga text="Depending on the assessment and scope of engagement, Zanga can provide:"/>
+                        </p>
+
+                        <ul className="space-y-3 mb-10">
+                            {deliverables.map((item) => (
+                                <li
+                                    key={item}
+                                    className="flex items-start gap-3 text-md text-gray-600 font-Montserrat leading-relaxed"
+                                >
+                                    <FiCheckCircle className="text-olive shrink-0 mt-0.5" size={16} aria-hidden="true"/>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+
+                        <OpenModalButton
+                            modal="book-a-demo"
+                            className="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-md font-semibold text-sm hover:bg-terracotta/90 transition-colors font-Montserrat"
+                        >
+                            Request a Demo
+                            <FiArrowRight size={16} aria-hidden="true"/>
+                        </OpenModalButton>
+                    </div>
+
+                    <div className="relative mt-8 lg:mt-0">
+                        <img
+                            src="https://res.cloudinary.com/xdufulll/image/upload/f_auto,q_auto,c_limit,w_1600,h_1600/zanga-site/159"
+                            alt="A team reviewing a workforce assessment report together"
+                            className="w-full h-64 md:h-80 xl:h-[650px] object-cover rounded-2xl"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
