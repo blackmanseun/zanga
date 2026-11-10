@@ -21,6 +21,18 @@ const option = (formData: FormData, name: string) => optional(toOptionValue(text
 
 const isBot = (formData: FormData) => text(formData, HONEYPOT_FIELD) !== ''
 
+/** Build a multi-line CRM lead description, dropping empty lines. */
+const describe = (...lines: (string | false | undefined)[]) =>
+  lines.filter((line): line is string => Boolean(line)).join('\n')
+
+/** Readable, comma-separated values of a multi-value field (e.g. checkboxes). */
+const textList = (formData: FormData, name: string) =>
+  formData
+    .getAll(name)
+    .filter((value): value is string => typeof value === 'string' && value.trim() !== '')
+    .map((value) => value.trim())
+    .join(', ')
+
 async function save(
   collection: 'demo-requests' | 'partner-applications' | 'contact-enquiries' | 'report-requests',
   data: Record<string, unknown>,
@@ -58,15 +70,13 @@ export async function submitDemoRequest(formData: FormData): Promise<FormResult>
     const location = text(formData, 'location')
     const message = text(formData, 'message')
 
-    const description = [
+    const description = describe(
       'Source: Website — Book a Demo',
       explore && `Wants to explore: ${explore}`,
       organisationSize && `Organisation size: ${organisationSize}`,
       location && `Country / Location: ${location}`,
       message && `\nMessage:\n${message}`,
-    ]
-      .filter(Boolean)
-      .join('\n')
+    )
 
     await createCrmLead({
       name: `Demo request — ${fullName || text(formData, 'email')}`,
@@ -83,7 +93,8 @@ export async function submitDemoRequest(formData: FormData): Promise<FormResult>
 
 export async function submitPartnerApplication(formData: FormData): Promise<FormResult> {
   if (isBot(formData)) return { ok: true }
-  return save('partner-applications', {
+
+  const result = await save('partner-applications', {
     fullName: text(formData, 'fullName'),
     email: text(formData, 'email'),
     jobTitle: text(formData, 'jobTitle'),
@@ -94,18 +105,50 @@ export async function submitPartnerApplication(formData: FormData): Promise<Form
       .filter((value): value is string => typeof value === 'string')
       .map(toOptionValue),
   })
+
+  if (result.ok) {
+    const fullName = text(formData, 'fullName')
+    await createCrmLead({
+      name: `Partner application — ${fullName || text(formData, 'email')}`,
+      contactName: fullName,
+      email: text(formData, 'email'),
+      jobTitle: text(formData, 'jobTitle'),
+      description: describe(
+        'Source: Website — Partner application',
+        text(formData, 'service') && `Service interest: ${text(formData, 'service')}`,
+        textList(formData, 'partnershipTypes') &&
+          `Partnership type(s): ${textList(formData, 'partnershipTypes')}`,
+        text(formData, 'location') && `Country / Location: ${text(formData, 'location')}`,
+      ),
+    })
+  }
+
+  return result
 }
 
 export async function submitReportRequest(formData: FormData): Promise<FormResult> {
   if (isBot(formData)) return { ok: true }
-  return save('report-requests', {
+
+  const result = await save('report-requests', {
     email: text(formData, 'email'),
   })
+
+  if (result.ok) {
+    const email = text(formData, 'email')
+    await createCrmLead({
+      name: `Report request — ${email}`,
+      email,
+      description: describe('Source: Website — Big Data Report request'),
+    })
+  }
+
+  return result
 }
 
 export async function submitContactEnquiry(formData: FormData): Promise<FormResult> {
   if (isBot(formData)) return { ok: true }
-  return save('contact-enquiries', {
+
+  const result = await save('contact-enquiries', {
     firstName: text(formData, 'firstName'),
     lastName: optional(text(formData, 'lastName')),
     email: text(formData, 'email'),
@@ -113,4 +156,22 @@ export async function submitContactEnquiry(formData: FormData): Promise<FormResu
     reason: option(formData, 'reason'),
     message: text(formData, 'message'),
   })
+
+  if (result.ok) {
+    const fullName = `${text(formData, 'firstName')} ${text(formData, 'lastName')}`.trim()
+    const message = text(formData, 'message')
+    await createCrmLead({
+      name: `Contact enquiry — ${fullName || text(formData, 'email')}`,
+      contactName: fullName,
+      email: text(formData, 'email'),
+      description: describe(
+        'Source: Website — Contact form',
+        text(formData, 'organisation') && `Organisation: ${text(formData, 'organisation')}`,
+        text(formData, 'reason') && `Reason: ${text(formData, 'reason')}`,
+        message && `\nMessage:\n${message}`,
+      ),
+    })
+  }
+
+  return result
 }
