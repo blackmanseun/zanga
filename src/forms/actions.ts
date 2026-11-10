@@ -3,6 +3,7 @@
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { HONEYPOT_FIELD, toOptionValue } from './options'
+import { createCrmLead } from '@/lib/odoo'
 
 export type FormResult = { ok: true } | { ok: false; error: string }
 
@@ -36,7 +37,8 @@ async function save(
 
 export async function submitDemoRequest(formData: FormData): Promise<FormResult> {
   if (isBot(formData)) return { ok: true }
-  return save('demo-requests', {
+
+  const result = await save('demo-requests', {
     fullName: text(formData, 'fullName'),
     email: text(formData, 'email'),
     phone: optional(text(formData, 'phone')),
@@ -46,6 +48,37 @@ export async function submitDemoRequest(formData: FormData): Promise<FormResult>
     organisationSize: option(formData, 'organisationSize'),
     message: optional(text(formData, 'message')),
   })
+
+  // Mirror the request into Odoo CRM. createCrmLead never throws, so a CRM
+  // outage cannot turn a saved submission into an error for the visitor.
+  if (result.ok) {
+    const fullName = text(formData, 'fullName')
+    const explore = text(formData, 'explore')
+    const organisationSize = text(formData, 'organisationSize')
+    const location = text(formData, 'location')
+    const message = text(formData, 'message')
+
+    const description = [
+      'Source: Website — Book a Demo',
+      explore && `Wants to explore: ${explore}`,
+      organisationSize && `Organisation size: ${organisationSize}`,
+      location && `Country / Location: ${location}`,
+      message && `\nMessage:\n${message}`,
+    ]
+      .filter(Boolean)
+      .join('\n')
+
+    await createCrmLead({
+      name: `Demo request — ${fullName || text(formData, 'email')}`,
+      contactName: fullName,
+      email: text(formData, 'email'),
+      phone: optional(text(formData, 'phone')),
+      jobTitle: text(formData, 'jobTitle'),
+      description,
+    })
+  }
+
+  return result
 }
 
 export async function submitPartnerApplication(formData: FormData): Promise<FormResult> {
