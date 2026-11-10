@@ -1,23 +1,38 @@
-import Odoo from 'odoo-await'
-
 /**
- * Sends form submissions into Odoo CRM as leads, in addition to saving them in
- * the Payload CMS collection, and emails a notification to the commercial inbox
- * through Odoo's own mailer. This is purely additive: any failure here is logged
- * and swallowed so it never breaks the visitor's submission.
+ * Odoo CRM integration for website form submissions.
+ *
+ * Each submission is mirrored into Odoo as a crm.lead (assigned to the
+ * ODOO_NOTIFY_EMAIL salesperson) and a notification email is sent to the
+ * commercial inbox through Odoo's own mailer. This is purely additive: any
+ * failure here is logged and swallowed so it never breaks the visitor's
+ * submission.
+ *
+ * Uses the Odoo External API over JSON-RPC with plain fetch — no dependency.
  *
  * Configure via environment variables:
  *   ODOO_URL           e.g. https://zanga-african-metrics.odoo.com
  *   ODOO_DB            the Odoo database name
  *   ODOO_USERNAME      the login/email of the integration user
  *   ODOO_API_KEY       an API key (Odoo → Preferences → Account Security → API Keys)
- *   ODOO_PORT          optional; defaults to 443 for https URLs, 8069 otherwise
- *   ODOO_NOTIFY_EMAIL  optional; who gets the new-lead email (default commercial@zangametrics.com)
+ *   ODOO_NOTIFY_EMAIL  optional; the salesperson leads are assigned to and who
+ *                      gets the new-lead email (default commercial@zangametrics.com)
  *
  * When the core vars are not set (e.g. local development), everything is skipped.
  */
 
+const ODOO_URL = process.env.ODOO_URL
+const ODOO_DB = process.env.ODOO_DB
+const ODOO_USERNAME = process.env.ODOO_USERNAME
+const ODOO_API_KEY = process.env.ODOO_API_KEY
+
 const DEFAULT_NOTIFY_EMAIL = 'commercial@zangametrics.com'
+const notifyEmail = () => process.env.ODOO_NOTIFY_EMAIL || DEFAULT_NOTIFY_EMAIL
+
+/**
+ * Website leads are created as opportunities so they always appear in the CRM
+ * pipeline. Switch to 'lead' only if the "Leads" stage is enabled in Odoo CRM.
+ */
+const LEAD_TYPE = 'opportunity'
 
 /** One submitted field: its label and value (value may be blank/undefined). */
 export type LeadField = [label: string, value: string | undefined]
@@ -34,9 +49,75 @@ export type OdooLead = {
   details?: LeadField[]
 }
 
-/** Drop undefined/empty values so Odoo keeps its own defaults for unset fields. */
-const clean = (data: Record<string, unknown>) =>
-  Object.fromEntries(Object.entries(data).filter(([, value]) => value !== undefined && value !== ''))
+const isConfigured = () => Boolean(ODOO_URL && ODOO_DB && ODOO_USERNAME && ODOO_API_KEY)
+
+/* ------------------------------------------------------------------ *
+ * JSON-RPC plumbing
+ * ------------------------------------------------------------------ */
+
+type JsonRpcParams = {
+  service: 'common' | 'object'
+  method: string
+  args: unknown[]
+}
+
+async function jsonRpc<T>(params: JsonRpcParams): Promise<T> {
+  const response = await fetch(`${ODOO_URL}/jsonrpc`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ jsonrpc: '2.0', method: 'call', params }),
+  })
+
+  if (!response.ok) {
+    throw new Error(`Odoo responded with HTTP ${response.status}`)
+  }
+
+  const payload = (await response.json()) as {
+    result?: T
+    error?: { message?: string; data?: { message?: string } }
+  }
+
+  if (payload.error) {
+    const detail = payload.error.data?.message || payload.error.message || 'Unknown Odoo error'
+    throw new Error(`Odoo RPC error: ${detail}`)
+  }
+
+  return payload.result as T
+}
+
+let cachedUid: number | null = null
+
+async function authenticate(): Promise<number> {
+  if (cachedUid) return cachedUid
+  const uid = await jsonRpc<number | false>({
+    service: 'common',
+    method: 'authenticate',
+    args: [ODOO_DB, ODOO_USERNAME, ODOO_API_KEY, {}],
+  })
+  if (!uid) {
+    throw new Error('Odoo authentication failed — check ODOO_USERNAME / ODOO_API_KEY')
+  }
+  cachedUid = uid
+  return uid
+}
+
+function executeKw<T>(
+  uid: number,
+  model: string,
+  method: string,
+  args: unknown[],
+  kwargs: Record<string, unknown> = {},
+): Promise<T> {
+  return jsonRpc<T>({
+    service: 'object',
+    method: 'execute_kw',
+    args: [ODOO_DB, uid, ODOO_API_KEY, model, method, args, kwargs],
+  })
+}
+
+/* ------------------------------------------------------------------ *
+ * Field / description / email helpers
+ * ------------------------------------------------------------------ */
 
 /** The submitted fields that actually have a value, in order. */
 const filledFields = (lead: OdooLead): Array<[string, string]> =>
@@ -57,10 +138,12 @@ const descriptionText = (lead: OdooLead): string | undefined =>
 /** The notification email body: every submitted field as its own labelled row. */
 const notificationBody = (lead: OdooLead): string => {
   const rows = filledFields(lead)
-    .map(([label, value]) => `<tr>
+    .map(
+      ([label, value]) => `<tr>
         <td style="padding:6px 16px 6px 0;vertical-align:top;color:#6b7280;font-weight:600;white-space:nowrap">${escapeHtml(label)}</td>
         <td style="padding:6px 0;vertical-align:top;color:#111827">${escapeMultiline(value)}</td>
-      </tr>`)
+      </tr>`,
+    )
     .join('')
   return `<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5">
       <p>A new enquiry was submitted on the website.</p>
@@ -68,72 +151,88 @@ const notificationBody = (lead: OdooLead): string => {
     </div>`
 }
 
-/**
- * Emails the commercial inbox about a new lead, using Odoo's outgoing mail server.
- * The record is created in Odoo's mail queue; we also try to send it immediately.
- * Odoo's XML-RPC serialiser throws on the (None) return of send(), but the email
- * has already gone out by then, so that specific error is ignored. Anything the
- * queue cron doesn't send immediately is delivered within ~1 minute regardless.
- */
-async function sendLeadNotification(odoo: Odoo, lead: OdooLead): Promise<void> {
-  const to = process.env.ODOO_NOTIFY_EMAIL || DEFAULT_NOTIFY_EMAIL
-  const id = (await odoo.create('mail.mail', {
-    subject: `New website lead: ${lead.name}`,
-    body_html: notificationBody(lead),
-    email_to: to,
-    auto_delete: true,
-  })) as number
+/** Resolve the notify email to an Odoo user id so leads get assigned. */
+async function findSalespersonId(uid: number): Promise<number | undefined> {
   try {
-    await odoo.execute_kw('mail.mail', 'send', [[id]])
+    const ids = await executeKw<number[]>(
+      uid,
+      'res.users',
+      'search',
+      [[['login', '=', notifyEmail()]]],
+      { limit: 1 },
+    )
+    return ids[0]
   } catch {
-    // send() returns None, which Odoo's XML-RPC layer cannot marshal; the mail
-    // is sent before that error, and the queue cron covers anything left over.
+    return undefined
   }
 }
 
-export async function createOdooLead(lead: OdooLead): Promise<void> {
-  const baseUrl = process.env.ODOO_URL
-  const db = process.env.ODOO_DB
-  const username = process.env.ODOO_USERNAME
-  const apiKey = process.env.ODOO_API_KEY
+/**
+ * Emails the commercial inbox about a new lead, using Odoo's outgoing mail
+ * server. The record is created in Odoo's mail queue and sent immediately;
+ * anything the queue cron doesn't send at once is delivered within ~1 minute.
+ */
+async function sendLeadNotification(uid: number, lead: OdooLead): Promise<void> {
+  const id = await executeKw<number>(uid, 'mail.mail', 'create', [
+    {
+      subject: `New website lead: ${lead.name}`,
+      body_html: notificationBody(lead),
+      email_to: notifyEmail(),
+      auto_delete: true,
+    },
+  ])
+  // Over JSON-RPC, send() returns null cleanly (no XML-RPC marshalling issue).
+  await executeKw(uid, 'mail.mail', 'send', [[id]])
+}
 
-  if (!baseUrl || !db || !username || !apiKey) {
+/* ------------------------------------------------------------------ *
+ * Public entry point
+ * ------------------------------------------------------------------ */
+
+/**
+ * Create a crm.lead in Odoo and notify the commercial inbox. Never throws: on
+ * any failure it logs and returns so a CRM outage can never break a visitor's
+ * form submission (the submission is already stored in Payload before this runs).
+ */
+export async function createOdooLead(lead: OdooLead): Promise<void> {
+  if (!isConfigured()) {
     console.warn('Odoo not configured; skipping CRM lead creation.')
     return
   }
 
   try {
-    const defaultPort = baseUrl.startsWith('https') ? 443 : 8069
-    const odoo = new Odoo({
-      baseUrl,
-      port: process.env.ODOO_PORT ? Number(process.env.ODOO_PORT) : defaultPort,
-      db,
-      username,
-      password: apiKey,
-    })
+    const uid = await authenticate()
+    const userId = await findSalespersonId(uid)
 
-    await odoo.connect()
-    await odoo.create(
-      'crm.lead',
-      clean({
-        name: lead.name,
-        contact_name: lead.contactName,
-        email_from: lead.email,
-        phone: lead.phone,
-        function: lead.jobTitle,
-        partner_name: lead.company,
-        description: descriptionText(lead),
-      }),
-    )
+    const values: Record<string, unknown> = {
+      name: lead.name,
+      type: LEAD_TYPE,
+      contact_name: lead.contactName,
+      email_from: lead.email,
+      phone: lead.phone,
+      function: lead.jobTitle,
+      partner_name: lead.company,
+      description: descriptionText(lead),
+    }
+    if (userId) values.user_id = userId
+
+    // Drop undefined so Odoo keeps its own defaults for unset fields.
+    for (const key of Object.keys(values)) {
+      if (values[key] === undefined) delete values[key]
+    }
+
+    await executeKw<number>(uid, 'crm.lead', 'create', [values])
 
     // Notify the commercial inbox. Isolated so a mail failure never undoes the
     // lead that was just created.
     try {
-      await sendLeadNotification(odoo, lead)
+      await sendLeadNotification(uid, lead)
     } catch (error) {
       console.error('Odoo lead created, but notification email failed', error)
     }
   } catch (error) {
+    // Reset the cached uid so a stale/expired session re-authenticates next time.
+    cachedUid = null
     console.error('Failed to create Odoo CRM lead', error)
   }
 }
